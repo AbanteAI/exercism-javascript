@@ -4,39 +4,71 @@
 //
 
 export class Rational {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+export class Rational {
+  constructor(num, denom) {
+    this.num = num;
+    this.denom = denom;
+    this.reduce();
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(other) {
+    const num = this.num * other.denom + other.num * this.denom;
+    const denom = this.denom * other.denom;
+    return new Rational(num, denom);
   }
 
-  sub() {
-    throw new Error('Remove this statement and implement this function');
+  sub(other) {
+    const num = this.num * other.denom - other.num * this.denom;
+    const denom = this.denom * other.denom;
+    return new Rational(num, denom);
   }
 
-  mul() {
-    throw new Error('Remove this statement and implement this function');
+  mul(other) {
+    const num = this.num * other.num;
+    const denom = this.denom * other.denom;
+    return new Rational(num, denom);
   }
 
-  div() {
-    throw new Error('Remove this statement and implement this function');
+  div(other) {
+    const num = this.num * other.denom;
+    const denom = this.denom * other.num;
+    return new Rational(num, denom);
   }
 
   abs() {
-    throw new Error('Remove this statement and implement this function');
+    const num = Math.abs(this.num);
+    const denom = Math.abs(this.denom);
+    return new Rational(num, denom);
   }
 
-  exprational() {
-    throw new Error('Remove this statement and implement this function');
+  exprational(exponent) {
+    const num = Math.pow(this.num, exponent);
+    const denom = Math.pow(this.denom, exponent);
+    return new Rational(num, denom);
   }
 
-  expreal() {
-    throw new Error('Remove this statement and implement this function');
+  expreal(exponent) {
+    const num = Math.pow(this.num, exponent);
+    const denom = Math.pow(this.denom, exponent);
+    return Math.pow(num / denom, 1 / exponent);
   }
 
   reduce() {
-    throw new Error('Remove this statement and implement this function');
+    const gcd = this.calculateGCD(this.num, this.denom);
+    this.num = this.num / gcd;
+    this.denom = this.denom / gcd;
+    if (this.denom < 0) {
+      this.num = -this.num;
+      this.denom = -this.denom;
+    }
+  }
+
+  calculateGCD(a, b) {
+    if (b === 0) {
+      return Math.abs(a);
+    }
+    return this.calculateGCD(b, a % b);
+  }
+}
   }
 }

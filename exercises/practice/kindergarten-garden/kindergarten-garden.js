@@ -26,11 +26,32 @@ const PLANT_CODES = {
 };
 
 export class Garden {
-  constructor(diagram, students = DEFAULT_STUDENTS) {
-    throw new Error('Remove this statement and implement this function');
+constructor(diagram, students = DEFAULT_STUDENTS) {
+    this.diagram = diagram.split('\n');
+    this.students = students.sort();
+}
   }
 
   plants(student) {
-    throw new Error('Remove this statement and implement this function');
-  }
+plants(student) {
+plants(student) {
+    const index = this.students.indexOf(student);
+    const studentPlants = [];
+    for (let i = 0; i < 2; i++) {
+        const start = index * 2;
+        const plant1 = this.diagram[i].charAt(start);
+        const plant2 = this.diagram[i].charAt(start + 1);
+        studentPlants.push(PLANT_CODES[plant1], PLANT_CODES[plant2]);
+    }
+    return studentPlants;
+}
+    const studentPlants = [];
+    for (let i = 0; i < 2; i++) {
+        const start = index * 2;
+        const plant1 = this.diagram[i].charAt(start);
+        const plant2 = this.diagram[i].charAt(start + 1);
+        studentPlants.push(PLANT_CODES[plant1], PLANT_CODES[plant2]);
+    }
+    return studentPlants;
+}
 }

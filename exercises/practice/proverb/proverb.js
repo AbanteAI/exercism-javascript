@@ -3,6 +3,13 @@
 // convenience to get you started writing code faster.
 //
 
-export const proverb = () => {
-  throw new Error('Remove this statement and implement this function');
+export const proverb = (list) => {
+  let result = '';
+  for (let i = 0; i < list.length - 1; i++) {
+    result += `For want of a ${list[i]} the ${list[i + 1]} was lost.\n`;
+  }
+  if (list.length > 0) {
+    result += `And all for the want of a ${list[0]}.`;
+  }
+  return result;
 };

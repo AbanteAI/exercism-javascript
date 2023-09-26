@@ -4,5 +4,16 @@
 //
 
 export const cost = (books) => {
-  throw new Error('Remove this statement and implement this function');
+  if (books.length === 0) {
+    return 0;
+  }
+
+  const discounts = [0, 0.05, 0.10, 0.20, 0.25];
+  const uniqueBooksCount = new Set(books).size;
+  const maxDiscount = discounts[uniqueBooksCount];
+
+  const remainingBooks = books.filter((book) => book !== "");
+  const price = remainingBooks.length * 8;
+
+  return price - price * maxDiscount;
 };

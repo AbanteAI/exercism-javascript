@@ -4,15 +4,42 @@
 //
 
 export class DiffieHellman {
+class DiffieHellman {
   constructor(p, g) {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.isPrime(p)) {
+      throw new Error('p is not a prime number');
+    }
+    this.p = p;
+    this.g = g;
+  }
+
+  isPrime(n) {
+    if (n <= 1) {
+      return false;
+    }
+    for (let i = 2; i * i <= n; i++) {
+      if (n % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
   }
 
   getPublicKey(privateKey) {
-    throw new Error('Remove this statement and implement this function');
+    if (privateKey <= 1 || privateKey >= this.p) {
+      throw new Error('Invalid private key');
+    }
+    return BigInt(this.g) ** BigInt(privateKey) % BigInt(this.p);
+  }
   }
 
   getSecret(theirPublicKey, myPrivateKey) {
-    throw new Error('Remove this statement and implement this function');
+    if (myPrivateKey <= 1 || myPrivateKey >= this.p) {
+      throw new Error('Invalid private key');
+    }
+    return BigInt(theirPublicKey) ** BigInt(myPrivateKey) % BigInt(this.p);
   }
+}
 }

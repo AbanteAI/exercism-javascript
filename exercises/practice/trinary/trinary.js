@@ -4,11 +4,22 @@
 //
 
 export class Trinary {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(trinaryString) {
+    this.trinaryString = trinaryString;
   }
-
+  }
+  }
   toDecimal() {
-    throw new Error('Remove this statement and implement this function');
+    if (!/^[0-2]+$/.test(this.trinaryString)) {
+      return 0;
+    }
+
+    let decimalValue = 0;
+    const reversedTrinaryString = this.trinaryString.split('').reverse().join('');
+    for (let i = 0; i < reversedTrinaryString.length; i++) {
+      decimalValue += parseInt(reversedTrinaryString[i]) * Math.pow(3, i);
+    }
+
+    return decimalValue;
   }
 }

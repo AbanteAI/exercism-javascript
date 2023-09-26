@@ -3,10 +3,37 @@
 // convenience to get you started writing code faster.
 //
 
-export const encode = () => {
-  throw new Error('Remove this statement and implement this function');
+export const encode = (input) => {
+  let encodedString = '';
+  let count = 1;
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === input[i + 1]) {
+      count++;
+    } else {
+      encodedString += (count > 1 ? count : '') + input[i];
+      count = 1;
+    }
+  }
+
+  return encodedString;
+};
 };
 
-export const decode = () => {
-  throw new Error('Remove this statement and implement this function');
+export const decode = (input) => {
+  let decodedString = '';
+  let count = '';
+
+  for (let i = 0; i < input.length; i++) {
+    if (/[0-9]/.test(input[i])) {
+      count += input[i];
+    } else {
+      const repeatCount = count === '' ? 1 : parseInt(count);
+      decodedString += input[i].repeat(repeatCount);
+      count = '';
+    }
+  }
+
+  return decodedString;
 };
+}

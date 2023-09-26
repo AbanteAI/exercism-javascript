@@ -5,27 +5,50 @@
 
 export class BankAccount {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.isOpen = false;
+    this.accountBalance = 0;
   }
 
   open() {
-    throw new Error('Remove this statement and implement this function');
+    if (this.isOpen) {
+      throw new ValueError('Account is already open');
+    }
+    this.isOpen = true;
   }
 
   close() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.isOpen) {
+      throw new ValueError('Account is already closed');
+    }
+    this.isOpen = false;
+    this.accountBalance = 0;
   }
 
-  deposit() {
-    throw new Error('Remove this statement and implement this function');
+  deposit(amount) {
+    if (!this.isOpen || amount < 0) {
+      throw new ValueError('Invalid deposit');
+    }
+    this.accountBalance += amount;
   }
 
-  withdraw() {
-    throw new Error('Remove this statement and implement this function');
+  withdraw(amount) {
+    if (!this.isOpen || amount < 0 || amount > this.accountBalance) {
+      throw new ValueError('Invalid withdrawal');
+    }
+    this.accountBalance -= amount;
   }
 
   get balance() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.isOpen) {
+      throw new ValueError('Account is closed');
+    }
+    return this.accountBalance;
+  }
+}
+
+export class ValueError extends Error {
+  constructor(message) {
+    super(message || 'Bank account error');
   }
 }
 

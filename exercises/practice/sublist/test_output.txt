@@ -1,0 +1,40 @@
+FAIL exercises/practice/sublist/sublist.spec.js
+  sublist
+    ✕ two empty lists are equal (2 ms)
+    ○ skipped an empty list is a sublist of a non-empty list
+    ○ skipped non empty list contains empty list
+    ○ skipped a non-empty list equals itself
+    ○ skipped two different lists are unequal
+    ○ skipped false start
+    ○ skipped consecutive
+    ○ skipped sublist at start
+    ○ skipped sublist in middle
+    ○ skipped sublist at end
+    ○ skipped at start of superlist
+    ○ skipped in middle of superlist
+    ○ skipped at end of superlist
+    ○ skipped first list missing element from second list
+    ○ skipped second list missing element from first list
+    ○ skipped order matters to a list
+    ○ skipped same digits but different numbers
+
+  ● sublist › two empty lists are equal
+
+    Remove this statement and implement this function
+
+       6 | export class List {
+       7 |   constructor() {
+    >  8 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+       9 |   }
+      10 |
+      11 |   compare() {
+
+      at new List (exercises/practice/sublist/sublist.js:8:11)
+      at Object.<anonymous> (exercises/practice/sublist/sublist.spec.js:5:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 16 skipped, 17 total
+Snapshots:   0 total
+Time:        0.295 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/sublist/i.

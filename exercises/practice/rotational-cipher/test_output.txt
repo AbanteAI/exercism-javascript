@@ -1,0 +1,18 @@
+PASS exercises/practice/rotational-cipher/rotational-cipher.spec.js
+  Rotational cipher
+    ✓ rotate a by 0, same output as input (3 ms)
+    ○ skipped rotate a by 1
+    ○ skipped rotate a by 26, same output as input
+    ○ skipped rotate m by 13
+    ○ skipped rotate n by 13 with wrap around alphabet
+    ○ skipped rotate capital letters
+    ○ skipped rotate spaces
+    ○ skipped rotate numbers
+    ○ skipped rotate punctuation
+    ○ skipped rotate all letters
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        0.617 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/rotational-cipher/i.

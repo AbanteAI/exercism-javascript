@@ -1,0 +1,35 @@
+FAIL exercises/practice/robot-name/robot-name.spec.js
+  Robot
+    ✕ has a name (4 ms)
+    ○ skipped name is the same each time
+    ○ skipped different robots have different names
+    ○ skipped is able to reset the name
+    ○ skipped should set a unique name after reset
+    ○ skipped internal name cannot be modified
+    ○ skipped new names should not be sequential
+    ○ skipped names from reset should not be sequential
+    ○ skipped all the names can be generated
+
+  ● Robot › has a name
+
+    expect(received).toMatch(expected)
+
+    Matcher error: received value must be a string
+
+    Received has value: undefined
+
+      35 |
+      36 |   test('has a name', () => {
+    > 37 |     expect(robot.name).toMatch(/^[A-Z]{2}\d{3}$/);
+         |                        ^
+      38 |   });
+      39 |
+      40 |   xtest('name is the same each time', () => {
+
+      at Object.toMatch (exercises/practice/robot-name/robot-name.spec.js:37:24)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 skipped, 9 total
+Snapshots:   0 total
+Time:        0.267 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/robot-name/i.

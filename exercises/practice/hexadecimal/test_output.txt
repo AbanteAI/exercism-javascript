@@ -1,0 +1,32 @@
+FAIL exercises/practice/hexadecimal/hexadecimal.spec.js
+  Hexadecimal
+    ✕ hex 1 is decimal 1 (2 ms)
+    ○ skipped hex c is decimal 12
+    ○ skipped hex 10 is decimal 16
+    ○ skipped hex af is decimal 175
+    ○ skipped hex 100 is decimal 256
+    ○ skipped hex 19ace is decimal 105166
+    ○ skipped invalid hex is decimal 0
+    ○ skipped hexadecimal value for HTML/CSS black color
+    ○ skipped hexadecimal value for HTML/CSS white color
+    ○ skipped hexadecimal value for HTML/CSS yellow color
+
+  ● Hexadecimal › hex 1 is decimal 1
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const toDecimal = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at toDecimal (exercises/practice/hexadecimal/hexadecimal.js:7:9)
+      at Object.<anonymous> (exercises/practice/hexadecimal/hexadecimal.spec.js:5:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 9 skipped, 10 total
+Snapshots:   0 total
+Time:        0.277 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/hexadecimal/i.

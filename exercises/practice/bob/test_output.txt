@@ -1,0 +1,47 @@
+FAIL exercises/practice/bob/bob.spec.js
+  Bob
+    ✕ stating something (2 ms)
+    ○ skipped shouting
+    ○ skipped shouting gibberish
+    ○ skipped asking a question
+    ○ skipped asking a numeric question
+    ○ skipped asking gibberish
+    ○ skipped talking forcefully
+    ○ skipped using acronyms in regular speech
+    ○ skipped forceful question
+    ○ skipped shouting numbers
+    ○ skipped no letters
+    ○ skipped question with no letters
+    ○ skipped shouting with special characters
+    ○ skipped shouting with no exclamation mark
+    ○ skipped statement containing question mark
+    ○ skipped non-letters with question
+    ○ skipped prattling on
+    ○ skipped silence
+    ○ skipped prolonged silence
+    ○ skipped alternate silence
+    ○ skipped multiple line question
+    ○ skipped starting with whitespace
+    ○ skipped ending with whitespace
+    ○ skipped other whitespace
+    ○ skipped non-question ending with whitespace
+
+  ● Bob › stating something
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const hey = (message) => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at hey (exercises/practice/bob/bob.js:7:9)
+      at Object.<anonymous> (exercises/practice/bob/bob.spec.js:5:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 24 skipped, 25 total
+Snapshots:   0 total
+Time:        0.274 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/bob/i.

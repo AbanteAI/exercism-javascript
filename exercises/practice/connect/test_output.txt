@@ -1,0 +1,33 @@
+FAIL exercises/practice/connect/connect.spec.js
+  Judging a game of connect
+    ✕ an empty board has no winner (2 ms)
+    ○ skipped X can win on a 1x1 board
+    ○ skipped O can win on a 1x1 board
+    ○ skipped only edges does not make a winner
+    ○ skipped illegal diagonal does not make a winner
+    ○ skipped nobody wins crossing adjacent angles
+    ○ skipped X wins crossing from left to right
+    ○ skipped O wins crossing from top to bottom
+    ○ skipped X wins using a convoluted path
+    ○ skipped X wins using a spiral path
+
+  ● Judging a game of connect › an empty board has no winner
+
+    Remove this statement and implement this function
+
+       6 | export class Board {
+       7 |   constructor() {
+    >  8 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+       9 |   }
+      10 |
+      11 |   winner() {
+
+      at new Board (exercises/practice/connect/connect.js:8:11)
+      at Object.<anonymous> (exercises/practice/connect/connect.spec.js:12:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 9 skipped, 10 total
+Snapshots:   0 total
+Time:        0.3 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/connect/i.

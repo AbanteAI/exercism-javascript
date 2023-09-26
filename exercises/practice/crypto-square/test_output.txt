@@ -1,0 +1,32 @@
+FAIL exercises/practice/crypto-square/crypto-square.spec.js
+  Crypto
+    ✕ empty plaintext results in an empty ciphertext (4 ms)
+    ○ skipped Lowercase
+    ○ skipped Remove spaces
+    ○ skipped Remove punctuation
+    ○ skipped 9 character plaintext results in 3 chunks of 3 characters
+    ○ skipped 8 character plaintext results in 3 chunks, the last one with a trailing space
+    ○ skipped 54 character plaintext results in 7 chunks, the last two with trailing spaces
+
+  ● Crypto › empty plaintext results in an empty ciphertext
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: ""
+    Received: [Function ciphertext]
+
+      4 |   test('empty plaintext results in an empty ciphertext', () => {
+      5 |     const crypto = new Crypto('');
+    > 6 |     expect(crypto.ciphertext).toEqual('');
+        |                               ^
+      7 |   });
+      8 |
+      9 |   xtest('Lowercase', () => {
+
+      at Object.toEqual (exercises/practice/crypto-square/crypto-square.spec.js:6:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 skipped, 7 total
+Snapshots:   0 total
+Time:        0.385 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/crypto-square/i.

@@ -4,8 +4,22 @@
 //
 
 export class Matrix {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(matrixString) {
+    this.matrix = this.parseMatrixString(matrixString);
+  }
+
+  parseMatrixString(matrixString) {
+    return matrixString.split('\n').map(row => row.split(' ').map(Number));
+  }
+
+  get rows() {
+    return this.matrix;
+  }
+
+  get columns() {
+    return this.matrix[0].map((_, colIndex) => this.matrix.map(row => row[colIndex]));
+  }
+}
   }
 
   get rows() {

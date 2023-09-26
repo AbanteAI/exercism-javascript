@@ -4,11 +4,44 @@
 //
 
 export class Crypto {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(plaintext) {
+    this.plaintext = plaintext;
   }
 
-  get ciphertext() {
-    throw new Error('Remove this statement and implement this function');
+  normalizePlaintext() {
+    return this.plaintext.replace(/[\W]/g, '').toLowerCase();
+  }
+
+  size() {
+    const normalized = this.normalizePlaintext();
+    const length = normalized.length;
+    const columns = Math.ceil(Math.sqrt(length));
+    const rows = Math.ceil(length / columns);
+    return { columns, rows };
+  }
+
+  plaintextSegments() {
+    const normalized = this.normalizePlaintext();
+    const { columns, rows } = this.size();
+    const segments = [];
+    for (let i = 0; i < rows; i++) {
+      segments.push(normalized.slice(i * columns, (i + 1) * columns));
+    }
+    return segments;
+  }
+
+  ciphertext() {
+    const segments = this.plaintextSegments();
+    const { columns } = this.size();
+    let encrypted = '';
+    for (let i = 0; i < columns; i++) {
+      for (let j = 0; j < segments.length; j++) {
+        if (segments[j][i]) {
+          encrypted += segments[j][i];
+        }
+      }
+      encrypted += ' ';
+    }
+    return encrypted.trim();
   }
 }

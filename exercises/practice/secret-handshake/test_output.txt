@@ -1,0 +1,34 @@
+FAIL exercises/practice/secret-handshake/secret-handshake.spec.js
+  Secret Handshake
+    Create A Handshake For A Number
+      ✕ wink for 1 (2 ms)
+      ○ skipped double blink for 10
+      ○ skipped close your eyes for 100
+      ○ skipped jump for 1000
+      ○ skipped combine two actions
+      ○ skipped reverse two actions
+      ○ skipped reversing one action gives the same action
+      ○ skipped reversing no actions still gives no actions
+      ○ skipped all possible actions
+      ○ skipped reverse all possible actions
+      ○ skipped do nothing for zero
+
+  ● Secret Handshake › Create A Handshake For A Number › wink for 1
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const commands = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at commands (exercises/practice/secret-handshake/secret-handshake.js:7:9)
+      at Object.<anonymous> (exercises/practice/secret-handshake/secret-handshake.spec.js:6:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 skipped, 11 total
+Snapshots:   0 total
+Time:        0.282 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/secret-handshake/i.

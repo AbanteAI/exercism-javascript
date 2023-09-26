@@ -1,0 +1,52 @@
+FAIL exercises/practice/robot-simulator/robot-simulator.spec.js
+  Robot
+    Create robot
+      ✕ facing north by default (4 ms)
+      ○ skipped facing east
+      ○ skipped facing west, at origin
+      ○ skipped at negative position facing south
+      ○ skipped invalid robot bearing
+    Rotating clockwise
+      ○ skipped changes north to east
+      ○ skipped changes east to south
+      ○ skipped changes south to west
+      ○ skipped changes west to north
+    Rotating counter-clockwise
+      ○ skipped changes north to west
+      ○ skipped changes west to south
+      ○ skipped changes south to east
+      ○ skipped changes east to north
+    Moving forward one
+      ○ skipped advance when facing north
+      ○ skipped advance when facing south
+      ○ skipped advance when facing east
+      ○ skipped advance when facing west
+    Follow series of instructions
+      ○ skipped moving east and north from README
+      ○ skipped moving west and north
+      ○ skipped moving west and south
+      ○ skipped moving east and north
+      ○ skipped instruct many robots
+
+  ● Robot › Create robot › facing north by default
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "north"
+    Received: undefined
+
+      17 |     test('facing north by default', () => {
+      18 |       const robot = new Robot();
+    > 19 |       expect(robot.bearing).toEqual('north');
+         |                             ^
+      20 |     });
+      21 |
+      22 |     xtest('facing east', () => {
+
+      at Object.toEqual (exercises/practice/robot-simulator/robot-simulator.spec.js:19:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 21 skipped, 22 total
+Snapshots:   0 total
+Time:        0.254 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/robot-simulator/i.

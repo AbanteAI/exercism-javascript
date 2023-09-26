@@ -1,0 +1,35 @@
+FAIL exercises/practice/transpose/transpose.spec.js
+  Transpose
+    ✕ empty string (2 ms)
+    ○ skipped two characters in a row
+    ○ skipped two characters in a column
+    ○ skipped simple
+    ○ skipped single line
+    ○ skipped first line longer than second line
+    ○ skipped second line longer than first line
+    ○ skipped mixed line length
+    ○ skipped square
+    ○ skipped rectangle
+    ○ skipped triangle
+    ○ skipped jagged triangle
+    ○ skipped many lines
+
+  ● Transpose › empty string
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const transpose = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at transpose (exercises/practice/transpose/transpose.js:7:9)
+      at Object.<anonymous> (exercises/practice/transpose/transpose.spec.js:5:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 12 skipped, 13 total
+Snapshots:   0 total
+Time:        0.307 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/transpose/i.

@@ -1,0 +1,31 @@
+FAIL exercises/practice/proverb/proverb.spec.js
+  Proverb
+    ✕ zero pieces (2 ms)
+    ○ skipped one piece
+    ○ skipped two pieces
+    ○ skipped three pieces
+    ○ skipped the whole proverb
+    ○ skipped proverb is the same each time
+    ○ skipped four pieces modernized
+    ○ skipped the use of an optional qualifier in the final consequence
+
+  ● Proverb › zero pieces
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+       6 | export const proverb = (list) => {
+       7 |   let result = '';
+    >  8 |   for (let i = 0; i < list.length - 1; i++) {
+         |                            ^
+       9 |     result += `For want of a ${list[i]} the ${list[i + 1]} was lost.\n`;
+      10 |   }
+      11 |   if (list.length > 0) {
+
+      at length (exercises/practice/proverb/proverb.js:8:28)
+      at Object.<anonymous> (exercises/practice/proverb/proverb.spec.js:5:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 7 skipped, 8 total
+Snapshots:   0 total
+Time:        0.279 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/proverb/i.

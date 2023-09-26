@@ -1,0 +1,36 @@
+FAIL exercises/practice/anagram/anagram.spec.js
+  Anagram
+    ✕ no matches (2 ms)
+    ○ skipped detects two anagrams
+    ○ skipped does not detect anagram subsets
+    ○ skipped detects anagram
+    ○ skipped detects three anagrams
+    ○ skipped detects multiple anagrams with different case
+    ○ skipped does not detect non-anagrams with identical checksum
+    ○ skipped detects anagrams case-insensitively
+    ○ skipped detects anagrams using case-insensitive subject
+    ○ skipped detects anagrams using case-insensitive possible matches
+    ○ skipped does not detect an anagram if the original word is repeated
+    ○ skipped anagrams must use all letters exactly once
+    ○ skipped words are not anagrams of themselves (case-insensitive)
+    ○ skipped words other than themselves can be anagrams
+
+  ● Anagram › no matches
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const findAnagrams = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at findAnagrams (exercises/practice/anagram/anagram.js:7:9)
+      at Object.<anonymous> (exercises/practice/anagram/anagram.spec.js:6:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 13 skipped, 14 total
+Snapshots:   0 total
+Time:        0.317 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/anagram/i.

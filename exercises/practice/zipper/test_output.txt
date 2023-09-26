@@ -1,0 +1,42 @@
+FAIL exercises/practice/zipper/zipper.spec.js
+  Zipper
+    ✕ data is retained (2 ms)
+    ○ skipped left, right and value
+    ○ skipped dead end
+    ○ skipped tree from deep focus
+    ○ skipped traversing up from top
+    ○ skipped left, right and up
+    ○ skipped setValue
+    ○ skipped setValue after traversing up
+    ○ skipped setLeft with leaf
+    ○ skipped setRight with null
+    ○ skipped setRight with subtree
+    ○ skipped setValue on deep focus
+    ○ skipped left returns a new Zipper
+    ○ skipped right returns a new Zipper
+    ○ skipped setValue returns a new Zipper
+    ○ skipped setRight returns a new Zipper
+    ○ skipped setLeft returns a new Zipper
+    ○ skipped up returns a new Zipper
+    ○ skipped should return same zipper from different paths
+
+  ● Zipper › data is retained
+
+    Remove this statement and implement this function
+
+      10 |
+      11 |   static fromTree() {
+    > 12 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+      13 |   }
+      14 |
+      15 |   toTree() {
+
+      at Function.fromTree (exercises/practice/zipper/zipper.js:12:11)
+      at Object.fromTree (exercises/practice/zipper/zipper.spec.js:25:21)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 18 skipped, 19 total
+Snapshots:   0 total
+Time:        0.29 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/zipper/i.

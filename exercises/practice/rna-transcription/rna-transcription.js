@@ -3,6 +3,13 @@
 // convenience to get you started writing code faster.
 //
 
-export const toRna = () => {
-  throw new Error('Remove this statement and implement this function');
+export const toRna = (dnaStrand) => {
+  const complement = {
+    G: 'C',
+    C: 'G',
+    T: 'A',
+    A: 'U',
+  };
+
+  return dnaStrand.split('').map((nucleotide) => complement[nucleotide]).join('');
 };

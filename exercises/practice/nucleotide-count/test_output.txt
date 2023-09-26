@@ -1,0 +1,27 @@
+FAIL exercises/practice/nucleotide-count/nucleotide-count.spec.js
+  count all nucleotides in a strand
+    ✕ empty strand (2 ms)
+    ○ skipped can count one nucleotide in single-character input
+    ○ skipped strand with repeated nucleotide
+    ○ skipped strand with multiple nucleotides
+    ○ skipped strand with invalid nucleotides
+
+  ● count all nucleotides in a strand › empty strand
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export function countNucleotides(strand) {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | }
+      9 |
+
+      at countNucleotides (exercises/practice/nucleotide-count/nucleotide-count.js:7:9)
+      at Object.<anonymous> (exercises/practice/nucleotide-count/nucleotide-count.spec.js:5:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 skipped, 5 total
+Snapshots:   0 total
+Time:        0.276 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/nucleotide-count/i.

@@ -1,0 +1,28 @@
+FAIL exercises/practice/satellite/satellite.spec.js
+  Satellite
+    ✕ Empty tree (2 ms)
+    ○ skipped Tree with one item
+    ○ skipped Tree with many items
+    ○ skipped Reject traversals of different length
+    ○ skipped Reject inconsistent traversals of same length
+    ○ skipped Reject traversals with repeated items
+
+  ● Satellite › Empty tree
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const treeFromTraversals = (preorder, inorder) => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at treeFromTraversals (exercises/practice/satellite/satellite.js:7:9)
+      at Object.<anonymous> (exercises/practice/satellite/satellite.spec.js:5:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 skipped, 6 total
+Snapshots:   0 total
+Time:        0.273 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/satellite/i.

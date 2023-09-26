@@ -1,0 +1,41 @@
+FAIL exercises/practice/twelve-days/twelve-days.spec.js
+  TwelveDays
+    ✕ test verse first day a partridge in a pear tree (5 ms)
+    ○ skipped test verse second day two turtle doves
+    ○ skipped test verse third day three french hens
+    ○ skipped test verse fourth day four calling birds
+    ○ skipped test verse fifth day five gold rings
+    ○ skipped test verse sixth day six geese-a-laying
+    ○ skipped test verse seventh day seven swans-a-swimming
+    ○ skipped test verse eighth day eight maids-a-milking
+    ○ skipped test verse ninth day nine ladies dancing
+    ○ skipped test verse tenth day ten lords-a-leaping
+    ○ skipped test verse eleventh day eleven pipers piping
+    ○ skipped test verse twelfth day twelve drummers drumming
+    ○ skipped test lyrics recites first three verses of the song
+    ○ skipped test lyrics recites three verses from the middle of the song
+    ○ skipped test lyrics recites the whole song
+
+  ● TwelveDays › test verse first day a partridge in a pear tree
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.
+    "
+    Received: ["On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.", "On the second day of Christmas my true love gave to me: two Turtle Doves, and a Partridge in a Pear Tree.", "On the third day of Christmas my true love gave to me: three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.", "On the fourth day of Christmas my true love gave to me: four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.", "On the fifth day of Christmas my true love gave to me: five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.", "On the sixth day of Christmas my true love gave to me: six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.", "On the seventh day of Christmas my true love gave to me: seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.", "On the eighth day of Christmas my true love gave to me: eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.", "On the ninth day of Christmas my true love gave to me: nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.", "On the tenth day of Christmas my true love gave to me: ten Lords-a-Leaping, nine Ladies Dancing, eight Maids-a-Milking, seven Swans-a-Swimming, six Geese-a-Laying, five Gold Rings, four Calling Birds, three French Hens, two Turtle Doves, and a Partridge in a Pear Tree.", …]
+
+       5 |     const expectedVerseOne =
+       6 |       'On the first day of Christmas my true love gave to me: a Partridge in a Pear Tree.\n';
+    >  7 |     expect(recite(1)).toEqual(expectedVerseOne);
+         |                       ^
+       8 |   });
+       9 |
+      10 |   xtest('test verse second day two turtle doves', () => {
+
+      at Object.toEqual (exercises/practice/twelve-days/twelve-days.spec.js:7:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 14 skipped, 15 total
+Snapshots:   0 total
+Time:        0.324 s
+Ran all test suites matching /exercises\/practice\/twelve-days/i.

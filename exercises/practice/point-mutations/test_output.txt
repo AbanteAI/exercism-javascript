@@ -1,0 +1,31 @@
+FAIL exercises/practice/point-mutations/point-mutations.spec.js
+  DNA
+    ✕ no difference between empty strands (2 ms)
+    ○ skipped no difference between identical strands
+    ○ skipped complete hamming distance in small strand
+    ○ skipped hamming distance in off by one strand
+    ○ skipped small hamming distance in middle somewhere
+    ○ skipped larger distance
+    ○ skipped shortens other strand when longer
+    ○ skipped shortens original strand when longer
+
+  ● DNA › no difference between empty strands
+
+    Remove this statement and implement this function
+
+       6 | export class DNA {
+       7 |   constructor() {
+    >  8 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+       9 |   }
+      10 |
+      11 |   hammingDistance() {
+
+      at new DNA (exercises/practice/point-mutations/point-mutations.js:8:11)
+      at Object.<anonymous> (exercises/practice/point-mutations/point-mutations.spec.js:5:17)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 7 skipped, 8 total
+Snapshots:   0 total
+Time:        0.281 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/point-mutations/i.

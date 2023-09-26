@@ -4,41 +4,69 @@
 //
 
 export class Element {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(value, next = null) {
+    this._value = value;
+    this._next = next;
   }
 
   get value() {
-    throw new Error('Remove this statement and implement this function');
+    return this._value;
   }
 
   get next() {
-    throw new Error('Remove this statement and implement this function');
+    return this._next;
   }
+}
 }
 
 export class List {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this._head = null;
+    this._length = 0;
   }
 
   add(nextValue) {
-    throw new Error('Remove this statement and implement this function');
+    const newElement = new Element(nextValue);
+    if (this._head === null) {
+      this._head = newElement;
+    } else {
+      let currentElement = this._head;
+      while (currentElement.next !== null) {
+        currentElement = currentElement.next;
+      }
+      currentElement._next = newElement;
+    }
+    this._length++;
   }
 
   get length() {
-    throw new Error('Remove this statement and implement this function');
+    return this._length;
   }
 
   get head() {
-    throw new Error('Remove this statement and implement this function');
+    return this._head;
   }
 
   toArray() {
-    throw new Error('Remove this statement and implement this function');
+    const array = [];
+    let currentElement = this._head;
+    while (currentElement !== null) {
+      array.push(currentElement.value);
+      currentElement = currentElement.next;
+    }
+    return array;
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    let prevElement = null;
+    let currentElement = this._head;
+    while (currentElement !== null) {
+      const nextElement = currentElement.next;
+      currentElement._next = prevElement;
+      prevElement = currentElement;
+      currentElement = nextElement;
+    }
+    this._head = prevElement;
   }
+}
 }

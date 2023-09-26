@@ -1,0 +1,19 @@
+PASS exercises/practice/scrabble-score/scrabble-score.spec.js
+  Scrabble
+    ✓ lowercase letter (3 ms)
+    ○ skipped uppercase letter
+    ○ skipped valuable letter
+    ○ skipped short word
+    ○ skipped short, valuable word
+    ○ skipped medium word
+    ○ skipped medium, valuable word
+    ○ skipped long, mixed-case word
+    ○ skipped english-like word
+    ○ skipped empty input
+    ○ skipped entire alphabet available
+
+Test Suites: 1 passed, 1 total
+Tests:       10 skipped, 1 passed, 11 total
+Snapshots:   0 total
+Time:        0.711 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/scrabble-score/i.

@@ -1,0 +1,41 @@
+FAIL exercises/practice/phone-number/phone-number.spec.js
+  Phone Number
+    Cleanup user-entered phone numbers
+      ✕ cleans the number (2 ms)
+      ○ skipped cleans numbers with dots
+      ○ skipped cleans numbers with multiple spaces
+      ○ skipped invalid when 9 digits
+      ○ skipped invalid when 11 digits does not start with a 1
+      ○ skipped valid when 11 digits and starting with 1
+      ○ skipped valid when 11 digits and starting with 1 even with punctuation
+      ○ skipped invalid when more than 11 digits
+      ○ skipped invalid with letters
+      ○ skipped invalid with punctuations
+      ○ skipped invalid if area code starts with 0
+      ○ skipped invalid if area code starts with 1
+      ○ skipped invalid if exchange code starts with 0
+      ○ skipped invalid if exchange code starts with 1
+      ○ skipped invalid if area code starts with 0 on valid 11-digit number
+      ○ skipped invalid if area code starts with 1 on valid 11-digit number
+      ○ skipped invalid if exchange code starts with 0 on valid 11-digit number
+      ○ skipped invalid if exchange code starts with 1 on valid 11-digit number
+
+  ● Phone Number › Cleanup user-entered phone numbers › cleans the number
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const clean = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at clean (exercises/practice/phone-number/phone-number.js:7:9)
+      at Object.<anonymous> (exercises/practice/phone-number/phone-number.spec.js:6:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 17 skipped, 18 total
+Snapshots:   0 total
+Time:        0.322 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/phone-number/i.

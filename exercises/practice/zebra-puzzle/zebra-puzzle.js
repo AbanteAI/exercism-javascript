@@ -5,7 +5,61 @@
 
 export class ZebraPuzzle {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.residents = [
+      {
+        nationality: "",
+        color: "",
+        pet: "",
+        drink: "",
+        smoke: ""
+      },
+      {
+        nationality: "",
+        color: "",
+        pet: "",
+        drink: "",
+        smoke: ""
+      },
+      {
+        nationality: "",
+        color: "",
+        pet: "",
+        drink: "",
+        smoke: ""
+      },
+      {
+        nationality: "",
+        color: "",
+        pet: "",
+        drink: "",
+        smoke: ""
+      },
+      {
+        nationality: "",
+        color: "",
+        pet: "",
+        drink: "",
+        smoke: ""
+      }
+    ];
+  }
+
+  waterDrinker() {
+    for (const resident of this.residents) {
+      if (resident.drink === "water") {
+        return resident.nationality;
+      }
+    }
+  }
+
+  zebraOwner() {
+    for (const resident of this.residents) {
+      if (resident.pet === "zebra") {
+        return resident.nationality;
+      }
+    }
+  }
+}
   }
 
   waterDrinker() {

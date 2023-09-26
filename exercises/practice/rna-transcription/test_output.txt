@@ -1,0 +1,14 @@
+PASS exercises/practice/rna-transcription/rna-transcription.spec.js
+  Transcription
+    ✓ empty rna sequence (4 ms)
+    ○ skipped transcribes cytosine to guanine
+    ○ skipped transcribes guanine to cytosine
+    ○ skipped transcribes thymine to adenine
+    ○ skipped transcribes adenine to uracil
+    ○ skipped transcribes all dna nucleotides to their rna complements
+
+Test Suites: 1 passed, 1 total
+Tests:       5 skipped, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.682 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/rna-transcription/i.
