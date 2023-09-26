@@ -4,43 +4,70 @@
 //
 
 export class CustomSet {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    constructor() {
+      this.set = new Set();
+    }
 
-  empty() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    empty() {
+      return this.set.size === 0;
+    }
 
-  contains() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    contains(element) {
+      return this.set.has(element);
+    }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    add(element) {
+      this.set.add(element);
+      return this;
+    }
 
-  subset() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    subset(otherSet) {
+      for (let elem of this.set) {
+        if (!otherSet.contains(elem)) return false;
+      }
+      return true;
+    }
 
-  disjoint() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    disjoint(otherSet) {
+      for (let elem of this.set) {
+        if (otherSet.contains(elem)) return false;
+      }
+      return true;
+    }
 
-  eql() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    eql(otherSet) {
+      if (this.set.size !== otherSet.set.size) return false;
+      return this.subset(otherSet);
+    }
 
-  union() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    union(otherSet) {
+      const resultSet = new CustomSet();
+      for (let elem of this.set) {
+        resultSet.add(elem);
+      }
+      for (let elem of otherSet.set) {
+        resultSet.add(elem);
+      }
+      return resultSet;
+    }
 
-  intersection() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    intersection(otherSet) {
+      const resultSet = new CustomSet();
+      for (let elem of this.set) {
+        if (otherSet.contains(elem)) {
+          resultSet.add(elem);
+        }
+      }
+      return resultSet;
+    }
 
-  difference() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    difference(otherSet) {
+      const resultSet = new CustomSet();
+      for (let elem of this.set) {
+        if (!otherSet.contains(elem)) {
+          resultSet.add(elem);
+        }
+      }
+      return resultSet;
+    }
 }

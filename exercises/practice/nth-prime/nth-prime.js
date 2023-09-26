@@ -3,6 +3,25 @@
 // convenience to get you started writing code faster.
 //
 
-export const prime = () => {
-  throw new Error('Remove this statement and implement this function');
+const isPrime = (num) => {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+};
+export const prime = (n) => {
+  if (n < 1) throw new Error("Invalid input");
+  let count = 0;
+  let num = 2;
+
+  while (count < n) {
+    if (isPrime(num)) {
+      count++;
+    }
+    if (count === n) {
+      return num;
+    }
+    num++;
+  }
 };

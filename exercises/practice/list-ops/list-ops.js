@@ -5,38 +5,68 @@
 
 export class List {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.values = [];
   }
 
-  append() {
-    throw new Error('Remove this statement and implement this function');
+  append(list) {
+    const result = new List();
+    result.values.push(...this.values, ...list.values);
+    return result;
   }
 
-  concat() {
-    throw new Error('Remove this statement and implement this function');
+  concat(lists) {
+    const result = new List();
+    for (const list of lists) {
+      result.append(list);
+    }
+    return result;
   }
 
-  filter() {
-    throw new Error('Remove this statement and implement this function');
+  filter(predicate) {
+    const result = new List();
+    for (const value of this.values) {
+      if (predicate(value)) {
+        result.values.push(value);
+      }
+    }
+    return result;
   }
 
-  map() {
-    throw new Error('Remove this statement and implement this function');
+  map(fn) {
+    const result = new List();
+    for (const value of this.values) {
+      result.values.push(fn(value));
+    }
+    return result;
   }
 
   length() {
-    throw new Error('Remove this statement and implement this function');
+    let count = 0;
+    for (const _ of this.values) {
+      count++;
+    }
+    return count;
   }
 
-  foldl() {
-    throw new Error('Remove this statement and implement this function');
+  foldl(fn, accumulator) {
+    for (const value of this.values) {
+      accumulator = fn(accumulator, value);
+    }
+    return accumulator;
   }
 
-  foldr() {
-    throw new Error('Remove this statement and implement this function');
+  foldr(fn, accumulator) {
+    for (const value of this.values.reverse()) {
+      accumulator = fn(value, accumulator);
+    }
+    return accumulator;
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    const result = new List();
+    for (const value of this.values) {
+      result.values.unshift(value);
+    }
+    return result;
   }
 }

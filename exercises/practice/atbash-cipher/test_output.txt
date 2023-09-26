@@ -1,0 +1,24 @@
+PASS exercises/practice/atbash-cipher/atbash-cipher.spec.js
+  Atbash Cipher
+    encode
+      ✓ encode yes (4 ms)
+      ○ skipped encode no
+      ○ skipped encode OMG
+      ○ skipped encode spaces
+      ○ skipped encode mindblowingly
+      ○ skipped encode numbers
+      ○ skipped encode deep thought
+      ○ skipped encode all the letters
+    decode
+      ○ skipped decode exercism
+      ○ skipped decode a sentence
+      ○ skipped decode numbers
+      ○ skipped decode all the letters
+      ○ skipped decode with too many spaces
+      ○ skipped decode with no spaces
+
+Test Suites: 1 passed, 1 total
+Tests:       13 skipped, 1 passed, 14 total
+Snapshots:   0 total
+Time:        0.673 s
+Ran all test suites matching /exercises\/practice\/atbash-cipher/i.

@@ -3,40 +3,45 @@
 // convenience to get you started writing code faster.
 //
 
-export const abilityModifier = () => {
-  throw new Error('Remove this statement and implement this function');
+export const abilityModifier = (constitution) => {
+  return Math.floor((constitution - 10) / 2);
 };
 
 export class Character {
   static rollAbility() {
-    throw new Error('Remove this statement and implement this function');
+    const rolls = [];
+    for (let i = 0; i < 4; i++) {
+      rolls.push(Math.floor(Math.random() * 6) + 1);
+    }
+    rolls.sort((a, b) => b - a);
+    return rolls[0] + rolls[1] + rolls[2];
   }
 
   get strength() {
-    throw new Error('Remove this statement and implement this function');
+    return Character.rollAbility();
   }
 
   get dexterity() {
-    throw new Error('Remove this statement and implement this function');
+    return Character.rollAbility();
   }
 
   get constitution() {
-    throw new Error('Remove this statement and implement this function');
+    return Character.rollAbility();
   }
 
   get intelligence() {
-    throw new Error('Remove this statement and implement this function');
+    return Character.rollAbility();
   }
 
   get wisdom() {
-    throw new Error('Remove this statement and implement this function');
+    return Character.rollAbility();
   }
 
   get charisma() {
-    throw new Error('Remove this statement and implement this function');
+    return Character.rollAbility();
   }
 
   get hitpoints() {
-    throw new Error('Remove this statement and implement this function');
+    return 10 + abilityModifier(this.constitution);
   }
 }

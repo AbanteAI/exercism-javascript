@@ -1,0 +1,21 @@
+PASS exercises/practice/largest-series-product/largest-series-product.spec.js
+  Largest Series Product
+    ✓ finds the largest product if span equals length (7 ms)
+    ○ skipped can find the largest product of 2 with numbers in order
+    ○ skipped can find the largest product of 2
+    ○ skipped can find the largest product of 3 with numbers in order
+    ○ skipped can find the largest product of 3
+    ○ skipped can find the largest product of 5 with numbers in order
+    ○ skipped can get the largest product of a big number
+    ○ skipped reports zero if the only digits are zero
+    ○ skipped reports zero if all spans include zero
+    ○ skipped rejects span longer than string length
+    ○ skipped rejects empty string and nonzero span
+    ○ skipped rejects invalid character in digits
+    ○ skipped rejects negative span
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 1 passed, 13 total
+Snapshots:   0 total
+Time:        0.63 s
+Ran all test suites matching /exercises\/practice\/largest-series-product/i.

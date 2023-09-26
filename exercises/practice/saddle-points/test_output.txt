@@ -1,0 +1,17 @@
+PASS exercises/practice/saddle-points/saddle-points.spec.js
+  Saddle Points
+    ✓ Can identify single saddle point (2 ms)
+    ○ skipped Can identify that empty matrix has no saddle points
+    ○ skipped Can identify lack of saddle points when there are none
+    ○ skipped Can identify multiple saddle points in a column
+    ○ skipped Can identify multiple saddle points in a row
+    ○ skipped Can identify saddle point in bottom right corner
+    ○ skipped Can identify saddle points in a non square matrix
+    ○ skipped Can identify that saddle points in a single column matrix are those with the minimum value
+    ○ skipped Can identify that saddle points in a single row matrix are those with the maximum value
+
+Test Suites: 1 passed, 1 total
+Tests:       8 skipped, 1 passed, 9 total
+Snapshots:   0 total
+Time:        0.651 s
+Ran all test suites matching /exercises\/practice\/saddle-points/i.

@@ -1,0 +1,17 @@
+PASS exercises/practice/robot-name/robot-name.spec.js
+  Robot
+    ✓ has a name (3 ms)
+    ○ skipped name is the same each time
+    ○ skipped different robots have different names
+    ○ skipped is able to reset the name
+    ○ skipped should set a unique name after reset
+    ○ skipped internal name cannot be modified
+    ○ skipped new names should not be sequential
+    ○ skipped names from reset should not be sequential
+    ○ skipped all the names can be generated
+
+Test Suites: 1 passed, 1 total
+Tests:       8 skipped, 1 passed, 9 total
+Snapshots:   0 total
+Time:        0.554 s
+Ran all test suites matching /exercises\/practice\/robot-name/i.

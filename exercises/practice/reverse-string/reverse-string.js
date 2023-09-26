@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const reverseString = () => {
-  throw new Error('Remove this statement and implement this function');
+export const reverseString = (inputString) => {
+  return inputString.split('').reverse().join('');
 };

@@ -4,15 +4,27 @@
 //
 
 export class Allergies {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(score) {
+    this.score = score;
   }
 
   list() {
-    throw new Error('Remove this statement and implement this function');
+    const allergens = [
+      { name: 'eggs', value: 1 },
+      { name: 'peanuts', value: 2 },
+      { name: 'shellfish', value: 4 },
+      { name: 'strawberries', value: 8 },
+      { name: 'tomatoes', value: 16 },
+      { name: 'chocolate', value: 32 },
+      { name: 'pollen', value: 64 },
+      { name: 'cats', value: 128 },
+    ];
+
+    return allergens.filter(allergen => (this.score & allergen.value) !== 0).map(allergen => allergen.name);
   }
 
-  allergicTo() {
-    throw new Error('Remove this statement and implement this function');
+  allergicTo(allergenName) {
+    const allergen = this.list().find(name => name === allergenName);
+    return allergen !== undefined;
   }
 }

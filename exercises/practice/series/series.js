@@ -5,10 +5,18 @@
 
 export class Series {
   constructor(series) {
-    throw new Error('Remove this statement and implement this function');
+    this.series = series;
   }
 
   slices(sliceLength) {
-    throw new Error('Remove this statement and implement this function');
+    if (sliceLength > this.series.length) {
+      throw new Error('Slice length too large for the series');
+    }
+
+    let slices = [];
+    for (let i = 0; i <= this.series.length - sliceLength; i++) {
+      slices.push(this.series.slice(i, i + sliceLength).split('').map(Number));
+    }
+    return slices;
   }
 }

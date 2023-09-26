@@ -4,11 +4,33 @@
 //
 
 export class Bowling {
-  roll() {
-    throw new Error('Remove this statement and implement this function');
+  constructor() {
+    this.rolls = [];
+  }
+  roll(pins) {
+    this.rolls.push(pins);
   }
 
   score() {
-    throw new Error('Remove this statement and implement this function');
+    let score = 0;
+    let rollIndex = 0;
+
+    for (let frame = 0; frame < 10; frame++) {
+      if (this.rolls[rollIndex] === 10) {
+        // Strike
+        score += 10 + this.rolls[rollIndex + 1] + this.rolls[rollIndex + 2];
+        rollIndex += 1;
+      } else if (this.rolls[rollIndex] + this.rolls[rollIndex + 1] === 10) {
+        // Spare
+        score += 10 + this.rolls[rollIndex + 2];
+        rollIndex += 2;
+      } else {
+        // Open frame
+        score += this.rolls[rollIndex] + this.rolls[rollIndex + 1];
+        rollIndex += 2;
+      }
+    }
+
+    return score;
   }
 }

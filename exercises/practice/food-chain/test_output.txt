@@ -1,0 +1,18 @@
+PASS exercises/practice/food-chain/food-chain.spec.js
+  Food Chain
+    ✓ fly (3 ms)
+    ○ skipped spider
+    ○ skipped bird
+    ○ skipped cat
+    ○ skipped dog
+    ○ skipped goat
+    ○ skipped cow
+    ○ skipped horse
+    ○ skipped multiple verses
+    ○ skipped the whole song
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        0.682 s
+Ran all test suites matching /exercises\/practice\/food-chain/i.

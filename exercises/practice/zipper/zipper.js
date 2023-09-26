@@ -4,43 +4,63 @@
 //
 
 export class Zipper {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(tree, path = []) {
+    this.tree = tree;
+    this.path = path;
   }
 
-  static fromTree() {
-    throw new Error('Remove this statement and implement this function');
+  static fromTree(tree) {
+    return new Zipper(tree);
   }
 
   toTree() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree;
   }
 
   value() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree.value;
   }
 
   left() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree.left ? new Zipper(this.tree.left, this.path.concat('L')) : null;
   }
 
   right() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree.right ? new Zipper(this.tree.right, this.path.concat('R')) : null;
   }
 
   up() {
-    throw new Error('Remove this statement and implement this function');
+    if (this.path.length === 0) return null;
+    let current = this.tree;
+    let path = this.path.slice(0, -1);
+    let parent = path.reduce((tree, direction) => (direction === 'L' ? tree.left : tree.right), this.tree);
+    if (this.path[this.path.length - 1] === 'L') {
+      parent.right = current;
+    } else {
+      parent.left = current;
+    }
+    return new Zipper(parent, path);
   }
 
-  setValue() {
-    throw new Error('Remove this statement and implement this function');
+  setValue(value) {
+    return new Zipper({ ...this.tree, value }, this.path);
   }
 
-  setLeft() {
-    throw new Error('Remove this statement and implement this function');
+  setLeft(left) {
+    return new Zipper({ ...this.tree, left }, this.path);
   }
 
-  setRight() {
-    throw new Error('Remove this statement and implement this function');
+  setRight(right) {
+    return new Zipper({ ...this.tree, right }, this.path);
+  }
+  delete() {
+    let path = this.path.slice(0, -1);
+    let parent = path.reduce((tree, direction) => (direction === 'L' ? tree.left : tree.right), this.tree);
+    if (this.path[this.path.length - 1] === 'L') {
+      parent.left = null;
+    } else {
+      parent.right = null;
+    }
+    return new Zipper(parent, path);
   }
 }

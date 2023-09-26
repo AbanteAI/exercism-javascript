@@ -1,0 +1,25 @@
+PASS exercises/practice/isbn-verifier/isbn-verifier.spec.js
+  ISBN Verifier
+    ✓ valid isbn (5 ms)
+    ○ skipped invalid isbn check digit
+    ○ skipped valid isbn number with a check digit of 10
+    ○ skipped check digit is a character other than X
+    ○ skipped invalid character in isbn
+    ○ skipped X is only valid as a check digit
+    ○ skipped valid isbn without separating dashes
+    ○ skipped isbn without separating dashes and X as check digit
+    ○ skipped isbn without check digit and dashes
+    ○ skipped too long isbn and no dashes
+    ○ skipped too short isbn
+    ○ skipped isbn without check digit
+    ○ skipped check digit of X should not be used for 0
+    ○ skipped empty isbn
+    ○ skipped input is 9 characters
+    ○ skipped invalid characters are not ignored
+    ○ skipped input is too long but contains a valid isbn
+
+Test Suites: 1 passed, 1 total
+Tests:       16 skipped, 1 passed, 17 total
+Snapshots:   0 total
+Time:        0.6 s
+Ran all test suites matching /exercises\/practice\/isbn-verifier/i.

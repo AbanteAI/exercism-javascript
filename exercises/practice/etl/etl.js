@@ -3,6 +3,15 @@
 // convenience to get you started writing code faster.
 //
 
-export const transform = () => {
-  throw new Error('Remove this statement and implement this function');
+export const transform = (oldData) => {
+  const newData = {};
+
+  for (const score in oldData) {
+    const letters = oldData[score];
+    for (const letter of letters) {
+      newData[letter.toLowerCase()] = parseInt(score);
+    }
+  }
+
+  return newData;
 };

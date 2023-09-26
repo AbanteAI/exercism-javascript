@@ -1,0 +1,23 @@
+PASS exercises/practice/run-length-encoding/run-length-encoding.spec.js
+  run-length encode a string
+    ✓ encode empty string (2 ms)
+    ○ skipped single characters only are encoded without count
+    ○ skipped encode string with no single characters
+    ○ skipped encode string with single characters mixed with repeated characters
+    ○ skipped encode string with multiple whitespaces
+    ○ skipped encode string with lowercase characters
+  run-length decode a string
+    ○ skipped decode empty string
+    ○ skipped decode string with single characters only
+    ○ skipped decode string with no single characters
+    ○ skipped decode string with single characters mixed with repeated characters
+    ○ skipped decode string with multiple whitespaces
+    ○ skipped decode string with lowercase characters
+  run-length encode and then decode
+    ○ skipped encode followed by decode gives original string
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 1 passed, 13 total
+Snapshots:   0 total
+Time:        0.59 s
+Ran all test suites matching /exercises\/practice\/run-length-encoding/i.

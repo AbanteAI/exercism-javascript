@@ -1,0 +1,64 @@
+PASS exercises/practice/clock/clock.spec.js
+  Clock
+    Creating a new clock with an initial time
+      ✓ on the hour (2 ms)
+      ○ skipped past the hour
+      ○ skipped midnight is zero hours
+      ○ skipped hour rolls over
+      ○ skipped hour rolls over continuously
+      ○ skipped sixty minutes is next hour
+      ○ skipped minutes roll over
+      ○ skipped minutes roll over continuously
+      ○ skipped hour and minutes roll over
+      ○ skipped hour and minutes roll over continuously
+      ○ skipped hour and minutes roll over to exactly midnight
+      ○ skipped negative hour
+      ○ skipped negative hour rolls over
+      ○ skipped negative hour rolls over continuously
+      ○ skipped negative minutes
+      ○ skipped negative minutes rolls over
+      ○ skipped negative minutes rolls over continuously
+      ○ skipped negative sixty minutes is previous hour
+      ○ skipped negative hour and minutes both roll over
+      ○ skipped negative hour and minutes both roll over continuously
+    Adding minutes
+      ○ skipped add minutes
+      ○ skipped add no minutes
+      ○ skipped add to next hour
+      ○ skipped add more than one hour
+      ○ skipped add more than two hours with carry
+      ○ skipped add across midnight
+      ○ skipped add more than one day (1500 min = 25 hrs)
+      ○ skipped add more than two days
+    Subtract minutes
+      ○ skipped subtract minutes
+      ○ skipped subtract to previous hour
+      ○ skipped subtract more than an hour
+      ○ skipped subtract across midnight
+      ○ skipped subtract more than two hours
+      ○ skipped subtract more than two hours with borrow
+      ○ skipped subtract more than one day (1500 min = 25 hrs)
+      ○ skipped subtract more than two days
+    Compare two clocks for equality
+      ○ skipped clocks with same time
+      ○ skipped clocks a minute apart
+      ○ skipped clocks an hour apart
+      ○ skipped clocks with hour overflow
+      ○ skipped clocks with hour overflow by several days
+      ○ skipped clocks with negative hour
+      ○ skipped clocks with negative hour that wraps
+      ○ skipped clocks with negative hour that wraps multiple times
+      ○ skipped clocks with minute overflow
+      ○ skipped clocks with minute overflow by several days
+      ○ skipped clocks with negative minute
+      ○ skipped clocks with negative minute that wraps
+      ○ skipped clocks with negative minute that wraps multiple times
+      ○ skipped clocks with negative hours and minutes
+      ○ skipped clocks with negative hours and minutes that wrap
+      ○ skipped full clock and zeroed clock
+
+Test Suites: 1 passed, 1 total
+Tests:       51 skipped, 1 passed, 52 total
+Snapshots:   0 total
+Time:        0.583 s
+Ran all test suites matching /exercises\/practice\/clock/i.

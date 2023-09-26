@@ -4,11 +4,44 @@
 //
 
 export class TwoBucket {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(bucketOneSize, bucketTwoSize, goal, startBucket) {
+    this.bucketOneSize = bucketOneSize;
+    this.bucketTwoSize = bucketTwoSize;
+    this.goal = goal;
+    this.startBucket = startBucket;
+    this.bucketOne = 0;
+    this.bucketTwo = 0;
   }
 
   solve() {
-    throw new Error('Remove this statement and implement this function');
+    let actions = 0;
+    if (this.startBucket === 'one') {
+      this.bucketOne = this.bucketOneSize;
+    } else {
+      this.bucketTwo = this.bucketTwoSize;
+    }
+    actions++;
+
+    while (this.bucketOne !== this.goal && this.bucketTwo !== this.goal) {
+      if (this.bucketOne === 0) {
+        this.bucketOne = this.bucketOneSize;
+      } else if (this.bucketTwo === this.bucketTwoSize) {
+        this.bucketTwo = 0;
+      } else {
+        const transfer = Math.min(this.bucketOne, this.bucketTwoSize - this.bucketTwo);
+        this.bucketOne -= transfer;
+        this.bucketTwo += transfer;
+      }
+      actions++;
+    }
+
+    const resultBucket = this.bucketOne === this.goal ? 'one' : 'two';
+    const otherBucket = resultBucket === 'one' ? this.bucketTwo : this.bucketOne;
+
+    return {
+      moves: actions,
+      goalBucket: resultBucket,
+      otherBucket: otherBucket
+    };
   }
 }

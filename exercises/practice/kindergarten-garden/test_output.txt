@@ -1,0 +1,34 @@
+PASS exercises/practice/kindergarten-garden/kindergarten-garden.spec.js
+  partial Garden
+    ✓ garden with single student (2 ms)
+    ○ skipped different garden with single student
+    ○ skipped garden with two students
+    multiple students for the same garden with three students
+      ○ skipped second student's garden
+      ○ skipped third student's garden
+  full garden
+    ○ skipped for Alice, first student's garden
+    ○ skipped for Bob, second student's garden
+    ○ skipped for Charlie
+    ○ skipped for David
+    ○ skipped for Eve
+    ○ skipped for Fred
+    ○ skipped for Ginny
+    ○ skipped for Harriet
+    ○ skipped for Ileana
+    ○ skipped for Joseph
+    ○ skipped for Kincaid, second to last student's garden
+    ○ skipped for Larry, last student's garden
+  disordered class
+    ○ skipped for Patricia
+    ○ skipped for Roger
+    ○ skipped for Samantha
+    ○ skipped for Xander
+  Two gardens, different students
+    ○ skipped Bob and Charlie for each garden
+
+Test Suites: 1 passed, 1 total
+Tests:       21 skipped, 1 passed, 22 total
+Snapshots:   0 total
+Time:        0.702 s
+Ran all test suites matching /exercises\/practice\/kindergarten-garden/i.

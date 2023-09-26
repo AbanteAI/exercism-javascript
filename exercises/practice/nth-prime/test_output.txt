@@ -1,0 +1,13 @@
+PASS exercises/practice/nth-prime/nth-prime.spec.js
+  nth-prime
+    ✓ first prime (3 ms)
+    ○ skipped second prime
+    ○ skipped sixth prime
+    ○ skipped big prime
+    ○ skipped there is no zeroth prime
+
+Test Suites: 1 passed, 1 total
+Tests:       4 skipped, 1 passed, 5 total
+Snapshots:   0 total
+Time:        0.568 s
+Ran all test suites matching /exercises\/practice\/nth-prime/i.

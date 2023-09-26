@@ -5,14 +5,25 @@
 
 export class Forth {
   constructor() {
-    throw Error('Remove this statement and implement this function');
+    this.stack = [];
+    this.words = {};
   }
 
-  evaluate() {
-    throw Error('Remove this statement and implement this function');
+  evaluate(input) {
+    input.split(' ').forEach(token => {
+      if (parseInt(token)) {
+        this.stack.push(parseInt(token));
+      } else {
+        let word = token.toUpperCase();
+        if (this.words[word]) {
+          this.words[word]();
+        } else {
+          throw Error(`Unknown word: ${word}`);
+        }
+      }
+    });
   }
 
   get stack() {
-    throw Error('Remove this statement and implement this function');
+    return this.stack.slice();
   }
-}

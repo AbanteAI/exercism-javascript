@@ -1,0 +1,36 @@
+PASS exercises/practice/variable-length-quantity/variable-length-quantity.spec.js
+  VariableLengthQuantity
+    Encode a series of integers, producing a series of bytes.
+      ✓ zero (4 ms)
+      ○ skipped arbitrary single byte
+      ○ skipped largest single byte
+      ○ skipped smallest double byte
+      ○ skipped arbitrary double byte
+      ○ skipped largest double byte
+      ○ skipped smallest triple byte
+      ○ skipped arbitrary triple byte
+      ○ skipped largest triple byte
+      ○ skipped smallest quadruple byte
+      ○ skipped arbitrary quadruple byte
+      ○ skipped largest quadruple byte
+      ○ skipped smallest quintuple byte
+      ○ skipped arbitrary quintuple byte
+      ○ skipped maximum 32-bit integer input
+      ○ skipped two single-byte values
+      ○ skipped two multi-byte values
+      ○ skipped many multi-byte values
+    Decode a series of bytes, producing a series of integers.
+      ○ skipped one byte
+      ○ skipped two bytes
+      ○ skipped three bytes
+      ○ skipped four bytes
+      ○ skipped maximum 32-bit integer
+      ○ skipped incomplete sequence causes error
+      ○ skipped incomplete sequence causes error, even if value is zero
+      ○ skipped multiple values
+
+Test Suites: 1 passed, 1 total
+Tests:       25 skipped, 1 passed, 26 total
+Snapshots:   0 total
+Time:        0.925 s
+Ran all test suites matching /exercises\/practice\/variable-length-quantity/i.

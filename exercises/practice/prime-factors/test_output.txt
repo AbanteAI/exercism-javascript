@@ -1,0 +1,20 @@
+PASS exercises/practice/prime-factors/prime-factors.spec.js
+  returns prime factors for the given input number
+    ✓ no factors (2 ms)
+    ○ skipped prime number
+    ○ skipped another prime number
+    ○ skipped square of a prime
+    ○ skipped product of first prime
+    ○ skipped cube of a prime
+    ○ skipped product of second prime
+    ○ skipped product of third prime
+    ○ skipped product of first prime and second prime
+    ○ skipped product of primes and non-primes
+    ○ skipped product of primes
+    ○ skipped factors include a large prime
+
+Test Suites: 1 passed, 1 total
+Tests:       11 skipped, 1 passed, 12 total
+Snapshots:   0 total
+Time:        0.579 s
+Ran all test suites matching /exercises\/practice\/prime-factors/i.

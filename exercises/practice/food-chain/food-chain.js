@@ -4,11 +4,43 @@
 //
 
 export class Song {
-  verse() {
-    throw new Error('Remove this statement and implement this function');
+  constructor() {
+    this.animals = [
+      { name: "fly", phrase: "I don't know why she swallowed the fly. Perhaps she'll die." },
+      { name: "spider", phrase: "It wriggled and jiggled and tickled inside her." },
+      { name: "bird", phrase: "How absurd to swallow a bird!" },
+      { name: "cat", phrase: "Imagine that, to swallow a cat!" },
+      { name: "dog", phrase: "What a hog, to swallow a dog!" },
+      { name: "goat", phrase: "Just opened her throat and swallowed a goat!" },
+      { name: "cow", phrase: "I don't know how she swallowed a cow!" },
+      { name: "horse", phrase: "She's dead, of course!" },
+    ];
   }
 
-  verses() {
-    throw new Error('Remove this statement and implement this function');
+  verse(n) {
+    let lyrics = `I know an old lady who swallowed a ${this.animals[n - 1].name}.\n${this.animals[n - 1].phrase}\n`;
+
+    if (n === 1 || n === 8) {
+      return lyrics;
+    }
+
+    for (let i = n - 1; i > 0; i--) {
+      let line = `She swallowed the ${this.animals[i].name} to catch the ${this.animals[i - 1].name}`;
+      if (i === 2) {
+        line += " that wriggled and jiggled and tickled inside her";
+      }
+      lyrics += `${line}.\n`;
+    }
+
+    lyrics += this.animals[0].phrase + "\n";
+    return lyrics;
+  }
+
+  verses(start, end) {
+    let lyrics = "";
+    for (let i = start; i <= end; i++) {
+      lyrics += this.verse(i) + "\n";
+    }
+    return lyrics;
   }
 }

@@ -1,0 +1,5 @@
+Test Suites: 1 skipped, 0 of 1 total
+Tests:       10 skipped, 10 total
+Snapshots:   0 total
+Time:        0.57 s
+Ran all test suites matching /exercises\/practice\/flatten-array/i.

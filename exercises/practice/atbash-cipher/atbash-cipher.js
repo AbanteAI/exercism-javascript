@@ -3,10 +3,36 @@
 // convenience to get you started writing code faster.
 //
 
-export const encode = () => {
-  throw new Error('Remove this statement and implement this function');
+export const encode = (input) => {
+  const plaintext = 'abcdefghijklmnopqrstuvwxyz';
+  const cipher = 'zyxwvutsrqponmlkjihgfedcba';
+  const normalizedInput = input.toLowerCase().replace(/[^a-z0-9]/g, '');
+  let encoded = '';
+
+  for (const char of normalizedInput) {
+    if (char.match(/[a-z]/)) {
+      encoded += cipher[plaintext.indexOf(char)];
+    } else {
+      encoded += char;
+    }
+  }
+
+  return encoded.match(/.{1,5}/g).join(' ');
 };
 
-export const decode = () => {
-  throw new Error('Remove this statement and implement this function');
+export const decode = (input) => {
+  const plaintext = 'abcdefghijklmnopqrstuvwxyz';
+  const cipher = 'zyxwvutsrqponmlkjihgfedcba';
+  const normalizedInput = input.replace(/[^a-z0-9]/g, '');
+  let decoded = '';
+
+  for (const char of normalizedInput) {
+    if (char.match(/[a-z]/)) {
+      decoded += plaintext[cipher.indexOf(char)];
+    } else {
+      decoded += char;
+    }
+  }
+
+  return decoded;
 };

@@ -4,39 +4,69 @@
 //
 
 export class Rational {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  gcd(a, b) {
+    while (b !== 0) {
+      [a, b] = [b, a % b];
+    }
+    return a;
+  }
+  constructor(a, b) {
+    if (b === 0) {
+      throw new Error('Denominator cannot be zero');
+    }
+    this.a = a;
+    this.b = b;
+    this.reduce();
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(rational) {
+    const a = this.a * rational.b + rational.a * this.b;
+    const b = this.b * rational.b;
+    return new Rational(a, b);
   }
 
-  sub() {
-    throw new Error('Remove this statement and implement this function');
+  sub(rational) {
+    const a = this.a * rational.b - rational.a * this.b;
+    const b = this.b * rational.b;
+    return new Rational(a, b);
   }
 
-  mul() {
-    throw new Error('Remove this statement and implement this function');
+  mul(rational) {
+    const a = this.a * rational.a;
+    const b = this.b * rational.b;
+    return new Rational(a, b);
   }
 
-  div() {
-    throw new Error('Remove this statement and implement this function');
+  div(rational) {
+    if (rational.a === 0) {
+      throw new Error('Division by zero');
+    }
+    const a = this.a * rational.b;
+    const b = this.b * rational.a;
+    return new Rational(a, b);
   }
 
   abs() {
-    throw new Error('Remove this statement and implement this function');
+    const a = Math.abs(this.a);
+    const b = Math.abs(this.b);
+    return new Rational(a, b);
   }
 
-  exprational() {
-    throw new Error('Remove this statement and implement this function');
+  exprational(n) {
+    const a = Math.pow(this.a, n);
+    const b = Math.pow(this.b, n);
+    return new Rational(a, b);
   }
 
-  expreal() {
-    throw new Error('Remove this statement and implement this function');
+  expreal(x) {
+    const a = Math.pow(this.a, x);
+    const b = Math.pow(this.b, x);
+    return a / b;
   }
 
   reduce() {
-    throw new Error('Remove this statement and implement this function');
+    const gcd = this.gcd(this.a, this.b);
+    this.a /= gcd;
+    this.b /= gcd;
   }
 }

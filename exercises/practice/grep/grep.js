@@ -47,3 +47,52 @@ const ARGS = process.argv;
 //
 // This file should *not* export a function. Use ARGS to determine what to grep
 // and use console.log(output) to write to the standard output.
+
+function grep(pattern, flags, files) {
+  let results = [];
+  let lineNumberFlag = flags.includes('n');
+  let fileNameFlag = flags.includes('l');
+  let ignoreCaseFlag = flags.includes('i');
+  let invertFlag = flags.includes('v');
+  let entireLineFlag = flags.includes('x');
+
+  for (let file of files) {
+    let lines = readLines(file);
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      let regexPattern = entireLineFlag ? `^${pattern}$` : pattern;
+      let regex = new RegExp(regexPattern, ignoreCaseFlag ? 'i' : '');
+      let match = regex.test(line);
+      if (invertFlag) match = !match;
+      if (match) {
+        let result = '';
+        if (fileNameFlag) {
+          result = file;
+        } else {
+          if (lineNumberFlag) result += (i + 1) + ':';
+          result += line;
+        }
+        results.push(result);
+        if (fileNameFlag) break;
+      }
+    }
+  }
+  return results.join('\n');
+}
+
+const args = process.argv.slice(2);
+let flags = [];
+let files = [];
+let pattern = '';
+
+for (let arg of args) {
+  if (arg.startsWith('-')) {
+    flags.push(...arg.slice(1).split(''));
+  } else if (!pattern) {
+    pattern = arg;
+  } else {
+    files.push(arg);
+  }
+}
+
+console.log(grep(pattern, flags, files));

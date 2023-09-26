@@ -1,0 +1,36 @@
+PASS exercises/practice/pig-latin/pig-latin.spec.js
+  Pig Latin
+    ay is added to words that start with vowels
+      ✓ word beginning with a (3 ms)
+      ○ skipped word beginning with e
+      ○ skipped word beginning with i
+      ○ skipped word beginning with o
+      ○ skipped word beginning with u
+      ○ skipped word beginning with a vowel and followed by a qu
+    first letter and ay are moved to the end of words that start with consonants
+      ○ skipped word beginning with p
+      ○ skipped word beginning with k
+      ○ skipped word beginning with x
+      ○ skipped word beginning with q without a following u
+    some letter clusters are treated like a single consonant
+      ○ skipped word beginning with ch
+      ○ skipped word beginning with qu
+      ○ skipped word beginning with qu and a preceding consonant
+      ○ skipped word beginning with th
+      ○ skipped word beginning with thr
+      ○ skipped word beginning with sch
+    some letter clusters are treated like a single vowel
+      ○ skipped word beginning with yt
+      ○ skipped word beginning with xr
+    position of y in a word determines if it is a consonant or a vowel
+      ○ skipped y is treated like a consonant at the beginning of a word
+      ○ skipped y is treated like a vowel at the end of a consonant cluster
+      ○ skipped y as second letter in two letter word
+    phrases are translated
+      ○ skipped a whole phrase
+
+Test Suites: 1 passed, 1 total
+Tests:       21 skipped, 1 passed, 22 total
+Snapshots:   0 total
+Time:        0.672 s
+Ran all test suites matching /exercises\/practice\/pig-latin/i.

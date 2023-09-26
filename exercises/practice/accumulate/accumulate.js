@@ -3,6 +3,12 @@
 // convenience to get you started writing code faster.
 //
 
-export const accumulate = () => {
-  throw new Error('Remove this statement and implement this function');
+export const accumulate = (collection, operation) => {
+  const result = [];
+
+  for (const element of collection) {
+    result.push(operation(element));
+  }
+
+  return result;
 };

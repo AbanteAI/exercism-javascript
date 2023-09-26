@@ -1,0 +1,38 @@
+FAIL exercises/practice/go-counting/go-counting.spec.js
+  Go Counting
+    getTerritory
+      ✕ Black corner territory on 5x5 board (3 ms)
+      ○ skipped White center territory on 5x5 board
+      ○ skipped Open corner territory on 5x5 board
+      ○ skipped A stone and not a territory on 5x5 board
+      ○ skipped Invalid because X is too low for 5x5 board
+      ○ skipped Invalid because X is too high for 5x5 board
+      ○ skipped Invalid because Y is too low for 5x5 board
+      ○ skipped Invalid because Y is too high for 5x5 board
+    getTerritories
+      ○ skipped One territory is the whole board
+      ○ skipped Two territory rectangular board
+      ○ skipped Two region rectangular board
+
+  ● Go Counting › getTerritory › Black corner territory on 5x5 board
+
+    ReferenceError: owner is not defined
+
+      32 |     const player = this.board[y][x];
+      33 |     if (player !== ' ') {
+    > 34 |       return { owner, territory: [] };
+         |                ^
+      35 |     }
+      36 |     let territory = { owner: 'NONE', territory: [[x, y]] };
+      37 |     for (const [dx, dy] of [[0, 1], [1, 0], [0, -1], [-1, 0]]) {
+
+      at GoCounting.owner [as exploreTerritory] (exercises/practice/go-counting/go-counting.js:34:16)
+      at GoCounting.exploreTerritory (exercises/practice/go-counting/go-counting.js:38:33)
+      at GoCounting.exploreTerritory [as getTerritory] (exercises/practice/go-counting/go-counting.js:15:30)
+      at Object.getTerritory (exercises/practice/go-counting/go-counting.spec.js:16:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 skipped, 11 total
+Snapshots:   0 total
+Time:        0.858 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/go-counting/i.
