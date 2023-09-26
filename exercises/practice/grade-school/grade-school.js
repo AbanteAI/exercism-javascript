@@ -3,16 +3,66 @@
 // convenience to get you started writing code faster.
 //
 
-export class GradeSchool {
+  constructor() {
+    this.schoolRoster = {};
+  }
+
   roster() {
-    throw new Error('Remove this statement and implement this function');
+    const sortedRoster = {};
+    for (const grade in this.schoolRoster) {
+      sortedRoster[grade] = [...this.schoolRoster[grade]].sort();
+    }
+    return sortedRoster;
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(student, grade) {
+    if (!this.schoolRoster[grade]) {
+      this.schoolRoster[grade] = [];
+    }
+    this.schoolRoster[grade].push(student);
+    this.schoolRoster[grade].sort();
   }
 
-  grade() {
-    throw new Error('Remove this statement and implement this function');
+  grade(grade) {
+    return this.schoolRoster[grade] ? [...this.schoolRoster[grade]] : [];
   }
+
+  sortedRoster() {
+    const sortedRoster = {};
+    const grades = Object.keys(this.schoolRoster).sort((a, b) => a - b);
+    for (const grade of grades) {
+      sortedRoster[grade] = [...this.schoolRoster[grade]].sort();
+    }
+    return sortedRoster;
+  }
+  roster() {
+    const sortedRoster = {};
+    for (const grade in this.schoolRoster) {
+      sortedRoster[grade] = [...this.schoolRoster[grade]].sort();
+    }
+    return sortedRoster;
+  }
+
+  add(student, grade) {
+    if (!this.schoolRoster[grade]) {
+      this.schoolRoster[grade] = [];
+    }
+    this.schoolRoster[grade].push(student);
+    this.schoolRoster[grade].sort();
+  }
+
+  grade(grade) {
+    return this.schoolRoster[grade] ? [...this.schoolRoster[grade]] : [];
+  }
+
+  sortedRoster() {
+    const sortedRoster = {};
+    const grades = Object.keys(this.schoolRoster).sort((a, b) => a - b);
+    for (const grade of grades) {
+      sortedRoster[grade] = [...this.schoolRoster[grade]].sort();
+    }
+    return sortedRoster;
+  }
+  }
+
 }

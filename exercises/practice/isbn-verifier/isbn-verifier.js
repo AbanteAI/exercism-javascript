@@ -3,6 +3,21 @@
 // convenience to get you started writing code faster.
 //
 
-export const isValid = () => {
-  throw new Error('Remove this statement and implement this function');
+export const isValid = (isbn) => {
+  isbn = isbn.replace(/-/g, '');
+
+  if (isbn.length !== 10 || !/^[\d]{9}[\dX]$/i.test(isbn)) {
+    return false;
+  }
+
+  let sum = 0;
+  for (let i = 0; i < 10; i++) {
+    if (isbn[i] === 'X') {
+      sum += 10;
+    } else {
+      sum += parseInt(isbn[i]) * (10 - i);
+    }
+  }
+
+  return sum % 11 === 0;
 };

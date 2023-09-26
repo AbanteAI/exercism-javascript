@@ -4,13 +4,44 @@
 //
 
 export class BinarySearchTree {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(value) {
+    this.value = value;
+    this.left = null;
+    this.right = null;
   }
 
   get data() {
-    throw new Error('Remove this statement and implement this function');
+    return this.value;
   }
+
+
+  insert(value) {
+    if (value <= this.value) {
+      if (this.left === null) {
+        this.left = new BinarySearchTree(value);
+      } else {
+        this.left.insert(value);
+      }
+    } else {
+      if (this.right === null) {
+        this.right = new BinarySearchTree(value);
+      } else {
+        this.right.insert(value);
+      }
+    }
+  }
+
+  each(callback) {
+    if (this.left !== null) {
+      this.left.each(callback);
+    }
+    callback(this.value);
+    if (this.right !== null) {
+      this.right.each(callback);
+    }
+  }
+}
+
   get right() {
     throw new Error('Remove this statement and implement this function');
   }

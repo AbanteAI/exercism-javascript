@@ -4,43 +4,129 @@
 //
 
 export class Zipper {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(value, left = null, right = null, parent = null) {
+    this._value = value;
+    this._left = left;
+    this._right = right;
+    this._parent = parent;
+  }
   }
 
-  static fromTree() {
-    throw new Error('Remove this statement and implement this function');
+  static fromTree(tree) {
+    if (!tree) {
+      return null;
+    }
+
+    const root = new Zipper(tree.value);
+    root._left = Zipper.fromTree(tree.left);
+    root._right = Zipper.fromTree(tree.right);
+
+    if (root._left) {
+      root._left._parent = root;
+    }
+
+    if (root._right) {
+      root._right._parent = root;
+    }
+
+    return root;
+  }
   }
 
   toTree() {
-    throw new Error('Remove this statement and implement this function');
+    let node = this;
+    while (node._parent) {
+      node = node._parent;
+    }
+    return node;
+  }
   }
 
   value() {
-    throw new Error('Remove this statement and implement this function');
+    return this._value;
+  }
   }
 
-  left() {
-    throw new Error('Remove this statement and implement this function');
+  prev() {
+    if (!this._parent) {
+      return null;
+    }
+
+    const siblings = this._parent._left === this ? this._parent._right : this._parent._left;
+    if (!siblings) {
+      return null;
+    }
+
+    let node = siblings;
+    while (node._right) {
+      node = node._right;
+    }
+
+    return node;
+  }
   }
 
-  right() {
-    throw new Error('Remove this statement and implement this function');
+  next() {
+    if (!this._parent) {
+      return null;
+    }
+
+    const siblings = this._parent._left === this ? this._parent._right : this._parent._left;
+    if (!siblings) {
+      return null;
+    }
+
+    let node = siblings;
+    while (node._left) {
+      node = node._left;
+    }
+
+    return node;
+  }
   }
 
   up() {
-    throw new Error('Remove this statement and implement this function');
+    return this._parent;
+  }
   }
 
-  setValue() {
-    throw new Error('Remove this statement and implement this function');
+  setValue(value) {
+    this._value = value;
+    return this;
+  }
   }
 
-  setLeft() {
-    throw new Error('Remove this statement and implement this function');
+  insertBefore(value) {
+    const newNode = new Zipper(value, this._left, this, this._parent);
+    if (this._left) {
+      this._left._parent = newNode;
+    }
+    this._left = newNode;
+    return newNode;
+  }
   }
 
-  setRight() {
-    throw new Error('Remove this statement and implement this function');
+  insertAfter(value) {
+    const newNode = new Zipper(value, this, this._right, this._parent);
+    if (this._right) {
+      this._right._parent = newNode;
+    }
+    this._right = newNode;
+    return newNode;
+  }
   }
 }
+  delete() {
+    if (!this._parent) {
+      return null;
+    }
+
+    const parent = this._parent;
+    if (parent._left === this) {
+      parent._left = null;
+    } else {
+      parent._right = null;
+    }
+
+    return parent;
+  }

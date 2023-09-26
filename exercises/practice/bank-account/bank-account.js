@@ -5,32 +5,59 @@
 
 export class BankAccount {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this._isOpen = false;
+    this._balance = 0;
   }
 
   open() {
-    throw new Error('Remove this statement and implement this function');
+    if (this._isOpen) {
+      throw new ValueError('Account is already open');
+    }
+    this._isOpen = true;
   }
 
   close() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this._isOpen) {
+      throw new ValueError('Account is already closed');
+    }
+    this._isOpen = false;
+    this._balance = 0;
   }
 
-  deposit() {
-    throw new Error('Remove this statement and implement this function');
+  deposit(amount) {
+    if (!this._isOpen) {
+      throw new ValueError('Account is closed');
+    }
+    if (amount < 0) {
+      throw new ValueError('Amount must be a positive number');
+    }
+    this._balance += amount;
   }
 
-  withdraw() {
-    throw new Error('Remove this statement and implement this function');
+  withdraw(amount) {
+    if (!this._isOpen) {
+      throw new ValueError('Account is closed');
+    }
+    if (amount < 0) {
+      throw new ValueError('Amount must be a positive number');
+    }
+    if (amount > this._balance) {
+      throw new ValueError('Insufficient funds');
+    }
+    this._balance -= amount;
   }
 
   get balance() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this._isOpen) {
+      throw new ValueError('Account is closed');
+    }
+    return this._balance;
   }
 }
 
 export class ValueError extends Error {
-  constructor() {
-    super('Bank account error');
+  constructor(message) {
+    super(message || 'Bank account error');
   }
 }
+

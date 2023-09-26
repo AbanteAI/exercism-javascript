@@ -4,43 +4,64 @@
 //
 
 export class ComplexNumber {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(a, b) {
+    this.a = a;
+    this.b = b;
+  }
   }
 
   get real() {
-    throw new Error('Remove this statement and implement this function');
+    return this.a;
+  }
   }
 
   get imag() {
-    throw new Error('Remove this statement and implement this function');
+    return this.b;
+  }
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(other) {
+    const a = this.a + other.a;
+    const b = this.b + other.b;
+    return new ComplexNumber(a, b);
+  }
   }
 
-  sub() {
-    throw new Error('Remove this statement and implement this function');
+  sub(other) {
+    const a = this.a - other.a;
+    const b = this.b - other.b;
+    return new ComplexNumber(a, b);
+  }
   }
 
-  div() {
-    throw new Error('Remove this statement and implement this function');
+  mul(other) {
+    const a = this.a * other.a - this.b * other.b;
+    const b = this.b * other.a + this.a * other.b;
+    return new ComplexNumber(a, b);
+  }
   }
 
-  mul() {
-    throw new Error('Remove this statement and implement this function');
+  div(other) {
+    const a = (this.a * other.a + this.b * other.b) / (other.a * other.a + other.b * other.b);
+    const b = (this.b * other.a - this.a * other.b) / (other.a * other.a + other.b * other.b);
+    return new ComplexNumber(a, b);
+  }
   }
 
   get abs() {
-    throw new Error('Remove this statement and implement this function');
+    return Math.sqrt(this.a * this.a + this.b * this.b);
+  }
   }
 
   get conj() {
-    throw new Error('Remove this statement and implement this function');
+    return new ComplexNumber(this.a, -this.b);
+  }
   }
 
   get exp() {
-    throw new Error('Remove this statement and implement this function');
+    const realPart = Math.exp(this.a) * Math.cos(this.b);
+    const imagPart = Math.exp(this.a) * Math.sin(this.b);
+    return new ComplexNumber(realPart, imagPart);
+  }
   }
 }

@@ -3,6 +3,13 @@
 // convenience to get you started writing code faster.
 //
 
-export const transform = () => {
-  throw new Error('Remove this statement and implement this function');
+export const transform = (oldData) => {
+  const newData = {};
+  for (const pointValue in oldData) {
+    const letters = oldData[pointValue];
+    letters.forEach((letter) => {
+      newData[letter.toLowerCase()] = parseInt(pointValue);
+    });
+  }
+  return newData;
 };

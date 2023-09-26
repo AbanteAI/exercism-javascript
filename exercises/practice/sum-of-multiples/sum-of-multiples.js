@@ -3,6 +3,28 @@
 // convenience to get you started writing code faster.
 //
 
-export const sum = () => {
-  throw new Error('Remove this statement and implement this function');
+export const sum = (level, multiples) => {
+  if (!Array.isArray(multiples)) {
+    return 0;
+  }
+
+  const uniqueMultiples = new Set();
+
+  multiples.forEach((multiple) => {
+    for (let i = multiple; i < level; i += multiple) {
+      uniqueMultiples.add(i);
+    }
+  });
+
+  return [...uniqueMultiples].reduce((sum, multiple) => sum + multiple, 0);
+};
+  const uniqueMultiples = new Set();
+
+  multiples.forEach((multiple) => {
+    for (let i = multiple; i < level; i += multiple) {
+      uniqueMultiples.add(i);
+    }
+  });
+
+  return [...uniqueMultiples].reduce((sum, multiple) => sum + multiple, 0);
 };

@@ -4,19 +4,39 @@
 //
 
 export class Triangle {
-  constructor(...sides) {
-    throw new Error('Remove this statement and implement this function');
+constructor(...sides) {
+    this.sides = sides;
+    if (this.sides.some(side => side <= 0)) {
+        throw new Error('Invalid triangle sides');
+    }
+    const [a, b, c] = this.sides;
+    if (a + b <= c || a + c <= b || b + c <= a) {
+        throw new Error('Invalid triangle sides');
+    }
+}
   }
 
   get isEquilateral() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get isEquilateral() {
+    const [a, b, c] = this.sides;
+    return a === b && b === c;
+}
+    return a === b && b === c;
+}
 
   get isIsosceles() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get isIsosceles() {
+    const [a, b, c] = this.sides;
+    return a === b || a === c || b === c;
+}
+    return a === b || a === c || b === c;
+}
 
   get isScalene() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get isScalene() {
+    const [a, b, c] = this.sides;
+    return a !== b && a !== c && b !== c;
+}
+    return a !== b && a !== c && b !== c;
+}
 }

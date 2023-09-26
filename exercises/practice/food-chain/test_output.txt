@@ -1,0 +1,89 @@
+FAIL exercises/practice/food-chain/food-chain.spec.js
+  ● Test suite failed to run
+
+    SyntaxError: /home/jake/Development/exercism-javascript/exercises/practice/food-chain/food-chain.js: Unexpected token, expected "," (20:0)
+
+      18 |     "She swallowed the spider to catch the fly.",
+      19 |     "I don't know why she swallowed the fly. Perhaps she'll die."
+    > 20 | }
+         | ^
+      21 |     ,
+      22 |     "I know an old lady who swallowed a bird.",
+      23 |     "How absurd to swallow a bird!",
+
+    > 1 | import { Song } from './food-chain';
+        | ^
+      2 |
+      3 | describe('Food Chain', () => {
+      4 |   let song;
+
+      at instantiate (node_modules/@babel/parser/src/parse-error/credentials.ts:62:21)
+      at instantiate (node_modules/@babel/parser/src/parse-error.ts:60:12)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1487:19)
+      at Parser.raise [as unexpected] (node_modules/@babel/parser/src/tokenizer/index.ts:1528:16)
+      at Parser.unexpected [as expect] (node_modules/@babel/parser/src/parser/util.ts:145:28)
+      at Parser.expect [as parseExprList] (node_modules/@babel/parser/src/parser/expression.ts:2658:14)
+      at Parser.parseExprList [as parseArrayLike] (node_modules/@babel/parser/src/parser/expression.ts:2456:26)
+      at Parser.parseArrayLike [as parseExprAtom] (node_modules/@babel/parser/src/parser/expression.ts:1175:21)
+      at Parser.parseExprAtom [as parseExprSubscripts] (node_modules/@babel/parser/src/parser/expression.ts:710:23)
+      at Parser.parseExprSubscripts [as parseUpdate] (node_modules/@babel/parser/src/parser/expression.ts:687:21)
+      at Parser.parseUpdate [as parseMaybeUnary] (node_modules/@babel/parser/src/parser/expression.ts:649:23)
+      at Parser.parseMaybeUnary [as parseMaybeUnaryOrPrivate] (node_modules/@babel/parser/src/parser/expression.ts:387:14)
+      at Parser.parseMaybeUnaryOrPrivate [as parseExprOps] (node_modules/@babel/parser/src/parser/expression.ts:399:23)
+      at Parser.parseExprOps [as parseMaybeConditional] (node_modules/@babel/parser/src/parser/expression.ts:354:23)
+      at Parser.parseMaybeConditional [as parseMaybeAssign] (node_modules/@babel/parser/src/parser/expression.ts:294:21)
+      at parseMaybeAssign (node_modules/@babel/parser/src/parser/expression.ts:248:12)
+      at Parser.callback [as allowInAnd] (node_modules/@babel/parser/src/parser/expression.ts:3076:16)
+      at Parser.allowInAnd [as parseMaybeAssignAllowIn] (node_modules/@babel/parser/src/parser/expression.ts:247:17)
+      at Parser.parseMaybeAssignAllowIn [as parseVar] (node_modules/@babel/parser/src/parser/statement.ts:1540:16)
+      at Parser.parseVar [as parseVarStatement] (node_modules/@babel/parser/src/parser/statement.ts:1201:10)
+      at Parser.parseVarStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:554:21)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:417:17)
+      at Parser.parseStatementLike [as parseStatementListItem] (node_modules/@babel/parser/src/parser/statement.ts:366:17)
+      at Parser.parseStatementListItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1395:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1368:10)
+      at Parser.parseBlockBody [as parseBlock] (node_modules/@babel/parser/src/parser/statement.ts:1336:10)
+      at Parser.parseBlock [as parseFunctionBody] (node_modules/@babel/parser/src/parser/expression.ts:2552:24)
+      at Parser.parseFunctionBody [as parseFunctionBodyAndFinish] (node_modules/@babel/parser/src/parser/expression.ts:2523:10)
+      at Parser.parseFunctionBodyAndFinish [as parseMethod] (node_modules/@babel/parser/src/parser/expression.ts:2432:31)
+      at Parser.parseMethod [as pushClassMethod] (node_modules/@babel/parser/src/parser/statement.ts:2195:12)
+      at Parser.pushClassMethod [as parseClassMemberWithIsStatic] (node_modules/@babel/parser/src/parser/statement.ts:1956:12)
+      at Parser.parseClassMemberWithIsStatic [as parseClassMember] (node_modules/@babel/parser/src/parser/statement.ts:1871:10)
+      at parseClassMember (node_modules/@babel/parser/src/parser/statement.ts:1784:14)
+      at Parser.callback [as withSmartMixTopicForbiddingContext] (node_modules/@babel/parser/src/parser/expression.ts:3055:14)
+      at Parser.withSmartMixTopicForbiddingContext [as parseClassBody] (node_modules/@babel/parser/src/parser/statement.ts:1757:10)
+      at Parser.parseClassBody [as parseClass] (node_modules/@babel/parser/src/parser/statement.ts:1712:22)
+      at Parser.parseClass [as parseExportDeclaration] (node_modules/@babel/parser/src/parser/statement.ts:2573:25)
+      at Parser.parseExportDeclaration [as maybeParseExportDeclaration] (node_modules/@babel/parser/src/parser/statement.ts:2502:31)
+      at Parser.maybeParseExportDeclaration [as parseExport] (node_modules/@babel/parser/src/parser/statement.ts:2395:29)
+      at Parser.parseExport [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:597:25)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:417:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:354:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1394:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1368:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:213:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:195:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:45:10)
+      at parse (node_modules/@babel/parser/src/index.ts:67:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:51:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:39:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+      at Object.require (exercises/practice/food-chain/food-chain.spec.js:1:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.826 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/food-chain/i.

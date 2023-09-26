@@ -5,14 +5,36 @@
 
 export class GoCounting {
   constructor(board) {
-    throw new Error('Remove this statement and implement this function');
+    this.board = board;
+  }
   }
 
   getTerritory(x, y) {
-    throw new Error('Remove this statement and implement this function');
+    if (this.board[x][y] !== ' ') {
+      return [];
+    }
+    const territory = [];
+    const visited = new Set();
+    this.exploreTerritory(x, y, territory, visited);
+    return territory;
+  }
   }
 
   getTerritories() {
-    throw new Error('Remove this statement and implement this function');
+    const territories = [];
+    const visited = new Set();
+    for (let x = 0; x < this.board.length; x++) {
+      for (let y = 0; y < this.board[x].length; y++) {
+        if (this.board[x][y] === ' ' && !visited.has(`${x},${y}`)) {
+          const territory = [];
+          this.exploreTerritory(x, y, territory, visited);
+          territories.push(territory);
+        }
+      }
+    }
+    return territories;
+    }
+    return territories;
+  }
   }
 }

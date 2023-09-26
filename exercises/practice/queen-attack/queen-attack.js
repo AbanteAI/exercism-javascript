@@ -8,8 +8,49 @@ export class QueenAttack {
     black: [blackRow, blackColumn] = [],
     white: [whiteRow, whiteColumn] = [],
   } = {}) {
-    throw new Error('Remove this statement and implement this function');
+    this.black = [blackRow, blackColumn];
+    this.white = [whiteRow, whiteColumn];
+    if (this.black[0] === this.white[0] && this.black[1] === this.white[1]) {
+      throw new Error('Queens cannot occupy the same space');
+    }
   }
+
+  toString() {
+    const board = Array.from({ length: 8 }, () => Array(8).fill('_'));
+    board[this.black[0]][this.black[1]] = 'B';
+    board[this.white[0]][this.white[1]] = 'W';
+    return board.map(row => row.join(' ')).join('\n') + '\n';
+  }
+
+  get canAttack() {
+    const [blackRow, blackColumn] = this.black;
+    const [whiteRow, whiteColumn] = this.white;
+    return (
+      blackRow === whiteRow ||
+      blackColumn === whiteColumn ||
+      Math.abs(blackRow - whiteRow) === Math.abs(blackColumn - whiteColumn)
+    );
+  }
+}
+  }
+
+  toString() {
+    const board = Array.from({ length: 8 }, () => Array(8).fill('_'));
+    board[this.black[0]][this.black[1]] = 'B';
+    board[this.white[0]][this.white[1]] = 'W';
+    return board.map(row => row.join(' ')).join('\n') + '\n';
+  }
+
+  get canAttack() {
+    const [blackRow, blackColumn] = this.black;
+    const [whiteRow, whiteColumn] = this.white;
+    return (
+      blackRow === whiteRow ||
+      blackColumn === whiteColumn ||
+      Math.abs(blackRow - whiteRow) === Math.abs(blackColumn - whiteColumn)
+    );
+  }
+}
 
   toString() {
     throw new Error('Remove this statement and implement this function');

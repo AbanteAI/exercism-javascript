@@ -19,31 +19,49 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Reads the given file and returns lines.
+ * Search a file for lines matching a regular expression pattern. Return the line
+ * number and contents of each matching line.
  *
- * This function works regardless of POSIX (LF) or windows (CRLF) encoding.
- *
- * @param {string} file path to file
- * @returns {string[]} the lines
+ * @param {string} pattern the pattern to match lines
+ * @param {string[]} files the files to search for matching lines
+ * @param {string[]} flags the flags to customize the matching behavior
+ * @returns {string} the matching lines
  */
 function readLines(file) {
   const data = fs.readFileSync(path.resolve(file), { encoding: 'utf-8' });
   return data.split(/\r?\n/);
 }
+  for (const file of files) {
+    const lines = readLines(file);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const lineNumber = i + 1;
+      const match = regex.test(line);
 
-const VALID_OPTIONS = [
-  'n', // add line numbers
-  'l', // print file names where pattern is found
-  'i', // ignore case
-  'v', // reverse files results
-  'x', // match entire line
-];
+      if (
+        (flags.includes('x') && line === pattern) ||
+        (flags.includes('v') && !match) ||
+        (!flags.includes('v') && match)
+      ) {
+        if (flags.includes('l')) {
+          matches.push(file);
+          break;
+        } else {
+          if (flags.includes('n')) {
+            matches.push(`${lineNumber}:${line}`);
+          } else {
+            matches.push(line);
+          }
+        }
+      }
+    }
+  }
 
-const ARGS = process.argv;
+  return matches.join('\\n');
+}
 
-//
-// This is only a SKELETON file for the 'Grep' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-// This file should *not* export a function. Use ARGS to determine what to grep
-// and use console.log(output) to write to the standard output.
+const pattern = ARGS[2];
+const flags = ARGS.slice(3, -1);
+const files = ARGS.slice(3);
+
+console.log(grep(pattern, files, flags));

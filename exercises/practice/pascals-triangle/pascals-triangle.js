@@ -3,6 +3,22 @@
 // convenience to get you started writing code faster.
 //
 
-export const rows = () => {
-  throw new Error('Remove this statement and implement this function');
+export const rows = (rowCount) => {
+  if (rowCount < 0) {
+    throw new Error('rowCount cannot be negative');
+  }
+
+  const triangle = [];
+  for (let i = 0; i < rowCount; i++) {
+    const row = [];
+    for (let j = 0; j <= i; j++) {
+      if (j === 0 || j === i) {
+        row.push(1);
+      } else {
+        row.push(triangle[i - 1][j - 1] + triangle[i - 1][j]);
+      }
+    }
+    triangle.push(row);
+  }
+  return triangle;
 };

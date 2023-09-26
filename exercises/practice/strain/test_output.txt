@@ -1,0 +1,20 @@
+PASS exercises/practice/strain/strain.spec.js
+  strain
+    ✓ keeps on empty array returns empty array (3 ms)
+    ○ skipped keeps everything 
+    ○ skipped keeps first and last
+    ○ skipped keeps neither first nor last
+    ○ skipped keeps strings
+    ○ skipped keeps arrays
+    ○ skipped empty discard
+    ○ skipped discards nothing
+    ○ skipped discards first and last
+    ○ skipped discards neither first nor last
+    ○ skipped discards strings
+    ○ skipped discards arrays
+
+Test Suites: 1 passed, 1 total
+Tests:       11 skipped, 1 passed, 12 total
+Snapshots:   0 total
+Time:        0.823 s
+Ran all test suites matching /exercises\/practice\/strain/i.

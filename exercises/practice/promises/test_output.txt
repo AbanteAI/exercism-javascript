@@ -1,0 +1,40 @@
+PASS exercises/practice/promises/promises.spec.js
+  promises
+    promisify
+      ✓ returns a function (3 ms)
+      ○ skipped promisified function call returns a Promise
+      ○ skipped promisified function resolves to a callback's success value
+      ○ skipped promisified function rejects a callback's error
+    all
+      ○ skipped returns a Promise
+      ○ skipped resolves when given no promises
+      ○ skipped resolves when given no arguments
+      ○ skipped resolved values appear in the order they are passed in
+      ○ skipped rejects if any promises fail
+    allSettled
+      ○ skipped returns a Promise
+      ○ skipped resolves when given no promises
+      ○ skipped resolves when given no arguments
+      ○ skipped resolved values appear in the order they are passed in
+      ○ skipped resolves even if some promises fail
+    race
+      ○ skipped returns a Promise
+      ○ skipped resolves when given no promises
+      ○ skipped resolves when given no arguments
+      ○ skipped resolves with value of the fastest successful promise
+      ○ skipped resolves with value of the fastest promise even if other slower promises fail
+      ○ skipped rejects if the fastest promise fails even if other slower promises succeed
+    any
+      ○ skipped returns a Promise
+      ○ skipped resolves when given no promises
+      ○ skipped resolves when given no arguments
+      ○ skipped resolves with value of fastest successful promise
+      ○ skipped resolves with value of the fastest successful promise even if slower promises fail
+      ○ skipped resolves with value of fastest successful promise even if faster promises fail
+      ○ skipped rejects with array of errors if all promises fail
+
+Test Suites: 1 passed, 1 total
+Tests:       26 skipped, 1 passed, 27 total
+Snapshots:   0 total
+Time:        0.811 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/promises/i.

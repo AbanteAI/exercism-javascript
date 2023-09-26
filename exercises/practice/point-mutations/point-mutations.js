@@ -4,11 +4,28 @@
 //
 
 export class DNA {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(strand) {
+    this.strand = strand;
+  };
+  }
   }
 
-  hammingDistance() {
-    throw new Error('Remove this statement and implement this function');
+  hammingDistance(otherStrand) {
+    if (this.strand.length !== otherStrand.length) {
+      throw new Error('DNA strands must be of equal length.');
+    }
+
+    let distance = 0;
+    for (let i = 0; i < this.strand.length; i++) {
+      if (this.strand[i] !== otherStrand[i]) {
+        distance++;
+      }
+    }
+
+    return distance;
+  }
+
+    return distance;
+  }
   }
 }

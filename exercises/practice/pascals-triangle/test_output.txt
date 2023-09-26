@@ -1,0 +1,17 @@
+PASS exercises/practice/pascals-triangle/pascals-triangle.spec.js
+  Pascals Triangle
+    Given a count, return a collection of that many rows of pascal's triangle
+      ✓ zero rows (3 ms)
+      ○ skipped single row
+      ○ skipped two rows
+      ○ skipped three rows
+      ○ skipped four rows
+      ○ skipped five rows
+      ○ skipped six rows
+      ○ skipped ten rows
+
+Test Suites: 1 passed, 1 total
+Tests:       7 skipped, 1 passed, 8 total
+Snapshots:   0 total
+Time:        0.706 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/pascals-triangle/i.

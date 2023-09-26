@@ -1,0 +1,20 @@
+PASS exercises/practice/secret-handshake/secret-handshake.spec.js
+  Secret Handshake
+    Create A Handshake For A Number
+      ✓ wink for 1 (5 ms)
+      ○ skipped double blink for 10
+      ○ skipped close your eyes for 100
+      ○ skipped jump for 1000
+      ○ skipped combine two actions
+      ○ skipped reverse two actions
+      ○ skipped reversing one action gives the same action
+      ○ skipped reversing no actions still gives no actions
+      ○ skipped all possible actions
+      ○ skipped reverse all possible actions
+      ○ skipped do nothing for zero
+
+Test Suites: 1 passed, 1 total
+Tests:       10 skipped, 1 passed, 11 total
+Snapshots:   0 total
+Time:        0.683 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/secret-handshake/i.

@@ -1,0 +1,103 @@
+PASS exercises/practice/meetup/meetup.spec.js
+  Meetup
+    ✓ monteenth of May 2013 (4 ms)
+    ○ skipped monteenth of August 2013
+    ○ skipped monteenth of September 2013
+    ○ skipped tuesteenth of March 2013
+    ○ skipped tuesteenth of April 2013
+    ○ skipped tuesteenth of August 2013
+    ○ skipped wednesteenth of January 2013
+    ○ skipped wednesteenth of February 2013
+    ○ skipped wednesteenth of June 2013
+    ○ skipped thursteenth of May 2013
+    ○ skipped thursteenth of June 2013
+    ○ skipped thursteenth of September 2013
+    ○ skipped friteenth of April 2013
+    ○ skipped friteenth of August 2013
+    ○ skipped friteenth of September 2013
+    ○ skipped saturteenth of February 2013
+    ○ skipped saturteenth of April 2013
+    ○ skipped saturteenth of October 2013
+    ○ skipped sunteenth of May 2013
+    ○ skipped sunteenth of June 2013
+    ○ skipped sunteenth of October 2013
+    ○ skipped first Monday of March 2013
+    ○ skipped first Monday of April 2013
+    ○ skipped first Tuesday of May 2013
+    ○ skipped first Tuesday of June 2013
+    ○ skipped first Wednesday of July 2013
+    ○ skipped first Wednesday of August 2013
+    ○ skipped first Thursday of September 2013
+    ○ skipped first Thursday of October 2013
+    ○ skipped first Friday of November 2013
+    ○ skipped first Friday of December 2013
+    ○ skipped first Saturday of January 2013
+    ○ skipped first Saturday of February 2013
+    ○ skipped first Sunday of March 2013
+    ○ skipped first Sunday of April 2013
+    ○ skipped second Monday of March 2013
+    ○ skipped second Monday of April 2013
+    ○ skipped second Tuesday of May 2013
+    ○ skipped second Tuesday of June 2013
+    ○ skipped second Wednesday of July 2013
+    ○ skipped second Wednesday of August 2013
+    ○ skipped second Thursday of September 2013
+    ○ skipped second Thursday of October 2013
+    ○ skipped second Friday of November 2013
+    ○ skipped second Friday of December 2013
+    ○ skipped second Saturday of January 2013
+    ○ skipped second Saturday of February 2013
+    ○ skipped second Sunday of March 2013
+    ○ skipped second Sunday of April 2013
+    ○ skipped third Monday of March 2013
+    ○ skipped third Monday of April 2013
+    ○ skipped third Tuesday of May 2013
+    ○ skipped third Tuesday of June 2013
+    ○ skipped third Wednesday of July 2013
+    ○ skipped third Wednesday of August 2013
+    ○ skipped third Thursday of September 2013
+    ○ skipped third Thursday of October 2013
+    ○ skipped third Friday of November 2013
+    ○ skipped third Friday of December 2013
+    ○ skipped third Saturday of January 2013
+    ○ skipped third Saturday of February 2013
+    ○ skipped third Sunday of March 2013
+    ○ skipped third Sunday of April 2013
+    ○ skipped fourth Monday of March 2013
+    ○ skipped fourth Monday of April 2013
+    ○ skipped fourth Tuesday of May 2013
+    ○ skipped fourth Tuesday of June 2013
+    ○ skipped fourth Wednesday of July 2013
+    ○ skipped fourth Wednesday of August 2013
+    ○ skipped fourth Thursday of September 2013
+    ○ skipped fourth Thursday of October 2013
+    ○ skipped fourth Friday of November 2013
+    ○ skipped fourth Friday of December 2013
+    ○ skipped fourth Saturday of January 2013
+    ○ skipped fourth Saturday of February 2013
+    ○ skipped fourth Sunday of March 2013
+    ○ skipped fourth Sunday of April 2013
+    ○ skipped last Monday of March 2013
+    ○ skipped last Monday of April 2013
+    ○ skipped last Tuesday of May 2013
+    ○ skipped last Tuesday of June 2013
+    ○ skipped last Wednesday of July 2013
+    ○ skipped last Wednesday of August 2013
+    ○ skipped last Thursday of September 2013
+    ○ skipped last Thursday of October 2013
+    ○ skipped last Friday of November 2013
+    ○ skipped last Friday of December 2013
+    ○ skipped last Saturday of January 2013
+    ○ skipped last Saturday of February 2013
+    ○ skipped last Sunday of March 2013
+    ○ skipped last Sunday of April 2013
+    ○ skipped last Wednesday of February 2012
+    ○ skipped last Wednesday of December 2014
+    ○ skipped last Sunday of February 2015
+    ○ skipped first Friday of December 2012
+
+Test Suites: 1 passed, 1 total
+Tests:       94 skipped, 1 passed, 95 total
+Snapshots:   0 total
+Time:        0.716 s
+Ran all test suites matching /exercises\/practice\/meetup/i.

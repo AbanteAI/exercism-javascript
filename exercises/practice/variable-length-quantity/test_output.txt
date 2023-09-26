@@ -1,0 +1,51 @@
+FAIL exercises/practice/variable-length-quantity/variable-length-quantity.spec.js
+  VariableLengthQuantity
+    Encode a series of integers, producing a series of bytes.
+      ✕ zero (2 ms)
+      ○ skipped arbitrary single byte
+      ○ skipped largest single byte
+      ○ skipped smallest double byte
+      ○ skipped arbitrary double byte
+      ○ skipped largest double byte
+      ○ skipped smallest triple byte
+      ○ skipped arbitrary triple byte
+      ○ skipped largest triple byte
+      ○ skipped smallest quadruple byte
+      ○ skipped arbitrary quadruple byte
+      ○ skipped largest quadruple byte
+      ○ skipped smallest quintuple byte
+      ○ skipped arbitrary quintuple byte
+      ○ skipped maximum 32-bit integer input
+      ○ skipped two single-byte values
+      ○ skipped two multi-byte values
+      ○ skipped many multi-byte values
+    Decode a series of bytes, producing a series of integers.
+      ○ skipped one byte
+      ○ skipped two bytes
+      ○ skipped three bytes
+      ○ skipped four bytes
+      ○ skipped maximum 32-bit integer
+      ○ skipped incomplete sequence causes error
+      ○ skipped incomplete sequence causes error, even if value is zero
+      ○ skipped multiple values
+
+  ● VariableLengthQuantity › Encode a series of integers, producing a series of bytes. › zero
+
+    TypeError: Assignment to constant variable.
+
+       8 |     let encodedNumber = number & 0x7f;
+       9 |
+    > 10 |     while ((number >>= 7) > 0) {
+         |                   ^
+      11 |       encodedNumber |= 0x80;
+      12 |       encodedNumber <<= 8;
+      13 |       encodedNumber |= (number & 0x7f) | 0x80;
+
+      at encode (exercises/practice/variable-length-quantity/variable-length-quantity.js:10:19)
+      at Object.<anonymous> (exercises/practice/variable-length-quantity/variable-length-quantity.spec.js:6:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 25 skipped, 26 total
+Snapshots:   0 total
+Time:        0.713 s
+Ran all test suites matching /exercises\/practice\/variable-length-quantity/i.

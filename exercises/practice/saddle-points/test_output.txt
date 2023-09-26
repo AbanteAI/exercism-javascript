@@ -1,0 +1,45 @@
+FAIL exercises/practice/saddle-points/saddle-points.spec.js
+  Saddle Points
+    ✕ Can identify single saddle point (10 ms)
+    ○ skipped Can identify that empty matrix has no saddle points
+    ○ skipped Can identify lack of saddle points when there are none
+    ○ skipped Can identify multiple saddle points in a column
+    ○ skipped Can identify multiple saddle points in a row
+    ○ skipped Can identify saddle point in bottom right corner
+    ○ skipped Can identify saddle points in a non square matrix
+    ○ skipped Can identify that saddle points in a single column matrix are those with the minimum value
+    ○ skipped Can identify that saddle points in a single row matrix are those with the maximum value
+
+  ● Saddle Points › Can identify single saddle point
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 4
+    + Received  + 4
+
+      Array [
+    -   Object {
+    -     "column": 1,
+    -     "row": 2,
+    -   },
+    +   Array [
+    +     1,
+    +     0,
+    +   ],
+      ]
+
+      10 |         [6, 6, 7],
+      11 |       ]),
+    > 12 |     ).toEqual(expected);
+         |       ^
+      13 |   });
+      14 |
+      15 |   xtest('Can identify that empty matrix has no saddle points', () => {
+
+      at Object.toEqual (exercises/practice/saddle-points/saddle-points.spec.js:12:7)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 skipped, 9 total
+Snapshots:   0 total
+Time:        0.746 s
+Ran all test suites matching /exercises\/practice\/saddle-points/i.

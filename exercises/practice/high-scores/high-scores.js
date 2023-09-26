@@ -4,23 +4,38 @@
 //
 
 export class HighScores {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(scores) {
+    this.scores = scores;
+  }
+    this.scores = scores;
+  }
   }
 
   get scores() {
-    throw new Error('Remove this statement and implement this function');
+    return this.scores;
+  }
+    return this.scores;
+  }
   }
 
   get latest() {
-    throw new Error('Remove this statement and implement this function');
+    return this.scores[this.scores.length - 1];
+  }
+    return this.scores[this.scores.length - 1];
+  }
   }
 
   get personalBest() {
-    throw new Error('Remove this statement and implement this function');
+    return Math.max(...this.scores);
+  }
+    return Math.max(...this.scores);
+  }
   }
 
   get personalTopThree() {
-    throw new Error('Remove this statement and implement this function');
+    return this.scores.sort((a, b) => b - a).slice(0, 3);
+  }
+    return this.scores.sort((a, b) => b - a).slice(0, 3);
+  }
   }
 }

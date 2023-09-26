@@ -4,15 +4,26 @@
 //
 
 export class Matrix {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(matrixString) {
+    this.matrix = matrixString.split('\n').map(row => row.split(' ').map(Number));
+    ;
+  }
   }
 
   get rows() {
-    throw new Error('Remove this statement and implement this function');
+  get rows() {
+    return this.matrix;
   }
 
   get columns() {
-    throw new Error('Remove this statement and implement this function');
+  get columns() {
+    const columnCount = this.matrix[0].length;
+    const columns = Array.from({ length: columnCount }, () => []);
+    this.matrix.forEach(row => {
+      row.forEach((value, columnIndex) => {
+        columns[columnIndex].push(value);
+      });
+    });
+    return columns;
   }
 }

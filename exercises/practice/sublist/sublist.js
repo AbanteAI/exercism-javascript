@@ -8,7 +8,25 @@ export class List {
     throw new Error('Remove this statement and implement this function');
   }
 
-  compare() {
-    throw new Error('Remove this statement and implement this function');
+  compare(listA, listB) {
+    if (listA.length === listB.length && listA.every((value, index) => value === listB[index])) {
+      return 'equal';
+    } else if (listA.every((value, index) => value === listB[index])) {
+      return 'sublist';
+    } else if (listB.every((value, index) => value === listA[index])) {
+      return 'superlist';
+    } else {
+      return 'unequal';
+    }
+  }
+      return 'equal';
+    } else if (listA.every((value, index) => value === listB[index])) {
+      return 'sublist';
+    } else if (listB.every((value, index) => value === listA[index])) {
+      return 'superlist';
+    } else {
+      return 'unequal';
+    }
+  }
   }
 }

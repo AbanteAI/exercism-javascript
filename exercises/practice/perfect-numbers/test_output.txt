@@ -1,0 +1,25 @@
+PASS exercises/practice/perfect-numbers/perfect-numbers.spec.js
+  Exercise - Perfect Numbers
+    Invalid Inputs
+      ✓ Zero is rejected (not a natural number) (9 ms)
+      ○ skipped Negative integer is rejected (not a natural number)
+    Perfect Numbers
+      ○ skipped Smallest perfect number is classified correctly
+      ○ skipped Medium perfect number is classified correctly
+      ○ skipped Large perfect number is classified correctly
+    Abundant Numbers
+      ○ skipped Smallest abundant number is classified correctly
+      ○ skipped Medium abundant number is classified correctly
+      ○ skipped Large abundant number is classified correctly
+    Deficient Numbers
+      ○ skipped Edge case (no factors other than itself) is classified correctly
+      ○ skipped Smallest prime deficient number is classified correctly
+      ○ skipped Smallest non-prime deficient number is classified correctly
+      ○ skipped Medium deficient number is classified correctly
+      ○ skipped Large deficient number is classified correctly
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 1 passed, 13 total
+Snapshots:   0 total
+Time:        0.646 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/perfect-numbers/i.

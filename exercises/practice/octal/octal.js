@@ -4,11 +4,21 @@
 //
 
 export class Octal {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
   }
 
   toDecimal() {
-    throw new Error('Remove this statement and implement this function');
+    if (this.input.match(/[^0-7]/)) {
+      return 0;
+    }
+
+    let decimal = 0;
+    const octalDigits = this.input.split("").reverse();
+
+    for (let i = 0; i < octalDigits.length; i++) {
+      decimal += parseInt(octalDigits[i]) * Math.pow(8, i);
+    }
+
+    return decimal;
+  }
   }
 }
