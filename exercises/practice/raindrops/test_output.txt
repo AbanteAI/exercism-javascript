@@ -1,0 +1,26 @@
+PASS exercises/practice/raindrops/raindrops.spec.js
+  Raindrops
+    ✓ the sound for 1 is 1 (2 ms)
+    ○ skipped the sound for 3 is Pling
+    ○ skipped the sound for 5 is Plang
+    ○ skipped the sound for 7 is Plong
+    ○ skipped the sound for 6 is Pling as it has a factor 3
+    ○ skipped 2 to the power 3 does not make a raindrop sound as 3 is the exponent not the base
+    ○ skipped the sound for 9 is Pling as it has a factor 3
+    ○ skipped the sound for 10 is Plang as it has a factor 5
+    ○ skipped the sound for 14 is Plong as it has a factor of 7
+    ○ skipped the sound for 15 is PlingPlang as it has factors 3 and 5
+    ○ skipped the sound for 21 is PlingPlong as it has factors 3 and 7
+    ○ skipped the sound for 25 is Plang as it has a factor 5
+    ○ skipped the sound for 27 is Pling as it has a factor 3
+    ○ skipped the sound for 35 is PlangPlong as it has factors 5 and 7
+    ○ skipped the sound for 49 is Plong as it has a factor 7
+    ○ skipped the sound for 52 is 52
+    ○ skipped the sound for 105 is PlingPlangPlong as it has factors 3, 5 and 7
+    ○ skipped the sound for 3125 is Plang as it has a factor 5
+
+Test Suites: 1 passed, 1 total
+Tests:       17 skipped, 1 passed, 18 total
+Snapshots:   0 total
+Time:        0.58 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/raindrops/i.

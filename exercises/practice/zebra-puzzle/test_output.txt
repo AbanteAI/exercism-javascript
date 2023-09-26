@@ -1,0 +1,27 @@
+FAIL exercises/practice/zebra-puzzle/zebra-puzzle.spec.js
+  Zebra puzzle
+    ✕ resident who drinks water (4 ms)
+    ○ skipped resident who owns zebra
+
+  ● Zebra puzzle › resident who drinks water
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "Norwegian"
+    Received: undefined
+
+      4 |   test('resident who drinks water', () => {
+      5 |     const puzzle = new ZebraPuzzle();
+    > 6 |     expect(puzzle.waterDrinker()).toEqual('Norwegian');
+        |                                   ^
+      7 |   });
+      8 |   xtest('resident who owns zebra', () => {
+      9 |     const puzzle = new ZebraPuzzle();
+
+      at Object.toEqual (exercises/practice/zebra-puzzle/zebra-puzzle.spec.js:6:35)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 skipped, 2 total
+Snapshots:   0 total
+Time:        0.233 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/zebra-puzzle/i.

@@ -3,6 +3,9 @@
 // convenience to get you started writing code faster.
 //
 
-export const clean = () => {
-  throw new Error('Remove this statement and implement this function');
+export const clean = (phoneNumber) => {
+  // Remove punctuation and country code if present
+  const cleanedNumber = phoneNumber.replace(/[^\d]/g, "").replace(/^1/, "");
+  
+  return cleanedNumber;
 };

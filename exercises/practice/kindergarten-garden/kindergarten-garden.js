@@ -27,10 +27,39 @@ const PLANT_CODES = {
 
 export class Garden {
   constructor(diagram, students = DEFAULT_STUDENTS) {
-    throw new Error('Remove this statement and implement this function');
+    this.diagram = diagram;
+    this.students = students.sort();
+    this.plantsByStudent = this.assignPlantsToStudents();
+  }
+
+  assignPlantsToStudents() {
+    const rows = this.diagram.split('\n');
+    const plantsByStudent = {};
+
+    for (let i = 0; i < rows[0].length; i += 2) {
+      const plants = rows.map(row => row.slice(i, i + 2));
+      let studentIndex = 0;
+
+      for (let j = 0; j < plants.length; j++) {
+        const student = this.students[studentIndex];
+
+        if (!plantsByStudent[student]) {
+          plantsByStudent[student] = [];
+        }
+
+        plantsByStudent[student].push(...plants[j]);
+
+        studentIndex = (studentIndex + 1) % this.students.length;
+      }
+    }
+
+    return plantsByStudent;
+  }
+
+    return plantsByStudent;
   }
 
   plants(student) {
-    throw new Error('Remove this statement and implement this function');
+    return this.plantsByStudent[student];
   }
 }

@@ -1,0 +1,58 @@
+FAIL exercises/practice/variable-length-quantity/variable-length-quantity.spec.js
+  VariableLengthQuantity
+    Encode a series of integers, producing a series of bytes.
+      ✕ zero (6 ms)
+      ○ skipped arbitrary single byte
+      ○ skipped largest single byte
+      ○ skipped smallest double byte
+      ○ skipped arbitrary double byte
+      ○ skipped largest double byte
+      ○ skipped smallest triple byte
+      ○ skipped arbitrary triple byte
+      ○ skipped largest triple byte
+      ○ skipped smallest quadruple byte
+      ○ skipped arbitrary quadruple byte
+      ○ skipped largest quadruple byte
+      ○ skipped smallest quintuple byte
+      ○ skipped arbitrary quintuple byte
+      ○ skipped maximum 32-bit integer input
+      ○ skipped two single-byte values
+      ○ skipped two multi-byte values
+      ○ skipped many multi-byte values
+    Decode a series of bytes, producing a series of integers.
+      ○ skipped one byte
+      ○ skipped two bytes
+      ○ skipped three bytes
+      ○ skipped four bytes
+      ○ skipped maximum 32-bit integer
+      ○ skipped incomplete sequence causes error
+      ○ skipped incomplete sequence causes error, even if value is zero
+      ○ skipped multiple values
+
+  ● VariableLengthQuantity › Encode a series of integers, producing a series of bytes. › zero
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   0,
+    - ]
+    + Array []
+
+      4 |   describe('Encode a series of integers, producing a series of bytes.', () => {
+      5 |     test('zero', () => {
+    > 6 |       expect(encode([0])).toEqual([0]);
+        |                           ^
+      7 |     });
+      8 |
+      9 |     xtest('arbitrary single byte', () => {
+
+      at Object.toEqual (exercises/practice/variable-length-quantity/variable-length-quantity.spec.js:6:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 25 skipped, 26 total
+Snapshots:   0 total
+Time:        0.576 s
+Ran all test suites matching /exercises\/practice\/variable-length-quantity/i.

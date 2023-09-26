@@ -1,0 +1,21 @@
+PASS exercises/practice/diffie-hellman/diffie-hellman.spec.js
+  diffie-hellman
+    ✓ throws an error if the constructor arguments are out of range (12 ms)
+    ○ skipped throws an error if the constructor arguments are not prime
+    ○ skipped can calculate secret using other party's public key
+    ○ skipped key exchange
+    input validation
+      ○ skipped throws an error if private key is negative
+      ○ skipped throws an error if private key is zero
+      ○ skipped throws an error if private key is one
+      ○ skipped throws an error if private key equals the modulus parameter p
+      ○ skipped throws an error if private key is greater than the modulus parameter p
+    stateless calculation
+      ○ skipped can calculate public key using private key
+      ○ skipped can calculate public key when given a different private key
+
+Test Suites: 1 passed, 1 total
+Tests:       10 skipped, 1 passed, 11 total
+Snapshots:   0 total
+Time:        0.57 s
+Ran all test suites matching /exercises\/practice\/diffie-hellman/i.

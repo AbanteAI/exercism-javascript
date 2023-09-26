@@ -4,15 +4,32 @@
 //
 
 export class Allergies {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(score) {
+    this.score = score;
+    this.allergens = {
+      1: "eggs",
+      2: "peanuts",
+      4: "shellfish",
+      8: "strawberries",
+      16: "tomatoes",
+      32: "chocolate",
+      64: "pollen",
+      128: "cats"
+    };
   }
 
   list() {
-    throw new Error('Remove this statement and implement this function');
+    const allergies = [];
+    for (let [key, value] of Object.entries(this.allergens)) {
+      if (this.score & key) {
+        allergies.push(value);
+      }
+    }
+    return allergies;
   }
 
-  allergicTo() {
-    throw new Error('Remove this statement and implement this function');
+  allergicTo(allergen) {
+    return this.list().includes(allergen);
   }
+}
 }

@@ -1,0 +1,55 @@
+PASS exercises/practice/custom-set/custom-set.spec.js
+  CustomSet
+    empty: returns true if the set contains no elements
+      ✓ sets with no elements are empty (3 ms)
+      ○ skipped sets with elements are not empty
+    contains: sets can report if they contain an element
+      ○ skipped nothing is contained in an empty set
+      ○ skipped when the element is in the set
+      ○ skipped when the element is not in the set
+    subset: a set is a subset if all of its elements are contained in the other set
+      ○ skipped empty set is a subset of another empty set
+      ○ skipped empty set is a subset of non-empty set
+      ○ skipped non-empty set is not a subset of empty set
+      ○ skipped set is a subset of set with exact same elements
+      ○ skipped set is a subset of larger set with same elements
+      ○ skipped set is not a subset of set that does not contain its elements
+    disjoint: sets are disjoint if they share no elements
+      ○ skipped the empty set is disjoint with itself
+      ○ skipped empty set is disjoint with non-empty set
+      ○ skipped non-empty set is disjoint with empty set
+      ○ skipped sets are not disjoint if they share an element
+      ○ skipped sets are disjoint if they share no elements
+    eql: sets with the same elements are equal
+      ○ skipped empty sets are equal
+      ○ skipped empty set is not equal to non-empty set
+      ○ skipped non-empty set is not equal to empty set
+      ○ skipped sets with the same elements are equal
+      ○ skipped sets with different elements are not equal
+      ○ skipped set is not equal to larger set with same elements
+    add: unique elements can be added to a set
+      ○ skipped add to empty set
+      ○ skipped add to non-empty set
+      ○ skipped adding an existing element does not change the set
+    intersection: returns a set of all shared elements
+      ○ skipped intersection of two empty sets is an empty set
+      ○ skipped intersection of an empty set and non-empty set is an empty set
+      ○ skipped intersection of a non-empty set and an empty set is an empty set
+      ○ skipped intersection of two sets with no shared elements is an empty set
+      ○ skipped intersection of two sets with shared elements is a set of the shared elements
+    difference of a set is a set of all elements that are only in the first set
+      ○ skipped difference of two empty sets is an empty set
+      ○ skipped difference of empty set and non-empty set is an empty set
+      ○ skipped difference of a non-empty set and an empty set is the non-empty set
+      ○ skipped difference of two non-empty sets is a set of elements that are only in the first set
+    union: returns a set of all elements in either set
+      ○ skipped union of empty sets is an empty set
+      ○ skipped union of an empty set and non-empty set is the non-empty set
+      ○ skipped union of a non-empty set and empty set is the non-empty set
+      ○ skipped union of non-empty sets contains all unique elements
+
+Test Suites: 1 passed, 1 total
+Tests:       37 skipped, 1 passed, 38 total
+Snapshots:   0 total
+Time:        0.595 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/custom-set/i.

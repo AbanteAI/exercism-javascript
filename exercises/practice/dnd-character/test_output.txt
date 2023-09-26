@@ -1,0 +1,30 @@
+PASS exercises/practice/dnd-character/dnd-character.spec.js
+  D&D Character
+    ○ skipped random ability within range
+    ○ skipped random character is valid
+    ○ skipped each ability is only calculated once
+    Ability modifier
+      ✓ ability modifier for score 3 is -4 (3 ms)
+      ○ skipped ability modifier for score 4 is -3
+      ○ skipped ability modifier for score 5 is -3
+      ○ skipped ability modifier for score 6 is -2
+      ○ skipped ability modifier for score 7 is -2
+      ○ skipped ability modifier for score 8 is -1
+      ○ skipped ability modifier for score 9 is -1
+      ○ skipped ability modifier for score 10 is 0
+      ○ skipped ability modifier for score 11 is 0
+      ○ skipped ability modifier for score 12 is 1
+      ○ skipped ability modifier for score 13 is 1
+      ○ skipped ability modifier for score 14 is 2
+      ○ skipped ability modifier for score 15 is 2
+      ○ skipped ability modifier for score 16 is 3
+      ○ skipped ability modifier for score 17 is 3
+      ○ skipped ability modifier for score 18 is 4
+      ○ skipped ability score less than 3 throws error
+      ○ skipped ability score greater than 18 throws error
+
+Test Suites: 1 passed, 1 total
+Tests:       20 skipped, 1 passed, 21 total
+Snapshots:   0 total
+Time:        0.673 s
+Ran all test suites matching /exercises\/practice\/dnd-character/i.

@@ -4,15 +4,23 @@
 //
 
 export class Forth {
-  constructor() {
-    throw Error('Remove this statement and implement this function');
-  }
+constructor() {
+    this.stack = [];
+}
 
-  evaluate() {
-    throw Error('Remove this statement and implement this function');
-  }
+evaluate() {
+    // TODO: Implement evaluation logic
+}
 
-  get stack() {
-    throw Error('Remove this statement and implement this function');
-  }
+get stack() {
+    return this.stack;
+}
+
+evaluate() {
+    // TODO: Implement evaluation logic
+}
+
+get stack() {
+    return this.stack;
+}
 }

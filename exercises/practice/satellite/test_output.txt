@@ -1,0 +1,31 @@
+FAIL exercises/practice/satellite/satellite.spec.js
+  Satellite
+    ✕ Empty tree (5 ms)
+    ○ skipped Tree with one item
+    ○ skipped Tree with many items
+    ○ skipped Reject traversals of different length
+    ○ skipped Reject inconsistent traversals of same length
+    ○ skipped Reject traversals with repeated items
+
+  ● Satellite › Empty tree
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: {}
+    Received: undefined
+
+      3 | describe('Satellite', () => {
+      4 |   test('Empty tree', () => {
+    > 5 |     expect(treeFromTraversals([], [])).toEqual({});
+        |                                        ^
+      6 |   });
+      7 |
+      8 |   xtest('Tree with one item', () => {
+
+      at Object.toEqual (exercises/practice/satellite/satellite.spec.js:5:40)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 skipped, 6 total
+Snapshots:   0 total
+Time:        0.624 s
+Ran all test suites matching /exercises\/practice\/satellite/i.

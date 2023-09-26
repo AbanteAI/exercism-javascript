@@ -4,19 +4,50 @@
 //
 
 export class Squares {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+export class Squares {
+  constructor(n) {
+    this.n = n;
   }
 
   get sumOfSquares() {
-    throw new Error('Remove this statement and implement this function');
+    let sum = 0;
+    for (let i = 1; i <= this.n; i++) {
+      sum += i ** 2;
+    }
+    return sum;
   }
 
   get squareOfSum() {
-    throw new Error('Remove this statement and implement this function');
+    let sum = 0;
+    for (let i = 1; i <= this.n; i++) {
+      sum += i;
+    }
+    return sum ** 2;
   }
 
   get difference() {
-    throw new Error('Remove this statement and implement this function');
+    return this.squareOfSum - this.sumOfSquares;
   }
+}
+
+  get sumOfSquares() {
+    let sum = 0;
+    for (let i = 1; i <= this.n; i++) {
+      sum += i ** 2;
+    }
+    return sum;
+  }
+
+  get squareOfSum() {
+    let sum = 0;
+    for (let i = 1; i <= this.n; i++) {
+      sum += i;
+    }
+    return sum ** 2;
+  }
+
+  get difference() {
+    return this.squareOfSum - this.sumOfSquares;
+  }
+}
 }

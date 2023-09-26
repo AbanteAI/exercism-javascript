@@ -1,0 +1,33 @@
+FAIL exercises/practice/series/series.spec.js
+  Series
+    ✕ slices of one from one (1 ms)
+    ○ skipped slices of one from two
+    ○ skipped slices of two
+    ○ skipped slices of two overlap
+    ○ skipped slices can include duplicates
+    ○ skipped slices of long series
+    ○ skipped slice length is too large
+    ○ skipped slice length cannot be zero
+    ○ skipped slice length cannot be negative
+    ○ skipped empty series is invalid
+
+  ● Series › slices of one from one
+
+    Remove this statement and implement this function
+
+      21 |
+      22 |   slices(sliceLength) {
+    > 23 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+      24 |   }
+      25 | }
+      26 |
+
+      at Series.slices (exercises/practice/series/series.js:23:11)
+      at Object.slices (exercises/practice/series/series.spec.js:5:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 9 skipped, 10 total
+Snapshots:   0 total
+Time:        0.294 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/series/i.

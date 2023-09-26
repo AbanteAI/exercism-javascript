@@ -1,0 +1,33 @@
+FAIL exercises/practice/food-chain/food-chain.spec.js
+  Food Chain
+    ✕ fly (2 ms)
+    ○ skipped spider
+    ○ skipped bird
+    ○ skipped cat
+    ○ skipped dog
+    ○ skipped goat
+    ○ skipped cow
+    ○ skipped horse
+    ○ skipped multiple verses
+    ○ skipped the whole song
+
+  ● Food Chain › fly
+
+    Not implemented
+
+       7 | verse() {
+       8 |     // TODO: Implement the logic to generate the lyrics for a specific verse
+    >  9 |     throw new Error('Not implemented');
+         |           ^
+      10 | }
+      11 |
+      12 | verses(startVerse, endVerse) {
+
+      at Song.verse (exercises/practice/food-chain/food-chain.js:9:11)
+      at Object.verse (exercises/practice/food-chain/food-chain.spec.js:15:17)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 9 skipped, 10 total
+Snapshots:   0 total
+Time:        0.226 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/food-chain/i.

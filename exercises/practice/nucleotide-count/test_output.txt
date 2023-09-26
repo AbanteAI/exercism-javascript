@@ -1,0 +1,30 @@
+FAIL exercises/practice/nucleotide-count/nucleotide-count.spec.js
+  count all nucleotides in a strand
+    ✕ empty strand (5 ms)
+    ○ skipped can count one nucleotide in single-character input
+    ○ skipped strand with repeated nucleotide
+    ○ skipped strand with multiple nucleotides
+    ○ skipped strand with invalid nucleotides
+
+  ● count all nucleotides in a strand › empty strand
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "0 0 0 0"
+    Received: {"A": 0, "C": 0, "G": 0, "T": 0}
+
+      3 | describe('count all nucleotides in a strand', () => {
+      4 |   test('empty strand', () => {
+    > 5 |     expect(countNucleotides('')).toEqual('0 0 0 0');
+        |                                  ^
+      6 |   });
+      7 |
+      8 |   xtest('can count one nucleotide in single-character input', () => {
+
+      at Object.toEqual (exercises/practice/nucleotide-count/nucleotide-count.spec.js:5:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 skipped, 5 total
+Snapshots:   0 total
+Time:        0.295 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/nucleotide-count/i.

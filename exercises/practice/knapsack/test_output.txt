@@ -1,0 +1,134 @@
+FAIL exercises/practice/knapsack/knapsack.spec.js
+  Knapsack
+    ✕ no items (4 ms)
+    ✕ one item, too heavy
+    ✕ five items (cannot be greedy by weight) (1 ms)
+    ✕ five items (cannot be greedy by value)
+    ✕ example knapsack
+    ✕ 8 items
+    ✕ 15 items (1 ms)
+
+  ● Knapsack › no items
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 0
+    Received: undefined
+
+      3 | describe('Knapsack', () => {
+      4 |   test('no items', () => {
+    > 5 |     expect(knapsack(100, [])).toEqual(0);
+        |                               ^
+      6 |   });
+      7 |
+      8 |   test('one item, too heavy', () => {
+
+      at Object.toEqual (exercises/practice/knapsack/knapsack.spec.js:5:31)
+
+  ● Knapsack › one item, too heavy
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 0
+    Received: undefined
+
+       8 |   test('one item, too heavy', () => {
+       9 |     const items = [{ weight: 100, value: 1 }];
+    > 10 |     expect(knapsack(10, items)).toEqual(0);
+         |                                 ^
+      11 |   });
+      12 |
+      13 |   test('five items (cannot be greedy by weight)', () => {
+
+      at Object.toEqual (exercises/practice/knapsack/knapsack.spec.js:10:33)
+
+  ● Knapsack › five items (cannot be greedy by weight)
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 21
+    Received: undefined
+
+      19 |       { weight: 10, value: 21 },
+      20 |     ];
+    > 21 |     expect(knapsack(10, items)).toEqual(21);
+         |                                 ^
+      22 |   });
+      23 |
+      24 |   test('five items (cannot be greedy by value)', () => {
+
+      at Object.toEqual (exercises/practice/knapsack/knapsack.spec.js:21:33)
+
+  ● Knapsack › five items (cannot be greedy by value)
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 80
+    Received: undefined
+
+      30 |       { weight: 10, value: 50 },
+      31 |     ];
+    > 32 |     expect(knapsack(10, items)).toEqual(80);
+         |                                 ^
+      33 |   });
+      34 |
+      35 |   test('example knapsack', () => {
+
+      at Object.toEqual (exercises/practice/knapsack/knapsack.spec.js:32:33)
+
+  ● Knapsack › example knapsack
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 90
+    Received: undefined
+
+      40 |       { weight: 4, value: 50 },
+      41 |     ];
+    > 42 |     expect(knapsack(10, items)).toEqual(90);
+         |                                 ^
+      43 |   });
+      44 |
+      45 |   test('8 items', () => {
+
+      at Object.toEqual (exercises/practice/knapsack/knapsack.spec.js:42:33)
+
+  ● Knapsack › 8 items
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 900
+    Received: undefined
+
+      54 |       { weight: 2, value: 5 },
+      55 |     ];
+    > 56 |     expect(knapsack(104, items)).toEqual(900);
+         |                                  ^
+      57 |   });
+      58 |
+      59 |   test('15 items', () => {
+
+      at Object.toEqual (exercises/practice/knapsack/knapsack.spec.js:56:34)
+
+  ● Knapsack › 15 items
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 1458
+    Received: undefined
+
+      75 |       { weight: 120, value: 240 },
+      76 |     ];
+    > 77 |     expect(knapsack(750, items)).toEqual(1458);
+         |                                  ^
+      78 |   });
+      79 | });
+      80 |
+
+      at Object.toEqual (exercises/practice/knapsack/knapsack.spec.js:77:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 7 total
+Snapshots:   0 total
+Time:        0.582 s
+Ran all test suites matching /exercises\/practice\/knapsack/i.

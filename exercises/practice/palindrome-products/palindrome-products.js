@@ -4,7 +4,27 @@
 //
 
 export class Palindromes {
-  static generate() {
-    throw new Error('Remove this statement and implement this function');
+export class Palindromes {
+  static generate(min, max) {
+    const isPalindrome = (num) => {
+      const str = String(num);
+      return str === str.split('').reverse().join('');
+    };
+
+    const palindromes = [];
+
+    for (let i = min; i <= max; i++) {
+      for (let j = i; j <= max; j++) {
+        const product = i * j;
+        if (isPalindrome(product)) {
+          palindromes.push({
+            value: product,
+            factors: [[i, j]]
+          });
+        }
+      }
+    }
+
+    return palindromes;
   }
 }

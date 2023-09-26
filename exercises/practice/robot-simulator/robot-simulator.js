@@ -11,13 +11,37 @@ export class InvalidInputError extends Error {
 }
 
 export class Robot {
-  get bearing() {
+get bearing() {
+    // Implement the logic to return the current direction the robot is facing
     throw new Error('Remove this statement and implement this function');
-  }
+}
 
-  get coordinates() {
+get coordinates() {
+    // Implement the logic to return the current coordinates of the robot
     throw new Error('Remove this statement and implement this function');
-  }
+}
+
+place({ x, y, direction }) {
+    // Implement the logic to place the robot at the specified coordinates and direction
+    throw new Error('Remove this statement and implement this function');
+}
+
+evaluate(instructions) {
+    // Implement the logic to evaluate the given instructions and update the robot's position and direction
+    throw new Error('Remove this statement and implement this function');
+}
+    throw new Error('Remove this statement and implement this function');
+}
+
+place({ x, y, direction }) {
+    // Implement the logic to place the robot at the specified coordinates and direction
+    throw new Error('Remove this statement and implement this function');
+}
+
+evaluate(instructions) {
+    // Implement the logic to evaluate the given instructions and update the robot's position and direction
+    throw new Error('Remove this statement and implement this function');
+}
 
   place({ x, y, direction }) {
     throw new Error('Remove this statement and implement this function');

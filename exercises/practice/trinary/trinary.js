@@ -4,11 +4,19 @@
 //
 
 export class Trinary {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(trinary) {
+    this.trinary = trinary;
   }
 
   toDecimal() {
-    throw new Error('Remove this statement and implement this function');
+    if (!/^[0-2]+$/.test(this.trinary)) {
+      return 0;
+    }
+
+    let decimal = 0;
+    for (let i = 0; i < this.trinary.length; i++) {
+      decimal += parseInt(this.trinary[i]) * Math.pow(3, this.trinary.length - i - 1);
+    }
+    return decimal;
   }
 }

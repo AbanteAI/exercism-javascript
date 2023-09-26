@@ -4,15 +4,36 @@
 //
 
 export class GradeSchool {
-  roster() {
-    throw new Error('Remove this statement and implement this function');
-  }
+roster() {
+    return {};
+}
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
-  }
+add(student, grade) {
+    // Check if the grade already exists in the roster
+    if (!this.roster.hasOwnProperty(grade)) {
+        this.roster[grade] = [];
+    }
+    // Add the student to the grade
+    this.roster[grade].push(student);
+}
 
-  grade() {
-    throw new Error('Remove this statement and implement this function');
-  }
+grade(grade) {
+    // Check if the grade exists in the roster
+    if (this.roster.hasOwnProperty(grade)) {
+        // Return a sorted copy of the students in the grade
+        return [...this.roster[grade]].sort();
+    } else {
+        return [];
+    }
+}
+
+allStudents() {
+    // Get all the students from all the grades
+    const students = [];
+    for (const grade in this.roster) {
+        students.push(...this.roster[grade]);
+    }
+    // Sort the students alphabetically
+    return students.sort();
+}
 }

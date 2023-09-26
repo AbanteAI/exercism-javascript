@@ -4,5 +4,7 @@
 //
 
 export const bestHands = (hands) => {
-  throw new Error('Remove this statement and implement this function');
+  // TODO: Implement the logic to determine the best hand(s) from a list of poker hands
+  return hands; // Placeholder return statement, replace with actual implementation
+};
 };

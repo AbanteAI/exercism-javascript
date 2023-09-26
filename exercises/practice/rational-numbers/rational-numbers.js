@@ -4,39 +4,56 @@
 //
 
 export class Rational {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(numerator, denominator) {
+    const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
+    const sign = denominator < 0 ? -1 : 1;
+    const divisor = gcd(Math.abs(numerator), Math.abs(denominator));
+    this.numerator = sign * Math.abs(numerator) / divisor;
+    this.denominator = Math.abs(denominator) / divisor;
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(other) {
+    const numerator = this.numerator * other.denominator + other.numerator * this.denominator;
+    const denominator = this.denominator * other.denominator;
+    return new Rational(numerator, denominator);
   }
 
-  sub() {
-    throw new Error('Remove this statement and implement this function');
+  sub(other) {
+    const numerator = this.numerator * other.denominator - other.numerator * this.denominator;
+    const denominator = this.denominator * other.denominator;
+    return new Rational(numerator, denominator);
   }
 
-  mul() {
-    throw new Error('Remove this statement and implement this function');
+  mul(other) {
+    const numerator = this.numerator * other.numerator;
+    const denominator = this.denominator * other.denominator;
+    return new Rational(numerator, denominator);
   }
 
-  div() {
-    throw new Error('Remove this statement and implement this function');
+  div(other) {
+    const numerator = this.numerator * other.denominator;
+    const denominator = this.denominator * other.numerator;
+    return new Rational(numerator, denominator);
   }
 
   abs() {
-    throw new Error('Remove this statement and implement this function');
+    const numerator = Math.abs(this.numerator);
+    const denominator = Math.abs(this.denominator);
+    return new Rational(numerator, denominator);
   }
 
-  exprational() {
-    throw new Error('Remove this statement and implement this function');
+  exprational(power) {
+    const numerator = Math.pow(this.numerator, power);
+    const denominator = Math.pow(this.denominator, power);
+    return new Rational(numerator, denominator);
   }
 
-  expreal() {
-    throw new Error('Remove this statement and implement this function');
+  expreal(base) {
+    const value = Math.pow(base, this.numerator / this.denominator);
+    return value;
   }
 
   reduce() {
-    throw new Error('Remove this statement and implement this function');
+    return new Rational(this.numerator, this.denominator);
   }
 }

@@ -1,0 +1,21 @@
+PASS exercises/practice/rectangles/rectangles.spec.js
+  Rectangles
+    ✓ no rows (3 ms)
+    ○ skipped no columns
+    ○ skipped no rectangles
+    ○ skipped one rectangle
+    ○ skipped two rectangles without shared parts
+    ○ skipped five rectangles with shared parts
+    ○ skipped rectangle of height 1 is counted
+    ○ skipped rectangle of width 1 is counted
+    ○ skipped 1x1 square is counted
+    ○ skipped only complete rectangles are counted
+    ○ skipped rectangles can be of different sizes
+    ○ skipped corner is required for a rectangle to be complete
+    ○ skipped large input with many rectangles
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 1 passed, 13 total
+Snapshots:   0 total
+Time:        0.565 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/rectangles/i.

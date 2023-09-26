@@ -4,16 +4,122 @@
 //
 
 export class Element {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(value, next = null) {
+    this._value = value;
+    this._next = next;
   }
 
   get value() {
-    throw new Error('Remove this statement and implement this function');
+    return this._value;
   }
 
   get next() {
-    throw new Error('Remove this statement and implement this function');
+    return this._next;
+  }
+}
+
+export class List {
+  constructor() {
+    this._head = null;
+    this._length = 0;
+  }
+
+  add(value) {
+    const newElement = new Element(value);
+
+    if (!this._head) {
+      this._head = newElement;
+    } else {
+      let current = this._head;
+      while (current.next) {
+        current = current.next;
+      }
+      current._next = newElement;
+    }
+
+    this._length++;
+  }
+
+  get length() {
+    return this._length;
+  }
+
+  get head() {
+    return this._head;
+  }
+
+  toArray() {
+    const array = [];
+    let current = this._head;
+    while (current) {
+      array.push(current.value);
+      current = current.next;
+    }
+    return array;
+  }
+
+  reverse() {
+    let previous = null;
+    let current = this._head;
+    while (current) {
+      const next = current.next;
+      current._next = previous;
+      previous = current;
+      current = next;
+    }
+    this._head = previous;
+  }
+}
+export class List {
+  constructor() {
+    this._head = null;
+    this._length = 0;
+  }
+
+  add(value) {
+    const newElement = new Element(value);
+
+    if (!this._head) {
+      this._head = newElement;
+    } else {
+      let current = this._head;
+      while (current.next) {
+        current = current.next;
+      }
+      current._next = newElement;
+    }
+
+    this._length++;
+  }
+
+  get length() {
+    return this._length;
+  }
+
+  get head() {
+    return this._head;
+  }
+
+  toArray() {
+    const array = [];
+    let current = this._head;
+    while (current) {
+      array.push(current.value);
+      current = current.next;
+    }
+    return array;
+  }
+
+  reverse() {
+    let previous = null;
+    let current = this._head;
+    while (current) {
+      const next = current.next;
+      current._next = previous;
+      previous = current;
+      current = next;
+    }
+    this._head = previous;
   }
 }
 

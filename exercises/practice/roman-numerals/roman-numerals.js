@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const toRoman = () => {
-  throw new Error('Remove this statement and implement this function');
+export const toRoman = (number) => {
+  // Implement the conversion logic here
 };

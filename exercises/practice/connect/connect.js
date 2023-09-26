@@ -4,11 +4,26 @@
 //
 
 export class Board {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
-  }
+constructor() {
+    this.board = [];
+}
 
-  winner() {
-    throw new Error('Remove this statement and implement this function');
-  }
+winner() {
+    const playerXConnected = this.checkConnection('X');
+    const playerOConnected = this.checkConnection('O');
+
+    if (playerXConnected && playerOConnected) {
+        return '';
+    } else if (playerXConnected) {
+        return 'X';
+    } else if (playerOConnected) {
+        return 'O';
+    } else {
+        return '';
+    }
+}
+
+checkConnection(player) {
+    // Implement the logic to check if the player has made a connection
+}
 }

@@ -1,0 +1,35 @@
+FAIL exercises/practice/minesweeper/minesweeper.spec.js
+  )
+    ✕ handles no rows (2 ms)
+    ○ skipped handles no columns
+    ○ skipped handles no mines
+    ○ skipped handles minefield with only mines
+    ○ skipped handles mine surrounded by spaces
+    ○ skipped handles space surrounded by mines
+    ○ skipped handles horizontal line
+    ○ skipped handles horizontal line, mines at edges
+    ○ skipped handles vertical line
+    ○ skipped handles vertical line, mines at edges
+    ○ skipped handles cross
+    ○ skipped handles large minefield
+
+  ● ) › handles no rows
+
+    TypeError: Cannot read properties of undefined (reading 'length')
+
+       6 | export const annotate = (input) => {
+       7 |   const rows = input.length;
+    >  8 |   const cols = input[0].length;
+         |                         ^
+       9 |   const result = [];
+      10 |
+      11 |   for (let i = 0; i < rows; i++) {
+
+      at length (exercises/practice/minesweeper/minesweeper.js:8:25)
+      at Object.<anonymous> (exercises/practice/minesweeper/minesweeper.spec.js:5:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 11 skipped, 12 total
+Snapshots:   0 total
+Time:        0.614 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/minesweeper/i.

@@ -4,11 +4,15 @@
 //
 
 export class TwoBucket {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(bucketOneSize, bucketTwoSize, desiredLiters, startBucket) {
+    this.bucketOneSize = bucketOneSize;
+    this.bucketTwoSize = bucketTwoSize;
+    this.desiredLiters = desiredLiters;
+    this.startBucket = startBucket;
   }
 
   solve() {
-    throw new Error('Remove this statement and implement this function');
+  solve() {
+    // Implement the solution here
   }
 }

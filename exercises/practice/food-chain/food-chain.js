@@ -4,11 +4,13 @@
 //
 
 export class Song {
-  verse() {
-    throw new Error('Remove this statement and implement this function');
-  }
+verse() {
+    // TODO: Implement the logic to generate the lyrics for a specific verse
+    throw new Error('Not implemented');
+}
 
-  verses() {
-    throw new Error('Remove this statement and implement this function');
-  }
+verses(startVerse, endVerse) {
+    // TODO: Implement the logic to generate the lyrics for a range of verses
+    throw new Error('Not implemented');
+}
 }

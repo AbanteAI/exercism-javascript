@@ -19,6 +19,59 @@ const fs = require('fs');
 const path = require('path');
 
 /**
+ * Search a file for lines matching a regular expression pattern. Return the line
+ * number and contents of each matching line.
+ *
+ * @param {string} pattern The pattern used to match lines in a file.
+ * @param {string[]} files One or more files in which to search for matching lines.
+ * @param {string[]} flags Zero or more flags to customize the matching behavior.
+ * @returns {string} The matching lines.
+ */
+function grep(pattern, files, flags) {
+  let output = '';
+
+  for (const file of files) {
+    const lines = readLines(file);
+
+    for (let lineNumber = 0; lineNumber < lines.length; lineNumber++) {
+      const line = lines[lineNumber];
+
+      let matches = line.match(pattern);
+
+      if (matches) {
+        if (flags.includes('-v')) {
+          continue;
+        }
+
+        if (flags.includes('-l')) {
+          output += `${file}\n`;
+          break;
+        }
+
+        if (flags.includes('-n')) {
+          output += `${lineNumber + 1}:${line}\n`;
+        } else {
+          output += `${line}\n`;
+        }
+      } else if (flags.includes('-v')) {
+        if (flags.includes('-l')) {
+          output += `${file}\n`;
+          break;
+        }
+
+        if (flags.includes('-n')) {
+          output += `${lineNumber + 1}:${line}\n`;
+        } else {
+          output += `${line}\n`;
+        }
+      }
+    }
+  }
+
+  return output;
+}
+
+/**
  * Reads the given file and returns lines.
  *
  * This function works regardless of POSIX (LF) or windows (CRLF) encoding.
@@ -31,19 +84,10 @@ function readLines(file) {
   return data.split(/\r?\n/);
 }
 
-const VALID_OPTIONS = [
-  'n', // add line numbers
-  'l', // print file names where pattern is found
-  'i', // ignore case
-  'v', // reverse files results
-  'x', // match entire line
-];
+const ARGS = process.argv.slice(2);
+const pattern = ARGS.shift();
+const flags = ARGS.filter(arg => arg.startsWith('-'));
+const files = ARGS.filter(arg => !arg.startsWith('-'));
 
-const ARGS = process.argv;
-
-//
-// This is only a SKELETON file for the 'Grep' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-// This file should *not* export a function. Use ARGS to determine what to grep
-// and use console.log(output) to write to the standard output.
+const output = grep(pattern, files, flags);
+console.log(output);

@@ -4,13 +4,49 @@
 //
 
 class WordSearch {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(puzzle) {
+    this.puzzle = puzzle;
   }
 
-  find() {
-    throw new Error('Remove this statement and implement this function');
+  find(words) {
+    const result = [];
+    for (const word of words) {
+      const positions = this.searchWord(word);
+      if (positions.length > 0) {
+        result.push({
+          word: word,
+          start: positions[0],
+          end: positions[positions.length - 1]
+        });
+      }
+    }
+    return result;
   }
+
+  searchWord(word) {
+    // Implementation for searching the word in the puzzle
+  }
+}
+
+export default WordSearch;
+      const positions = this.searchWord(word);
+      if (positions.length > 0) {
+        result.push({
+          word: word,
+          start: positions[0],
+          end: positions[positions.length - 1]
+        });
+      }
+    }
+    return result;
+  }
+
+  searchWord(word) {
+    // Implementation for searching the word in the puzzle
+  }
+}
+
+export default WordSearch;
 }
 
 export default WordSearch;

@@ -4,19 +4,21 @@
 //
 
 export class Triangle {
-  constructor(...sides) {
-    throw new Error('Remove this statement and implement this function');
+  constructor(side1, side2, side3) {
+    this.side1 = side1;
+    this.side2 = side2;
+    this.side3 = side3;
   }
 
   get isEquilateral() {
-    throw new Error('Remove this statement and implement this function');
+    return this.side1 === this.side2 && this.side2 === this.side3;
   }
 
   get isIsosceles() {
-    throw new Error('Remove this statement and implement this function');
+    return this.side1 === this.side2 || this.side1 === this.side3 || this.side2 === this.side3;
   }
 
   get isScalene() {
-    throw new Error('Remove this statement and implement this function');
+    return this.side1 !== this.side2 && this.side2 !== this.side3 && this.side1 !== this.side3;
   }
 }

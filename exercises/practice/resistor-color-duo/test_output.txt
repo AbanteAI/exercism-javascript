@@ -1,0 +1,13 @@
+PASS exercises/practice/resistor-color-duo/resistor-color-duo.spec.js
+  Resistor Colors
+    ✓ Brown and black (2 ms)
+    ○ skipped Blue and grey
+    ○ skipped Yellow and violet
+    ○ skipped Orange and orange
+    ○ skipped Ignore additional colors
+
+Test Suites: 1 passed, 1 total
+Tests:       4 skipped, 1 passed, 5 total
+Snapshots:   0 total
+Time:        0.529 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/resistor-color-duo/i.

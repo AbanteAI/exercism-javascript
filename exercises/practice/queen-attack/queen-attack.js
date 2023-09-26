@@ -8,14 +8,35 @@ export class QueenAttack {
     black: [blackRow, blackColumn] = [],
     white: [whiteRow, whiteColumn] = [],
   } = {}) {
-    throw new Error('Remove this statement and implement this function');
+    this.blackRow = blackRow;
+    this.blackColumn = blackColumn;
+    this.whiteRow = whiteRow;
+    this.whiteColumn = whiteColumn;
   }
 
   toString() {
-    throw new Error('Remove this statement and implement this function');
+    const chessboard = [];
+    for (let row = 0; row < 8; row++) {
+      const rowArray = [];
+      for (let column = 0; column < 8; column++) {
+        if (row === this.blackRow && column === this.blackColumn) {
+          rowArray.push('B');
+        } else if (row === this.whiteRow && column === this.whiteColumn) {
+          rowArray.push('W');
+        } else {
+          rowArray.push('_');
+        }
+      }
+      chessboard.push(rowArray.join(' '));
+    }
+    return chessboard.join('\n');
   }
 
   get canAttack() {
-    throw new Error('Remove this statement and implement this function');
+    return (
+      this.blackRow === this.whiteRow ||
+      this.blackColumn === this.whiteColumn ||
+      Math.abs(this.blackRow - this.whiteRow) === Math.abs(this.blackColumn - this.whiteColumn)
+    );
   }
 }

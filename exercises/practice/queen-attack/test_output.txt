@@ -1,0 +1,47 @@
+FAIL exercises/practice/queen-attack/queen-attack.spec.js
+  Queens
+    Test creation of Queens with valid and invalid positions
+      ✕ queen with a valid position (5 ms)
+      ○ skipped queen must have positive row
+      ○ skipped queen must have row on board
+      ○ skipped queen must have positive column
+      ○ skipped queen must have column on board
+      ○ skipped two queens cannot occupy the same space
+    Test the ability of one queen to attack another
+      ○ skipped queens cannot attack
+      ○ skipped queens can attack when they are on the same row
+      ○ skipped queens can attack when they are on the same column
+      ○ skipped queens can attack diagonally
+      ○ skipped queens can attack another diagonally
+      ○ skipped queens can attack yet another diagonally
+      ○ skipped queens can attack diagonally, really
+      ○ skipped queens can attack on a north-east/south-west diagonal
+      ○ skipped queens can attack on another ne/sw diagonal
+    Test the board visualisation
+      ○ skipped board
+      ○ skipped board with queens at their starting positions
+      ○ skipped board with the black queen at her starting positions
+      ○ skipped board with queens at the edges
+
+  ● Queens › Test creation of Queens with valid and invalid positions › queen with a valid position
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: [2, 2]
+    Received: undefined
+
+       5 |     test('queen with a valid position', () => {
+       6 |       const queens = new QueenAttack({ white: [2, 2] });
+    >  7 |       expect(queens.white).toEqual([2, 2]);
+         |                            ^
+       8 |     });
+       9 |
+      10 |     xtest('queen must have positive row', () => {
+
+      at Object.toEqual (exercises/practice/queen-attack/queen-attack.spec.js:7:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 18 skipped, 19 total
+Snapshots:   0 total
+Time:        0.259 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/queen-attack/i.

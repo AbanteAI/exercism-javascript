@@ -3,10 +3,22 @@
 // convenience to get you started writing code faster.
 //
 
-export const keep = () => {
-  throw new Error('Remove this statement and implement this function');
+export const keep = (collection, predicate) => {
+  const result = [];
+  for (let i = 0; i < collection.length; i++) {
+    if (predicate(collection[i])) {
+      result.push(collection[i]);
+    }
+  }
+  return result;
 };
 
-export const discard = () => {
-  throw new Error('Remove this statement and implement this function');
+export const discard = (collection, predicate) => {
+  const result = [];
+  for (let i = 0; i < collection.length; i++) {
+    if (!predicate(collection[i])) {
+      result.push(collection[i]);
+    }
+  }
+  return result;
 };

@@ -1,0 +1,27 @@
+PASS exercises/practice/zipper/zipper.spec.js
+  Zipper
+    ✓ data is retained (3 ms)
+    ○ skipped left, right and value
+    ○ skipped dead end
+    ○ skipped tree from deep focus
+    ○ skipped traversing up from top
+    ○ skipped left, right and up
+    ○ skipped setValue
+    ○ skipped setValue after traversing up
+    ○ skipped setLeft with leaf
+    ○ skipped setRight with null
+    ○ skipped setRight with subtree
+    ○ skipped setValue on deep focus
+    ○ skipped left returns a new Zipper
+    ○ skipped right returns a new Zipper
+    ○ skipped setValue returns a new Zipper
+    ○ skipped setRight returns a new Zipper
+    ○ skipped setLeft returns a new Zipper
+    ○ skipped up returns a new Zipper
+    ○ skipped should return same zipper from different paths
+
+Test Suites: 1 passed, 1 total
+Tests:       18 skipped, 1 passed, 19 total
+Snapshots:   0 total
+Time:        0.633 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/zipper/i.

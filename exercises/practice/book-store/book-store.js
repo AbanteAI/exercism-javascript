@@ -4,5 +4,7 @@
 //
 
 export const cost = (books) => {
+  // TODO: Implement the cost function according to the instructions
   throw new Error('Remove this statement and implement this function');
+};
 };

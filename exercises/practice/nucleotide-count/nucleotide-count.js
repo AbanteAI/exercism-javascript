@@ -4,5 +4,21 @@
 //
 
 export function countNucleotides(strand) {
-  throw new Error('Remove this statement and implement this function');
+  const count = {
+    'A': 0,
+    'C': 0,
+    'G': 0,
+    'T': 0
+  };
+
+  for (let i = 0; i < strand.length; i++) {
+    const nucleotide = strand[i];
+    if (nucleotide === 'A' || nucleotide === 'C' || nucleotide === 'G' || nucleotide === 'T') {
+      count[nucleotide]++;
+    } else {
+      throw new Error('Invalid nucleotide');
+    }
+  }
+
+  return count;
 }

@@ -1,0 +1,51 @@
+FAIL exercises/practice/roman-numerals/roman-numerals.spec.js
+  toRoman()
+    ✕ converts 1 (4 ms)
+    ○ skipped converts 2
+    ○ skipped converts 3
+    ○ skipped converts 4
+    ○ skipped converts 5
+    ○ skipped converts 6
+    ○ skipped converts 9
+    ○ skipped converts 16
+    ○ skipped converts 27
+    ○ skipped converts 48
+    ○ skipped converts 49
+    ○ skipped converts 59
+    ○ skipped converts 66
+    ○ skipped converts 93
+    ○ skipped converts 141
+    ○ skipped converts 163
+    ○ skipped converts 166
+    ○ skipped converts 402
+    ○ skipped converts 575
+    ○ skipped converts 666
+    ○ skipped converts 911
+    ○ skipped converts 1024
+    ○ skipped converts 1666
+    ○ skipped converts 3000
+    ○ skipped converts 3001
+    ○ skipped converts 3999
+
+  ● toRoman() › converts 1
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "I"
+    Received: undefined
+
+      2 |
+      3 | describe('toRoman()', () => {
+    > 4 |   test('converts 1', () => expect(toRoman(1)).toEqual('I'));
+        |                                               ^
+      5 |   xtest('converts 2', () => expect(toRoman(2)).toEqual('II'));
+      6 |   xtest('converts 3', () => expect(toRoman(3)).toEqual('III'));
+      7 |   xtest('converts 4', () => expect(toRoman(4)).toEqual('IV'));
+
+      at Object.toEqual (exercises/practice/roman-numerals/roman-numerals.spec.js:4:47)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 25 skipped, 26 total
+Snapshots:   0 total
+Time:        0.275 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/roman-numerals/i.

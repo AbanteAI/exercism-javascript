@@ -4,11 +4,21 @@
 //
 
 export class DNA {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(dnaStrand) {
+    this.dnaStrand = dnaStrand;
+  }
+  constructor(dnaStrand) {
+    this.dnaStrand = dnaStrand;
   }
 
-  hammingDistance() {
-    throw new Error('Remove this statement and implement this function');
+  hammingDistance(comparisonStrand) {
+    let distance = 0;
+    for (let i = 0; i < this.dnaStrand.length; i++) {
+      if (this.dnaStrand[i] !== comparisonStrand[i]) {
+        distance++;
+      }
+    }
+    return distance;
   }
+}
 }
