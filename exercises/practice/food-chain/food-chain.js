@@ -4,10 +4,21 @@
 //
 
 export class Song {
-  verse() {
-    throw new Error('Remove this statement and implement this function');
-  }
+  verse(verseNumber) {
+    const animals = [
+      'fly',
+      'spider',
+      'bird',
+      'cat',
+      'dog',
+      'goat',
+      'cow',
+      'horse',
+    ];
 
+    const animalLines = [
+      'I know an old lady who swallowed a fly.',
+    'I know an old lady who swallowed a fly.',
   verses() {
     throw new Error('Remove this statement and implement this function');
   }

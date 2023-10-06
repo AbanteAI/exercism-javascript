@@ -1,0 +1,35 @@
+PASS exercises/practice/word-search/word-search.spec.js
+  single line grids
+    ✓ Should accept an initial game grid (3 ms)
+    ○ skipped can accept a target search word
+    ○ skipped should locate a word written left to right
+    ○ skipped can locate a left to right word in a different position
+    ○ skipped can locate a different left to right word
+    ○ skipped can locate that different left to right word in a different position
+  multi line grids
+    ○ skipped can locate a left to right word in a two line grid
+    ○ skipped can locate a left to right word in a different position in a two line grid
+    ○ skipped can locate a left to right word in a three line grid
+    ○ skipped can locate a left to right word in a ten line grid
+    ○ skipped can locate a left to right word in a different position in a ten line grid
+    ○ skipped can locate a different left to right word in a ten line grid
+  can find multiple words
+    ○ skipped can find two words written left to right
+  different directions
+    ○ skipped should locate a single word written right to left
+    ○ skipped should locate multiple words written in different horizontal directions
+  vertical directions
+    ○ skipped should locate words written top to bottom
+    ○ skipped should locate words written bottom to top
+    ○ skipped should locate words written top left to bottom right
+    ○ skipped should locate words written bottom right to top left
+    ○ skipped should locate words written bottom left to top right
+    ○ skipped should locate words written top right to bottom left
+    word doesn't exist
+      ○ skipped should fail to locate a word that is not in the puzzle
+
+Test Suites: 1 passed, 1 total
+Tests:       21 skipped, 1 passed, 22 total
+Snapshots:   0 total
+Time:        0.653 s
+Ran all test suites matching /exercises\/practice\/word-search/i.

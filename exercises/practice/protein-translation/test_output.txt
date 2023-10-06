@@ -1,0 +1,40 @@
+PASS exercises/practice/protein-translation/protein-translation.spec.js
+  ProteinTranslation
+    ✓ Empty RNA has no proteins (3 ms)
+    Single codons
+      ○ skipped Methionine RNA sequence 1 translates into Methionine
+      ○ skipped Phenylalanine RNA sequence 1 translates into Phenylalanine
+      ○ skipped Phenylalanine RNA sequence 2 translates into Phenylalanine
+      ○ skipped Leucine RNA sequence 1 translates into Leucine
+      ○ skipped Leucine RNA sequence 2 translates into Leucine
+      ○ skipped Serine RNA sequence 1 translates into Serine
+      ○ skipped Serine RNA sequence 2 translates into Serine
+      ○ skipped Serine RNA sequence 3 translates into Serine
+      ○ skipped Serine RNA sequence 4 translates into Serine
+      ○ skipped Tyrosine RNA sequence 1 translates into Tyrosine
+      ○ skipped Tyrosine RNA sequence 2 translates into Tyrosine
+      ○ skipped Cysteine RNA sequence 1 translates into Cysteine
+      ○ skipped Cysteine RNA sequence 2 translates into Cysteine
+      ○ skipped Tryptophan RNA sequence 1 translates into Tryptophan
+      ○ skipped STOP codon RNA sequence 1
+      ○ skipped STOP codon RNA sequence 2
+      ○ skipped STOP codon RNA sequence 3
+    Multiple codons
+      ○ skipped Sequence of two protein codons translates into proteins
+      ○ skipped Sequence of two different protein codons translates into proteins
+      ○ skipped Translate RNA strand into correct protein list
+      ○ skipped Translation stops if STOP codon at beginning of sequence
+      ○ skipped Translation stops if STOP codon at end of three-codon sequence
+      ○ skipped Translation stops if STOP codon in middle of three-codon sequence
+      ○ skipped Translation stops if STOP codon in middle of six-codon sequence
+    Unexpected strands
+      ○ skipped Non-existing codon can't translate
+      ○ skipped Unknown amino acids, not part of a codon, can't translate
+      ○ skipped Incomplete RNA sequence can't translate
+      ○ skipped Incomplete RNA sequence can translate if valid until a STOP codon
+
+Test Suites: 1 passed, 1 total
+Tests:       28 skipped, 1 passed, 29 total
+Snapshots:   0 total
+Time:        0.557 s
+Ran all test suites matching /exercises\/practice\/protein-translation/i.

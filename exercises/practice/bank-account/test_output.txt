@@ -1,0 +1,23 @@
+PASS exercises/practice/bank-account/bank-account.spec.js
+  Bank Account
+    ✓ newly opened account has zero balance (3 ms)
+    ○ skipped can deposit money
+    ○ skipped can deposit money sequentially
+    ○ skipped can withdraw money
+    ○ skipped can withdraw money sequentially
+    ○ skipped checking balance of closed account throws error
+    ○ skipped deposit into closed account throws error
+    ○ skipped withdraw from closed account throws error
+    ○ skipped close already closed account throws error
+    ○ skipped open already opened account throws error
+    ○ skipped reopened account does not retain balance
+    ○ skipped cannot withdraw more than deposited
+    ○ skipped cannot withdraw negative amount
+    ○ skipped cannot deposit negative amount
+    ○ skipped changing balance directly throws error
+
+Test Suites: 1 passed, 1 total
+Tests:       14 skipped, 1 passed, 15 total
+Snapshots:   0 total
+Time:        0.659 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/bank-account/i.

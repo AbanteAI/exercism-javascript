@@ -1,0 +1,17 @@
+PASS exercises/practice/high-scores/high-scores.spec.js
+  High Scores Test Suite
+    ✓ List of scores (3 ms)
+    ○ skipped Latest score
+    ○ skipped Personal best
+    Top 3 scores
+      ○ skipped Personal top three from a list of scores
+      ○ skipped Personal top highest to lowest
+      ○ skipped Personal top when there is a tie
+      ○ skipped Personal top when there are less than 3
+      ○ skipped Personal top when there is only one
+
+Test Suites: 1 passed, 1 total
+Tests:       7 skipped, 1 passed, 8 total
+Snapshots:   0 total
+Time:        0.549 s
+Ran all test suites matching /exercises\/practice\/high-scores/i.

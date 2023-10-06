@@ -1,0 +1,37 @@
+FAIL exercises/practice/tournament/tournament.spec.js
+  Tournament
+    ✕ just the header if no input (2 ms)
+    ○ skipped a win is three points, a loss is zero points
+    ○ skipped a win can also be expressed as a loss
+    ○ skipped a different team can win
+    ○ skipped a draw is one point each
+    ○ skipped there can be more than one match
+    ○ skipped there can be more than one winner
+    ○ skipped there can be more than two teams
+    ○ skipped typical input
+    ○ skipped incomplete competition (not all pairs have played)
+    ○ skipped ties broken alphabetically
+    ○ skipped ensure points sorted numerically
+
+  ● Tournament › just the header if no input
+
+    TypeError: Cannot read properties of undefined (reading 'localeCompare')
+
+      37 |   
+      38 |     if (statsA.P === statsB.P) {
+    > 39 |       return teamA.localeCompare(teamB) || teamA.localeCompare(teamB, 'en', { sensitivity: 'base' });
+         |                    ^
+      40 |     }
+      41 |   });
+      42 |   
+
+      at localeCompare (exercises/practice/tournament/tournament.js:39:20)
+          at Array.sort (<anonymous>)
+      at sort (exercises/practice/tournament/tournament.js:34:44)
+      at Object.<anonymous> (exercises/practice/tournament/tournament.spec.js:5:34)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 11 skipped, 12 total
+Snapshots:   0 total
+Time:        0.628 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/tournament/i.

@@ -1,0 +1,25 @@
+PASS exercises/practice/sublist/sublist.spec.js
+  sublist
+    ✓ two empty lists are equal (3 ms)
+    ○ skipped an empty list is a sublist of a non-empty list
+    ○ skipped non empty list contains empty list
+    ○ skipped a non-empty list equals itself
+    ○ skipped two different lists are unequal
+    ○ skipped false start
+    ○ skipped consecutive
+    ○ skipped sublist at start
+    ○ skipped sublist in middle
+    ○ skipped sublist at end
+    ○ skipped at start of superlist
+    ○ skipped in middle of superlist
+    ○ skipped at end of superlist
+    ○ skipped first list missing element from second list
+    ○ skipped second list missing element from first list
+    ○ skipped order matters to a list
+    ○ skipped same digits but different numbers
+
+Test Suites: 1 passed, 1 total
+Tests:       16 skipped, 1 passed, 17 total
+Snapshots:   0 total
+Time:        0.587 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/sublist/i.

@@ -5,14 +5,30 @@
 
 export class ZebraPuzzle {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+  }
   }
 
   waterDrinker() {
-    throw new Error('Remove this statement and implement this function');
+    const houses = this.generateHouses();
+    for (const house of houses) {
+      if (house.drinks === 'water') {
+        return house.nationality;
+      }
+    }
+  }
+    for (const house of houses) {
+      if (house.drinks === 'water') {
+        return house.nationality;
+      }
+    }
   }
 
   zebraOwner() {
-    throw new Error('Remove this statement and implement this function');
+    const houses = this.generateHouses();
+    for (const house of houses) {
+      if (house.pet === 'zebra') {
+        return house.nationality;
+      }
+    }
   }
 }

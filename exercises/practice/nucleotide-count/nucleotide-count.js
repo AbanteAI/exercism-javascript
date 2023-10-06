@@ -4,5 +4,14 @@
 //
 
 export function countNucleotides(strand) {
-  throw new Error('Remove this statement and implement this function');
+  const count = { A: 0, C: 0, G: 0, T: 0 };
+
+  for (const nucleotide of strand) {
+    if (!count.hasOwnProperty(nucleotide)) {
+      throw new Error('Invalid nucleotide');
+    }
+    count[nucleotide]++;
+  }
+
+  return `${count.A} ${count.C} ${count.G} ${count.T}`;
 }

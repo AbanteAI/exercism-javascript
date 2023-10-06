@@ -1,0 +1,51 @@
+PASS exercises/practice/rational-numbers/rational-numbers.spec.js
+  Addition
+    ✓ Add two positive rational numbers (3 ms)
+    ○ skipped Add a positive rational number and a negative rational number
+    ○ skipped Add two negative rational numbers
+    ○ skipped Add a rational number to its additive inverse
+  Subtraction
+    ○ skipped Subtract two positive rational numbers
+    ○ skipped Subtract a positive rational number and a negative rational number
+    ○ skipped Subtract two negative rational numbers
+    ○ skipped Subtract a rational number from itself
+  Multiplication
+    ○ skipped Multiply two positive rational numbers
+    ○ skipped Multiply a negative rational number by a positive rational number
+    ○ skipped Multiply two negative rational numbers
+    ○ skipped Multiply a rational number by its reciprocal
+    ○ skipped Multiply a rational number by 1
+    ○ skipped Multiply a rational number by 0
+  Division
+    ○ skipped Divide two positive rational numbers
+    ○ skipped Divide a positive rational number by a negative rational number
+    ○ skipped Divide two negative rational numbers
+    ○ skipped Divide a rational number by 1
+  Absolute value
+    ○ skipped Absolute value of a positive rational number
+    ○ skipped Absolute value of a negative rational number
+    ○ skipped Absolute value of zero
+  Exponentiation of a rational number
+    ○ skipped Raise a positive rational number to a positive integer power
+    ○ skipped Raise a negative rational number to a positive integer power
+    ○ skipped Raise zero to an integer power
+    ○ skipped Raise one to an integer power
+    ○ skipped Raise a positive rational number to the power of zero
+    ○ skipped Raise a negative rational number to the power of zero
+  Exponentiation of a real number to a rational number
+    ○ skipped Raise a real number to a positive rational number
+    ○ skipped Raise a real number to a negative rational number
+    ○ skipped Raise a real number to a zero rational number
+  Reduction to lowest terms
+    ○ skipped Reduce a positive rational number to lowest terms
+    ○ skipped Reduce a negative rational number to lowest terms
+    ○ skipped Reduce a rational number with a negative denominator to lowest terms
+    ○ skipped Reduce zero to lowest terms
+    ○ skipped Reduce an integer to lowest terms
+    ○ skipped Reduce one to lowest terms
+
+Test Suites: 1 passed, 1 total
+Tests:       35 skipped, 1 passed, 36 total
+Snapshots:   0 total
+Time:        0.573 s
+Ran all test suites matching /exercises\/practice\/rational-numbers/i.

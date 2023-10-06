@@ -4,43 +4,47 @@
 //
 
 export class Zipper {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(tree, focus = null, parent = null, left = null, right = null) {
+    this.tree = tree;
+    this.focus = focus;
+    this.parent = parent;
+    this.left = left;
+    this.right = right;
   }
 
-  static fromTree() {
-    throw new Error('Remove this statement and implement this function');
+  static fromTree(tree) {
+    return new Zipper(tree);
   }
 
   toTree() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree;
   }
 
   value() {
-    throw new Error('Remove this statement and implement this function');
+    return this.focus?.value;
   }
 
   left() {
-    throw new Error('Remove this statement and implement this function');
+    return new Zipper(this.tree, this.left?.focus, this, this.left?.left, this.left?.right);
   }
 
   right() {
-    throw new Error('Remove this statement and implement this function');
+    return new Zipper(this.tree, this.right?.focus, this, this.right?.left, this.right?.right);
   }
 
   up() {
-    throw new Error('Remove this statement and implement this function');
+    return this.parent;
   }
 
-  setValue() {
-    throw new Error('Remove this statement and implement this function');
+  setValue(value) {
+    return new Zipper(this.tree, { ...this.focus, value }, this.parent, this.left, this.right);
   }
 
-  setLeft() {
-    throw new Error('Remove this statement and implement this function');
+  setLeft(left) {
+    return new Zipper(this.tree, this.focus, this.parent, left, this.right);
   }
 
-  setRight() {
-    throw new Error('Remove this statement and implement this function');
+  setRight(right) {
+    return new Zipper(this.tree, this.focus, this.parent, this.left, right);
   }
 }

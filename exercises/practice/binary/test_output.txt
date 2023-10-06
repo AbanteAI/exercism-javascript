@@ -1,0 +1,37 @@
+PASS exercises/practice/binary/binary.spec.js
+FAIL exercises/practice/binary-search/binary-search.spec.js
+  ● Binary Search › finds a value in an array with one element
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const find = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at find (exercises/practice/binary-search/binary-search.js:7:9)
+      at Object.<anonymous> (exercises/practice/binary-search/binary-search.spec.js:5:16)
+
+FAIL exercises/practice/binary-search-tree/binary-search-tree.spec.js
+  ● BinarySearchTree › data is retained
+
+    Remove this statement and implement this function
+
+       6 | export class BinarySearchTree {
+       7 |   constructor() {
+    >  8 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+       9 |   }
+      10 |
+      11 |   get data() {
+
+      at new BinarySearchTree (exercises/practice/binary-search-tree/binary-search-tree.js:8:11)
+      at Object.<anonymous> (exercises/practice/binary-search-tree/binary-search-tree.spec.js:13:12)
+
+Test Suites: 2 failed, 1 passed, 3 total
+Tests:       2 failed, 28 skipped, 1 passed, 31 total
+Snapshots:   0 total
+Time:        0.809 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/binary/i.

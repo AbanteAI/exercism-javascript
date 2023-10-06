@@ -1,0 +1,37 @@
+FAIL exercises/practice/go-counting/go-counting.spec.js
+  Go Counting
+    getTerritory
+      ✕ Black corner territory on 5x5 board (2 ms)
+      ○ skipped White center territory on 5x5 board
+      ○ skipped Open corner territory on 5x5 board
+      ○ skipped A stone and not a territory on 5x5 board
+      ○ skipped Invalid because X is too low for 5x5 board
+      ○ skipped Invalid because X is too high for 5x5 board
+      ○ skipped Invalid because Y is too low for 5x5 board
+      ○ skipped Invalid because Y is too high for 5x5 board
+    getTerritories
+      ○ skipped One territory is the whole board
+      ○ skipped Two territory rectangular board
+      ○ skipped Two region rectangular board
+
+  ● Go Counting › getTerritory › Black corner territory on 5x5 board
+
+    Invalid coordinates
+
+      49 |   validateCoordinates(x, y) {
+      50 |     if (x < 0 || x >= this.rows || y < 0 || y >= this.cols) {
+    > 51 |       throw new Error('Invalid coordinates');
+         |             ^
+      52 |     }
+      53 |   }
+      54 |
+
+      at GoCounting.validateCoordinates (exercises/practice/go-counting/go-counting.js:51:13)
+      at GoCounting.validateCoordinates [as getTerritory] (exercises/practice/go-counting/go-counting.js:17:10)
+      at Object.getTerritory (exercises/practice/go-counting/go-counting.spec.js:16:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 skipped, 11 total
+Snapshots:   0 total
+Time:        0.284 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/go-counting/i.

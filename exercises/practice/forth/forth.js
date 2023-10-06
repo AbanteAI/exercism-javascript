@@ -5,14 +5,25 @@
 
 export class Forth {
   constructor() {
-    throw Error('Remove this statement and implement this function');
+    this.stack = [];
+    this.dictionary = {};
+  }
   }
 
-  evaluate() {
-    throw Error('Remove this statement and implement this function');
+  evaluate(input) {
+    const words = input.split(" ");
+    for (const word of words) {
+      if (this.dictionary[word]) {
+        this.dictionary[word](this.stack);
+      } else if (/^-?\d+$/.test(word)) {
+        this.stack.push(Number(word));
+      } else {
+        throw new Error(`Invalid word: ${word}`);
+      }
+    }
   }
 
   get stack() {
-    throw Error('Remove this statement and implement this function');
+    return [...this.stack];
   }
 }

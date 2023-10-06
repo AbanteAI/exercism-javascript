@@ -1,0 +1,13 @@
+PASS exercises/practice/diamond/diamond.spec.js
+  Diamond
+    ✓ Degenerate case with a single 'A' row (3 ms)
+    ○ skipped Degenerate case with no row containing 3 distinct groups of spaces
+    ○ skipped Smallest non-degenerate case with odd diamond side length
+    ○ skipped Smallest non-degenerate case with even diamond side length
+    ○ skipped Largest possible diamond
+
+Test Suites: 1 passed, 1 total
+Tests:       4 skipped, 1 passed, 5 total
+Snapshots:   0 total
+Time:        0.642 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/diamond/i.

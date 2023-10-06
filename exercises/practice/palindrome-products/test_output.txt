@@ -1,0 +1,35 @@
+FAIL exercises/practice/palindrome-products/palindrome-products.spec.js
+  Palindromes
+    ✕ smallest palindrome from single digit factors (3 ms)
+    ○ skipped largest palindrome from single digit factors
+    ○ skipped smallest palindrome from double digit factors
+    ○ skipped largest palindrome from double digit factors
+    ○ skipped smallest palindrome from triple digit factors
+    ○ skipped largest palindrome from triple digit factors
+    ○ skipped smallest palindrome from four digit factors
+    ○ skipped largest palindrome from four digit factors
+    ○ skipped empty result for smallest if no palindrome in range
+    ○ skipped empty result for largest if no palindrome in range
+    ○ skipped error for smallest if min is more than max
+    ○ skipped error for largest if min is more than max
+
+  ● Palindromes › smallest palindrome from single digit factors
+
+    ReferenceError: getFactors is not defined
+
+      26 |
+      27 |     return {
+    > 28 |       smallest: { value: minPalindrome, factors: getFactors(minPalindrome, palindromes) },
+         |                                                  ^
+      29 |       largest: { value: maxPalindrome, factors: getFactors(maxPalindrome, palindromes) },
+      30 |     };
+      31 |   }
+
+      at Function.getFactors [as generate] (exercises/practice/palindrome-products/palindrome-products.js:28:50)
+      at Object.generate (exercises/practice/palindrome-products/palindrome-products.spec.js:5:37)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 11 skipped, 12 total
+Snapshots:   0 total
+Time:        0.725 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/palindrome-products/i.

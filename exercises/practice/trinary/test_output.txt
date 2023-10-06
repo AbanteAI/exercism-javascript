@@ -1,0 +1,18 @@
+PASS exercises/practice/trinary/trinary.spec.js
+  Trinary
+    ✓ 1 is decimal 1 (3 ms)
+    ○ skipped 2 is decimal 2
+    ○ skipped 10 is decimal 3
+    ○ skipped 11 is decimal 4
+    ○ skipped 100 is decimal 9
+    ○ skipped 112 is decimal 14
+    ○ skipped 222 is 26
+    ○ skipped 1122000120 is 32091
+    ○ skipped invalid trinary is decimal 0
+    ○ skipped digits from 3 to 9 are invalid
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        0.542 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/trinary/i.

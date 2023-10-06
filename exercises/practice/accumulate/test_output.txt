@@ -1,0 +1,13 @@
+PASS exercises/practice/accumulate/accumulate.spec.js
+  accumulate()
+    ✓ accumulation empty (5 ms)
+    ○ skipped accumulate squares
+    ○ skipped accumulate upcases
+    ○ skipped accumulate reversed strings
+    ○ skipped accumulate recursively
+
+Test Suites: 1 passed, 1 total
+Tests:       4 skipped, 1 passed, 5 total
+Snapshots:   0 total
+Time:        0.307 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/accumulate/i.

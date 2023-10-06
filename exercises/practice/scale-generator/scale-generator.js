@@ -5,14 +5,23 @@
 
 export class Scale {
   constructor(tonic) {
-    throw new Error('Remove this statement and implement this function');
+    this.tonic = tonic.toUpperCase();
+  }
   }
 
   chromatic() {
-    throw new Error('Remove this statement and implement this function');
+    const chromaticScale = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
+    const startIdx = chromaticScale.findIndex(note => note.startsWith(this.tonic));
+    return chromaticScale.slice(startIdx).map(note => note.toUpperCase());
   }
-
   interval(intervals) {
-    throw new Error('Remove this statement and implement this function');
+    const steps = { M: 2, m: 1, A: 3 };
+    const scale = [this.tonic];
+    let currentIdx = 0;
+    for (const interval of intervals) {
+      currentIdx += steps[interval];
+      scale.push(chromaticScale[currentIdx % chromaticScale.length].toUpperCase());
+    }
+    return scale;
   }
 }

@@ -4,15 +4,25 @@
 //
 
 export class Allergies {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(allergyScore) {
+    this.allergyScore = allergyScore;
+    this.allergies = {
+      1: 'eggs',
+      2: 'peanuts',
+      4: 'shellfish',
+      8: 'strawberries',
+      16: 'tomatoes',
+      32: 'chocolate',
+      64: 'pollen',
+      128: 'cats'
+    };
   }
 
   list() {
-    throw new Error('Remove this statement and implement this function');
+    return Object.values(this.allergies).filter(allergy => this.allergicTo(allergy));
   }
 
-  allergicTo() {
-    throw new Error('Remove this statement and implement this function');
+  allergicTo(allergy) {
+    return !!(this.allergyScore & Object.keys(this.allergies).find(key => this.allergies[key] === allergy));
   }
 }

@@ -1,0 +1,36 @@
+FAIL exercises/practice/rectangles/rectangles.spec.js
+  Rectangles
+    ✕ no rows (2 ms)
+    ○ skipped no columns
+    ○ skipped no rectangles
+    ○ skipped one rectangle
+    ○ skipped two rectangles without shared parts
+    ○ skipped five rectangles with shared parts
+    ○ skipped rectangle of height 1 is counted
+    ○ skipped rectangle of width 1 is counted
+    ○ skipped 1x1 square is counted
+    ○ skipped only complete rectangles are counted
+    ○ skipped rectangles can be of different sizes
+    ○ skipped corner is required for a rectangle to be complete
+    ○ skipped large input with many rectangles
+
+  ● Rectangles › no rows
+
+    TypeError: diagram.split is not a function
+
+       6 | export function count(diagram) {
+       7 |   let count = 0;
+    >  8 |   const rows = diagram.split("\n").filter((row) => row.trim() !== "");
+         |                        ^
+       9 |   const numRows = rows.length;
+      10 |   const numCols = rows[0].length;
+      11 |
+
+      at split (exercises/practice/rectangles/rectangles.js:8:24)
+      at Object.<anonymous> (exercises/practice/rectangles/rectangles.spec.js:6:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 12 skipped, 13 total
+Snapshots:   0 total
+Time:        0.337 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/rectangles/i.

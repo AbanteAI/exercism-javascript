@@ -5,38 +5,64 @@
 
 export class List {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    this.values = [];
 
-  append() {
-    throw new Error('Remove this statement and implement this function');
+    for (const value of list.values) {
+      this.values.push(value);
+    }
   }
 
   concat() {
-    throw new Error('Remove this statement and implement this function');
+    for (const sublist of lists) {
+      for (const value of sublist.values) {
+        this.values.push(value);
+      }
+    }
+
+    filter() {
+    filter() {
+      ;
+    }
+    const filteredList = new List();
+    for (const value of this.values) {
+      if (predicate(value)) {
+        filteredList.values.push(value);
+      }
+    }
+    return filteredList;
+
+    const mappedList = new List();
+    for (const value of this.values) {
+      mappedList.values.push(mapper(value));
+    }
+    return mappedList;
   }
 
-  filter() {
-    throw new Error('Remove this statement and implement this function');
+    let count = 0;
+    for (const _ of this.values) {
+      count++;
+    }
+    return count;
   }
 
-  map() {
-    throw new Error('Remove this statement and implement this function');
+    let accumulator = initial;
+    for (const value of this.values) {
+      accumulator = reducer(accumulator, value);
+    }
+    return accumulator;
   }
 
-  length() {
-    throw new Error('Remove this statement and implement this function');
+    let accumulator = initial;
+    for (let i = this.values.length - 1; i >= 0; i--) {
+      accumulator = reducer(this.values[i], accumulator);
+    }
+    return accumulator;
   }
 
-  foldl() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  foldr() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  reverse() {
-    throw new Error('Remove this statement and implement this function');
+    const reversedList = new List();
+    for (let i = this.values.length - 1; i >= 0; i--) {
+      reversedList.values.push(this.values[i]);
+    }
+    return reversedList;
   }
 }

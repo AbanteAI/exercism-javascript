@@ -3,40 +3,67 @@
 // convenience to get you started writing code faster.
 //
 
-export const abilityModifier = () => {
-  throw new Error('Remove this statement and implement this function');
+export const abilityModifier = (score) => {
+  if (score < 3) {
+    throw new Error('Ability scores must be at least 3');
+  }
+  if (score > 18) {
+    throw new Error('Ability scores can be at most 18');
+  }
+  return Math.floor((score - 10) / 2);
 };
 
 export class Character {
-  static rollAbility() {
-    throw new Error('Remove this statement and implement this function');
+static rollAbility() {
+  const diceRolls = Array.from({ length: 4 }, () => Math.floor(Math.random() * 6) + 1);
+  const minRoll = Math.min(...diceRolls);
+  return diceRolls.reduce((sum, roll) => sum + roll, 0) - minRoll;
+}
   }
 
-  get strength() {
-    throw new Error('Remove this statement and implement this function');
+get strength() {
+  if (!this._strength) {
+    this._strength = Character.rollAbility();
   }
+  return this._strength;
+}
 
-  get dexterity() {
-    throw new Error('Remove this statement and implement this function');
+get dexterity() {
+  if (!this._dexterity) {
+    this._dexterity = Character.rollAbility();
   }
+  return this._dexterity;
+}
 
-  get constitution() {
-    throw new Error('Remove this statement and implement this function');
+get constitution() {
+  if (!this._constitution) {
+    this._constitution = Character.rollAbility();
   }
+  return this._constitution;
+}
 
-  get intelligence() {
-    throw new Error('Remove this statement and implement this function');
+get intelligence() {
+  if (!this._intelligence) {
+    this._intelligence = Character.rollAbility();
   }
+  return this._intelligence;
+}
 
-  get wisdom() {
-    throw new Error('Remove this statement and implement this function');
+get wisdom() {
+  if (!this._wisdom) {
+    this._wisdom = Character.rollAbility();
   }
+  return this._wisdom;
+}
 
-  get charisma() {
-    throw new Error('Remove this statement and implement this function');
+get charisma() {
+  if (!this._charisma) {
+    this._charisma = Character.rollAbility();
   }
+  return this._charisma;
+}
 
-  get hitpoints() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get hitpoints() {
+  return 10 + abilityModifier(this.constitution);
+}
 }

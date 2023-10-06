@@ -41,9 +41,44 @@ const VALID_OPTIONS = [
 
 const ARGS = process.argv;
 
-//
-// This is only a SKELETON file for the 'Grep' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-// This file should *not* export a function. Use ARGS to determine what to grep
-// and use console.log(output) to write to the standard output.
+function grep(pattern, flags, files) {
+  const isMatch = (line) => {
+    if (flags.includes('x')) {
+      return line === pattern;
+    }
+    const regex = new RegExp(pattern, flags.includes('i') ? 'i' : undefined);
+    return regex.test(line);
+  };
+
+  const results = [];
+  for (const file of files) {
+    const lines = readLines(file);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const lineNumber = i + 1;
+      const shouldInclude =
+        (flags.includes('v') && !isMatch(line)) ||
+        (!flags.includes('v') && isMatch(line));
+      if (shouldInclude) {
+        if (flags.includes('l')) {
+      if (flags.includes('l')) {
+        if (results.length > 0) {
+          return files.join('\n');
+        } else {
+          continue;
+        }
+      }
+          results.push(flags.includes('n') ? `${lineNumber}:${line}` : line);
+        }
+      }
+    }
+  }
+
+  return results.join('\n');
+}
+
+const pattern = ARGS[2];
+const flags = ARGS.slice(3, -1);
+const files = ARGS.slice(-1);
+
+console.log(grep(pattern, flags, files));

@@ -4,11 +4,42 @@
 //
 
 export class List {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(elements) {
+    this.elements = elements || [];
   }
 
-  compare() {
-    throw new Error('Remove this statement and implement this function');
+  compare(list) {
+    if (this.equals(list)) {
+      return 'EQUAL';
+    } else if (this.isSublist(list)) {
+      return 'SUBLIST';
+    } else if (this.isSuperlist(list)) {
+      return 'SUPERLIST';
+    } else {
+      return 'UNEQUAL';
+    }
+  }
+
+  equals(list) {
+    if (this.length !== list.length) {
+      return false;
+    }
+    return this.elements.every((element, index) => element === list.elements[index]);
+  }
+
+  isSublist(list) {
+    if (this.length > list.length) {
+      return false;
+    }
+    for (let i = 0; i <= list.length - this.length; i++) {
+      if (this.equals(list.slice(i, i + this.length))) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  isSuperlist(list) {
+    return list.isSublist(this);
   }
 }

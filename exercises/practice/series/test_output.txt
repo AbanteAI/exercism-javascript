@@ -1,0 +1,18 @@
+PASS exercises/practice/series/series.spec.js
+  Series
+    ✓ slices of one from one (3 ms)
+    ○ skipped slices of one from two
+    ○ skipped slices of two
+    ○ skipped slices of two overlap
+    ○ skipped slices can include duplicates
+    ○ skipped slices of long series
+    ○ skipped slice length is too large
+    ○ skipped slice length cannot be zero
+    ○ skipped slice length cannot be negative
+    ○ skipped empty series is invalid
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        0.777 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/series/i.

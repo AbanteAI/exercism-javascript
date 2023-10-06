@@ -1,0 +1,13 @@
+PASS exercises/practice/nucleotide-count/nucleotide-count.spec.js
+  count all nucleotides in a strand
+    ✓ empty strand (3 ms)
+    ○ skipped can count one nucleotide in single-character input
+    ○ skipped strand with repeated nucleotide
+    ○ skipped strand with multiple nucleotides
+    ○ skipped strand with invalid nucleotides
+
+Test Suites: 1 passed, 1 total
+Tests:       4 skipped, 1 passed, 5 total
+Snapshots:   0 total
+Time:        0.58 s
+Ran all test suites matching /exercises\/practice\/nucleotide-count/i.

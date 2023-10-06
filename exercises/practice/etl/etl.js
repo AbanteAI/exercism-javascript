@@ -3,6 +3,13 @@
 // convenience to get you started writing code faster.
 //
 
-export const transform = () => {
-  throw new Error('Remove this statement and implement this function');
+export const transform = (oldScores) => {
+  let newScores = {};
+  for (let score in oldScores) {
+    let letters = oldScores[score];
+    for (let i = 0; i < letters.length; i++) {
+      newScores[letters[i].toLowerCase()] = Number(score);
+    }
+  }
+  return newScores;
 };

@@ -5,42 +5,42 @@
 
 export class CustomSet {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.set = new Set();
   }
 
   empty() {
-    throw new Error('Remove this statement and implement this function');
+    return this.set.size === 0;
   }
 
   contains() {
-    throw new Error('Remove this statement and implement this function');
+    return this.set.has(element);
   }
 
   add() {
-    throw new Error('Remove this statement and implement this function');
+    this.set.add(element);
   }
 
   subset() {
-    throw new Error('Remove this statement and implement this function');
+    return isSubset;
   }
 
   disjoint() {
-    throw new Error('Remove this statement and implement this function');
+    return isDisjoint;
   }
 
   eql() {
-    throw new Error('Remove this statement and implement this function');
+    return isEqual;
   }
 
   union() {
-    throw new Error('Remove this statement and implement this function');
+    return newSet;
   }
 
   intersection() {
-    throw new Error('Remove this statement and implement this function');
+    return newSet;
   }
 
   difference() {
-    throw new Error('Remove this statement and implement this function');
+    return newSet;
   }
 }

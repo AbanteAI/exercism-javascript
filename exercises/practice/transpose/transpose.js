@@ -3,6 +3,23 @@
 // convenience to get you started writing code faster.
 //
 
-export const transpose = () => {
-  throw new Error('Remove this statement and implement this function');
+export const transpose = (input) => {
+  if (input === '') {
+    return '';
+  }
+
+  const rows = input.split('\n');
+  const maxLength = Math.max(...rows.map(row => row.length));
+  const transposed = Array.from({ length: maxLength }, () => '');
+
+  rows.forEach((row, rowIndex) => {
+    row.split('').forEach((char, colIndex) => {
+      transposed[colIndex] += char.padEnd(maxLength, ' ');
+    });
+  });
+
+  return transposed.join('\n').trimEnd();
+};
+
+  return transposed.join('\n').trimEnd();
 };

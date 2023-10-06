@@ -1,0 +1,31 @@
+FAIL exercises/practice/resistor-color-trio/resistor-color-trio.spec.js
+  Resistor Color Trio
+    ✕ Orange and orange and black (6 ms)
+    ○ skipped Blue and grey and brown
+    ○ skipped Red and black and red
+    ○ skipped Green and brown and orange
+    ○ skipped Yellow and violet and yellow
+    ○ skipped Invalid color
+
+  ● Resistor Color Trio › Orange and orange and black
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: "Resistor value: 33 ohms"
+    Received: [Function label]
+
+       7 | describe('Resistor Color Trio', () => {
+       8 |   test('Orange and orange and black', () => {
+    >  9 |     expect(new ResistorColorTrio(['orange', 'orange', 'black']).label).toEqual(
+         |                                                                        ^
+      10 |       makeLabel({ value: 33, unit: 'ohms' }),
+      11 |     );
+      12 |   });
+
+      at Object.toEqual (exercises/practice/resistor-color-trio/resistor-color-trio.spec.js:9:72)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 skipped, 6 total
+Snapshots:   0 total
+Time:        0.666 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/resistor-color-trio/i.

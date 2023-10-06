@@ -1,0 +1,41 @@
+FAIL exercises/practice/book-store/book-store.spec.js
+  Book Store
+    Creating a basket
+      ✕ only a single book (2 ms)
+      ○ skipped two of the same book
+      ○ skipped empty basket
+      ○ skipped two different books
+      ○ skipped three different books
+      ○ skipped four different books
+      ○ skipped five different books
+      ○ skipped two groups of four is cheaper than group of five plus group of three
+      ○ skipped two groups of four is cheaper than groups of five and three
+      ○ skipped group of four plus group of two is cheaper than two groups of three
+      ○ skipped two each of first 4 books and 1 copy each of rest
+      ○ skipped two copies of each book
+      ○ skipped three copies of first book and 2 each of remaining
+      ○ skipped three each of first 2 books and 2 each of remaining books
+      ○ skipped four groups of four are cheaper than two groups each of five and three
+      ○ skipped two groups of four and a group of five
+      ○ skipped shuffled book order
+
+  ● Book Store › Creating a basket › only a single book
+
+    ReferenceError: Cannot access 'uniqueCounts' before initialization
+
+      30 |   let totalCost = 0;
+      31 |   while (uniqueCounts > 0) {
+    > 32 |     totalCost += prices[uniqueCounts] * uniqueCounts * discounts[uniqueCounts];
+         |                         ^
+      33 |     for (const book in bookCounts) {
+      34 |       if (bookCounts[book] > 0) {
+      35 |         bookCounts[book] -= 1;
+
+      at uniqueCounts (exercises/practice/book-store/book-store.js:32:25)
+      at Object.<anonymous> (exercises/practice/book-store/book-store.spec.js:7:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 16 skipped, 17 total
+Snapshots:   0 total
+Time:        0.626 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/book-store/i.

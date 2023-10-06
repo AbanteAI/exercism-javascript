@@ -1,0 +1,15 @@
+PASS exercises/practice/knapsack/knapsack.spec.js
+  Knapsack
+    ✓ no items (3 ms)
+    ✓ one item, too heavy
+    ✓ five items (cannot be greedy by weight) (1 ms)
+    ✓ five items (cannot be greedy by value)
+    ✓ example knapsack
+    ✓ 8 items (1 ms)
+    ✓ 15 items (8 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        0.676 s
+Ran all test suites matching /exercises\/practice\/knapsack/i.
