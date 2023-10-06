@@ -1,0 +1,30 @@
+FAIL exercises/practice/space-age/space-age.spec.js
+  Space Age
+    ✕ age on Earth (2 ms)
+    ○ skipped age on Mercury
+    ○ skipped age on Venus
+    ○ skipped age on Mars
+    ○ skipped age on Jupiter
+    ○ skipped age on Saturn
+    ○ skipped age on Uranus
+    ○ skipped age on Neptune
+
+  ● Space Age › age on Earth
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const age = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at age (exercises/practice/space-age/space-age.js:7:9)
+      at Object.<anonymous> (exercises/practice/space-age/space-age.spec.js:5:15)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 7 skipped, 8 total
+Snapshots:   0 total
+Time:        0.232 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/space-age/i.

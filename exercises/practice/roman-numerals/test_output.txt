@@ -1,0 +1,34 @@
+PASS exercises/practice/roman-numerals/roman-numerals.spec.js
+  toRoman()
+    ✓ converts 1 (3 ms)
+    ○ skipped converts 2
+    ○ skipped converts 3
+    ○ skipped converts 4
+    ○ skipped converts 5
+    ○ skipped converts 6
+    ○ skipped converts 9
+    ○ skipped converts 16
+    ○ skipped converts 27
+    ○ skipped converts 48
+    ○ skipped converts 49
+    ○ skipped converts 59
+    ○ skipped converts 66
+    ○ skipped converts 93
+    ○ skipped converts 141
+    ○ skipped converts 163
+    ○ skipped converts 166
+    ○ skipped converts 402
+    ○ skipped converts 575
+    ○ skipped converts 666
+    ○ skipped converts 911
+    ○ skipped converts 1024
+    ○ skipped converts 1666
+    ○ skipped converts 3000
+    ○ skipped converts 3001
+    ○ skipped converts 3999
+
+Test Suites: 1 passed, 1 total
+Tests:       25 skipped, 1 passed, 26 total
+Snapshots:   0 total
+Time:        0.754 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/roman-numerals/i.

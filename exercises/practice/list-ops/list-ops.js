@@ -4,39 +4,43 @@
 //
 
 export class List {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(values = []) {
+    this.values = values;
   }
 
-  append() {
-    throw new Error('Remove this statement and implement this function');
+  append(list) {
+    return new List([...this.values, ...list.values]);
   }
 
   concat() {
-    throw new Error('Remove this statement and implement this function');
+    return this.foldl((acc, list) => acc.append(list), new List());
   }
 
-  filter() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  map() {
-    throw new Error('Remove this statement and implement this function');
+  filter(predicate) {
+    return this.foldl((acc, value) => (predicate(value) ? acc.append(new List([value])) : acc), new List());
   }
 
   length() {
-    throw new Error('Remove this statement and implement this function');
+    return this.foldl((acc) => acc + 1, 0);
   }
 
-  foldl() {
-    throw new Error('Remove this statement and implement this function');
+  map(mapper) {
+    return this.foldl((acc, value) => acc.append(new List([mapper(value)])), new List());
   }
 
-  foldr() {
-    throw new Error('Remove this statement and implement this function');
+  foldl(reducer, initial) {
+    let result = initial;
+    for (const value of this.values) {
+      result = reducer(result, value);
+    }
+    return result;
+  }
+
+  foldr(reducer, initial) {
+    return this.reverse().foldl(reducer, initial);
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    return new List([...this.values].reverse());
   }
 }

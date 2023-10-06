@@ -1,0 +1,14 @@
+PASS exercises/practice/satellite/satellite.spec.js
+  Satellite
+    ✓ Empty tree (3 ms)
+    ○ skipped Tree with one item
+    ○ skipped Tree with many items
+    ○ skipped Reject traversals of different length
+    ○ skipped Reject inconsistent traversals of same length
+    ○ skipped Reject traversals with repeated items
+
+Test Suites: 1 passed, 1 total
+Tests:       5 skipped, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.626 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/satellite/i.

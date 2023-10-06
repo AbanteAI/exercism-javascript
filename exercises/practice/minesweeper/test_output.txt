@@ -1,0 +1,20 @@
+PASS exercises/practice/minesweeper/minesweeper.spec.js
+  )
+    ✓ handles no rows (4 ms)
+    ○ skipped handles no columns
+    ○ skipped handles no mines
+    ○ skipped handles minefield with only mines
+    ○ skipped handles mine surrounded by spaces
+    ○ skipped handles space surrounded by mines
+    ○ skipped handles horizontal line
+    ○ skipped handles horizontal line, mines at edges
+    ○ skipped handles vertical line
+    ○ skipped handles vertical line, mines at edges
+    ○ skipped handles cross
+    ○ skipped handles large minefield
+
+Test Suites: 1 passed, 1 total
+Tests:       11 skipped, 1 passed, 12 total
+Snapshots:   0 total
+Time:        0.7 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/minesweeper/i.

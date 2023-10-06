@@ -1,0 +1,33 @@
+FAIL exercises/practice/scrabble-score/scrabble-score.spec.js
+  Scrabble
+    ✕ lowercase letter (2 ms)
+    ○ skipped uppercase letter
+    ○ skipped valuable letter
+    ○ skipped short word
+    ○ skipped short, valuable word
+    ○ skipped medium word
+    ○ skipped medium, valuable word
+    ○ skipped long, mixed-case word
+    ○ skipped english-like word
+    ○ skipped empty input
+    ○ skipped entire alphabet available
+
+  ● Scrabble › lowercase letter
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const score = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at score (exercises/practice/scrabble-score/scrabble-score.js:7:9)
+      at Object.<anonymous> (exercises/practice/scrabble-score/scrabble-score.spec.js:5:17)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 skipped, 11 total
+Snapshots:   0 total
+Time:        0.225 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/scrabble-score/i.

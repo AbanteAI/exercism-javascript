@@ -1,0 +1,28 @@
+FAIL exercises/practice/spiral-matrix/spiral-matrix.spec.js
+  Spiral Matrix
+    ✕ empty spiral (1 ms)
+    ○ skipped trivial spiral
+    ○ skipped spiral of size 2
+    ○ skipped spiral of size 3
+    ○ skipped spiral of size 4
+    ○ skipped spiral of size 5
+
+  ● Spiral Matrix › empty spiral
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const spiralMatrix = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at spiralMatrix (exercises/practice/spiral-matrix/spiral-matrix.js:7:9)
+      at Object.<anonymous> (exercises/practice/spiral-matrix/spiral-matrix.spec.js:6:32)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 skipped, 6 total
+Snapshots:   0 total
+Time:        0.236 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/spiral-matrix/i.

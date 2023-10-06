@@ -3,6 +3,15 @@
 // convenience to get you started writing code faster.
 //
 
-export const parse = () => {
-  throw new Error('Remove this statement and implement this function');
+export const parse = (phrase) => {
+  if (!phrase) {
+    return '';
+  }
+
+  const words = phrase.split(/[ -]/);
+  const acronym = words
+    .map((word) => word[0].toUpperCase())
+    .join('');
+
+  return acronym;
 };

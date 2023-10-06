@@ -1,0 +1,24 @@
+PASS exercises/practice/say/say.spec.js
+  say
+    ✓ zero (2 ms)
+    ○ skipped one
+    ○ skipped fourteen
+    ○ skipped twenty
+    ○ skipped twenty-two
+    ○ skipped one hundred
+    ○ skipped one hundred twenty-three
+    ○ skipped one thousand
+    ○ skipped one thousand two hundred thirty-four
+    ○ skipped one million
+    ○ skipped one million two
+    ○ skipped one million two thousand three hundred forty-five
+    ○ skipped one billion
+    ○ skipped a really big number
+    ○ skipped raises an error below zero
+    ○ skipped raises an error above 999,999,999,999
+
+Test Suites: 1 passed, 1 total
+Tests:       15 skipped, 1 passed, 16 total
+Snapshots:   0 total
+Time:        0.581 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/say/i.

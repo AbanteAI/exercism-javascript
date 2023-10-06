@@ -1,0 +1,45 @@
+FAIL exercises/practice/dnd-character/dnd-character.spec.js
+  D&D Character
+    ○ skipped random ability within range
+    ○ skipped random character is valid
+    ○ skipped each ability is only calculated once
+    Ability modifier
+      ✕ ability modifier for score 3 is -4 (2 ms)
+      ○ skipped ability modifier for score 4 is -3
+      ○ skipped ability modifier for score 5 is -3
+      ○ skipped ability modifier for score 6 is -2
+      ○ skipped ability modifier for score 7 is -2
+      ○ skipped ability modifier for score 8 is -1
+      ○ skipped ability modifier for score 9 is -1
+      ○ skipped ability modifier for score 10 is 0
+      ○ skipped ability modifier for score 11 is 0
+      ○ skipped ability modifier for score 12 is 1
+      ○ skipped ability modifier for score 13 is 1
+      ○ skipped ability modifier for score 14 is 2
+      ○ skipped ability modifier for score 15 is 2
+      ○ skipped ability modifier for score 16 is 3
+      ○ skipped ability modifier for score 17 is 3
+      ○ skipped ability modifier for score 18 is 4
+      ○ skipped ability score less than 3 throws error
+      ○ skipped ability score greater than 18 throws error
+
+  ● D&D Character › Ability modifier › ability modifier for score 3 is -4
+
+    Remove this statement and implement this function
+
+       5 |
+       6 | export const abilityModifier = () => {
+    >  7 |   throw new Error('Remove this statement and implement this function');
+         |         ^
+       8 | };
+       9 |
+      10 | export class Character {
+
+      at abilityModifier (exercises/practice/dnd-character/dnd-character.js:7:9)
+      at Object.<anonymous> (exercises/practice/dnd-character/dnd-character.spec.js:6:29)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 20 skipped, 21 total
+Snapshots:   0 total
+Time:        0.378 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/dnd-character/i.

@@ -1,0 +1,59 @@
+PASS exercises/practice/dominoes/dominoes.spec.js
+  Dominoes
+    empty input = empty output
+      ✓ Should have a chain (2 ms)
+      ○ skipped The number of dominoes in the output equals the number of dominoes in the input.
+      ○ skipped For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.
+      ○ skipped Should have the same dominoes
+    singleton input = singleton output
+      ○ skipped Should have a chain
+      ○ skipped The number of dominoes in the output equals the number of dominoes in the input.
+      ○ skipped For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.
+      ○ skipped For the dominoes on the ends (a, b) ... (c, d): a is equal to d.
+      ○ skipped Should have the same dominoes
+    singleton that can't be chained
+      ○ skipped Should not have a chain
+    three elements
+      ○ skipped Should have a chain
+      ○ skipped The number of dominoes in the output equals the number of dominoes in the input.
+      ○ skipped For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.
+      ○ skipped For the dominoes on the ends (a, b) ... (c, d): a is equal to d.
+      ○ skipped Should have the same dominoes
+    can reverse dominoes
+      ○ skipped Should have a chain
+      ○ skipped The number of dominoes in the output equals the number of dominoes in the input.
+      ○ skipped For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.
+      ○ skipped For the dominoes on the ends (a, b) ... (c, d): a is equal to d.
+      ○ skipped Should have the same dominoes
+    can't be chained
+      ○ skipped Should not have a chain
+    disconnected - simple
+      ○ skipped Should not have a chain
+    disconnected - double loop
+      ○ skipped Should not have a chain
+    disconnected - single isolated
+      ○ skipped Should not have a chain
+    need backtrack
+      ○ skipped Should have a chain
+      ○ skipped The number of dominoes in the output equals the number of dominoes in the input.
+      ○ skipped For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.
+      ○ skipped For the dominoes on the ends (a, b) ... (c, d): a is equal to d.
+      ○ skipped Should have the same dominoes
+    separate loops
+      ○ skipped Should have a chain
+      ○ skipped The number of dominoes in the output equals the number of dominoes in the input.
+      ○ skipped For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.
+      ○ skipped For the dominoes on the ends (a, b) ... (c, d): a is equal to d.
+      ○ skipped Should have the same dominoes
+    nine elements
+      ○ skipped Should have a chain
+      ○ skipped The number of dominoes in the output equals the number of dominoes in the input.
+      ○ skipped For each adjacent pair of dominoes ... (a, b), (c, d) ...: b is equal to c.
+      ○ skipped For the dominoes on the ends (a, b) ... (c, d): a is equal to d.
+      ○ skipped Should have the same dominoes
+
+Test Suites: 1 passed, 1 total
+Tests:       38 skipped, 1 passed, 39 total
+Snapshots:   0 total
+Time:        0.602 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/dominoes/i.

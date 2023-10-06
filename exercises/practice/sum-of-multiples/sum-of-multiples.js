@@ -3,6 +3,13 @@
 // convenience to get you started writing code faster.
 //
 
-export const sum = () => {
-  throw new Error('Remove this statement and implement this function');
+export const sum = (factors, limit) => {
+  const multiples = new Set();
+  factors.forEach(factor => {
+    for (let i = factor; i < limit; i += factor) {
+      multiples.add(i);
+    }
+  });
+  return [...multiples].reduce((sum, num) => sum + num, 0);
 };
+

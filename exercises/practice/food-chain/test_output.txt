@@ -1,0 +1,40 @@
+FAIL exercises/practice/food-chain/food-chain.spec.js
+  Food Chain
+    ✕ fly (6 ms)
+    ○ skipped spider
+    ○ skipped bird
+    ○ skipped cat
+    ○ skipped dog
+    ○ skipped goat
+    ○ skipped cow
+    ○ skipped horse
+    ○ skipped multiple verses
+    ○ skipped the whole song
+
+  ● Food Chain › fly
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 1
+
+      I know an old lady who swallowed a fly.
+      I don't know why she swallowed the fly. Perhaps she'll die.
+    -
+    + I don't know why she swallowed the fly. Perhaps she'll die.
+
+      13 | `;
+      14 |
+    > 15 |     expect(song.verse(1)).toEqual(expected);
+         |                           ^
+      16 |   });
+      17 |
+      18 |   xtest('spider', () => {
+
+      at Object.toEqual (exercises/practice/food-chain/food-chain.spec.js:15:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 9 skipped, 10 total
+Snapshots:   0 total
+Time:        0.607 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/food-chain/i.

@@ -1,0 +1,50 @@
+FAIL exercises/practice/robot-simulator/robot-simulator.spec.js
+  Robot
+    Create robot
+      ✕ facing north by default (2 ms)
+      ○ skipped facing east
+      ○ skipped facing west, at origin
+      ○ skipped at negative position facing south
+      ○ skipped invalid robot bearing
+    Rotating clockwise
+      ○ skipped changes north to east
+      ○ skipped changes east to south
+      ○ skipped changes south to west
+      ○ skipped changes west to north
+    Rotating counter-clockwise
+      ○ skipped changes north to west
+      ○ skipped changes west to south
+      ○ skipped changes south to east
+      ○ skipped changes east to north
+    Moving forward one
+      ○ skipped advance when facing north
+      ○ skipped advance when facing south
+      ○ skipped advance when facing east
+      ○ skipped advance when facing west
+    Follow series of instructions
+      ○ skipped moving east and north from README
+      ○ skipped moving west and north
+      ○ skipped moving west and south
+      ○ skipped moving east and north
+      ○ skipped instruct many robots
+
+  ● Robot › Create robot › facing north by default
+
+    Remove this statement and implement this function
+
+      13 | export class Robot {
+      14 |   get bearing() {
+    > 15 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+      16 |   }
+      17 |
+      18 |   get coordinates() {
+
+      at Robot.get bearing [as bearing] (exercises/practice/robot-simulator/robot-simulator.js:15:11)
+      at Object.bearing (exercises/practice/robot-simulator/robot-simulator.spec.js:19:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 21 skipped, 22 total
+Snapshots:   0 total
+Time:        0.25 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/robot-simulator/i.

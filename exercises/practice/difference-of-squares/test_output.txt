@@ -1,0 +1,35 @@
+FAIL exercises/practice/difference-of-squares/difference-of-squares.spec.js
+  difference-of-squares
+    Square the sum of the numbers up to the given number
+      ✕ square of sum 1 (1 ms)
+      ○ skipped square of sum 5
+      ○ skipped square of sum 100
+    Sum the squares of the numbers up to the given number
+      ○ skipped sum of squares 1
+      ○ skipped sum of squares 5
+      ○ skipped sum of squares 100
+    Subtract sum of squares from square of sums
+      ○ skipped difference of squares 1
+      ○ skipped difference of squares 5
+      ○ skipped difference of squares 100
+
+  ● difference-of-squares › Square the sum of the numbers up to the given number › square of sum 1
+
+    Remove this statement and implement this function
+
+      34 |
+      35 |   get squareOfSum() {
+    > 36 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+      37 |   }
+      38 |
+      39 |   get difference() {
+
+      at Squares.get squareOfSum [as squareOfSum] (exercises/practice/difference-of-squares/difference-of-squares.js:36:11)
+      at Object.squareOfSum (exercises/practice/difference-of-squares/difference-of-squares.spec.js:10:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 skipped, 9 total
+Snapshots:   0 total
+Time:        0.562 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/difference-of-squares/i.

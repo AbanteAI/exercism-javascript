@@ -4,11 +4,15 @@
 //
 
 export class Trinary {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(trinaryString) {
+    this.trinaryString = trinaryString;
   }
 
   toDecimal() {
-    throw new Error('Remove this statement and implement this function');
+    const trinaryDigits = this.trinaryString.split("").map(Number);
+    if (trinaryDigits.some(digit => digit < 0 || digit > 2)) {
+      return 0;
+    }
+    return trinaryDigits.reduce((decimal, digit) => decimal * 3 + digit, 0);
   }
 }

@@ -5,8 +5,22 @@
 
 export class Series {
   constructor(series) {
-    throw new Error('Remove this statement and implement this function');
+    this.series = series;
   }
+
+  slices(sliceLength) {
+    if (sliceLength > this.series.length) {
+      throw new Error('Slice length cannot be greater than series length');
+    }
+
+    const result = [];
+    for (let i = 0; i <= this.series.length - sliceLength; i++) {
+      result.push(this.series.slice(i, i + sliceLength));
+    }
+    return result;
+  }
+}
+
 
   slices(sliceLength) {
     throw new Error('Remove this statement and implement this function');

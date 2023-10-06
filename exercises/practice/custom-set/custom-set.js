@@ -5,42 +5,57 @@
 
 export class CustomSet {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.set = new Set();
   }
 
   empty() {
-    throw new Error('Remove this statement and implement this function');
+    return this.set.size === 0;
   }
 
-  contains() {
-    throw new Error('Remove this statement and implement this function');
+  contains(element) {
+    return this.set.has(element);
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(element) {
+    this.set.add(element);
+    return this;
   }
 
-  subset() {
-    throw new Error('Remove this statement and implement this function');
+  subset(otherSet) {
+    return [...this.set].every(element => otherSet.contains(element));
   }
 
-  disjoint() {
-    throw new Error('Remove this statement and implement this function');
+  disjoint(otherSet) {
+    return ![...this.set].some(element => otherSet.contains(element));
   }
 
-  eql() {
-    throw new Error('Remove this statement and implement this function');
+  eql(otherSet) {
+    return this.set.size === otherSet.set.size && [...this.set].every(element => otherSet.contains(element));
   }
 
-  union() {
-    throw new Error('Remove this statement and implement this function');
+  union(otherSet) {
+    const newSet = new CustomSet();
+    [...this.set, ...otherSet.set].forEach(element => newSet.add(element));
+    return newSet;
   }
 
-  intersection() {
-    throw new Error('Remove this statement and implement this function');
+  intersection(otherSet) {
+    const newSet = new CustomSet();
+    [...this.set].forEach(element => {
+      if (otherSet.contains(element)) {
+        newSet.add(element);
+      }
+    });
+    return newSet;
   }
 
-  difference() {
-    throw new Error('Remove this statement and implement this function');
+  difference(otherSet) {
+    const newSet = new CustomSet();
+    [...this.set].forEach(element => {
+      if (!otherSet.contains(element)) {
+        newSet.add(element);
+      }
+    });
+    return newSet;
   }
 }

@@ -4,15 +4,27 @@
 //
 
 export class Matrix {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(matrixString) {
+    this.matrix = this.parseMatrixString(matrixString);
+  }
+
+  parseMatrixString(matrixString) {
+    return matrixString.split('\n').map(row => row.split(' ').map(Number));
   }
 
   get rows() {
-    throw new Error('Remove this statement and implement this function');
+    return this.matrix;
+  }
+  get columns() {
+    return this.transposeMatrix(this.matrix);
+  }
   }
 
   get columns() {
-    throw new Error('Remove this statement and implement this function');
+    return this.transposeMatrix(this.matrix);
+  }
+
+  transposeMatrix(matrix) {
+    return matrix[0].map((_, colIndex) => matrix.map(row => row[colIndex]));
   }
 }

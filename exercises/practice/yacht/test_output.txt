@@ -1,0 +1,50 @@
+FAIL exercises/practice/yacht/yacht.spec.js
+  Yacht
+    ✕ Yacht (2 ms)
+    ○ skipped Not Yacht
+    ○ skipped Ones
+    ○ skipped Ones, out of order
+    ○ skipped No ones
+    ○ skipped Twos
+    ○ skipped Fours
+    ○ skipped Yacht counted as threes
+    ○ skipped Yacht of 3s counted as fives
+    ○ skipped Sixes
+    ○ skipped Full house two small, three big
+    ○ skipped Full house three small, two big
+    ○ skipped Two pair is not a full house
+    ○ skipped Four of a kind is not a full house
+    ○ skipped Yacht is not a full house
+    ○ skipped Four of a Kind
+    ○ skipped Yacht can be scored as Four of a Kind
+    ○ skipped Full house is not Four of a Kind
+    ○ skipped Little Straight
+    ○ skipped Little Straight as Big Straight
+    ○ skipped Four in order but not a little straight
+    ○ skipped No pairs but not a little straight
+    ○ skipped Minimum is 1, maximum is 5, but not a little straight
+    ○ skipped Big Straight
+    ○ skipped Big Straight as little straight
+    ○ skipped No pairs but not a big straight
+    ○ skipped Choice
+    ○ skipped Yacht as choice
+
+  ● Yacht › Yacht
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const score = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at score (exercises/practice/yacht/yacht.js:7:9)
+      at Object.<anonymous> (exercises/practice/yacht/yacht.spec.js:5:17)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 27 skipped, 28 total
+Snapshots:   0 total
+Time:        0.231 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/yacht/i.

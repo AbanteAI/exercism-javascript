@@ -4,5 +4,14 @@
 //
 
 export function countNucleotides(strand) {
-  throw new Error('Remove this statement and implement this function');
+  const nucleotideCounts = { 'A': 0, 'C': 0, 'G': 0, 'T': 0 };
+
+  for (const nucleotide of strand) {
+    if (!nucleotideCounts.hasOwnProperty(nucleotide)) {
+      throw new Error('Invalid nucleotide');
+    }
+    nucleotideCounts[nucleotide]++;
+  }
+
+  return Object.values(nucleotideCounts).join(' ');
 }

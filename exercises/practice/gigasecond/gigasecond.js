@@ -3,6 +3,9 @@
 // convenience to get you started writing code faster.
 //
 
-export const gigasecond = () => {
-  throw new Error('Remove this statement and implement this function');
+export const gigasecond = (inputDate) => {
+  const gigasecondInMillis = 1e12;
+  const inputDateInMillis = inputDate.getTime();
+  const gigasecondDateInMillis = inputDateInMillis + gigasecondInMillis;
+  return new Date(gigasecondDateInMillis);
 };

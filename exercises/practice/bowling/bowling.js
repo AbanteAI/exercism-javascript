@@ -3,12 +3,33 @@
 // convenience to get you started writing code faster.
 //
 
-export class Bowling {
-  roll() {
-    throw new Error('Remove this statement and implement this function');
+  constructor() {
+    this.rolls = [];
+  }
+  roll(pins) {
+    if (pins < 0 || pins > 10) {
+      throw new Error('Invalid number of pins');
+    }
+    this.rolls.push(pins);
   }
 
   score() {
-    throw new Error('Remove this statement and implement this function');
+    let totalScore = 0;
+    let rollIndex = 0;
+
+    for (let frame = 0; frame < 10; frame++) {
+      if (this.isStrike(rollIndex)) {
+        totalScore += this.strikeScore(rollIndex);
+        rollIndex += 1;
+      } else if (this.isSpare(rollIndex)) {
+        totalScore += this.spareScore(rollIndex);
+        rollIndex += 2;
+      } else {
+        totalScore += this.openFrameScore(rollIndex);
+        rollIndex += 2;
+      }
+    }
+
+    return totalScore;
   }
 }

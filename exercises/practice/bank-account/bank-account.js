@@ -5,27 +5,43 @@
 
 export class BankAccount {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this._isOpen = false;
+    this._balance = 0;
   }
 
   open() {
-    throw new Error('Remove this statement and implement this function');
+    if (this._isOpen) {
+      throw new ValueError('Account is already open');
+    }
+    this._isOpen = true;
   }
 
   close() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this._isOpen) {
+      throw new ValueError('Account is already closed');
+    }
+    this._isOpen = false;
   }
 
-  deposit() {
-    throw new Error('Remove this statement and implement this function');
+  deposit(amount) {
+    if (!this._isOpen || amount < 0) {
+      throw new ValueError('Cannot deposit into closed account or negative amount');
+    }
+    this._balance += amount;
   }
 
-  withdraw() {
-    throw new Error('Remove this statement and implement this function');
+  withdraw(amount) {
+    if (!this._isOpen || amount > this._balance || amount < 0) {
+      throw new ValueError('Cannot withdraw from closed account, insufficient balance, or negative amount');
+    }
+    this._balance -= amount;
   }
 
   get balance() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this._isOpen) {
+      throw new ValueError('Cannot get balance from closed account');
+    }
+    return this._balance;
   }
 }
 

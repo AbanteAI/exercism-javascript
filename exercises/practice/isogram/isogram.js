@@ -3,6 +3,9 @@
 // convenience to get you started writing code faster.
 //
 
-export const isIsogram = () => {
-  throw new Error('Remove this statement and implement this function');
+export const isIsogram = (input) => {
+  const cleanedInput = input.replace(/[-\s]/g, "").toLowerCase();
+  const letters = new Set(cleanedInput);
+  return cleanedInput.length === letters.size;
 };
+

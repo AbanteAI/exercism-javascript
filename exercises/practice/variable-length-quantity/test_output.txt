@@ -1,0 +1,89 @@
+FAIL exercises/practice/variable-length-quantity/variable-length-quantity.spec.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /home/jake/Development/exercism-javascript/exercises/practice/variable-length-quantity/variable-length-quantity.js: Identifier 'decode' has already been declared. (43:13)
+
+      41 | };
+      42 |
+    > 43 | export const decode = () => {
+         |              ^
+      44 |   throw new Error('Remove this statement and implement this function');
+      45 | };
+      46 |
+
+    > 1 | import { encode, decode } from './variable-length-quantity';
+        | ^
+      2 |
+      3 | describe('VariableLengthQuantity', () => {
+      4 |   describe('Encode a series of integers, producing a series of bytes.', () => {
+
+      at instantiate (node_modules/@babel/parser/src/parse-error/credentials.ts:62:21)
+      at instantiate (node_modules/@babel/parser/src/parse-error.ts:60:12)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1487:19)
+      at ScopeHandler.raise [as checkRedeclarationInScope] (node_modules/@babel/parser/src/util/scope.ts:143:19)
+      at ScopeHandler.checkRedeclarationInScope [as declareName] (node_modules/@babel/parser/src/util/scope.ts:104:12)
+      at Parser.declareName [as declareNameFromIdentifier] (node_modules/@babel/parser/src/parser/lval.ts:703:16)
+      at Parser.declareNameFromIdentifier [as checkIdentifier] (node_modules/@babel/parser/src/parser/lval.ts:698:12)
+      at Parser.checkIdentifier [as checkLVal] (node_modules/@babel/parser/src/parser/lval.ts:611:12)
+      at Parser.checkLVal [as parseVarId] (node_modules/@babel/parser/src/parser/statement.ts:1573:10)
+      at Parser.parseVarId [as parseVar] (node_modules/@babel/parser/src/parser/statement.ts:1535:12)
+      at Parser.parseVar [as parseVarStatement] (node_modules/@babel/parser/src/parser/statement.ts:1201:10)
+      at Parser.parseVarStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:554:21)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:417:17)
+      at Parser.parseStatementLike [as parseStatementListItem] (node_modules/@babel/parser/src/parser/statement.ts:366:17)
+      at Parser.parseStatementListItem (node_modules/@babel/parser/src/parser/statement.ts:2580:17)
+      at Parser.parseExportDeclaration [as maybeParseExportDeclaration] (node_modules/@babel/parser/src/parser/statement.ts:2502:31)
+      at Parser.maybeParseExportDeclaration [as parseExport] (node_modules/@babel/parser/src/parser/statement.ts:2395:29)
+      at Parser.parseExport [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:597:25)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:417:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:354:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1394:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1368:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:213:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:195:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:45:10)
+      at parse (node_modules/@babel/parser/src/index.ts:67:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:51:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:39:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+      at Object.require (exercises/practice/variable-length-quantity/variable-length-quantity.spec.js:1:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.645 s
+Ran all test suites matching /exercises\/practice\/variable-length-quantity/i.

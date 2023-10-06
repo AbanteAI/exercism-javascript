@@ -41,9 +41,49 @@ const VALID_OPTIONS = [
 
 const ARGS = process.argv;
 
-//
-// This is only a SKELETON file for the 'Grep' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-// This file should *not* export a function. Use ARGS to determine what to grep
-// and use console.log(output) to write to the standard output.
+const patterns = ARGS.slice(2, -1);
+const files = ARGS.slice(-1);
+
+function grep(patterns, files) {
+  const options = ARGS.slice(2, -1).filter((arg) => arg.startsWith('-'));
+  const patternsToSearch = ARGS.slice(2, -1).filter((arg) => !arg.startsWith('-'));
+  const isCaseInsensitive = options.includes('-i');
+  const isReverse = options.includes('-v');
+  const isMatchEntireLine = options.includes('-x');
+  const isPrintLineNumbers = options.includes('-n');
+  const isPrintFileNames = options.includes('-l');
+
+  let output = '';
+
+  for (const file of files) {
+    const lines = readLines(file);
+    let matchingLines = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const match = isCaseInsensitive
+        ? line.match(new RegExp(patternsToSearch.join('|'), 'i'))
+        : line.match(new RegExp(patternsToSearch.join('|')));
+
+      if (isMatchEntireLine ? match && match[0] === line : match) {
+        matchingLines.push(isPrintLineNumbers ? `${i + 1}:${line}` : line);
+      }
+    }
+
+    if (isReverse) {
+      matchingLines = lines.filter((line) => !matchingLines.includes(line));
+    }
+
+    if (isPrintFileNames && matchingLines.length > 0) {
+      output += `${file}\n`;
+    } else {
+      output += matchingLines.join('\n') + '\n';
+    }
+  }
+
+  return output.trim();
+}
+
+const output = grep(patterns, files);
+console.log(output);
+

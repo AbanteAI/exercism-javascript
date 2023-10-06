@@ -1,0 +1,36 @@
+FAIL exercises/practice/go-counting/go-counting.spec.js
+  Go Counting
+    getTerritory
+      ✕ Black corner territory on 5x5 board (2 ms)
+      ○ skipped White center territory on 5x5 board
+      ○ skipped Open corner territory on 5x5 board
+      ○ skipped A stone and not a territory on 5x5 board
+      ○ skipped Invalid because X is too low for 5x5 board
+      ○ skipped Invalid because X is too high for 5x5 board
+      ○ skipped Invalid because Y is too low for 5x5 board
+      ○ skipped Invalid because Y is too high for 5x5 board
+    getTerritories
+      ○ skipped One territory is the whole board
+      ○ skipped Two territory rectangular board
+      ○ skipped Two region rectangular board
+
+  ● Go Counting › getTerritory › Black corner territory on 5x5 board
+
+    Remove this statement and implement this function
+
+      70 |
+      71 |   getTerritory(x, y) {
+    > 72 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+      73 |   }
+      74 |
+      75 |   getTerritories() {
+
+      at GoCounting.getTerritory (exercises/practice/go-counting/go-counting.js:72:11)
+      at Object.getTerritory (exercises/practice/go-counting/go-counting.spec.js:16:25)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 skipped, 11 total
+Snapshots:   0 total
+Time:        0.28 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/go-counting/i.

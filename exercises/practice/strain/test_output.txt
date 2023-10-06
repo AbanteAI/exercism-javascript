@@ -1,0 +1,35 @@
+FAIL exercises/practice/strain/strain.spec.js
+  strain
+    ✕ keeps on empty array returns empty array (2 ms)
+    ○ skipped keeps everything 
+    ○ skipped keeps first and last
+    ○ skipped keeps neither first nor last
+    ○ skipped keeps strings
+    ○ skipped keeps arrays
+    ○ skipped empty discard
+    ○ skipped discards nothing
+    ○ skipped discards first and last
+    ○ skipped discards neither first nor last
+    ○ skipped discards strings
+    ○ skipped discards arrays
+
+  ● strain › keeps on empty array returns empty array
+
+    Remove this statement and implement this function
+
+       5 |
+       6 | export const keep = () => {
+    >  7 |   throw new Error('Remove this statement and implement this function');
+         |         ^
+       8 | };
+       9 |
+      10 | export const discard = () => {
+
+      at keep (exercises/practice/strain/strain.js:7:9)
+      at Object.<anonymous> (exercises/practice/strain/strain.spec.js:5:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 11 skipped, 12 total
+Snapshots:   0 total
+Time:        0.249 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/strain/i.

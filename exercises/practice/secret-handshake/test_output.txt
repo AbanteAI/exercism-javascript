@@ -1,0 +1,42 @@
+FAIL exercises/practice/secret-handshake/secret-handshake.spec.js
+  Secret Handshake
+    Create A Handshake For A Number
+      ✕ wink for 1 (7 ms)
+      ○ skipped double blink for 10
+      ○ skipped close your eyes for 100
+      ○ skipped jump for 1000
+      ○ skipped combine two actions
+      ○ skipped reverse two actions
+      ○ skipped reversing one action gives the same action
+      ○ skipped reversing no actions still gives no actions
+      ○ skipped all possible actions
+      ○ skipped reverse all possible actions
+      ○ skipped do nothing for zero
+
+  ● Secret Handshake › Create A Handshake For A Number › wink for 1
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 1
+
+    - Array [
+    -   "wink",
+    - ]
+    + Array []
+
+      4 |   describe('Create A Handshake For A Number', () => {
+      5 |     test('wink for 1', () => {
+    > 6 |       expect(commands(1)).toEqual(['wink']);
+        |                           ^
+      7 |     });
+      8 |
+      9 |     xtest('double blink for 10', () => {
+
+      at Object.toEqual (exercises/practice/secret-handshake/secret-handshake.spec.js:6:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 skipped, 11 total
+Snapshots:   0 total
+Time:        0.648 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/secret-handshake/i.

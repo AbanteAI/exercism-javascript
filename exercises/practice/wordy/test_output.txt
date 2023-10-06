@@ -1,0 +1,45 @@
+FAIL exercises/practice/wordy/wordy.spec.js
+  Wordy
+    ✕ just a number (2 ms)
+    ○ skipped addition
+    ○ skipped more addition
+    ○ skipped addition with negative numbers
+    ○ skipped large addition
+    ○ skipped subtraction
+    ○ skipped multiplication
+    ○ skipped division
+    ○ skipped multiple additions
+    ○ skipped addition and subtraction
+    ○ skipped multiple subtraction
+    ○ skipped subtraction then addition
+    ○ skipped multiple multiplication
+    ○ skipped addition and multiplication
+    ○ skipped multiple division
+    ○ skipped unknown operation
+    ○ skipped Non math question
+    ○ skipped reject problem missing an operand
+    ○ skipped reject problem with no operands or operators
+    ○ skipped reject two operations in a row
+    ○ skipped reject two numbers in a row
+    ○ skipped reject postfix notation
+    ○ skipped reject prefix notation
+
+  ● Wordy › just a number
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const answer = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at answer (exercises/practice/wordy/wordy.js:7:9)
+      at Object.<anonymous> (exercises/practice/wordy/wordy.spec.js:5:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 22 skipped, 23 total
+Snapshots:   0 total
+Time:        0.257 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/wordy/i.

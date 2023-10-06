@@ -1,0 +1,25 @@
+PASS exercises/practice/matching-brackets/matching-brackets.spec.js
+  Matching Brackets
+    ✓ paired square brackets (2 ms)
+    ○ skipped empty string
+    ○ skipped unpaired brackets
+    ○ skipped wrong ordered brackets
+    ○ skipped wrong closing bracket
+    ○ skipped paired with whitespace
+    ○ skipped partially paired brackets
+    ○ skipped simple nested brackets
+    ○ skipped several paired brackets
+    ○ skipped paired and nested brackets
+    ○ skipped unopened closing brackets
+    ○ skipped unpaired and nested brackets
+    ○ skipped paired and wrong nested brackets
+    ○ skipped paired and incomplete brackets
+    ○ skipped too many closing brackets
+    ○ skipped math expression
+    ○ skipped complex latex expression
+
+Test Suites: 1 passed, 1 total
+Tests:       16 skipped, 1 passed, 17 total
+Snapshots:   0 total
+Time:        0.578 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/matching-brackets/i.

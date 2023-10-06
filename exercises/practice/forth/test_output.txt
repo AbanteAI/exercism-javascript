@@ -1,0 +1,84 @@
+FAIL exercises/practice/forth/forth.spec.js
+  Forth
+    parsing and numbers
+      ✕ numbers just get pushed onto the stack (2 ms)
+      ○ skipped pushes negative numbers onto the stack
+    addition
+      ○ skipped can add two numbers
+      ○ skipped errors if there is nothing on the stack
+      ○ skipped errors if there is only one value on the stack
+    subtraction
+      ○ skipped can subtract two numbers
+      ○ skipped errors if there is nothing on the stack
+      ○ skipped errors if there is only one value on the stack
+    multiplication
+      ○ skipped can multiply two numbers
+      ○ skipped errors if there is nothing on the stack
+      ○ skipped errors if there is only one value on the stack
+    division
+      ○ skipped can divide two numbers
+      ○ skipped performs integer division
+      ○ skipped errors if dividing by zero
+      ○ skipped errors if there is nothing on the stack
+      ○ skipped errors if there is only one value on the stack
+    combined arithmetic
+      ○ skipped addition and subtraction
+      ○ skipped multiplication and division
+    dup
+      ○ skipped copies a value on the stack
+      ○ skipped copies the top value on the stack
+      ○ skipped errors if there is nothing on the stack
+    drop
+      ○ skipped removes the top value on the stack if it is the only one
+      ○ skipped removes the top value on the stack if it is not the only one
+      ○ skipped errors if there is nothing on the stack
+    swap
+      ○ skipped swaps the top two values on the stack if they are the only ones
+      ○ skipped swaps the top two values on the stack if they are not the only ones
+      ○ skipped errors if there is nothing on the stack
+      ○ skipped errors if there is only one value on the stack
+    over
+      ○ skipped copies the second element if there are only two
+      ○ skipped copies the second element if there are more than two
+      ○ skipped errors if there is nothing on the stack
+      ○ skipped errors if there is only one value on the stack
+    user-defined words
+      ○ skipped can consist of built-in words
+      ○ skipped execute in the right order
+      ○ skipped can override other user-defined words
+      ○ skipped can override built-in words
+      ○ skipped can override built-in operators
+      ○ skipped can use different words with the same name
+      ○ skipped can define word that uses word with the same name
+      ○ skipped cannot redefine numbers
+      ○ skipped cannot redefine negative numbers
+      ○ skipped errors if executing a non-existent word
+      ○ skipped only defines locally
+    case-insensitivity
+      ○ skipped DUP is case-insensitive
+      ○ skipped DROP is case-insensitive
+      ○ skipped SWAP is case-insensitive
+      ○ skipped OVER is case-insensitive
+      ○ skipped user-defined words are case-insensitive
+      ○ skipped definitions are case-insensitive
+
+  ● Forth › parsing and numbers › numbers just get pushed onto the stack
+
+    Remove this statement and implement this function
+
+       6 | export class Forth {
+       7 |   constructor() {
+    >  8 |     throw Error('Remove this statement and implement this function');
+         |           ^
+       9 |   }
+      10 |
+      11 |   evaluate() {
+
+      at new Error (exercises/practice/forth/forth.js:8:11)
+      at Object.<anonymous> (exercises/practice/forth/forth.spec.js:7:13)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 48 skipped, 49 total
+Snapshots:   0 total
+Time:        0.272 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/forth/i.

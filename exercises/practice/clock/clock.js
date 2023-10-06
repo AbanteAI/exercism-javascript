@@ -3,24 +3,30 @@
 // convenience to get you started writing code faster.
 //
 
-export class Clock {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  formatNumber(value) {
+    return String(value).padStart(2, '0');
+  }
   }
 
   toString() {
-    throw new Error('Remove this statement and implement this function');
+    return `${this.formatNumber(this.hour)}:${this.formatNumber(this.minute)}`;
   }
 
-  plus() {
-    throw new Error('Remove this statement and implement this function');
+  plus(minutes) {
+    const totalMinutes = this.hour * 60 + this.minute + minutes;
+    this.hour = (totalMinutes / 60) % 24;
+    this.minute = totalMinutes % 60;
+    return this;
   }
 
-  minus() {
-    throw new Error('Remove this statement and implement this function');
+  minus(minutes) {
+    const totalMinutes = this.hour * 60 + this.minute - minutes;
+    this.hour = (totalMinutes / 60 + 24) % 24;
+    this.minute = (totalMinutes + 60) % 60;
+    return this;
   }
 
-  equals() {
-    throw new Error('Remove this statement and implement this function');
+  equals(clock) {
+    return this.toString() === clock.toString();
   }
 }

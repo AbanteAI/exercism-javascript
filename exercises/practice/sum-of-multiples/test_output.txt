@@ -1,0 +1,24 @@
+PASS exercises/practice/sum-of-multiples/sum-of-multiples.spec.js
+  Sum Of Multiples
+    ✓ no multiples within limit (4 ms)
+    ○ skipped one factor has multiples within limit
+    ○ skipped more than one multiple within limit
+    ○ skipped more than one factor with multiples within limit
+    ○ skipped each multiple is only counted once
+    ○ skipped a much larger limit
+    ○ skipped three factors
+    ○ skipped factors not relatively prime
+    ○ skipped some pairs of factors relatively prime and some not
+    ○ skipped one factor is a multiple of another
+    ○ skipped much larger factors
+    ○ skipped all numbers are multiples of 1
+    ○ skipped no factors means an empty sum
+    ○ skipped the only multiple of 0 is 0
+    ○ skipped the factor 0 does not affect the sum of multiples of other factors
+    ○ skipped solutions using include-exclude must extend to cardinality greater than 3
+
+Test Suites: 1 passed, 1 total
+Tests:       15 skipped, 1 passed, 16 total
+Snapshots:   0 total
+Time:        0.563 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/sum-of-multiples/i.
