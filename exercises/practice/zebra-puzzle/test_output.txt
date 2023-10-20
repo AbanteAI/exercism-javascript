@@ -1,0 +1,10 @@
+PASS exercises/practice/zebra-puzzle/zebra-puzzle.spec.js
+  Zebra puzzle
+    ✓ resident who drinks water (2 ms)
+    ○ skipped resident who owns zebra
+
+Test Suites: 1 passed, 1 total
+Tests:       1 skipped, 1 passed, 2 total
+Snapshots:   0 total
+Time:        0.647 s
+Ran all test suites matching /exercises\/practice\/zebra-puzzle/i.

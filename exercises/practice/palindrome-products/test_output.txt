@@ -1,0 +1,20 @@
+PASS exercises/practice/palindrome-products/palindrome-products.spec.js
+  Palindromes
+    ✓ smallest palindrome from single digit factors (4 ms)
+    ○ skipped largest palindrome from single digit factors
+    ○ skipped smallest palindrome from double digit factors
+    ○ skipped largest palindrome from double digit factors
+    ○ skipped smallest palindrome from triple digit factors
+    ○ skipped largest palindrome from triple digit factors
+    ○ skipped smallest palindrome from four digit factors
+    ○ skipped largest palindrome from four digit factors
+    ○ skipped empty result for smallest if no palindrome in range
+    ○ skipped empty result for largest if no palindrome in range
+    ○ skipped error for smallest if min is more than max
+    ○ skipped error for largest if min is more than max
+
+Test Suites: 1 passed, 1 total
+Tests:       11 skipped, 1 passed, 12 total
+Snapshots:   0 total
+Time:        0.841 s
+Ran all test suites matching /exercises\/practice\/palindrome-products/i.

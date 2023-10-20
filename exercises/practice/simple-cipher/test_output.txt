@@ -1,0 +1,21 @@
+PASS exercises/practice/simple-cipher/simple-cipher.spec.js
+  Random key cipher
+    ✓ can encode (3 ms)
+    ○ skipped can decode
+    ○ skipped is reversible
+    ○ skipped key is made only of lowercase letters
+  Substitution cipher
+    ○ skipped can encode
+    ○ skipped can decode
+    ○ skipped is reversible
+    ○ skipped can double shift encode
+    ○ skipped can wrap on encode
+    ○ skipped can wrap on decode
+    ○ skipped can encode messages longer than the key
+    ○ skipped can decode messages longer than the key
+
+Test Suites: 1 passed, 1 total
+Tests:       11 skipped, 1 passed, 12 total
+Snapshots:   0 total
+Time:        0.665 s
+Ran all test suites matching /exercises\/practice\/simple-cipher/i.

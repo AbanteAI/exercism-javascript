@@ -1,0 +1,18 @@
+PASS exercises/practice/connect/connect.spec.js
+  Judging a game of connect
+    ✓ an empty board has no winner (5 ms)
+    ○ skipped X can win on a 1x1 board
+    ○ skipped O can win on a 1x1 board
+    ○ skipped only edges does not make a winner
+    ○ skipped illegal diagonal does not make a winner
+    ○ skipped nobody wins crossing adjacent angles
+    ○ skipped X wins crossing from left to right
+    ○ skipped O wins crossing from top to bottom
+    ○ skipped X wins using a convoluted path
+    ○ skipped X wins using a spiral path
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        1.003 s
+Ran all test suites matching /exercises\/practice\/connect/i.

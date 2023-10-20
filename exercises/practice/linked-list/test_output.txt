@@ -1,0 +1,27 @@
+PASS exercises/practice/linked-list/linked-list.spec.js
+  LinkedList
+    ✓ pop gets last element from the list (3 ms)
+    ✓ push/pop respectively add/remove at the end of the list (1 ms)
+    ✓ shift gets element from the list (1 ms)
+    ✓ shift gets first element from the list
+    ○ skipped unshift adds element at the start of the list
+    ○ skipped pop, push, shift, and unshift can be used in any order
+    ○ skipped count an empty list
+    ○ skipped count a list with items
+    ○ skipped count is correct after mutation
+    ○ skipped popping to empty doesn't break the list
+    ○ skipped shifting to empty doesn't break the list
+    ○ skipped deletes the only element
+    ○ skipped deletes the element with the specified value from the list
+    ○ skipped deletes the element with the specified value from the list, re-assigns tail
+    ○ skipped deletes the element with the specified value from the list, re-assigns head
+    ○ skipped deletes the first of two elements
+    ○ skipped deletes the second of two elements
+    ○ skipped delete does not modify the list if the element is not found
+    ○ skipped deletes only the first occurrence
+
+Test Suites: 1 passed, 1 total
+Tests:       15 skipped, 4 passed, 19 total
+Snapshots:   0 total
+Time:        0.81 s
+Ran all test suites matching /exercises\/practice\/linked-list/i.

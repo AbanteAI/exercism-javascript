@@ -4,24 +4,46 @@
 //
 
 class CircularBuffer {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(size) {
+    this.buffer = new Array(size);
+    this.readIndex = 0;
+    this.writeIndex = 0;
+    this.size = size;
   }
 
-  write() {
-    throw new Error('Remove this statement and implement this function');
+  write(value) {
+    if (this.buffer[this.writeIndex] !== undefined) {
+      throw new BufferFullError();
+    }
+    if (value !== undefined) {
+      this.buffer[this.writeIndex] = value;
+      this.writeIndex = (this.writeIndex + 1) % this.size;
+    }
   }
 
   read() {
-    throw new Error('Remove this statement and implement this function');
+    if (this.buffer[this.readIndex] === undefined) {
+      throw new BufferEmptyError();
+    }
+    const value = this.buffer[this.readIndex];
+    this.buffer[this.readIndex] = undefined;
+    this.readIndex = (this.readIndex + 1) % this.size;
+    return value;
   }
 
-  forceWrite() {
-    throw new Error('Remove this statement and implement this function');
+  forceWrite(value) {
+    if (value !== undefined) {
+      if (this.buffer[this.writeIndex] !== undefined) {
+        this.readIndex = (this.readIndex + 1) % this.size;
+      }
+      this.write(value);
+    }
   }
 
   clear() {
-    throw new Error('Remove this statement and implement this function');
+    this.buffer.fill(undefined);
+    this.readIndex = 0;
+    this.writeIndex = 0;
   }
 }
 
@@ -29,12 +51,12 @@ export default CircularBuffer;
 
 export class BufferFullError extends Error {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    super('Buffer is full');
   }
 }
 
 export class BufferEmptyError extends Error {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    super('Buffer is empty');
   }
 }

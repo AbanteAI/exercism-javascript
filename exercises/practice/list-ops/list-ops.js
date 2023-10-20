@@ -3,40 +3,52 @@
 // convenience to get you started writing code faster.
 //
 
-export class List {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.list = [];
+  }
+  append(list) {
+    return this.list.concat(list);
   }
 
-  append() {
-    throw new Error('Remove this statement and implement this function');
+  concat(lists) {
+    return lists.reduce((acc, list) => acc.concat(list), this.list);
   }
 
-  concat() {
-    throw new Error('Remove this statement and implement this function');
+  filter(predicate) {
+    const result = [];
+    for (const item of this.list) {
+      if (predicate(item)) {
+        result.push(item);
+      }
+    }
+    return result;
   }
 
-  filter() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  map() {
-    throw new Error('Remove this statement and implement this function');
+  map(fn) {
+    const result = [];
+    for (const item of this.list) {
+      result.push(fn(item));
+    }
+    return result;
   }
 
   length() {
-    throw new Error('Remove this statement and implement this function');
+    return this.list.length;
   }
 
-  foldl() {
-    throw new Error('Remove this statement and implement this function');
+  foldl(fn, acc) {
+    return this.list.reduce((accumulator, item) => fn(accumulator, item), acc);
   }
 
-  foldr() {
-    throw new Error('Remove this statement and implement this function');
+  foldr(fn, acc) {
+    return this.list.reduceRight((accumulator, item) => fn(item, accumulator), acc);
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    const result = [];
+    for (let i = this.list.length - 1; i >= 0; i--) {
+      result.push(this.list[i]);
+    }
+    return result;
   }
 }

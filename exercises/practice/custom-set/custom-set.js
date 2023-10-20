@@ -5,42 +5,59 @@
 
 export class CustomSet {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.set = [];
   }
 
   empty() {
-    throw new Error('Remove this statement and implement this function');
+    return this.set.length === 0;
   }
 
-  contains() {
-    throw new Error('Remove this statement and implement this function');
+  contains(element) {
+    return this.set.includes(element);
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(element) {
+    if (!this.contains(element)) {
+      this.set.push(element);
+    }
   }
 
-  subset() {
-    throw new Error('Remove this statement and implement this function');
+  subset(otherSet) {
+    return this.set.every(element => otherSet.contains(element));
   }
 
-  disjoint() {
-    throw new Error('Remove this statement and implement this function');
+  disjoint(otherSet) {
+    return this.set.every(element => !otherSet.contains(element));
   }
 
-  eql() {
-    throw new Error('Remove this statement and implement this function');
+  eql(otherSet) {
+    return this.subset(otherSet) && otherSet.subset(this);
   }
 
-  union() {
-    throw new Error('Remove this statement and implement this function');
+  union(otherSet) {
+    const resultSet = new CustomSet();
+    this.set.forEach(element => resultSet.add(element));
+    otherSet.set.forEach(element => resultSet.add(element));
+    return resultSet;
   }
 
-  intersection() {
-    throw new Error('Remove this statement and implement this function');
+  intersection(otherSet) {
+    const resultSet = new CustomSet();
+    this.set.forEach(element => {
+      if (otherSet.contains(element)) {
+        resultSet.add(element);
+      }
+    });
+    return resultSet;
   }
 
-  difference() {
-    throw new Error('Remove this statement and implement this function');
+  difference(otherSet) {
+    const resultSet = new CustomSet();
+    this.set.forEach(element => {
+      if (!otherSet.contains(element)) {
+        resultSet.add(element);
+      }
+    });
+    return resultSet;
   }
 }

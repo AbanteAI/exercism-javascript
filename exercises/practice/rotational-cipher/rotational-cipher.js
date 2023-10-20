@@ -3,6 +3,21 @@
 // convenience to get you started writing code faster.
 //
 
-export const rotate = () => {
-  throw new Error('Remove this statement and implement this function');
+export const rotate = (text, key) => {
+  const rotateChar = (char, base) => {
+    return String.fromCharCode(((char.charCodeAt(0) - base + key) % 26) + base);
+  };
+
+  return text
+    .split('')
+    .map((char) => {
+      if (char >= 'A' && char <= 'Z') {
+        return rotateChar(char, 'A'.charCodeAt(0));
+      } else if (char >= 'a' && char <= 'z') {
+        return rotateChar(char, 'a'.charCodeAt(0));
+      } else {
+        return char;
+      }
+    })
+    .join('');
 };

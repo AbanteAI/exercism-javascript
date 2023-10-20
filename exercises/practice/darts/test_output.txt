@@ -1,0 +1,21 @@
+PASS exercises/practice/darts/darts.spec.js
+  Darts
+    ✓ Missed target (3 ms)
+    ○ skipped On the outer circle
+    ○ skipped On the middle circle
+    ○ skipped On the inner circle
+    ○ skipped Exactly on centre
+    ○ skipped Near the centre
+    ○ skipped Just within the inner circle
+    ○ skipped Just outside the inner circle
+    ○ skipped Just within the middle circle
+    ○ skipped Just outside the middle circle
+    ○ skipped Just within the outer circle
+    ○ skipped Just outside the outer circle
+    ○ skipped Asymmetric position between the inner and middle circles
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 1 passed, 13 total
+Snapshots:   0 total
+Time:        0.693 s
+Ran all test suites matching /exercises\/practice\/darts/i.

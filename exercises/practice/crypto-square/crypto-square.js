@@ -4,11 +4,27 @@
 //
 
 export class Crypto {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(text) {
+    this.normalizedText = text.replace(/[^a-z0-9]/gi, '').toLowerCase();
   }
 
   get ciphertext() {
-    throw new Error('Remove this statement and implement this function');
+    const length = this.normalizedText.length;
+    const c = Math.ceil(Math.sqrt(length));
+    const r = Math.ceil(length / c);
+
+    let encodedText = '';
+
+    for (let i = 0; i < c; i++) {
+      for (let j = 0; j < r; j++) {
+        const charIndex = j * c + i;
+        encodedText += charIndex < length ? this.normalizedText[charIndex] : ' ';
+      }
+      if (i < c - 1) {
+        encodedText += ' ';
+      }
+    }
+
+    return encodedText;
   }
 }

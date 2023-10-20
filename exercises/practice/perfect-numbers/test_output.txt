@@ -1,0 +1,46 @@
+FAIL exercises/practice/perfect-numbers/perfect-numbers.spec.js
+  Exercise - Perfect Numbers
+    Invalid Inputs
+      ✕ Zero is rejected (not a natural number) (26 ms)
+      ○ skipped Negative integer is rejected (not a natural number)
+    Perfect Numbers
+      ○ skipped Smallest perfect number is classified correctly
+      ○ skipped Medium perfect number is classified correctly
+      ○ skipped Large perfect number is classified correctly
+    Abundant Numbers
+      ○ skipped Smallest abundant number is classified correctly
+      ○ skipped Medium abundant number is classified correctly
+      ○ skipped Large abundant number is classified correctly
+    Deficient Numbers
+      ○ skipped Edge case (no factors other than itself) is classified correctly
+      ○ skipped Smallest prime deficient number is classified correctly
+      ○ skipped Smallest non-prime deficient number is classified correctly
+      ○ skipped Medium deficient number is classified correctly
+      ○ skipped Large deficient number is classified correctly
+
+  ● Exercise - Perfect Numbers › Invalid Inputs › Zero is rejected (not a natural number)
+
+    expect(received).toThrow(expected)
+
+    Expected message: "Classification is only possible for natural numbers."
+    Received message: "(0 , _perfectNumbers.classify) is not a function"
+
+          4 |   describe('Invalid Inputs', () => {
+          5 |     test('Zero is rejected (not a natural number)', () => {
+        > 6 |       expect(() => classify(0)).toThrow(
+            |                            ^
+          7 |         new Error('Classification is only possible for natural numbers.'),
+          8 |       );
+          9 |     });
+
+      at exercises/practice/perfect-numbers/perfect-numbers.spec.js:6:28
+      at Object.<anonymous> (node_modules/expect/build/toThrowMatchers.js:74:11)
+      at Object.throwingMatcher [as toThrow] (node_modules/expect/build/index.js:320:21)
+      at Object.toThrow (exercises/practice/perfect-numbers/perfect-numbers.spec.js:6:33)
+      at Object.toThrow (exercises/practice/perfect-numbers/perfect-numbers.spec.js:6:33)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 12 skipped, 13 total
+Snapshots:   0 total
+Time:        0.654 s
+Ran all test suites matching /exercises\/practice\/perfect-numbers/i.

@@ -3,6 +3,15 @@
 // convenience to get you started writing code faster.
 //
 
-export const isPangram = () => {
-  throw new Error('Remove this statement and implement this function');
+export const isPangram = (input) => {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const lowerCaseInput = input.toLowerCase();
+
+  for (const letter of alphabet) {
+    if (!lowerCaseInput.includes(letter)) {
+      return false;
+    }
+  }
+
+  return true;
 };

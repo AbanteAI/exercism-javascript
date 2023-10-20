@@ -1,0 +1,23 @@
+PASS exercises/practice/twelve-days/twelve-days.spec.js
+  TwelveDays
+    ✓ test verse first day a partridge in a pear tree (3 ms)
+    ○ skipped test verse second day two turtle doves
+    ○ skipped test verse third day three french hens
+    ○ skipped test verse fourth day four calling birds
+    ○ skipped test verse fifth day five gold rings
+    ○ skipped test verse sixth day six geese-a-laying
+    ○ skipped test verse seventh day seven swans-a-swimming
+    ○ skipped test verse eighth day eight maids-a-milking
+    ○ skipped test verse ninth day nine ladies dancing
+    ○ skipped test verse tenth day ten lords-a-leaping
+    ○ skipped test verse eleventh day eleven pipers piping
+    ○ skipped test verse twelfth day twelve drummers drumming
+    ○ skipped test lyrics recites first three verses of the song
+    ○ skipped test lyrics recites three verses from the middle of the song
+    ○ skipped test lyrics recites the whole song
+
+Test Suites: 1 passed, 1 total
+Tests:       14 skipped, 1 passed, 15 total
+Snapshots:   0 total
+Time:        0.692 s
+Ran all test suites matching /exercises\/practice\/twelve-days/i.

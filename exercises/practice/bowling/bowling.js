@@ -4,11 +4,42 @@
 //
 
 export class Bowling {
-  roll() {
-    throw new Error('Remove this statement and implement this function');
+  constructor() {
+    this.rolls = [];
+  }
+  roll(pins) {
+    if (pins < 0 || pins > 10) {
+      throw new Error("Invalid number of pins");
+    }
+    this.rolls.push(pins);
   }
 
   score() {
-    throw new Error('Remove this statement and implement this function');
+    let score = 0;
+    let frameIndex = 0;
+
+    for (let frame = 0; frame < 10; frame++) {
+      if (this.rolls[frameIndex] === 10) { // Strike
+        if (frameIndex + 2 >= this.rolls.length) {
+          throw new Error("Score cannot be taken until the end of the game");
+        }
+        score += 10 + this.rolls[frameIndex + 1] + this.rolls[frameIndex + 2];
+        frameIndex++;
+      } else if (this.rolls[frameIndex] + this.rolls[frameIndex + 1] === 10) { // Spare
+        if (frameIndex + 2 >= this.rolls.length) {
+          throw new Error("Score cannot be taken until the end of the game");
+        }
+        score += 10 + this.rolls[frameIndex + 2];
+        frameIndex += 2;
+      } else { // Open frame
+        if (frameIndex + 1 >= this.rolls.length) {
+          throw new Error("Score cannot be taken until the end of the game");
+        }
+        score += this.rolls[frameIndex] + this.rolls[frameIndex + 1];
+        frameIndex += 2;
+      }
+    }
+
+    return score;
   }
 }

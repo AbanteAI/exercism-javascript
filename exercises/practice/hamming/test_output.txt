@@ -1,0 +1,17 @@
+PASS exercises/practice/hamming/hamming.spec.js
+  Hamming
+    ✓ empty strands (3 ms)
+    ○ skipped single letter identical strands
+    ○ skipped single letter different strands
+    ○ skipped long identical strands
+    ○ skipped long different strands
+    ○ skipped disallow first strand longer
+    ○ skipped disallow second strand longer
+    ○ skipped disallow empty first strand
+    ○ skipped disallow empty second strand
+
+Test Suites: 1 passed, 1 total
+Tests:       8 skipped, 1 passed, 9 total
+Snapshots:   0 total
+Time:        0.648 s
+Ran all test suites matching /exercises\/practice\/hamming/i.

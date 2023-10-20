@@ -3,6 +3,23 @@
 // convenience to get you started writing code faster.
 //
 
-export const isPaired = () => {
-  throw new Error('Remove this statement and implement this function');
+export const isPaired = (input) => {
+  const stack = [];
+  const pairs = {
+    '[': ']',
+    '{': '}',
+    '(': ')'
+  };
+
+  for (const char of input) {
+    if (pairs[char]) {
+      stack.push(char);
+    } else if (Object.values(pairs).includes(char)) {
+      if (pairs[stack.pop()] !== char) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
 };

@@ -4,43 +4,62 @@
 //
 
 export class Zipper {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(tree, focus) {
+    this.tree = tree;
+    this.focus = focus;
   }
 
-  static fromTree() {
-    throw new Error('Remove this statement and implement this function');
+  static fromTree(tree) {
+    return new Zipper(tree, tree);
   }
 
   toTree() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree;
   }
 
   value() {
-    throw new Error('Remove this statement and implement this function');
+    return this.focus.value;
   }
 
-  left() {
-    throw new Error('Remove this statement and implement this function');
+  prev() {
+    return this.focus.prev ? new Zipper(this.tree, this.focus.prev) : null;
   }
 
-  right() {
-    throw new Error('Remove this statement and implement this function');
+  next() {
+    return this.focus.next ? new Zipper(this.tree, this.focus.next) : null;
   }
 
   up() {
-    throw new Error('Remove this statement and implement this function');
+    return this.focus.parent ? new Zipper(this.tree, this.focus.parent) : null;
   }
 
-  setValue() {
-    throw new Error('Remove this statement and implement this function');
+  setValue(value) {
+    this.focus.value = value;
+    return this;
   }
 
-  setLeft() {
-    throw new Error('Remove this statement and implement this function');
+  insertBefore(subTree) {
+    subTree.next = this.focus;
+    subTree.parent = this.focus.parent;
+    this.focus.prev = subTree;
+    return new Zipper(this.tree, subTree);
   }
 
-  setRight() {
-    throw new Error('Remove this statement and implement this function');
+  insertAfter(subTree) {
+    subTree.prev = this.focus;
+    subTree.parent = this.focus.parent;
+    this.focus.next = subTree;
+    return new Zipper(this.tree, subTree);
+  delete() {
+    if (this.focus.prev) {
+      this.focus.prev.next = this.focus.next;
+      return new Zipper(this.tree, this.focus.prev);
+    } else if (this.focus.next) {
+      this.focus.next.prev = this.focus.prev;
+      return new Zipper(this.tree, this.focus.next);
+    } else {
+      return new Zipper(this.tree, this.focus.parent);
+    }
+  }
   }
 }

@@ -1,0 +1,16 @@
+PASS exercises/practice/proverb/proverb.spec.js
+  Proverb
+    ✓ zero pieces (3 ms)
+    ○ skipped one piece
+    ○ skipped two pieces
+    ○ skipped three pieces
+    ○ skipped the whole proverb
+    ○ skipped proverb is the same each time
+    ○ skipped four pieces modernized
+    ○ skipped the use of an optional qualifier in the final consequence
+
+Test Suites: 1 passed, 1 total
+Tests:       7 skipped, 1 passed, 8 total
+Snapshots:   0 total
+Time:        0.701 s
+Ran all test suites matching /exercises\/practice\/proverb/i.

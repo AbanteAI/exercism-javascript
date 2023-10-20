@@ -1,0 +1,107 @@
+FAIL exercises/practice/binary-search/binary-search.spec.js
+  ● Binary Search › finds a value in an array with one element
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const find = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at find (exercises/practice/binary-search/binary-search.js:7:9)
+      at Object.<anonymous> (exercises/practice/binary-search/binary-search.spec.js:5:16)
+
+FAIL exercises/practice/binary-search-tree/binary-search-tree.spec.js
+  ● BinarySearchTree › data is retained
+
+    Remove this statement and implement this function
+
+       6 | export class BinarySearchTree {
+       7 |   constructor() {
+    >  8 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+       9 |   }
+      10 |
+      11 |   get data() {
+
+      at new BinarySearchTree (exercises/practice/binary-search-tree/binary-search-tree.js:8:11)
+      at Object.<anonymous> (exercises/practice/binary-search-tree/binary-search-tree.spec.js:13:12)
+
+FAIL exercises/practice/binary/binary.spec.js
+  ● Test suite failed to run
+
+    Jest encountered an unexpected token
+
+    Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+
+    Out of the box Jest supports Babel, which will be used to transform your files into valid JS based on your Babel configuration.
+
+    By default "node_modules" folder is ignored by transformers.
+
+    Here's what you can do:
+     • If you are trying to use ECMAScript Modules, see https://jestjs.io/docs/ecmascript-modules for how to enable it.
+     • If you are trying to use TypeScript, see https://jestjs.io/docs/getting-started#using-typescript
+     • To have some of your "node_modules" files transformed, you can specify a custom "transformIgnorePatterns" in your config.
+     • If you need a custom transformation specify a "transform" option in your config.
+     • If you simply want to mock your non-JS modules (e.g. binary assets) you can stub them out with the "moduleNameMapper" config option.
+
+    You'll find more details and examples of these config options in the docs:
+    https://jestjs.io/docs/configuration
+    For information about custom transformations, see:
+    https://jestjs.io/docs/code-transformation
+
+    Details:
+
+    SyntaxError: /home/jake/Development/mentat/tests/benchmarks/repos/exercism-javascript/exercises/practice/binary/binary.js: Missing semicolon. (12:13)
+
+      10 |   }
+      11 |
+    > 12 |   toDecimal() {
+         |              ^
+      13 |     if (!/^[01]+$/.test(this.binaryString)) {
+      14 |       return 0;
+      15 |     }
+
+    > 1 | import { Binary } from './binary';
+        | ^
+      2 |
+      3 | describe('binary', () => {
+      4 |   test('0 is decimal 0', () => expect(new Binary('0').toDecimal()).toEqual(0));
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:81:19)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1487:19)
+      at Parser.raise [as semicolon] (node_modules/@babel/parser/src/parser/util.ts:142:10)
+      at Parser.semicolon [as parseExpressionStatement] (node_modules/@babel/parser/src/parser/statement.ts:1314:10)
+      at Parser.parseExpressionStatement [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:660:19)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:417:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:354:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1394:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1368:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:213:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:195:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:45:10)
+      at parse (node_modules/@babel/parser/src/index.ts:66:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:50:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:39:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+      at Object.require (exercises/practice/binary/binary.spec.js:1:1)
+
+Test Suites: 3 failed, 3 total
+Tests:       2 failed, 19 skipped, 21 total
+Snapshots:   0 total
+Time:        1.007 s
+Ran all test suites matching /exercises\/practice\/binary/i.

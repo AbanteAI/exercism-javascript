@@ -4,27 +4,85 @@
 //
 
 export class LinkedList {
-  push() {
-    throw new Error('Remove this statement and implement this function');
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+  push(value) {
+    const newNode = { value, prev: this.tail, next: null };
+    if (this.tail) {
+      this.tail.next = newNode;
+    } else {
+      this.head = newNode;
+    }
+    this.tail = newNode;
   }
 
   pop() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.tail) {
+      return null;
+    }
+    const value = this.tail.value;
+    this.tail = this.tail.prev;
+    if (this.tail) {
+      this.tail.next = null;
+    } else {
+      this.head = null;
+    }
+    return value;
   }
 
   shift() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.head) {
+      return null;
+    }
+    const value = this.head.value;
+    this.head = this.head.next;
+    if (this.head) {
+      this.head.prev = null;
+    } else {
+      this.tail = null;
+    }
+    return value;
   }
 
-  unshift() {
-    throw new Error('Remove this statement and implement this function');
+  unshift(value) {
+    const newNode = { value, prev: null, next: this.head };
+    if (this.head) {
+      this.head.prev = newNode;
+    } else {
+      this.tail = newNode;
+    }
+    this.head = newNode;
   }
 
-  delete() {
-    throw new Error('Remove this statement and implement this function');
+  delete(value) {
+    let currentNode = this.head;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        if (currentNode.prev) {
+          currentNode.prev.next = currentNode.next;
+        } else {
+          this.head = currentNode.next;
+        }
+        if (currentNode.next) {
+          currentNode.next.prev = currentNode.prev;
+        } else {
+          this.tail = currentNode.prev;
+        }
+        return;
+      }
+      currentNode = currentNode.next;
+    }
   }
 
   count() {
-    throw new Error('Remove this statement and implement this function');
+    let count = 0;
+    let currentNode = this.head;
+    while (currentNode) {
+      count++;
+      currentNode = currentNode.next;
+    }
+    return count;
   }
 }

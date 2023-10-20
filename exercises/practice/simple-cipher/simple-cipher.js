@@ -4,19 +4,44 @@
 //
 
 export class Cipher {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(key) {
+    if (key === undefined) {
+      this._key = this.generateRandomKey();
+    } else {
+      this._key = key;
+    }
+  }
+  generateRandomKey() {
+    const keyLength = 100;
+    const characters = 'abcdefghijklmnopqrstuvwxyz';
+    let result = '';
+    for (let i = 0; i < keyLength; i++) {
+      result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
   }
 
-  encode() {
-    throw new Error('Remove this statement and implement this function');
+  encode(input) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      const charCode = input.charCodeAt(i);
+      const keyCharCode = this._key.charCodeAt(i % this._key.length);
+      result += String.fromCharCode(((charCode - 97 + keyCharCode - 97) % 26) + 97);
+    }
+    return result;
   }
 
-  decode() {
-    throw new Error('Remove this statement and implement this function');
+  decode(input) {
+    let result = '';
+    for (let i = 0; i < input.length; i++) {
+      const charCode = input.charCodeAt(i);
+      const keyCharCode = this._key.charCodeAt(i % this._key.length);
+      result += String.fromCharCode(((charCode - 97 - (keyCharCode - 97) + 26) % 26) + 97);
+    }
+    return result;
   }
 
   get key() {
-    throw new Error('Remove this statement and implement this function');
+    return this._key;
   }
 }

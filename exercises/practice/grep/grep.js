@@ -47,3 +47,61 @@ const ARGS = process.argv;
 //
 // This file should *not* export a function. Use ARGS to determine what to grep
 // and use console.log(output) to write to the standard output.
+
+function parseArguments(args) {
+  const flags = [];
+  let pattern = '';
+  const files = [];
+
+  for (let i = 2; i < args.length; i++) {
+    if (args[i].startsWith('-')) {
+      flags.push(...args[i].slice(1));
+    } else if (!pattern) {
+      pattern = args[i];
+    } else {
+      files.push(args[i]);
+    }
+  }
+
+  return { flags, pattern, files };
+}
+
+function grep(flags, pattern, file) {
+function grep(flags, pattern, file, dataDir = 'data') {
+  const results = [];
+  const lines = readLines(path.join(dataDir, file));
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const match = regex.test(line);
+
+    if ((match && !flags.includes('v')) || (!match && flags.includes('v'))) {
+      if (flags.includes('x') && line !== pattern) {
+        continue;
+      }
+
+      let result = '';
+
+      if (flags.includes('n')) {
+        result += `${i + 1}:`;
+      }
+
+      result += line;
+      results.push(result);
+    }
+  }
+
+  return results;
+}
+
+const { flags, pattern, files } = parseArguments(ARGS);
+
+files.forEach((file) => {
+  const results = grep(flags, pattern, file);
+
+  if (flags.includes('l') && results.length > 0) {
+    console.log(file);
+  } else {
+    console.log(results.join('\n'));
+  }
+});

@@ -1,0 +1,33 @@
+PASS exercises/practice/simple-linked-list/simple-linked-list.spec.js
+  Element class
+    ✓ has constructor (4 ms)
+    ○ skipped value reflects constructor arg
+    ○ skipped has null for next by default
+  List class
+    ○ skipped has constructor
+    ○ skipped new lists should have length 0
+    ○ skipped can add a element
+    ○ skipped adding a element increments length
+    ○ skipped adding two elements increments twice
+    ○ skipped new Lists have a null head element
+    ○ skipped adding an Element to an empty list sets the head Element
+    ○ skipped adding a second Element updates the head Element
+    ○ skipped can get the next Element from the head
+    ○ skipped can be initialized with an array
+  Lists with multiple elements
+    ○ skipped with correct length
+    ○ skipped with correct head value
+    ○ skipped can traverse the list
+    ○ skipped can convert to an array
+    ○ skipped head of list is final element from input array
+    ○ skipped can convert longer list to an array
+    ○ skipped can be reversed
+    ○ skipped can be reversed when it has more elements
+    ○ skipped can reverse with many elements
+    ○ skipped can reverse a reversal
+
+Test Suites: 1 passed, 1 total
+Tests:       22 skipped, 1 passed, 23 total
+Snapshots:   0 total
+Time:        1.111 s
+Ran all test suites matching /exercises\/practice\/simple-linked-list/i.

@@ -1,0 +1,18 @@
+PASS exercises/practice/octal/octal.spec.js
+  octal
+    ✓ 1 is decimal 1 (4 ms)
+    ○ skipped 10 is decimal 8
+    ○ skipped 17 is decimal 15
+    ○ skipped 11 is decimal 9
+    ○ skipped 130 is decimal 88
+    ○ skipped 2047 is decimal 1063
+    ○ skipped 7777 is decimal 4095
+    ○ skipped 1234567 is decimal 342391
+    ○ skipped invalid is decimal 0
+    ○ skipped considers the digit 8 as invalid
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        0.705 s
+Ran all test suites matching /exercises\/practice\/octal/i.

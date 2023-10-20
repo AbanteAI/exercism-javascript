@@ -4,5 +4,18 @@
 //
 
 export const knapsack = (maximumWeight, items) => {
-  throw new Error('Remove this statement and implement this function');
+  const n = items.length;
+  const dp = Array.from({ length: n + 1 }, () => Array(maximumWeight + 1).fill(0));
+
+  for (let i = 1; i <= n; i++) {
+    for (let w = 1; w <= maximumWeight; w++) {
+      if (items[i - 1].weight <= w) {
+        dp[i][w] = Math.max(dp[i - 1][w], dp[i - 1][w - items[i - 1].weight] + items[i - 1].value);
+      } else {
+        dp[i][w] = dp[i - 1][w];
+      }
+    }
+  }
+
+  return dp[n][maximumWeight];
 };

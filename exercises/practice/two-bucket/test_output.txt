@@ -1,0 +1,24 @@
+PASS exercises/practice/two-bucket/two-bucket.spec.js
+  TwoBucket
+    Measure using bucket one of size 3 and bucket two of size 5
+      ✓ start with bucket one (4 ms)
+      ○ skipped start with bucket two
+    Measure using bucket one of size 7 and bucket two of size 11
+      ○ skipped start with bucket one
+      ○ skipped start with bucket two
+    Measure one step using bucket one of size 1 and bucket two of size 3
+      ○ skipped start with bucket two
+    Measure using bucket one of size 2 and bucket two of size 3
+      ○ skipped start with bucket one and end with bucket two
+    Reachability
+      ○ skipped Not possible to reach the goal, start with bucket one
+      ○ skipped Not possible to reach the goal, start with bucket two
+      ○ skipped With the same buckets but a different goal, then it is possible
+    Goal larger than both buckets
+      ○ skipped Is impossible
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        0.743 s
+Ran all test suites matching /exercises\/practice\/two-bucket/i.

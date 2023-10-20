@@ -3,6 +3,15 @@
 // convenience to get you started writing code faster.
 //
 
-export const clean = () => {
-  throw new Error('Remove this statement and implement this function');
+export const clean = (phoneNumber) => {
+  const cleanedNumber = phoneNumber.replace(/\D+/g, '');
+  const numberLength = cleanedNumber.length;
+
+  if (numberLength === 11 && cleanedNumber[0] === '1') {
+    return cleanedNumber.slice(1);
+  } else if (numberLength === 10) {
+    return cleanedNumber;
+  } else {
+    throw new Error('Invalid phone number');
+  }
 };

@@ -3,6 +3,24 @@
 // convenience to get you started writing code faster.
 //
 
-export const valid = () => {
-  throw new Error('Remove this statement and implement this function');
+export const valid = (input) => {
+  if (input.length <= 1) return false;
+
+  const cleanedInput = input.replace(/\s+/g, '');
+  if (!/^\d+$/.test(cleanedInput)) return false;
+
+  let sum = 0;
+  let shouldDouble = cleanedInput.length % 2 === 0;
+
+  for (const digit of cleanedInput) {
+    let value = parseInt(digit, 10);
+    if (shouldDouble) {
+      value *= 2;
+      if (value > 9) value -= 9;
+    }
+    sum += value;
+    shouldDouble = !shouldDouble;
+  }
+
+  return sum % 10 === 0;
 };

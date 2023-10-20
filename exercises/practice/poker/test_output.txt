@@ -1,0 +1,36 @@
+PASS exercises/practice/poker/poker.spec.js
+  Poker
+    ✓ single hand always wins (4 ms)
+    ○ skipped highest card out of all hands wins
+    ○ skipped a tie has multiple winners
+    ○ skipped multiple hands with the same high cards, tie compares next highest ranked, down to last card
+    ○ skipped one pair beats high card
+    ○ skipped highest pair wins
+    ○ skipped two pairs beats one pair
+    ○ skipped both hands have two pairs, highest ranked pair wins
+    ○ skipped both hands have two pairs, with the same highest ranked pair, tie goes to low pair
+    ○ skipped both hands have two identically ranked pairs, tie goes to remaining card (kicker)
+    ○ skipped three of a kind beats two pair
+    ○ skipped both hands have three of a kind, tie goes to highest ranked triplet
+    ○ skipped with multiple decks, two players can have same three of a kind, ties go to highest remaining cards
+    ○ skipped a straight beats three of a kind
+    ○ skipped aces can end a straight (10 J Q K A)
+    ○ skipped aces can start a straight (A 2 3 4 5)
+    ○ skipped both hands with a straight, tie goes to highest ranked card
+    ○ skipped even though an ace is usually high, a 5-high straight is the lowest-scoring straight
+    ○ skipped flush beats a straight
+    ○ skipped both hands have a flush, tie goes to high card, down to the last one if necessary
+    ○ skipped full house beats a flush
+    ○ skipped both hands have a full house, tie goes to highest-ranked triplet
+    ○ skipped with multiple decks, both hands have a full house with the same triplet, tie goes to the pair
+    ○ skipped four of a kind beats a full house
+    ○ skipped both hands have four of a kind, tie goes to high quad
+    ○ skipped with multiple decks, both hands with identical four of a kind, tie determined by kicker
+    ○ skipped straight flush beats four of a kind
+    ○ skipped both hands have straight flush, tie goes to highest-ranked card
+
+Test Suites: 1 passed, 1 total
+Tests:       27 skipped, 1 passed, 28 total
+Snapshots:   0 total
+Time:        0.749 s
+Ran all test suites matching /exercises\/practice\/poker/i.

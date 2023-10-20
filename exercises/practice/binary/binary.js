@@ -4,11 +4,21 @@
 //
 
 export class Binary {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(binaryString) {
+    this.binaryString = binaryString;
+  }
   }
 
   toDecimal() {
-    throw new Error('Remove this statement and implement this function');
+    if (!/^[01]+$/.test(this.binaryString)) {
+      return 0;
+    }
+
+    let decimal = 0;
+    for (let i = 0; i < this.binaryString.length; i++) {
+      decimal = decimal * 2 + parseInt(this.binaryString[i], 10);
+    }
+    return decimal;
+  }
   }
 }

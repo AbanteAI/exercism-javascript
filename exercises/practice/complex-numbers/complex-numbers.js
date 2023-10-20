@@ -4,43 +4,44 @@
 //
 
 export class ComplexNumber {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(real, imag) {
+    this._real = real;
+    this._imag = imag;
   }
 
   get real() {
-    throw new Error('Remove this statement and implement this function');
+    return this._real;
   }
-
   get imag() {
-    throw new Error('Remove this statement and implement this function');
+    return this._imag;
+  }
+  add(complex) {
+    return new ComplexNumber(this.real + complex.real, this.imag + complex.imag);
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  sub(complex) {
+    return new ComplexNumber(this.real - complex.real, this.imag - complex.imag);
   }
 
-  sub() {
-    throw new Error('Remove this statement and implement this function');
+  div(complex) {
+    const denominator = complex.real ** 2 + complex.imag ** 2;
+    const real = (this.real * complex.real + this.imag * complex.imag) / denominator;
+    const imag = (this.imag * complex.real - this.real * complex.imag) / denominator;
+    return new ComplexNumber(real, imag);
   }
 
-  div() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  mul() {
-    throw new Error('Remove this statement and implement this function');
+  mul(complex) {
+    const real = this.real * complex.real - this.imag * complex.imag;
+    const imag = this.imag * complex.real + this.real * complex.imag;
+    return new ComplexNumber(real, imag);
   }
 
   get abs() {
-    throw new Error('Remove this statement and implement this function');
+    return Math.sqrt(this.real ** 2 + this.imag ** 2);
   }
-
-  get conj() {
-    throw new Error('Remove this statement and implement this function');
+    return new ComplexNumber(this.real, -this.imag);
   }
-
-  get exp() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    const real = Math.exp(this.real) * Math.cos(this.imag);
+    const imag = Math.exp(this.real) * Math.sin(this.imag);
+    return new ComplexNumber(real, imag);
 }

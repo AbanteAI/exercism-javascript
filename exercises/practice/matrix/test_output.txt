@@ -1,0 +1,17 @@
+PASS exercises/practice/matrix/matrix.spec.js
+  Matrix
+    ✓ extract row from one number matrix (4 ms)
+    ○ skipped can extract row
+    ○ skipped extract row where numbers have different widths
+    ○ skipped can extract row from non-square matrix with no corresponding column
+    ○ skipped extract column from one number matrix
+    ○ skipped can extract column
+    ○ skipped can extract column from non-square matrix with no corresponding row
+    ○ skipped can extract column from non-square matrix with more columns than rows
+    ○ skipped extract column where numbers have different widths
+
+Test Suites: 1 passed, 1 total
+Tests:       8 skipped, 1 passed, 9 total
+Snapshots:   0 total
+Time:        0.782 s
+Ran all test suites matching /exercises\/practice\/matrix/i.

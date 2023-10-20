@@ -5,30 +5,73 @@
 
 export class InputCell {
   constructor(value) {
-    throw new Error('Remove this statement and implement this function');
+    this.value = value;
+    this.callbacks = [];
   }
 
   setValue(value) {
-    throw new Error('Remove this statement and implement this function');
+    this.value = value;
+    this.callbacks.forEach((callback) => callback());
+  }
+
+  addCallback(callback) {
+    this.callbacks.push(callback);
+  }
+
+  removeCallback(callback) {
+    this.callbacks = this.callbacks.filter((cb) => cb !== callback);
   }
 }
 
 export class ComputeCell {
   constructor(inputCells, fn) {
-    throw new Error('Remove this statement and implement this function');
+    this.inputCells = inputCells;
+    this.fn = fn;
+    this.value = this.computeValue();
+    this.callbacks = [];
+
+    inputCells.forEach((cell) => {
+      cell.addCallback(() => {
+        const newValue = this.computeValue();
+        if (newValue !== this.value) {
+          this.value = newValue;
+          this.callbacks.forEach((callback) => callback());
+        }
+      });
+    });
+  }
+
+  computeValue() {
+    return this.fn(this.inputCells);
   }
 
   addCallback(cb) {
-    throw new Error('Remove this statement and implement this function');
+    this.callbacks.push(cb);
   }
 
   removeCallback(cb) {
-    throw new Error('Remove this statement and implement this function');
+    this.callbacks = this.callbacks.filter((callback) => callback !== cb);
   }
 }
 
 export class CallbackCell {
   constructor(fn) {
-    throw new Error('Remove this statement and implement this function');
+    this.fn = fn;
+    this.values = [];
+
+    this.callback = () => {
+      const newValue = this.fn();
+      if (newValue !== this.values[this.values.length - 1]) {
+        this.values.push(newValue);
+      }
+    };
+  }
+
+  addCallbackTo(cell) {
+    cell.addCallback(this.callback);
+  }
+
+  removeCallbackFrom(cell) {
+    cell.removeCallback(this.callback);
   }
 }

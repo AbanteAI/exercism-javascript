@@ -4,15 +4,35 @@
 //
 
 export class RestAPI {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(database = {}) {
+    this.database = database;
   }
 
   get(url) {
-    throw new Error('Remove this statement and implement this function');
+    const queryParams = new URLSearchParams(url.split('?')[1]);
+    const users = queryParams.get('users') ? queryParams.get('users').split(',') : Object.keys(this.database);
+    return { users: users.map(user => this.database[user]).filter(user => user) };
+  }
   }
 
   post(url, payload) {
-    throw new Error('Remove this statement and implement this function');
+    if (url === '/add') {
+      const newUser = {
+        name: payload.user,
+        owes: {},
+        owed_by: {},
+        balance: 0
+      };
+      this.database[payload.user] = newUser;
+      return newUser;
+    } else if (url === '/iou') {
+      const { lender, borrower, amount } = payload;
+      this.database[lender].owed_by[borrower] = (this.database[lender].owed_by[borrower] || 0) + amount;
+      this.database[borrower].owes[lender] = (this.database[borrower].owes[lender] || 0) + amount;
+      this.database[lender].balance += amount;
+      this.database[borrower].balance -= amount;
+      return { users: [this.database[lender], this.database[borrower]].filter(user => user).sort((a, b) => a.name.localeCompare(b.name)) };
+    }
+    }
   }
 }

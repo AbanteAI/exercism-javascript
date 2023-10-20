@@ -1,0 +1,20 @@
+PASS exercises/practice/grains/grains.spec.js
+  Grains
+    ○ skipped returns the total number of grains on the board
+    returns the number of grains on the square
+      ✓ grains on square 1 (3 ms)
+      ○ skipped grains on square 2
+      ○ skipped grains on square 3
+      ○ skipped grains on square 4
+      ○ skipped grains on square 16
+      ○ skipped grains on square 32
+      ○ skipped grains on square 64
+      ○ skipped square 0 raises an exception
+      ○ skipped negative square raises an exception
+      ○ skipped square greater than 64 raises an exception
+
+Test Suites: 1 passed, 1 total
+Tests:       10 skipped, 1 passed, 11 total
+Snapshots:   0 total
+Time:        0.717 s
+Ran all test suites matching /exercises\/practice\/grains/i.

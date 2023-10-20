@@ -4,5 +4,22 @@
 //
 
 export const treeFromTraversals = (preorder, inorder) => {
-  throw new Error('Remove this statement and implement this function');
+  if (preorder.length === 0 || inorder.length === 0) {
+    return {};
+  }
+
+  const rootValue = preorder[0];
+  const rootIndex = inorder.indexOf(rootValue);
+
+  const leftInorder = inorder.slice(0, rootIndex);
+  const rightInorder = inorder.slice(rootIndex + 1);
+
+  const leftPreorder = preorder.slice(1, leftInorder.length + 1);
+  const rightPreorder = preorder.slice(leftInorder.length + 1);
+
+  return {
+    value: rootValue,
+    left: treeFromTraversals(leftPreorder, leftInorder),
+    right: treeFromTraversals(rightPreorder, rightInorder),
+  };
 };

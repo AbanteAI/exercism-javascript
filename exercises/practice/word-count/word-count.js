@@ -3,6 +3,20 @@
 // convenience to get you started writing code faster.
 //
 
-export const countWords = () => {
-  throw new Error('Remove this statement and implement this function');
+export const countWords = (input) => {
+  const wordCounts = {};
+  const words = input
+    .toLowerCase()
+    .split(/[^a-z0-9']+/)
+    .filter((word) => word !== '');
+
+  words.forEach((word) => {
+    if (wordCounts[word]) {
+      wordCounts[word]++;
+    } else {
+      wordCounts[word] = 1;
+    }
+  });
+
+  return wordCounts;
 };
