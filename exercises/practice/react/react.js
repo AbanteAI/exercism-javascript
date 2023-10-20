@@ -5,30 +5,56 @@
 
 export class InputCell {
   constructor(value) {
-    throw new Error('Remove this statement and implement this function');
+    this.value = value;
+    this.callbacks = [];
   }
 
   setValue(value) {
-    throw new Error('Remove this statement and implement this function');
+    if (this.value !== value) {
+      this.value = value;
+      this.callbacks.forEach(cb => cb());
+    }
   }
 }
 
 export class ComputeCell {
   constructor(inputCells, fn) {
-    throw new Error('Remove this statement and implement this function');
+    this.inputCells = inputCells;
+    this.fn = fn;
+    this.value = this.computeValue();
+    this.callbacks = [];
+    this.inputCells.forEach(cell => cell.addCallback(() => this.updateValue()));
   }
 
   addCallback(cb) {
-    throw new Error('Remove this statement and implement this function');
+    this.callbacks.push(cb);
   }
 
   removeCallback(cb) {
-    throw new Error('Remove this statement and implement this function');
+    const index = this.callbacks.indexOf(cb);
+    if (index !== -1) {
+      this.callbacks.splice(index, 1);
+    }
+  }
+
+  computeValue() {
+    return this.fn(this.inputCells.map(cell => cell.value));
+  }
+
+  updateValue() {
+    const newValue = this.computeValue();
+    if (this.value !== newValue) {
+      this.value = newValue;
+      this.callbacks.forEach(cb => cb());
+    }
   }
 }
 
 export class CallbackCell {
   constructor(fn) {
-    throw new Error('Remove this statement and implement this function');
+    this.fn = fn;
+    this.value = this.fn();
+    this.callbacks = [];
   }
+}
 }

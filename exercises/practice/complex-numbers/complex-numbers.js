@@ -4,43 +4,65 @@
 //
 
 export class ComplexNumber {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(real, imag) {
+    this.real = real;
+    this.imag = imag;
   }
 
   get real() {
-    throw new Error('Remove this statement and implement this function');
+    return this._real;
+  }
+
+  set real(value) {
+    this._real = value;
   }
 
   get imag() {
-    throw new Error('Remove this statement and implement this function');
+    return this._imag;
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  set imag(value) {
+    this._imag = value;
   }
 
-  sub() {
-    throw new Error('Remove this statement and implement this function');
+  add(other) {
+    const real = this.real + other.real;
+    const imag = this.imag + other.imag;
+    return new ComplexNumber(real, imag);
   }
 
-  div() {
-    throw new Error('Remove this statement and implement this function');
+  sub(other) {
+    const real = this.real - other.real;
+    const imag = this.imag - other.imag;
+    return new ComplexNumber(real, imag);
   }
 
-  mul() {
-    throw new Error('Remove this statement and implement this function');
+  div(other) {
+    const denominator = other.real ** 2 + other.imag ** 2;
+    const real = (this.real * other.real + this.imag * other.imag) / denominator;
+    const imag = (this.imag * other.real - this.real * other.imag) / denominator;
+    return new ComplexNumber(real, imag);
+  }
+
+  mul(other) {
+    const real = this.real * other.real - this.imag * other.imag;
+    const imag = this.imag * other.real + this.real * other.imag;
+    return new ComplexNumber(real, imag);
   }
 
   get abs() {
-    throw new Error('Remove this statement and implement this function');
+    const abs = Math.sqrt(this.real ** 2 + this.imag ** 2);
+    return abs;
   }
 
   get conj() {
-    throw new Error('Remove this statement and implement this function');
+    const imag = -this.imag;
+    return new ComplexNumber(this.real, imag);
   }
 
   get exp() {
-    throw new Error('Remove this statement and implement this function');
+    const real = Math.exp(this.real) * Math.cos(this.imag);
+    const imag = Math.exp(this.real) * Math.sin(this.imag);
+    return new ComplexNumber(real, imag);
   }
 }

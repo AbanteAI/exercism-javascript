@@ -1,0 +1,33 @@
+FAIL exercises/practice/space-age/space-age.spec.js
+  Space Age
+    ✕ age on Earth (5 ms)
+    ○ skipped age on Mercury
+    ○ skipped age on Venus
+    ○ skipped age on Mars
+    ○ skipped age on Jupiter
+    ○ skipped age on Saturn
+    ○ skipped age on Uranus
+    ○ skipped age on Neptune
+
+  ● Space Age › age on Earth
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 31.69
+    Received: {"onEarth": 31.69, "onJupiter": 2.67, "onMars": 16.85, "onMercury": 131.57, "onNeptune": 0.19, "onSaturn": 1.08, "onUranus": 0.38, "onVenus": 51.51, "seconds": 1000000000}
+
+      3 | describe('Space Age', () => {
+      4 |   test('age on Earth', () => {
+    > 5 |     expect(age('earth', 1000000000)).toEqual(31.69);
+        |                                      ^
+      6 |   });
+      7 |
+      8 |   xtest('age on Mercury', () => {
+
+      at Object.toEqual (exercises/practice/space-age/space-age.spec.js:5:38)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 7 skipped, 8 total
+Snapshots:   0 total
+Time:        0.635 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/space-age/i.

@@ -1,0 +1,26 @@
+PASS exercises/practice/luhn/luhn.spec.js
+  Luhn
+    ✓ single digit strings can not be valid (3 ms)
+    ○ skipped a single zero is invalid
+    ○ skipped a simple valid SIN that remains valid if reversed
+    ○ skipped a simple valid SIN that becomes invalid if reversed
+    ○ skipped a valid Canadian SIN
+    ○ skipped invalid Canadian SIN
+    ○ skipped invalid credit card
+    ○ skipped invalid long number with an even remainder
+    ○ skipped valid number with an even number of digits
+    ○ skipped valid number with an odd number of spaces
+    ○ skipped valid strings with a non-digit added at the end invalid
+    ○ skipped valid strings with punctuation included become invalid
+    ○ skipped valid strings with symbols included become invalid
+    ○ skipped single zero with space is invalid
+    ○ skipped more than a single zero is valid
+    ○ skipped input digit 9 is correctly converted to output digit 9
+    ○ skipped using ascii value for non-doubled non-digit isn't allowed
+    ○ skipped using ascii value for doubled non-digit isn't allowed
+
+Test Suites: 1 passed, 1 total
+Tests:       17 skipped, 1 passed, 18 total
+Snapshots:   0 total
+Time:        0.661 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/luhn/i.

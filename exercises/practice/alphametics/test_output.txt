@@ -1,0 +1,32 @@
+FAIL exercises/practice/alphametics/alphametics.spec.js
+  Solve the alphametics puzzle
+    ✕ puzzle with three letters (2 ms)
+    ○ skipped solution must have unique value for each letter
+    ○ skipped leading zero solution is invalid
+    ○ skipped puzzle with four letters
+    ○ skipped puzzle with six letters
+    ○ skipped puzzle with seven letters
+    ○ skipped puzzle with eight letters
+    ○ skipped puzzle with ten letters
+    ○ skipped puzzle with ten letters and 199 addends
+
+  ● Solve the alphametics puzzle › puzzle with three letters
+
+    TypeError: Cannot destructure property 'words' of 'parsePuzzle(...)' as it is undefined.
+
+       5 |
+       6 | export const solve = (puzzle) => {
+    >  7 |   const { words, sum } = parsePuzzle(puzzle);
+         |           ^
+       8 |   const letters = extractLetters(puzzle);
+       9 |   const digitCombinations = generateDigitCombinations(letters);
+      10 |   
+
+      at words (exercises/practice/alphametics/alphametics.js:7:11)
+      at Object.<anonymous> (exercises/practice/alphametics/alphametics.spec.js:11:17)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 8 skipped, 9 total
+Snapshots:   0 total
+Time:        0.283 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/alphametics/i.

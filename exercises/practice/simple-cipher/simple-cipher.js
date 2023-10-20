@@ -4,19 +4,49 @@
 //
 
 export class Cipher {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(key = generateRandomKey()) {
+    if (!/^[a-z]+$/.test(key)) {
+      throw new Error('Invalid key. Key must contain only lowercase letters.');
+    }
+    this.key = key;
   }
 
-  encode() {
-    throw new Error('Remove this statement and implement this function');
+  encode(plaintext) {
+    let ciphertext = '';
+    for (let i = 0; i < plaintext.length; i++) {
+      const plaintextCharCode = plaintext.charCodeAt(i) - 97;
+      const keyCharCode = this.key.charCodeAt(i % this.key.length) - 97;
+      const encodedCharCode = (plaintextCharCode + keyCharCode) % 26 + 97;
+      ciphertext += String.fromCharCode(encodedCharCode);
+    }
+    return ciphertext;
   }
 
-  decode() {
-    throw new Error('Remove this statement and implement this function');
+  decode(ciphertext) {
+    let plaintext = '';
+    for (let i = 0; i < ciphertext.length; i++) {
+      const ciphertextCharCode = ciphertext.charCodeAt(i) - 97;
+      const keyCharCode = this.key.charCodeAt(i % this.key.length) - 97;
+      const decodedCharCode = (ciphertextCharCode - keyCharCode + 26) % 26 + 97;
+      plaintext += String.fromCharCode(decodedCharCode);
+    }
+    return plaintext;
   }
 
   get key() {
-    throw new Error('Remove this statement and implement this function');
+    return this._key;
   }
+
+  set key(key) {
+    this._key = key;
+  }
+}
+
+function generateRandomKey() {
+  let key = '';
+  for (let i = 0; i < 100; i++) {
+    const randomCharCode = Math.floor(Math.random() * 26) + 97;
+    key += String.fromCharCode(randomCharCode);
+  }
+  return key;
 }

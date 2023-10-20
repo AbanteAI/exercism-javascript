@@ -1,0 +1,57 @@
+FAIL exercises/practice/go-counting/go-counting.spec.js
+  Go Counting
+    getTerritory
+      ✕ Black corner territory on 5x5 board (7 ms)
+      ○ skipped White center territory on 5x5 board
+      ○ skipped Open corner territory on 5x5 board
+      ○ skipped A stone and not a territory on 5x5 board
+      ○ skipped Invalid because X is too low for 5x5 board
+      ○ skipped Invalid because X is too high for 5x5 board
+      ○ skipped Invalid because Y is too low for 5x5 board
+      ○ skipped Invalid because Y is too high for 5x5 board
+    getTerritories
+      ○ skipped One territory is the whole board
+      ○ skipped Two territory rectangular board
+      ○ skipped Two region rectangular board
+
+  ● Go Counting › getTerritory › Black corner territory on 5x5 board
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+    @@ -1,15 +1,15 @@
+      Object {
+        "owner": "BLACK",
+        "territory": Array [
+          Array [
+            0,
+    -       0,
+    +       1,
+          ],
+          Array [
+    +       0,
+            0,
+    -       1,
+          ],
+          Array [
+            1,
+            0,
+          ],
+
+      14 |         ],
+      15 |       };
+    > 16 |       expect(goCounting.getTerritory(0, 1)).toEqual(expectedTerritory);
+         |                                             ^
+      17 |     });
+      18 |
+      19 |     xtest('White center territory on 5x5 board', () => {
+
+      at Object.toEqual (exercises/practice/go-counting/go-counting.spec.js:16:45)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 10 skipped, 11 total
+Snapshots:   0 total
+Time:        0.717 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/go-counting/i.

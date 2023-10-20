@@ -4,15 +4,16 @@
 //
 
 export class RestAPI {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(database = {}) {
+    this.database = database;
   }
 
   get(url) {
-    throw new Error('Remove this statement and implement this function');
+    // Implement get method here
   }
 
   post(url, payload) {
-    throw new Error('Remove this statement and implement this function');
+    // Implement post method here
   }
+}
 }

@@ -1,0 +1,20 @@
+PASS exercises/practice/tournament/tournament.spec.js
+  Tournament
+    ✓ just the header if no input (3 ms)
+    ○ skipped a win is three points, a loss is zero points
+    ○ skipped a win can also be expressed as a loss
+    ○ skipped a different team can win
+    ○ skipped a draw is one point each
+    ○ skipped there can be more than one match
+    ○ skipped there can be more than one winner
+    ○ skipped there can be more than two teams
+    ○ skipped typical input
+    ○ skipped incomplete competition (not all pairs have played)
+    ○ skipped ties broken alphabetically
+    ○ skipped ensure points sorted numerically
+
+Test Suites: 1 passed, 1 total
+Tests:       11 skipped, 1 passed, 12 total
+Snapshots:   0 total
+Time:        0.6 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/tournament/i.

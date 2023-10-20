@@ -1,0 +1,28 @@
+FAIL exercises/practice/square-root/square-root.spec.js
+  Square root
+    ✕ root of 1 (1 ms)
+    ○ skipped root of 4
+    ○ skipped root of 5
+    ○ skipped root of 81
+    ○ skipped root of 196
+    ○ skipped root of 65025
+
+  ● Square root › root of 1
+
+    TypeError: (0 , _squareRoot.squareRoot) is not a function
+
+      3 | describe('Square root', () => {
+      4 |   test('root of 1', () => {
+    > 5 |     expect(squareRoot(1)).toEqual(1);
+        |                      ^
+      6 |   });
+      7 |   xtest('root of 4', () => {
+      8 |     expect(squareRoot(4)).toEqual(2);
+
+      at Object.<anonymous> (exercises/practice/square-root/square-root.spec.js:5:22)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 skipped, 6 total
+Snapshots:   0 total
+Time:        0.671 s
+Ran all test suites matching /exercises\/practice\/square-root/i.

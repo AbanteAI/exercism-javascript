@@ -1,0 +1,39 @@
+PASS exercises/practice/complex-numbers/complex-numbers.spec.js
+  Complex numbers
+    ✓ Real part of a purely real number (3 ms)
+    ○ skipped Real part of a purely imaginary number
+    ○ skipped Real part of a number with real and imaginary part
+    ○ skipped Imaginary part of a purely real number
+    ○ skipped Imaginary part of a purely imaginary number
+    ○ skipped Imaginary part of a number with real and imaginary part
+    ○ skipped Add purely real numbers
+    ○ skipped Add purely imaginary numbers
+    ○ skipped Add numbers with real and imaginary part
+    ○ skipped Subtract purely real numbers
+    ○ skipped Subtract purely imaginary numbers
+    ○ skipped Subtract numbers with real and imaginary part
+    ○ skipped Multiply purely real numbers
+    ○ skipped Multiply imaginary unit
+    ○ skipped Multiply purely imaginary numbers
+    ○ skipped Multiply numbers with real and imaginary part
+    ○ skipped Divide purely real numbers
+    ○ skipped Divide purely imaginary numbers
+    ○ skipped Divide numbers with real and imaginary part
+    ○ skipped Absolute value of a positive purely real number
+    ○ skipped Absolute value of a negative purely real number
+    ○ skipped Absolute value of a purely imaginary number with positive imaginary part
+    ○ skipped Absolute value of a purely imaginary number with negative imaginary part
+    ○ skipped Absolute value of a number with real and imaginary part
+    ○ skipped Conjugate a purely real number
+    ○ skipped Conjugate a purely imaginary number
+    ○ skipped Conjugate a number with real and imaginary part
+    ○ skipped Euler's identity/formula
+    ○ skipped Exponential of 0
+    ○ skipped Exponential of a purely real number
+    ○ skipped Exponential of a number with real and imaginary part
+
+Test Suites: 1 passed, 1 total
+Tests:       30 skipped, 1 passed, 31 total
+Snapshots:   0 total
+Time:        0.629 s
+Ran all test suites matching /exercises\/practice\/complex-numbers/i.

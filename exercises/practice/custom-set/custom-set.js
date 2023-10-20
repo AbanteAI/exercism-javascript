@@ -5,42 +5,59 @@
 
 export class CustomSet {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this.set = [];
   }
 
   empty() {
-    throw new Error('Remove this statement and implement this function');
+    return this.set.length === 0;
   }
 
-  contains() {
-    throw new Error('Remove this statement and implement this function');
+  contains(element) {
+    return this.set.includes(element);
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(element) {
+    if (!this.contains(element)) {
+      this.set.push(element);
+    }
   }
 
-  subset() {
-    throw new Error('Remove this statement and implement this function');
+  subset(otherSet) {
+    return this.set.every(element => otherSet.contains(element));
   }
 
-  disjoint() {
-    throw new Error('Remove this statement and implement this function');
+  disjoint(otherSet) {
+    return !this.set.some(element => otherSet.contains(element));
   }
 
-  eql() {
-    throw new Error('Remove this statement and implement this function');
+  eql(otherSet) {
+    return this.set.length === otherSet.set.length && this.subset(otherSet);
   }
 
-  union() {
-    throw new Error('Remove this statement and implement this function');
+  union(otherSet) {
+    const unionSet = new CustomSet();
+    this.set.forEach(element => unionSet.add(element));
+    otherSet.set.forEach(element => unionSet.add(element));
+    return unionSet;
   }
 
-  intersection() {
-    throw new Error('Remove this statement and implement this function');
+  intersection(otherSet) {
+    const intersectionSet = new CustomSet();
+    this.set.forEach(element => {
+      if (otherSet.contains(element)) {
+        intersectionSet.add(element);
+      }
+    });
+    return intersectionSet;
   }
 
-  difference() {
-    throw new Error('Remove this statement and implement this function');
+  difference(otherSet) {
+    const differenceSet = new CustomSet();
+    this.set.forEach(element => {
+      if (!otherSet.contains(element)) {
+        differenceSet.add(element);
+      }
+    });
+    return differenceSet;
   }
 }

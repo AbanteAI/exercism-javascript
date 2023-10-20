@@ -3,6 +3,20 @@
 // convenience to get you started writing code faster.
 //
 
-export const squareRoot = () => {
-  throw new Error('Remove this statement and implement this function');
-};
+function squareRoot(radicand) {
+  if (radicand < 0) {
+    throw new Error('Radicand must be a positive number');
+  }
+
+  let guess = radicand / 2;
+  let prevGuess = 0;
+
+  while (Math.abs(guess * guess - radicand) > 0.0001) {
+    prevGuess = guess;
+    guess = (guess + radicand / guess) / 2;
+  }
+
+  return Number(guess.toFixed(5));
+}
+module.exports = squareRoot;
+

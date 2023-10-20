@@ -3,6 +3,14 @@
 // convenience to get you started writing code faster.
 //
 
-export const countWords = () => {
-  throw new Error('Remove this statement and implement this function');
+export const countWords = (subtitle) => {
+  const words = subtitle.split(/[^\w']+|(?<=\w)'(?=\w)/);
+  const wordCounts = {};
+
+  for (const word of words) {
+    const lowercaseWord = word.toLowerCase();
+    wordCounts[lowercaseWord] = (wordCounts[lowercaseWord] || 0) + 1;
+  }
+
+  return wordCounts;
 };

@@ -1,0 +1,19 @@
+FAIL exercises/practice/reverse-string/reverse-string.spec.js
+  ● Test suite failed to run
+
+    Remove this statement and implement this function
+
+       7 |     return input.split('').reverse().join('');
+       8 | };
+    >  9 |   throw new Error('Remove this statement and implement this function');
+         |         ^
+      10 |
+
+      at Object.<anonymous> (exercises/practice/reverse-string/reverse-string.js:9:9)
+      at Object.require (exercises/practice/reverse-string/reverse-string.spec.js:1:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.584 s
+Ran all test suites matching /exercises\/practice\/reverse-string/i.

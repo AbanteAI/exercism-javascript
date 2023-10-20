@@ -5,10 +5,25 @@
 
 export class Board {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    this.board = [];
 
   winner() {
-    throw new Error('Remove this statement and implement this function');
-  }
+    // Implement the winner method here
+    // Check if player O has connected top and bottom
+    for (let i = 0; i < this.board.length; i++) {
+      if (this.board[i][0] === 'O' && this.board[i][this.board[i].length - 1] === 'O') {
+        return 'O';
+      }
+    }
+
+    // Check if player X has connected left and right
+    for (let i = 0; i < this.board[0].length; i++) {
+      if (this.board[0][i] === 'X' && this.board[this.board.length - 1][i] === 'X') {
+        return 'X';
+      }
+    }
+
+    // No winner
+    return '';
+
 }

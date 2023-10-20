@@ -1,0 +1,20 @@
+PASS exercises/practice/change/change.spec.js
+  Change
+    ✓ change for 1 cent (3 ms)
+    ○ skipped single coin change
+    ○ skipped multiple coin change
+    ○ skipped change with Lilliputian Coins
+    ○ skipped change with Lower Elbonia Coins
+    ○ skipped large target values
+    ○ skipped possible change without unit coins available
+    ○ skipped another possible change without unit coins available
+    ○ skipped no coins make 0 change
+    ○ skipped error testing for change smaller than the smallest of coins
+    ○ skipped error testing if no combination can add up to target
+    ○ skipped cannot find negative change values
+
+Test Suites: 1 passed, 1 total
+Tests:       11 skipped, 1 passed, 12 total
+Snapshots:   0 total
+Time:        0.631 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/change/i.

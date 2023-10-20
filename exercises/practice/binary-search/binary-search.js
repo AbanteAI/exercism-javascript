@@ -3,6 +3,21 @@
 // convenience to get you started writing code faster.
 //
 
-export const find = () => {
-  throw new Error('Remove this statement and implement this function');
+export const find = (list, target) => {
+  let start = 0;
+  let end = list.length - 1;
+
+  while (start <= end) {
+    let middle = Math.floor((start + end) / 2);
+
+    if (list[middle] === target) {
+      return middle;
+    } else if (list[middle] < target) {
+      start = middle + 1;
+    } else {
+      end = middle - 1;
+    }
+  }
+
+  return -1;
 };

@@ -1,0 +1,14 @@
+PASS exercises/practice/spiral-matrix/spiral-matrix.spec.js
+  Spiral Matrix
+    ✓ empty spiral (5 ms)
+    ○ skipped trivial spiral
+    ○ skipped spiral of size 2
+    ○ skipped spiral of size 3
+    ○ skipped spiral of size 4
+    ○ skipped spiral of size 5
+
+Test Suites: 1 passed, 1 total
+Tests:       5 skipped, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.799 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/spiral-matrix/i.

@@ -3,6 +3,9 @@
 // convenience to get you started writing code faster.
 //
 
-export const isArmstrongNumber = () => {
-  throw new Error('Remove this statement and implement this function');
+export const isArmstrongNumber = (number) => {
+  const digits = String(number).split('');
+  const power = digits.length;
+  const sum = digits.reduce((acc, digit) => acc + Math.pow(Number(digit), power), 0);
+  return sum === number;
 };

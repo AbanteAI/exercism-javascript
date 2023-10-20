@@ -3,6 +3,13 @@
 // convenience to get you started writing code faster.
 //
 
-export const findAnagrams = () => {
-  throw new Error('Remove this statement and implement this function');
-};
+export const findAnagrams = (target, candidates) => {
+  const lowercasedTarget = target.toLowerCase();
+  const lowercasedCandidates = candidates.map(candidate => candidate.toLowerCase());
+
+  return lowercasedCandidates.filter(candidate => {
+    return (
+      candidate !== lowercasedTarget &&
+      sortString(candidate) === sortString(lowercasedTarget)
+    );
+  });

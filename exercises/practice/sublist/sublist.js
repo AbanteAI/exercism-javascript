@@ -4,11 +4,61 @@
 //
 
 export class List {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(elements) {
+    this.elements = elements;
   }
 
-  compare() {
-    throw new Error('Remove this statement and implement this function');
+  compare(otherList) {
+    if (this.elements.length === 0 && otherList.elements.length === 0) {
+      return 'EQUAL';
+    } else if (this.elements.length === 0) {
+      return 'SUBLIST';
+    } else if (otherList.elements.length === 0) {
+      return 'SUPERLIST';
+    } else if (this.isSublist(otherList)) {
+      if (this.elements.length === otherList.elements.length) {
+        return 'EQUAL';
+      } else if (this.elements.length < otherList.elements.length) {
+        return 'SUBLIST';
+      } else {
+        return 'SUPERLIST';
+      }
+    } else {
+      return 'UNEQUAL';
+    }
+  }
+
+  isSublist(otherList) {
+    if (this.elements.length > otherList.elements.length) {
+      return false;
+    }
+    for (let i = 0; i <= otherList.elements.length - this.elements.length; i++) {
+      if (this.elements.every((element, index) => element === otherList.elements[i + index])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  isEqual(otherList) {
+    if (this.elements.length !== otherList.elements.length) {
+      return false;
+    }
+    return this.elements.every((element, index) => element === otherList.elements[index]);
+  }
+    }
+  }
+
+  isSublist(otherList) {
+    for (let i = 0; i <= otherList.elements.length - this.elements.length; i++) {
+      if (this.elements.every((element, index) => element === otherList.elements[i + index])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  isEqual(otherList) {
+    return this.elements.every((element, index) => element === otherList.elements[index]);
   }
 }

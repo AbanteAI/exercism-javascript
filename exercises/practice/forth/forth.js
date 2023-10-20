@@ -5,14 +5,29 @@
 
 export class Forth {
   constructor() {
-    throw Error('Remove this statement and implement this function');
+    this.stack = [];
+    this.dictionary = {};
   }
 
-  evaluate() {
-    throw Error('Remove this statement and implement this function');
+  evaluate(input) {
+    const words = input.trim().toUpperCase().split(/\s+/);
+    for (const word of words) {
+      if (this.isNumber(word)) {
+        this.stack.push(parseInt(word));
+      } else if (this.dictionary[word]) {
+        this.dictionary[word]();
+      } else {
+        throw new Error(`Unknown word: ${word}`);
+      }
+    }
   }
 
-  get stack() {
-    throw Error('Remove this statement and implement this function');
+get stack() {
+    return [...this.stack];
+}
+  }
+
+  isNumber(word) {
+    return /^\d+$/.test(word);
   }
 }

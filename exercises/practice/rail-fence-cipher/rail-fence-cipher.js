@@ -3,8 +3,16 @@
 // convenience to get you started writing code faster.
 //
 
-export const encode = () => {
-  throw new Error('Remove this statement and implement this function');
+export const encode = (message, rails) => {
+  // Implementation goes here
+};
+
+export const encode = (message, rails) => {
+  // Implementation goes here
+};
+
+export const decode = (ciphertext, rails) => {
+  // Implementation goes here
 };
 
 export const decode = () => {

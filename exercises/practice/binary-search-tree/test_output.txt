@@ -1,0 +1,20 @@
+PASS exercises/practice/binary-search-tree/binary-search-tree.spec.js
+  BinarySearchTree
+    ✓ data is retained (3 ms)
+    ○ skipped can create complex tree
+    insert data at proper node
+      ○ skipped smaller number at left node
+      ○ skipped same number at left node"
+      ○ skipped greater number at right node
+    can sort data
+      ○ skipped can sort single number
+      ○ skipped can sort if second number is smaller than first
+      ○ skipped can sort if second number is same as first
+      ○ skipped can sort if second number is greater than first
+      ○ skipped can sort complex tree
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        0.642 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/binary-search-tree/i.

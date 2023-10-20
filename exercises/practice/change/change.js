@@ -5,6 +5,21 @@
 
 export class Change {
   calculate(coinArray, target) {
-    throw new Error('Remove this statement and implement this function');
+    const sortedCoins = coinArray.sort((a, b) => b - a);
+    let remaining = target;
+    const result = [];
+
+    for (const coin of sortedCoins) {
+      while (remaining >= coin) {
+        result.push(coin);
+        remaining -= coin;
+      }
+    }
+
+    if (remaining !== 0) {
+      throw new Error("Cannot make change with the given coins");
+    }
+
+    return result;
   }
 }

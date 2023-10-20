@@ -1,0 +1,31 @@
+PASS exercises/practice/wordy/wordy.spec.js
+  Wordy
+    ✓ just a number (2 ms)
+    ○ skipped addition
+    ○ skipped more addition
+    ○ skipped addition with negative numbers
+    ○ skipped large addition
+    ○ skipped subtraction
+    ○ skipped multiplication
+    ○ skipped division
+    ○ skipped multiple additions
+    ○ skipped addition and subtraction
+    ○ skipped multiple subtraction
+    ○ skipped subtraction then addition
+    ○ skipped multiple multiplication
+    ○ skipped addition and multiplication
+    ○ skipped multiple division
+    ○ skipped unknown operation
+    ○ skipped Non math question
+    ○ skipped reject problem missing an operand
+    ○ skipped reject problem with no operands or operators
+    ○ skipped reject two operations in a row
+    ○ skipped reject two numbers in a row
+    ○ skipped reject postfix notation
+    ○ skipped reject prefix notation
+
+Test Suites: 1 passed, 1 total
+Tests:       22 skipped, 1 passed, 23 total
+Snapshots:   0 total
+Time:        0.61 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/wordy/i.

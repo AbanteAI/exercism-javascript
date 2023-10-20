@@ -12,18 +12,86 @@ export class InvalidInputError extends Error {
 
 export class Robot {
   get bearing() {
-    throw new Error('Remove this statement and implement this function');
+    return this.direction;
   }
 
   get coordinates() {
-    throw new Error('Remove this statement and implement this function');
+    return { x: this.x, y: this.y };
   }
 
   place({ x, y, direction }) {
-    throw new Error('Remove this statement and implement this function');
+    this.x = x;
+    this.y = y;
+    this.direction = direction;
   }
 
   evaluate(instructions) {
-    throw new Error('Remove this statement and implement this function');
+    for (let instruction of instructions) {
+      switch (instruction) {
+        case 'R':
+          this.turnRight();
+          break;
+        case 'L':
+          this.turnLeft();
+          break;
+        case 'A':
+          this.advance();
+          break;
+        default:
+          throw new InvalidInputError('Invalid instruction');
+      }
+    }
   }
+
+
 }
+  turnRight() {
+    switch (this.direction) {
+      case 'north':
+        this.direction = 'east';
+        break;
+      case 'east':
+        this.direction = 'south';
+        break;
+      case 'south':
+        this.direction = 'west';
+        break;
+      case 'west':
+        this.direction = 'north';
+        break;
+    }
+  }
+
+  turnLeft() {
+    switch (this.direction) {
+      case 'north':
+        this.direction = 'west';
+        break;
+      case 'west':
+        this.direction = 'south';
+        break;
+      case 'south':
+        this.direction = 'east';
+        break;
+      case 'east':
+        this.direction = 'north';
+        break;
+    }
+  }
+
+  advance() {
+    switch (this.direction) {
+      case 'north':
+        this.y += 1;
+        break;
+      case 'south':
+        this.y -= 1;
+        break;
+      case 'east':
+        this.x += 1;
+        break;
+      case 'west':
+        this.x -= 1;
+        break;
+    }
+  }

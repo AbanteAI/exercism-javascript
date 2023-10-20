@@ -1,0 +1,27 @@
+PASS exercises/practice/phone-number/phone-number.spec.js
+  Phone Number
+    Cleanup user-entered phone numbers
+      ✓ cleans the number (3 ms)
+      ○ skipped cleans numbers with dots
+      ○ skipped cleans numbers with multiple spaces
+      ○ skipped invalid when 9 digits
+      ○ skipped invalid when 11 digits does not start with a 1
+      ○ skipped valid when 11 digits and starting with 1
+      ○ skipped valid when 11 digits and starting with 1 even with punctuation
+      ○ skipped invalid when more than 11 digits
+      ○ skipped invalid with letters
+      ○ skipped invalid with punctuations
+      ○ skipped invalid if area code starts with 0
+      ○ skipped invalid if area code starts with 1
+      ○ skipped invalid if exchange code starts with 0
+      ○ skipped invalid if exchange code starts with 1
+      ○ skipped invalid if area code starts with 0 on valid 11-digit number
+      ○ skipped invalid if area code starts with 1 on valid 11-digit number
+      ○ skipped invalid if exchange code starts with 0 on valid 11-digit number
+      ○ skipped invalid if exchange code starts with 1 on valid 11-digit number
+
+Test Suites: 1 passed, 1 total
+Tests:       17 skipped, 1 passed, 18 total
+Snapshots:   0 total
+Time:        0.645 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/phone-number/i.

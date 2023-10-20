@@ -1,0 +1,18 @@
+PASS exercises/practice/pangram/pangram.spec.js
+  Pangram()
+    ✓ empty sentence (2 ms)
+    ○ skipped perfect lower case
+    ○ skipped only lower case
+    ○ skipped missing the letter 'x'
+    ○ skipped missing the letter 'h'
+    ○ skipped with underscores
+    ○ skipped with numbers
+    ○ skipped missing letters replaced by numbers
+    ○ skipped mixed case and punctuation
+    ○ skipped case insensitive
+
+Test Suites: 1 passed, 1 total
+Tests:       9 skipped, 1 passed, 10 total
+Snapshots:   0 total
+Time:        0.628 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/pangram/i.

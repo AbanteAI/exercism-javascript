@@ -1,0 +1,30 @@
+PASS exercises/practice/triangle/triangle.spec.js
+  Triangle
+    equilateral triangle
+      ✓ all sides are equal (2 ms)
+      ○ skipped any side is unequal
+      ○ skipped no sides are equal
+      ○ skipped all zero sides is not a triangle
+      ○ skipped sides may be floats
+    isosceles triangle
+      ○ skipped last two sides are equal
+      ○ skipped first two sides are equal
+      ○ skipped first and last sides are equal
+      ○ skipped equilateral triangles are also isosceles
+      ○ skipped no sides are equal
+      ○ skipped first triangle inequality violation
+      ○ skipped second triangle inequality violation
+      ○ skipped third triangle inequality violation
+      ○ skipped sides may be floats
+    scalene triangle
+      ○ skipped no sides are equal
+      ○ skipped all sides are equal
+      ○ skipped two sides are equal
+      ○ skipped may not violate triangle inequality
+      ○ skipped sides may be floats
+
+Test Suites: 1 passed, 1 total
+Tests:       18 skipped, 1 passed, 19 total
+Snapshots:   0 total
+Time:        0.625 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/triangle/i.

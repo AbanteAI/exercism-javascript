@@ -1,0 +1,38 @@
+FAIL exercises/practice/rectangles/rectangles.spec.js
+  Rectangles
+    ✕ no rows (4 ms)
+    ○ skipped no columns
+    ○ skipped no rectangles
+    ○ skipped one rectangle
+    ○ skipped two rectangles without shared parts
+    ○ skipped five rectangles with shared parts
+    ○ skipped rectangle of height 1 is counted
+    ○ skipped rectangle of width 1 is counted
+    ○ skipped 1x1 square is counted
+    ○ skipped only complete rectangles are counted
+    ○ skipped rectangles can be of different sizes
+    ○ skipped corner is required for a rectangle to be complete
+    ○ skipped large input with many rectangles
+
+  ● Rectangles › no rows
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 0
+    Received: undefined
+
+       6 |     const actual = count([]);
+       7 |
+    >  8 |     expect(actual).toEqual(expected);
+         |                    ^
+       9 |   });
+      10 |
+      11 |   xtest('no columns', () => {
+
+      at Object.toEqual (exercises/practice/rectangles/rectangles.spec.js:8:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 12 skipped, 13 total
+Snapshots:   0 total
+Time:        0.281 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/rectangles/i.

@@ -3,6 +3,20 @@
 // convenience to get you started writing code faster.
 //
 
-export const steps = () => {
-  throw new Error('Remove this statement and implement this function');
+export const steps = (n) => {
+  if (typeof n !== 'number' || n <= 0 || !Number.isInteger(n)) {
+    throw new Error('Only positive integers are allowed');
+  }
+
+  let count = 0;
+  while (n !== 1) {
+    if (n % 2 === 0) {
+      n = n / 2;
+    } else {
+      n = 3 * n + 1;
+    }
+    count++;
+  }
+
+  return count;
 };

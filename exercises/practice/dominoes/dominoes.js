@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const chain = () => {
-  throw new Error('Remove this statement and implement this function');
+export const chain = (dominoes) => {
+  // Implementation goes here
 };

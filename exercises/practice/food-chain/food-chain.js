@@ -4,11 +4,7 @@
 //
 
 export class Song {
-  verse() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  verses() {
-    throw new Error('Remove this statement and implement this function');
-  }
+verse(verseNumber) {
+    const verses = [
+        "I know an old lady who swallowed a fly.",
 }

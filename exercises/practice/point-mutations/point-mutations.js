@@ -3,12 +3,17 @@
 // convenience to get you started writing code faster.
 //
 
-export class DNA {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+export function hammingDistance(strand1, strand2) {
+  if (strand1.length !== strand2.length) {
+    throw new Error('Sequences must have equal length');
   }
 
-  hammingDistance() {
-    throw new Error('Remove this statement and implement this function');
+  let distance = 0;
+  for (let i = 0; i < strand1.length; i++) {
+    if (strand1[i] !== strand2[i]) {
+      distance++;
+    }
   }
+
+  return distance;
 }

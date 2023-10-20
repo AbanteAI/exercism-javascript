@@ -4,15 +4,27 @@
 //
 
 export class Matrix {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(matrixString) {
+    this.matrix = this.parseMatrixString(matrixString);
+  }
+
+  parseMatrixString(matrixString) {
+    return matrixString.split('\n').map(row => row.split(' ').map(Number));
   }
 
   get rows() {
-    throw new Error('Remove this statement and implement this function');
+    return this.matrix;
   }
 
   get columns() {
-    throw new Error('Remove this statement and implement this function');
+    const numColumns = this.matrix[0].length;
+    const columns = [];
+
+    for (let i = 0; i < numColumns; i++) {
+      const column = this.matrix.map(row => row[i]);
+      columns.push(column);
+    }
+
+    return columns;
   }
 }

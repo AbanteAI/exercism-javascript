@@ -5,14 +5,43 @@
 
 export class Scale {
   constructor(tonic) {
-    throw new Error('Remove this statement and implement this function');
+    this.tonic = tonic.toUpperCase();
+    this.sharps = ['C', 'G', 'D', 'A', 'E', 'B', 'F#'];
+    this.flats = ['F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'Cb'];
   }
 
   chromatic() {
-    throw new Error('Remove this statement and implement this function');
+    const scale = [];
+    const notes = this.sharps.includes(this.tonic) ? this.sharps : this.flats;
+    let index = notes.indexOf(this.tonic);
+    for (let i = 0; i < 12; i++) {
+      scale.push(notes[index]);
+      index = (index + 1) % notes.length;
+    }
+    return scale;
   }
 
   interval(intervals) {
-    throw new Error('Remove this statement and implement this function');
+    const scale = [this.tonic];
+    const notes = this.sharps.includes(this.tonic) ? this.sharps : this.flats;
+    let index = notes.indexOf(this.tonic);
+    for (const interval of intervals) {
+      index = (index + interval) % notes.length;
+      scale.push(notes[index]);
+    }
+    return scale;
+  }
+    return scale;
+  }
+
+  interval(intervals) {
+    const scale = [this.tonic];
+    const notes = this.sharps.includes(this.tonic) ? this.sharps : this.flats;
+    let index = notes.indexOf(this.tonic);
+    for (const interval of intervals) {
+      index = (index + interval) % 7;
+      scale.push(notes[index]);
+    }
+    return scale;
   }
 }
