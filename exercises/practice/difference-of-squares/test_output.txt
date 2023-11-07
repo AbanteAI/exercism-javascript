@@ -1,0 +1,20 @@
+PASS exercises/practice/difference-of-squares/difference-of-squares.spec.js
+  difference-of-squares
+    Square the sum of the numbers up to the given number
+      ✓ square of sum 1 (2 ms)
+      ○ skipped square of sum 5
+      ○ skipped square of sum 100
+    Sum the squares of the numbers up to the given number
+      ○ skipped sum of squares 1
+      ○ skipped sum of squares 5
+      ○ skipped sum of squares 100
+    Subtract sum of squares from square of sums
+      ○ skipped difference of squares 1
+      ○ skipped difference of squares 5
+      ○ skipped difference of squares 100
+
+Test Suites: 1 passed, 1 total
+Tests:       8 skipped, 1 passed, 9 total
+Snapshots:   0 total
+Time:        0.605 s
+Ran all test suites matching /exercises\/practice\/difference-of-squares/i.

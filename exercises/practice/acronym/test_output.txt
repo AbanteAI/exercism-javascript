@@ -1,0 +1,17 @@
+PASS exercises/practice/acronym/acronym.spec.js
+  Acronyms are produced from
+    ✓ title cased phrases (4 ms)
+    ○ skipped other title cased phrases
+    ○ skipped phrases with punctuation
+    ○ skipped phrases with all uppercase words
+    ○ skipped phrases with punctuation without whitespace
+    ○ skipped long phrases
+    ○ skipped phrases with consecutive delimiters
+    ○ skipped phrases with apostrophes
+    ○ skipped phrases with underscore emphasis
+
+Test Suites: 1 passed, 1 total
+Tests:       8 skipped, 1 passed, 9 total
+Snapshots:   0 total
+Time:        0.893 s
+Ran all test suites matching /exercises\/practice\/acronym/i.

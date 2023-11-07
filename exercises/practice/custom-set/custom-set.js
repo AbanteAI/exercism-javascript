@@ -4,43 +4,58 @@
 //
 
 export class CustomSet {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(elements = []) {
+    this.elements = [...new Set(elements)];
+  };
+  }
   }
 
   empty() {
-    throw new Error('Remove this statement and implement this function');
+    return this.elements.length === 0;
+  };
   }
 
-  contains() {
-    throw new Error('Remove this statement and implement this function');
+  contains(element) {
+    return this.elements.includes(element);
+  };
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(element) {
+    if (!this.contains(element)) {
+      this.elements.push(element);
+    }
+    return this;
+  };
   }
 
-  subset() {
-    throw new Error('Remove this statement and implement this function');
+  subset(other) {
+    return this.elements.every(el => other.contains(el));
+  };
   }
 
-  disjoint() {
-    throw new Error('Remove this statement and implement this function');
+  disjoint(other) {
+    return this.elements.every(el => !other.contains(el));
+  };
   }
 
-  eql() {
-    throw new Error('Remove this statement and implement this function');
+  eql(other) {
+    if (this.elements.length !== other.elements.length) return false;
+    return this.elements.every(el => other.contains(el));
+  };
   }
 
-  union() {
-    throw new Error('Remove this statement and implement this function');
+  union(other) {
+    return new CustomSet([...this.elements, ...other.elements]);
+  };
   }
 
-  intersection() {
-    throw new Error('Remove this statement and implement this function');
+  intersection(other) {
+    return new CustomSet(this.elements.filter(el => other.contains(el)));
+  };
   }
 
-  difference() {
-    throw new Error('Remove this statement and implement this function');
+  difference(other) {
+    return new CustomSet(this.elements.filter(el => !other.contains(el)));
+  };
   }
 }

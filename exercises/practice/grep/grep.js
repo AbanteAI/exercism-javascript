@@ -40,6 +40,55 @@ const VALID_OPTIONS = [
 ];
 
 const ARGS = process.argv;
+function parseArguments(args) {
+  const flags = args.filter(arg => arg.startsWith('-')).map(flag => flag.substring(1));
+  const files = args.filter(arg => !arg.startsWith('-'));
+  const pattern = files.shift();
+
+  return { pattern, flags, files };
+}
+
+function grep(pattern, flags, files) {
+  const results = [];
+  const patternRegex = new RegExp(pattern, flags.includes('i') ? 'i' : '');
+
+  files.forEach(file => {
+    const lines = readLines(file);
+    lines.forEach((line, index) => {
+      const lineNum = index + 1;
+      const match = flags.includes('x') ? line === pattern : patternRegex.test(line);
+      const shouldInvert = flags.includes('v');
+      const lineMatches = shouldInvert ? !match : match;
+
+      if (lineMatches) {
+        if (flags.includes('l')) {
+          if (!results.includes(file)) {
+            results.push(file);
+          }
+        } else {
+          const outputLine = flags.includes('n') ? `${lineNum}:${line}` : line;
+          results.push(outputLine);
+        }
+      }
+    });
+  });
+
+  return results.join('\n');
+}
+
+function main() {
+  const { pattern, flags, files } = parseArguments(ARGS.slice(2));
+
+  if (!pattern || files.length === 0) {
+    console.error('Usage: grep.js <pattern> <file>...');
+    process.exit(1);
+  }
+
+  const output = grep(pattern, flags, files);
+  console.log(output);
+}
+
+main();
 
 //
 // This is only a SKELETON file for the 'Grep' exercise. It's been provided as a

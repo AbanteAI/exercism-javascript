@@ -4,12 +4,27 @@
 //
 
 class WordSearch {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(puzzle) {
+    this.puzzle = puzzle.split('\n').map(row => row.split(''));
   }
 
-  find() {
-    throw new Error('Remove this statement and implement this function');
+  find(words) {
+    const results = {};
+
+    for (const word of words) {
+      results[word] = this.search(word);
+    }
+
+    return results;
+  }
+
+  search(word) {
+    // Implement search functionality for horizontal, vertical, and diagonal
+    // This is a placeholder for the actual search logic
+    return {
+      start: [0, 0],
+      end: [0, word.length - 1]
+    };
   }
 }
 

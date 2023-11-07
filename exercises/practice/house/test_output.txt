@@ -1,0 +1,36 @@
+FAIL exercises/practice/house/house.spec.js
+  House
+    ✕ verse one - the house that jack built (1 ms)
+    ○ skipped verse two - the malt that lay
+    ○ skipped verse three - the rat that ate
+    ○ skipped verse four - the cat that killed
+    ○ skipped verse five - the dog that worried
+    ○ skipped verse six - the cow with the crumpled horn
+    ○ skipped verse seven - the maiden all forlorn
+    ○ skipped verse eight - the man all tattered and torn
+    ○ skipped verse nine - the priest all shaven and shorn
+    ○ skipped verse ten - the rooster that crowed in the morn
+    ○ skipped verse eleven - the farmer sowing his corn
+    ○ skipped verse twelve - the horse and the hound and the horn
+    ○ skipped multiple verses
+    ○ skipped full rhyme
+
+  ● House › verse one - the house that jack built
+
+    TypeError: Cannot read properties of undefined (reading 'verse')
+
+      4 |   test('verse one - the house that jack built', () => {
+      5 |     const lyrics = ['This is the house that Jack built.'];
+    > 6 |     expect(House.verse(1)).toEqual(lyrics);
+        |                  ^
+      7 |   });
+      8 |
+      9 |   xtest('verse two - the malt that lay', () => {
+
+      at Object.verse (exercises/practice/house/house.spec.js:6:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 13 skipped, 14 total
+Snapshots:   0 total
+Time:        0.61 s
+Ran all test suites matching /exercises\/practice\/house/i.

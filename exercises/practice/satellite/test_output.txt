@@ -1,0 +1,29 @@
+FAIL exercises/practice/satellite/satellite.spec.js
+  Satellite
+    ✕ Empty tree (2 ms)
+    ○ skipped Tree with one item
+    ○ skipped Tree with many items
+    ○ skipped Reject traversals of different length
+    ○ skipped Reject inconsistent traversals of same length
+    ○ skipped Reject traversals with repeated items
+
+  ● Satellite › Empty tree
+
+    Traversal lists have different lengths
+
+       6 | export const treeFromTraversals = (preorder, inorder) => {
+       7 |   if (preorder.length === 0 || inorder.length === 0 || preorder.length !== inorder.length) {
+    >  8 |     throw new Error('Traversal lists have different lengths');
+         |           ^
+       9 |   }
+      10 |
+      11 |   const buildTree = (preorder, inorder) => {
+
+      at treeFromTraversals (exercises/practice/satellite/satellite.js:8:11)
+      at Object.<anonymous> (exercises/practice/satellite/satellite.spec.js:5:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 5 skipped, 6 total
+Snapshots:   0 total
+Time:        0.757 s
+Ran all test suites matching /exercises\/practice\/satellite/i.

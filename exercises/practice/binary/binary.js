@@ -4,11 +4,17 @@
 //
 
 export class Binary {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(binaryString) {
+    this.binaryString = binaryString;
   }
 
   toDecimal() {
-    throw new Error('Remove this statement and implement this function');
+    if (!/^[01]+$/.test(this.binaryString)) {
+      return 0;
+    }
+
+    return this.binaryString.split('').reverse().reduce((acc, digit, index) => {
+      return acc + Number(digit) * Math.pow(2, index);
+    }, 0);
   }
 }

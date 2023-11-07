@@ -1,0 +1,14 @@
+PASS exercises/practice/square-root/square-root.spec.js
+  Square root
+    ✓ root of 1 (3 ms)
+    ○ skipped root of 4
+    ○ skipped root of 5
+    ○ skipped root of 81
+    ○ skipped root of 196
+    ○ skipped root of 65025
+
+Test Suites: 1 passed, 1 total
+Tests:       5 skipped, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.818 s
+Ran all test suites matching /exercises\/practice\/square-root/i.

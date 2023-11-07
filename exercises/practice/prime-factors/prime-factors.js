@@ -3,6 +3,12 @@
 // convenience to get you started writing code faster.
 //
 
-export const primeFactors = () => {
-  throw new Error('Remove this statement and implement this function');
+export const primeFactors = (number) => {
+  const factors = [];
+  for (let divisor = 2; number > 1; divisor++) {
+    for (; number % divisor === 0; number /= divisor) {
+      factors.push(divisor);
+    }
+  }
+  return factors;
 };

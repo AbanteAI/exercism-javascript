@@ -4,39 +4,67 @@
 //
 
 export class List {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(elements = []) {
+    this.values = elements;
   }
 
-  append() {
-    throw new Error('Remove this statement and implement this function');
+  append(list) {
+    return new List([...this.values, ...list.values]);
   }
 
-  concat() {
-    throw new Error('Remove this statement and implement this function');
+  concatenate(listOfLists) {
+    let concatenated = new List(this.values);
+    for (let i = 0; i < listOfLists.length(); i++) {
+      concatenated = concatenated.append(listOfLists.values[i]);
+    }
+    return concatenated;
   }
 
-  filter() {
-    throw new Error('Remove this statement and implement this function');
-  }
-
-  map() {
-    throw new Error('Remove this statement and implement this function');
+  filter(predicate) {
+    let filtered = [];
+    for (let item of this.values) {
+      if (predicate(item)) {
+        filtered.push(item);
+      }
+    }
+    return new List(filtered);
   }
 
   length() {
-    throw new Error('Remove this statement and implement this function');
+    let count = 0;
+    for (let item of this.values) {
+      count++;
+    }
+    return count;
   }
 
-  foldl() {
-    throw new Error('Remove this statement and implement this function');
+  map(func) {
+    let mapped = [];
+    for (let item of this.values) {
+      mapped.push(func(item));
+    }
+    return new List(mapped);
   }
 
-  foldr() {
-    throw new Error('Remove this statement and implement this function');
+  foldl(func, accumulator) {
+    for (let item of this.values) {
+      accumulator = func(accumulator, item);
+    }
+    return accumulator;
+  }
+
+  foldr(func, accumulator) {
+    for (let i = this.length() - 1; i >= 0; i--) {
+      accumulator = func(this.values[i], accumulator);
+    }
+    return accumulator;
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    let reversed = [];
+    for (let i = this.length() - 1; i >= 0; i--) {
+      reversed.push(this.values[i]);
+    }
+    return new List(reversed);
   }
 }

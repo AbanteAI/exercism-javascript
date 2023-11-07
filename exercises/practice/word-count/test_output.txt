@@ -1,0 +1,21 @@
+PASS exercises/practice/word-count/word-count.spec.js
+  countWords
+    ✓ count one word (4 ms)
+    ○ skipped count one of each word
+    ○ skipped multiple occurrences of a word
+    ○ skipped handles cramped lists
+    ○ skipped handles expanded lists
+    ○ skipped ignore punctuation
+    ○ skipped include numbers
+    ○ skipped normalize case
+    ○ skipped with apostrophes
+    ○ skipped with quotations
+    ○ skipped substrings from the beginning
+    ○ skipped multiple spaces not detected as a word
+    ○ skipped alternating word separators not detected as a word
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 1 passed, 13 total
+Snapshots:   0 total
+Time:        0.659 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/word-count/i.

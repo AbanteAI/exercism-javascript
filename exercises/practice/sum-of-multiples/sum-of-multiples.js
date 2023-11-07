@@ -3,6 +3,16 @@
 // convenience to get you started writing code faster.
 //
 
-export const sum = () => {
-  throw new Error('Remove this statement and implement this function');
+export const sum = (limit, multiples) => {
+  const uniqueMultiples = new Set();
+  
+  if (!Array.isArray(multiples)) {
+    multiples = [multiples];
+  }
+    for (let multiple = baseValue; multiple < limit; multiple += baseValue) {
+      uniqueMultiples.add(multiple);
+    }
+  });
+
+  return Array.from(uniqueMultiples).reduce((acc, curr) => acc + curr, 0);
 };

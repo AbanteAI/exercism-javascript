@@ -3,6 +3,12 @@
 // convenience to get you started writing code faster.
 //
 
-export const transform = () => {
-  throw new Error('Remove this statement and implement this function');
+export const transform = (old) => {
+  const newScoreFormat = {};
+  for (const [score, letters] of Object.entries(old)) {
+    letters.forEach(letter => {
+      newScoreFormat[letter.toLowerCase()] = parseInt(score);
+    });
+  }
+  return newScoreFormat;
 };

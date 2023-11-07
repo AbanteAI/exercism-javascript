@@ -4,11 +4,25 @@
 //
 
 export class List {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(elements = []) {
+    this.elements = elements;
   }
+  };
 
-  compare() {
-    throw new Error('Remove this statement and implement this function');
+  compare(otherList) {
+    const thisListStr = this.elements.join(',');
+    const otherListStr = otherList.elements.join(',');
+
+    if (thisListStr === otherListStr) {
+      return 'EQUAL';
+    } else if (thisListStr.length && otherListStr.includes(thisListStr)) {
+      return 'SUBLIST';
+    } else if (otherListStr.length && thisListStr.includes(otherListStr)) {
+      return 'SUPERLIST';
+    } else {
+      return 'UNEQUAL';
+    }
+  }
+  };
   }
 }

@@ -3,6 +3,17 @@
 // convenience to get you started writing code faster.
 //
 
-export const compute = () => {
-  throw new Error('Remove this statement and implement this function');
+export const compute = (strandA, strandB) => {
+  if (strandA.length !== strandB.length) {
+    throw new Error('DNA strands must be of equal length.');
+  }
+
+  let distance = 0;
+  for (let i = 0; i < strandA.length; i++) {
+    if (strandA[i] !== strandB[i]) {
+      distance++;
+    }
+  }
+
+  return distance;
 };

@@ -1,0 +1,68 @@
+FAIL exercises/practice/diffie-hellman/diffie-hellman.spec.js
+  ● Test suite failed to run
+
+    SyntaxError: /home/jake/Development/mentat/tests/benchmarks/repos/exercism-javascript/exercises/practice/diffie-hellman/diffie-hellman.js: Unexpected token, expected "," (15:19)
+
+      13 |   }
+      14 |
+    > 15 |     if (privateKey <= 1 || privateKey >= this.p) {
+         |                    ^
+      16 |       throw new Error('Private key should be greater than 1 and less than p.');
+      17 |     }
+      18 |     return this.modPow(this.g, privateKey, this.p);
+
+      1 | /* eslint-disable no-new */
+    > 2 | import { DiffieHellman } from './diffie-hellman';
+        | ^
+      3 |
+      4 | describe('diffie-hellman', () => {
+      5 |   test('throws an error if the constructor arguments are out of range', () => {
+
+      at constructor (node_modules/@babel/parser/src/parse-error.ts:81:19)
+      at Parser.toParseError [as raise] (node_modules/@babel/parser/src/tokenizer/index.ts:1487:19)
+      at Parser.raise [as unexpected] (node_modules/@babel/parser/src/tokenizer/index.ts:1528:16)
+      at Parser.unexpected [as expect] (node_modules/@babel/parser/src/parser/util.ts:149:28)
+      at Parser.expect [as parseBindingList] (node_modules/@babel/parser/src/parser/lval.ts:402:14)
+      at Parser.parseBindingList [as parseFunctionParams] (node_modules/@babel/parser/src/parser/statement.ts:1666:24)
+      at Parser.parseFunctionParams [as parseMethod] (node_modules/@babel/parser/src/parser/expression.ts:2468:10)
+      at Parser.parseMethod [as pushClassMethod] (node_modules/@babel/parser/src/parser/statement.ts:2195:12)
+      at Parser.pushClassMethod [as parseClassMemberWithIsStatic] (node_modules/@babel/parser/src/parser/statement.ts:1956:12)
+      at Parser.parseClassMemberWithIsStatic [as parseClassMember] (node_modules/@babel/parser/src/parser/statement.ts:1871:10)
+      at parseClassMember (node_modules/@babel/parser/src/parser/statement.ts:1784:14)
+      at Parser.callback [as withSmartMixTopicForbiddingContext] (node_modules/@babel/parser/src/parser/expression.ts:3116:14)
+      at Parser.withSmartMixTopicForbiddingContext [as parseClassBody] (node_modules/@babel/parser/src/parser/statement.ts:1757:10)
+      at Parser.parseClassBody [as parseClass] (node_modules/@babel/parser/src/parser/statement.ts:1712:22)
+      at Parser.parseClass [as parseExportDeclaration] (node_modules/@babel/parser/src/parser/statement.ts:2573:25)
+      at Parser.parseExportDeclaration [as maybeParseExportDeclaration] (node_modules/@babel/parser/src/parser/statement.ts:2502:31)
+      at Parser.maybeParseExportDeclaration [as parseExport] (node_modules/@babel/parser/src/parser/statement.ts:2395:29)
+      at Parser.parseExport [as parseStatementContent] (node_modules/@babel/parser/src/parser/statement.ts:597:25)
+      at Parser.parseStatementContent [as parseStatementLike] (node_modules/@babel/parser/src/parser/statement.ts:417:17)
+      at Parser.parseStatementLike [as parseModuleItem] (node_modules/@babel/parser/src/parser/statement.ts:354:17)
+      at Parser.parseModuleItem [as parseBlockOrModuleBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1394:16)
+      at Parser.parseBlockOrModuleBlockBody [as parseBlockBody] (node_modules/@babel/parser/src/parser/statement.ts:1368:10)
+      at Parser.parseBlockBody [as parseProgram] (node_modules/@babel/parser/src/parser/statement.ts:213:10)
+      at Parser.parseProgram [as parseTopLevel] (node_modules/@babel/parser/src/parser/statement.ts:195:25)
+      at Parser.parseTopLevel [as parse] (node_modules/@babel/parser/src/parser/index.ts:45:10)
+      at parse (node_modules/@babel/parser/src/index.ts:66:38)
+      at parser (node_modules/@babel/core/src/parser/index.ts:28:19)
+          at parser.next (<anonymous>)
+      at normalizeFile (node_modules/@babel/core/src/transformation/normalize-file.ts:50:24)
+          at normalizeFile.next (<anonymous>)
+      at run (node_modules/@babel/core/src/transformation/index.ts:39:36)
+          at run.next (<anonymous>)
+      at transform (node_modules/@babel/core/src/transform.ts:29:20)
+          at transform.next (<anonymous>)
+      at evaluateSync (node_modules/gensync/index.js:251:28)
+      at sync (node_modules/gensync/index.js:89:14)
+      at fn (node_modules/@babel/core/src/errors/rewrite-stack-trace.ts:99:14)
+      at transformSync (node_modules/@babel/core/src/transform.ts:66:52)
+      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/ScriptTransformer.js:545:31)
+      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/ScriptTransformer.js:674:40)
+      at ScriptTransformer.transform (node_modules/@jest/transform/build/ScriptTransformer.js:726:19)
+      at Object.require (exercises/practice/diffie-hellman/diffie-hellman.spec.js:2:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        1.08 s
+Ran all test suites matching /exercises\/practice\/diffie-hellman/i.

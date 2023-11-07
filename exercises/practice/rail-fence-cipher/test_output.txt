@@ -1,0 +1,16 @@
+PASS exercises/practice/rail-fence-cipher/rail-fence-cipher.spec.js
+  Rail Fence Cipher
+    encode
+      ✓ encode with two rails (3 ms)
+      ○ skipped encode with three rails
+      ○ skipped encode with ending in the middle
+    decode
+      ○ skipped decode with three rails
+      ○ skipped decode with five rails
+      ○ skipped decode with six rails
+
+Test Suites: 1 passed, 1 total
+Tests:       5 skipped, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.719 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/rail-fence-cipher/i.

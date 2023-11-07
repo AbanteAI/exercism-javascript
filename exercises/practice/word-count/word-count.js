@@ -3,6 +3,13 @@
 // convenience to get you started writing code faster.
 //
 
-export const countWords = () => {
-  throw new Error('Remove this statement and implement this function');
+export const countWords = (phrase) => {
+  const wordCounts = {};
+  const words = phrase.toLowerCase().match(/\b[\w']+\b/g);
+
+  words.forEach(word => {
+    wordCounts[word] = (wordCounts[word] || 0) + 1;
+  });
+
+  return wordCounts;
 };

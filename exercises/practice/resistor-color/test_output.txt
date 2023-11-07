@@ -1,0 +1,38 @@
+FAIL exercises/practice/resistor-color-trio/resistor-color-trio.spec.js
+  ● Resistor Color Trio › Orange and orange and black
+
+    Remove this statement and implement this function
+
+       6 | export class ResistorColorTrio {
+       7 |   constructor() {
+    >  8 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+       9 |   }
+      10 |
+      11 |   label() {
+
+      at new ResistorColorTrio (exercises/practice/resistor-color-trio/resistor-color-trio.js:8:11)
+      at Object.<anonymous> (exercises/practice/resistor-color-trio/resistor-color-trio.spec.js:9:12)
+
+FAIL exercises/practice/resistor-color-duo/resistor-color-duo.spec.js
+  ● Resistor Colors › Brown and black
+
+    Remove this statement and implement this function
+
+      5 |
+      6 | export const decodedValue = () => {
+    > 7 |   throw new Error('Remove this statement and implement this function');
+        |         ^
+      8 | };
+      9 |
+
+      at decodedValue (exercises/practice/resistor-color-duo/resistor-color-duo.js:7:9)
+      at Object.<anonymous> (exercises/practice/resistor-color-duo/resistor-color-duo.spec.js:5:24)
+
+PASS exercises/practice/resistor-color/resistor-color.spec.js
+
+Test Suites: 2 failed, 1 passed, 3 total
+Tests:       2 failed, 12 skipped, 1 passed, 15 total
+Snapshots:   0 total
+Time:        1.078 s
+Ran all test suites matching /exercises\/practice\/resistor-color/i.

@@ -4,15 +4,19 @@
 //
 
 export class Matrix {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(matrixString) {
+    this._rows = matrixString.split('\n').map(row => row.split(' ').map(Number));
+    this._columns = this._rows[0].map((_, i) => this._rows.map(row => row[i]));
+  }
   }
 
   get rows() {
-    throw new Error('Remove this statement and implement this function');
+    return this._rows;
+  }
   }
 
   get columns() {
-    throw new Error('Remove this statement and implement this function');
+    return this._columns;
+  }
   }
 }

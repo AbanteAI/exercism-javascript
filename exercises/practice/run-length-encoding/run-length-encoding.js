@@ -3,10 +3,10 @@
 // convenience to get you started writing code faster.
 //
 
-export const encode = () => {
-  throw new Error('Remove this statement and implement this function');
+export const encode = (input) => {
+  return input.replace(/(.)\1+/g, (match, char) => `${match.length}${char}`);
 };
 
-export const decode = () => {
-  throw new Error('Remove this statement and implement this function');
+export const decode = (input) => {
+  return input.replace(/(\d+)(\D)/g, (match, count, char) => char.repeat(Number(count)));
 };

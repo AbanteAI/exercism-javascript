@@ -5,17 +5,37 @@
 
 export class QueenAttack {
   constructor({
-    black: [blackRow, blackColumn] = [],
-    white: [whiteRow, whiteColumn] = [],
+    black: [blackRow, blackColumn] = [7, 3],
+    white: [whiteRow, whiteColumn] = [0, 3],
   } = {}) {
-    throw new Error('Remove this statement and implement this function');
+    if (blackRow === whiteRow && blackColumn === whiteColumn) {
+      throw new Error('Queens cannot share the same space');
+    }
+
+    this.black = [blackRow, blackColumn];
+    this.white = [whiteRow, whiteColumn];
+    this.board = this.generateBoard();
+  }
+
+  generateBoard() {
+    const board = Array(8).fill(null).map(() => Array(8).fill('_'));
+    board[this.white[0]][this.white[1]] = 'W';
+    board[this.black[0]][this.black[1]] = 'B';
+    return board;
   }
 
   toString() {
-    throw new Error('Remove this statement and implement this function');
+    return this.board.map(row => row.join(' ')).join('\n') + '\n';
   }
 
   get canAttack() {
-    throw new Error('Remove this statement and implement this function');
+    const [blackRow, blackColumn] = this.black;
+    const [whiteRow, whiteColumn] = this.white;
+    
+    const sameRow = blackRow === whiteRow;
+    const sameColumn = blackColumn === whiteColumn;
+    const sameDiagonal = Math.abs(blackRow - whiteRow) === Math.abs(blackColumn - whiteColumn);
+
+    return sameRow || sameColumn || sameDiagonal;
   }
 }

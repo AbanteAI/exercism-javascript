@@ -4,43 +4,56 @@
 //
 
 export class Zipper {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(tree, focus, ancestry) {
+    this.tree = tree;
+    this.focus = focus;
+    this.ancestry = ancestry || [];
   }
 
-  static fromTree() {
-    throw new Error('Remove this statement and implement this function');
+  static fromTree(tree) {
+    return new Zipper(tree, tree);
   }
 
   toTree() {
-    throw new Error('Remove this statement and implement this function');
+    if (this.ancestry.length === 0) return this.focus;
+    const topAncestor = this.ancestry[0];
+    return topAncestor.tree;
   }
 
   value() {
-    throw new Error('Remove this statement and implement this function');
+    return this.focus.value;
   }
 
   left() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.focus.left) return null;
+    const newAncestry = [{ tree: this.focus, direction: 'left' }, ...this.ancestry];
+    return new Zipper(this.tree, this.focus.left, newAncestry);
   }
 
   right() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.focus.right) return null;
+    const newAncestry = [{ tree: this.focus, direction: 'right' }, ...this.ancestry];
+    return new Zipper(this.tree, this.focus.right, newAncestry);
   }
 
   up() {
-    throw new Error('Remove this statement and implement this function');
+    if (this.ancestry.length === 0) return null;
+    const [parentRecord, ...newAncestry] = this.ancestry;
+    return new Zipper(this.tree, parentRecord.tree, newAncestry);
   }
 
-  setValue() {
-    throw new Error('Remove this statement and implement this function');
+  setValue(value) {
+    const newFocus = { ...this.focus, value };
+    return new Zipper(this.tree, newFocus, this.ancestry);
   }
 
-  setLeft() {
-    throw new Error('Remove this statement and implement this function');
+  setLeft(left) {
+    const newFocus = { ...this.focus, left };
+    return new Zipper(this.tree, newFocus, this.ancestry);
   }
 
-  setRight() {
-    throw new Error('Remove this statement and implement this function');
+  setRight(right) {
+    const newFocus = { ...this.focus, right };
+    return new Zipper(this.tree, newFocus, this.ancestry);
   }
 }

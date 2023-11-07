@@ -4,23 +4,33 @@
 //
 
 export class Clock {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+constructor(hour = 0, minute = 0) {
+    this.minutes = (hour * 60 + minute) % 1440;
+    if (this.minutes < 0) this.minutes += 1440;
+}
   }
 
-  toString() {
-    throw new Error('Remove this statement and implement this function');
+toString() {
+    const hours = Math.floor(this.minutes / 60).toString().padStart(2, '0');
+    const minutes = (this.minutes % 60).toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+}
   }
 
-  plus() {
-    throw new Error('Remove this statement and implement this function');
+plus(minutesToAdd) {
+    this.minutes = (this.minutes + minutesToAdd) % 1440;
+    if (this.minutes < 0) this.minutes += 1440;
+    return this;
+}
   }
 
-  minus() {
-    throw new Error('Remove this statement and implement this function');
+minus(minutesToSubtract) {
+    return this.plus(-minutesToSubtract);
+}
   }
 
-  equals() {
-    throw new Error('Remove this statement and implement this function');
+equals(otherClock) {
+    return this.minutes === otherClock.minutes;
+}
   }
 }

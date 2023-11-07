@@ -27,10 +27,20 @@ const PLANT_CODES = {
 
 export class Garden {
   constructor(diagram, students = DEFAULT_STUDENTS) {
-    throw new Error('Remove this statement and implement this function');
+    this.studentPlants = {};
+    students.sort().forEach((student, index) => {
+      const plantPositions = [(index * 2), (index * 2) + 1];
+      this.studentPlants[student] = plantPositions.flatMap(position =>
+        [diagram[0][position], diagram[0][position + 1], diagram[1][position], diagram[1][position + 1]]
+          .map(code => PLANT_CODES[code])
+      );
+    });
+  };
+  }
   }
 
   plants(student) {
-    throw new Error('Remove this statement and implement this function');
+    return this.studentPlants[student];
+  };
   }
 }

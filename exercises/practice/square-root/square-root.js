@@ -3,6 +3,15 @@
 // convenience to get you started writing code faster.
 //
 
-export const squareRoot = () => {
-  throw new Error('Remove this statement and implement this function');
+export const squareRoot = (radicand) => {
+  if (radicand < 0) {
+    throw new Error('Radicand cannot be negative');
+  }
+  let x = radicand;
+  let y = (x + 1) / 2;
+  while (y < x) {
+    x = y;
+    y = (x + radicand / x) / 2;
+  }
+  return Math.floor(x);
 };

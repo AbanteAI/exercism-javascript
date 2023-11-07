@@ -1,0 +1,29 @@
+PASS exercises/practice/scale-generator/scale-generator.spec.js
+  ScaleGenerator
+    Chromatic scales
+      ✓ Chromatic scale with sharps (3 ms)
+      ○ skipped Chromatic scale with flats
+      ○ skipped Chromatic scale with sharps from D
+      ○ skipped Chromatic scale with flats from D
+    Scales with specified intervals
+      ○ skipped Simple major scale
+      ○ skipped Major scale with sharps
+      ○ skipped Major scale with flats
+      ○ skipped Minor scale with sharps
+      ○ skipped Minor scale with flats
+      ○ skipped Dorian mode
+      ○ skipped Phrygian mode
+      ○ skipped Lydian mode
+      ○ skipped Mixolydian mode
+      ○ skipped Locrian mode
+      ○ skipped Harmonic minor
+      ○ skipped Octatonic
+      ○ skipped Hexatonic
+      ○ skipped Pentatonic
+      ○ skipped Enigmatic
+
+Test Suites: 1 passed, 1 total
+Tests:       18 skipped, 1 passed, 19 total
+Snapshots:   0 total
+Time:        0.855 s
+Ran all test suites matching /exercises\/practice\/scale-generator/i.

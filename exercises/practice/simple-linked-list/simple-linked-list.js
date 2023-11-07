@@ -4,41 +4,66 @@
 //
 
 export class Element {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(value, next = null) {
+    this._value = value;
+    this._next = next;
   }
 
   get value() {
-    throw new Error('Remove this statement and implement this function');
+    return this._value;
   }
 
   get next() {
-    throw new Error('Remove this statement and implement this function');
+    return this._next;
+  }
+
+  set next(elem) {
+    this._next = elem;
   }
 }
 
 export class List {
   constructor() {
-    throw new Error('Remove this statement and implement this function');
+    this._head = null;
+    this._length = 0;
   }
 
-  add(nextValue) {
-    throw new Error('Remove this statement and implement this function');
+  add(value) {
+    const newElement = new Element(value, this._head);
+    this._head = newElement;
+    this._length++;
   }
 
   get length() {
-    throw new Error('Remove this statement and implement this function');
+    return this._length;
   }
 
   get head() {
-    throw new Error('Remove this statement and implement this function');
+    return this._head;
   }
 
   toArray() {
-    throw new Error('Remove this statement and implement this function');
+    let arr = [];
+    let current = this._head;
+    while (current !== null) {
+      arr.push(current.value);
+      current = current.next;
+    }
+    return arr;
   }
 
   reverse() {
-    throw new Error('Remove this statement and implement this function');
+    let current = this._head;
+    let prev = null;
+    let next = null;
+    
+    while (current !== null) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+
+    this._head = prev;
   }
 }

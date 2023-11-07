@@ -1,0 +1,29 @@
+PASS exercises/practice/all-your-base/all-your-base.spec.js
+  Converter
+    ✓ single bit one to decimal (4 ms)
+    ○ skipped binary to single decimal
+    ○ skipped single decimal to binary
+    ○ skipped binary to multiple decimal
+    ○ skipped decimal to binary
+    ○ skipped trinary to hexadecimal
+    ○ skipped hexadecimal to trinary
+    ○ skipped 15-bit integer
+    ○ skipped empty list
+    ○ skipped single zero
+    ○ skipped multiple zeros
+    ○ skipped leading zeros
+    ○ skipped negative digit
+    ○ skipped invalid positive digit
+    ○ skipped first base is one
+    ○ skipped second base is one
+    ○ skipped first base is zero
+    ○ skipped second base is zero
+    ○ skipped first base is negative
+    ○ skipped second base is negative
+    ○ skipped both bases are negative
+
+Test Suites: 1 passed, 1 total
+Tests:       20 skipped, 1 passed, 21 total
+Snapshots:   0 total
+Time:        0.632 s
+Ran all test suites matching /exercises\/practice\/all-your-base/i.

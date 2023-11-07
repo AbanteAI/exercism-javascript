@@ -4,19 +4,20 @@
 //
 
 export class Squares {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(n) {
+    this.n = n;
   }
 
   get sumOfSquares() {
-    throw new Error('Remove this statement and implement this function');
+    return (this.n * (this.n + 1) * (2 * this.n + 1)) / 6;
   }
 
   get squareOfSum() {
-    throw new Error('Remove this statement and implement this function');
+    const sum = (this.n * (this.n + 1)) / 2;
+    return sum * sum;
   }
 
   get difference() {
-    throw new Error('Remove this statement and implement this function');
+    return this.squareOfSum - this.sumOfSquares;
   }
 }

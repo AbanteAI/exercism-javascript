@@ -3,6 +3,18 @@
 // convenience to get you started writing code faster.
 //
 
-export const toRna = () => {
-  throw new Error('Remove this statement and implement this function');
+export const toRna = (dna) => {
+  const dnaToRnaMapping = {
+    'G': 'C',
+    'C': 'G',
+    'T': 'A',
+    'A': 'U',
+  };
+
+  return dna.split('').map(nucleotide => {
+    if (!dnaToRnaMapping[nucleotide]) {
+      throw new Error('Invalid input DNA.');
+    }
+    return dnaToRnaMapping[nucleotide];
+  }).join('');
 };

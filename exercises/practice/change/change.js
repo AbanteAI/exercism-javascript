@@ -4,7 +4,27 @@
 //
 
 export class Change {
+export class Change {
   calculate(coinArray, target) {
-    throw new Error('Remove this statement and implement this function');
+    if (target < 0) throw new Error('Negative totals are not allowed.');
+    if (target !== 0 && coinArray.every(coin => coin > target)) {
+      throw new Error('The total cannot be represented in the given currency.');
+    }
+
+    let result = [];
+    let remaining = target;
+
+    // Sort the array in descending order to start with the largest coin value
+    coinArray.sort((a, b) => b - a);
+
+    for (let coin of coinArray) {
+      while (remaining - coin >= 0) {
+        remaining -= coin;
+        result.push(coin);
+      }
+      if (remaining === 0) break;
+    }
+
+    return result.length === 0 && target !== 0 ? null : result;
   }
 }

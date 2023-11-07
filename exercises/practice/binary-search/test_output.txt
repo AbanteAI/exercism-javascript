@@ -1,0 +1,23 @@
+FAIL exercises/practice/binary-search-tree/binary-search-tree.spec.js
+  ● BinarySearchTree › data is retained
+
+    Remove this statement and implement this function
+
+       6 | export class BinarySearchTree {
+       7 |   constructor() {
+    >  8 |     throw new Error('Remove this statement and implement this function');
+         |           ^
+       9 |   }
+      10 |
+      11 |   get data() {
+
+      at new BinarySearchTree (exercises/practice/binary-search-tree/binary-search-tree.js:8:11)
+      at Object.<anonymous> (exercises/practice/binary-search-tree/binary-search-tree.spec.js:13:12)
+
+PASS exercises/practice/binary-search/binary-search.spec.js
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       1 failed, 19 skipped, 1 passed, 21 total
+Snapshots:   0 total
+Time:        0.616 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/binary-search/i.

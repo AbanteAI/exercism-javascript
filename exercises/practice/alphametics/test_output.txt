@@ -1,0 +1,17 @@
+PASS exercises/practice/alphametics/alphametics.spec.js
+  Solve the alphametics puzzle
+    ✓ puzzle with three letters (833 ms)
+    ○ skipped solution must have unique value for each letter
+    ○ skipped leading zero solution is invalid
+    ○ skipped puzzle with four letters
+    ○ skipped puzzle with six letters
+    ○ skipped puzzle with seven letters
+    ○ skipped puzzle with eight letters
+    ○ skipped puzzle with ten letters
+    ○ skipped puzzle with ten letters and 199 addends
+
+Test Suites: 1 passed, 1 total
+Tests:       8 skipped, 1 passed, 9 total
+Snapshots:   0 total
+Time:        1.555 s
+Ran all test suites matching /exercises\/practice\/alphametics/i.

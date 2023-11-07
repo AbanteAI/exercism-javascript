@@ -11,19 +11,70 @@ export class InvalidInputError extends Error {
 }
 
 export class Robot {
+  constructor() {
+    this._bearing = 'north';
+    this._x = 0;
+    this._y = 0;
+  }
+
   get bearing() {
-    throw new Error('Remove this statement and implement this function');
+    return this._bearing;
   }
 
   get coordinates() {
-    throw new Error('Remove this statement and implement this function');
+    return [this._x, this._y];
   }
 
   place({ x, y, direction }) {
-    throw new Error('Remove this statement and implement this function');
+    this._x = x;
+    this._y = y;
+    this._bearing = direction;
   }
 
   evaluate(instructions) {
-    throw new Error('Remove this statement and implement this function');
+    for (let i = 0; i < instructions.length; i++) {
+      switch (instructions[i]) {
+        case 'R':
+          this.turnRight();
+          break;
+        case 'L':
+          this.turnLeft();
+          break;
+        case 'A':
+          this.advance();
+          break;
+        default:
+          throw new InvalidInputError('Invalid Instruction');
+      }
+    }
+  }
+
+  turnRight() {
+    const directions = ['north', 'east', 'south', 'west'];
+    const currentIndex = directions.indexOf(this._bearing);
+    this._bearing = directions[(currentIndex + 1) % directions.length];
+  }
+
+  turnLeft() {
+    const directions = ['north', 'west', 'south', 'east'];
+    const currentIndex = directions.indexOf(this._bearing);
+    this._bearing = directions[(currentIndex + 1) % directions.length];
+  }
+
+  advance() {
+    switch (this._bearing) {
+      case 'north':
+        this._y += 1;
+        break;
+      case 'east':
+        this._x += 1;
+        break;
+      case 'south':
+        this._y -= 1;
+        break;
+      case 'west':
+        this._x -= 1;
+        break;
+    }
   }
 }

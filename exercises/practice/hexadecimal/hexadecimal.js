@@ -3,6 +3,16 @@
 // convenience to get you started writing code faster.
 //
 
-export const toDecimal = () => {
-  throw new Error('Remove this statement and implement this function');
+export const toDecimal = (hexString) => {
+  if (!hexString.match(/^[0-9a-fA-F]+$/)) {
+    return 0;
+  }
+
+  let decimalValue = 0;
+  for (let i = 0; i < hexString.length; i++) {
+    const digitValue = parseInt(hexString[i], 16);
+    decimalValue = decimalValue * 16 + digitValue;
+  }
+
+  return decimalValue;
 };

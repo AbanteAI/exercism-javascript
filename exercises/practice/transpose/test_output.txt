@@ -1,0 +1,21 @@
+PASS exercises/practice/transpose/transpose.spec.js
+  Transpose
+    ✓ empty string (3 ms)
+    ○ skipped two characters in a row
+    ○ skipped two characters in a column
+    ○ skipped simple
+    ○ skipped single line
+    ○ skipped first line longer than second line
+    ○ skipped second line longer than first line
+    ○ skipped mixed line length
+    ○ skipped square
+    ○ skipped rectangle
+    ○ skipped triangle
+    ○ skipped jagged triangle
+    ○ skipped many lines
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 1 passed, 13 total
+Snapshots:   0 total
+Time:        0.706 s
+Ran all test suites matching /exercises\/practice\/transpose/i.

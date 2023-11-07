@@ -1,0 +1,14 @@
+PASS exercises/practice/collatz-conjecture/collatz-conjecture.spec.js
+  steps()
+    ✓ zero steps for one (4 ms)
+    ○ skipped divide if even
+    ○ skipped even and odd steps
+    ○ skipped large number of even and odd steps
+    ○ skipped zero is an error
+    ○ skipped negative value is an error
+
+Test Suites: 1 passed, 1 total
+Tests:       5 skipped, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.981 s
+Ran all test suites matching /exercises\/practice\/collatz-conjecture/i.
