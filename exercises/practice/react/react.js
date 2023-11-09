@@ -5,30 +5,32 @@
 
 export class InputCell {
   constructor(value) {
-    throw new Error('Remove this statement and implement this function');
+    this.value = value;
   }
 
   setValue(value) {
-    throw new Error('Remove this statement and implement this function');
+    this.value = value;
   }
 }
 
 export class ComputeCell {
   constructor(inputCells, fn) {
-    throw new Error('Remove this statement and implement this function');
+    this.inputCells = inputCells;
+    this.fn = fn;
+    this.callbacks = [];
   }
 
   addCallback(cb) {
-    throw new Error('Remove this statement and implement this function');
+    this.callbacks.push(cb);
   }
 
   removeCallback(cb) {
-    throw new Error('Remove this statement and implement this function');
+    this.callbacks = this.callbacks.filter(callback => callback !== cb);
   }
 }
 
 export class CallbackCell {
   constructor(fn) {
-    throw new Error('Remove this statement and implement this function');
+    this.fn = fn;
   }
 }

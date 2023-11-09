@@ -1,0 +1,13 @@
+PASS exercises/practice/sieve/sieve.spec.js
+  Sieve
+    ✓ no primes under two (4 ms)
+    ○ skipped finds first prime
+    ○ skipped finds primes up to 10
+    ○ skipped limit is prime
+    ○ skipped finds primes up to 1000
+
+Test Suites: 1 passed, 1 total
+Tests:       4 skipped, 1 passed, 5 total
+Snapshots:   0 total
+Time:        0.941 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/sieve/i.

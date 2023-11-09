@@ -3,22 +3,97 @@
 // convenience to get you started writing code faster.
 //
 
-export const promisify = () => {
-  throw new Error('Remove this statement and implement this function');
+export const promisify = (fn) => {
+    return (...args) =>
+        new Promise((resolve, reject) => {
+            fn(...args, (error, result) => {
+                if (error) {
+                    reject(error);
+                } else {
+                    resolve(result);
+                }
+            });
+        });
 };
 
-export const all = () => {
-  throw new Error('Remove this statement and implement this function');
+export const all = (promises) => {
+    return new Promise((resolve, reject) => {
+        const results = [];
+        let completed = 0;
+
+        promises.forEach((promise, index) => {
+            Promise.resolve(promise)
+                .then((result) => {
+                    results[index] = result;
+                    completed++;
+
+                    if (completed === promises.length) {
+                        resolve(results);
+                    }
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
+    });
 };
 
-export const allSettled = () => {
-  throw new Error('Remove this statement and implement this function');
+export const allSettled = (promises) => {
+    return new Promise((resolve) => {
+        const results = [];
+        let completed = 0;
+
+        promises.forEach((promise, index) => {
+            Promise.resolve(promise)
+                .then((result) => {
+                    results[index] = { status: "fulfilled", value: result };
+                    completed++;
+                })
+                .catch((error) => {
+                    results[index] = { status: "rejected", reason: error };
+                    completed++;
+                })
+                .finally(() => {
+                    if (completed === promises.length) {
+                        resolve(results);
+                    }
+                });
+        });
+    });
 };
 
-export const race = () => {
-  throw new Error('Remove this statement and implement this function');
+export const race = (promises) => {
+    return new Promise((resolve, reject) => {
+        promises.forEach((promise) => {
+            Promise.resolve(promise)
+                .then((result) => {
+                    resolve(result);
+                })
+                .catch((error) => {
+                    reject(error);
+                });
+        });
+    });
 };
 
-export const any = () => {
-  throw new Error('Remove this statement and implement this function');
+export const any = (promises) => {
+    return new Promise((resolve, reject) => {
+        const errors = [];
+        let completed = 0;
+
+        promises.forEach((promise, index) => {
+            Promise.resolve(promise)
+                .then((result) => {
+                    resolve(result);
+                })
+                .catch((error) => {
+                    errors[index] = error;
+                    completed++;
+
+                    if (completed === promises.length) {
+                        reject(new AggregateError(errors, "All promises rejected"));
+                    }
+                });
+        });
+    });
 };

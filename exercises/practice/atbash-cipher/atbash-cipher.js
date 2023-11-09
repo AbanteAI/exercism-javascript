@@ -3,10 +3,26 @@
 // convenience to get you started writing code faster.
 //
 
-export const encode = () => {
-  throw new Error('Remove this statement and implement this function');
+const generateAtbashMapping = () => {
+  const plain = 'abcdefghijklmnopqrstuvwxyz';
+  const cipher = plain.split('').reverse().join('');
+  return new Map([...plain].map((char, index) => [char, cipher[index]]));
 };
 
-export const decode = () => {
-  throw new Error('Remove this statement and implement this function');
+const atbashMapping = generateAtbashMapping();
+export const encode = (input) => {
+  const cleanedInput = input.toLowerCase().replace(/[^a-z0-9]/g, '');
+  const encoded = cleanedInput
+    .split('')
+    .map((char) => (atbashMapping.has(char) ? atbashMapping.get(char) : char))
+    .join('');
+  return encoded.match(/.{1,5}/g).join(' ');
+};
+
+export const decode = (input) => {
+  const cleanedInput = input.replace(/ /g, '');
+  return cleanedInput
+    .split('')
+    .map((char) => (atbashMapping.has(char) ? atbashMapping.get(char) : char))
+    .join('');
 };

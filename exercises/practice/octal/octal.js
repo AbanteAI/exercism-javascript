@@ -4,11 +4,23 @@
 //
 
 export class Octal {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(octalString) {
+    this.octalString = octalString;
+  };
   }
-
+  }
   toDecimal() {
-    throw new Error('Remove this statement and implement this function');
+    if (this.octalString.match(/[^0-7]/)) {
+      return 0;
+    }
+
+    let decimal = 0;
+    for (let i = 0; i < this.octalString.length; i++) {
+      decimal += parseInt(this.octalString[i], 10) * Math.pow(8, this.octalString.length - i - 1);
+    }
+
+    return decimal;
+  };
+  }
   }
 }

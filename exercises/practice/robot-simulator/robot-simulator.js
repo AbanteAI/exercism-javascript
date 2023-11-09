@@ -11,19 +11,68 @@ export class InvalidInputError extends Error {
 }
 
 export class Robot {
+  constructor() {
+    this._bearing = "north";
+    this._coordinates = [0, 0];
+  }
+
   get bearing() {
-    throw new Error('Remove this statement and implement this function');
+    return this._bearing;
   }
 
   get coordinates() {
-    throw new Error('Remove this statement and implement this function');
+    return this._coordinates;
   }
 
   place({ x, y, direction }) {
-    throw new Error('Remove this statement and implement this function');
+    this._coordinates = [x, y];
+    this._bearing = direction;
   }
 
   evaluate(instructions) {
-    throw new Error('Remove this statement and implement this function');
+    for (const instruction of instructions) {
+      switch (instruction) {
+        case "R":
+          this._turnRight();
+          break;
+        case "L":
+          this._turnLeft();
+          break;
+        case "A":
+          this._advance();
+          break;
+        default:
+          throw new InvalidInputError(`Invalid instruction: ${instruction}`);
+      }
+    }
+  }
+
+  _turnRight() {
+    const directions = ["north", "east", "south", "west"];
+    const newIndex = (directions.indexOf(this._bearing) + 1) % 4;
+    this._bearing = directions[newIndex];
+  }
+
+  _turnLeft() {
+    const directions = ["north", "east", "south", "west"];
+    const newIndex = (directions.indexOf(this._bearing) + 3) % 4;
+    this._bearing = directions[newIndex];
+  }
+
+  _advance() {
+    switch (this._bearing) {
+      case "north":
+        this._coordinates[1]++;
+        break;
+      case "east":
+        this._coordinates[0]++;
+        break;
+      case "south":
+        this._coordinates[1]--;
+        break;
+      case "west":
+        this._coordinates[0]--;
+        break;
+    }
   }
 }

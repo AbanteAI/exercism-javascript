@@ -1,0 +1,66 @@
+PASS exercises/practice/allergies/allergies.spec.js
+  Allergies
+    testing for eggs allergy
+      ✓ not allergic to anything (5 ms)
+      ○ skipped allergic only to eggs
+      ○ skipped allergic to eggs and something else
+      ○ skipped allergic to something, but not eggs
+      ○ skipped allergic to everything
+    testing for peanuts allergy
+      ○ skipped not allergic to anything
+      ○ skipped allergic only to peanuts
+      ○ skipped allergic to peanuts and something else
+      ○ skipped allergic to something, but not peanuts
+      ○ skipped allergic to everything
+    testing for shellfish allergy
+      ○ skipped not allergic to anything
+      ○ skipped allergic only to shellfish
+      ○ skipped allergic to shellfish and something else
+      ○ skipped allergic to something, but not shellfish
+      ○ skipped allergic to everything
+    testing for strawberries allergy
+      ○ skipped not allergic to anything
+      ○ skipped allergic only to strawberries
+      ○ skipped allergic to strawberries and something else
+      ○ skipped allergic to something, but not strawberries
+      ○ skipped allergic to everything
+    testing for tomatoes allergy
+      ○ skipped not allergic to anything
+      ○ skipped allergic only to tomatoes
+      ○ skipped allergic to tomatoes and something else
+      ○ skipped allergic to something, but not tomatoes
+      ○ skipped allergic to everything
+    testing for chocolate allergy
+      ○ skipped not allergic to anything
+      ○ skipped allergic only to chocolate
+      ○ skipped allergic to chocolate and something else
+      ○ skipped allergic to something, but not chocolate
+      ○ skipped allergic to everything
+    testing for pollen allergy
+      ○ skipped not allergic to anything
+      ○ skipped allergic only to pollen
+      ○ skipped allergic to pollen and something else
+      ○ skipped allergic to something, but not pollen
+      ○ skipped allergic to everything
+    testing for cats allergy
+      ○ skipped not allergic to anything
+      ○ skipped allergic only to cats
+      ○ skipped allergic to cats and something else
+      ○ skipped allergic to something, but not cats
+      ○ skipped allergic to everything
+    list when:
+      ○ skipped no allergies
+      ○ skipped just eggs
+      ○ skipped just peanuts
+      ○ skipped just strawberries
+      ○ skipped eggs and peanuts
+      ○ skipped more than eggs but not peanuts
+      ○ skipped lots of stuff
+      ○ skipped everything
+      ○ skipped no allergen score parts
+
+Test Suites: 1 passed, 1 total
+Tests:       48 skipped, 1 passed, 49 total
+Snapshots:   0 total
+Time:        0.987 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/allergies/i.

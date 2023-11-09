@@ -1,0 +1,16 @@
+PASS exercises/practice/point-mutations/point-mutations.spec.js
+  DNA
+    ✓ no difference between empty strands (4 ms)
+    ○ skipped no difference between identical strands
+    ○ skipped complete hamming distance in small strand
+    ○ skipped hamming distance in off by one strand
+    ○ skipped small hamming distance in middle somewhere
+    ○ skipped larger distance
+    ○ skipped shortens other strand when longer
+    ○ skipped shortens original strand when longer
+
+Test Suites: 1 passed, 1 total
+Tests:       7 skipped, 1 passed, 8 total
+Snapshots:   0 total
+Time:        1.036 s
+Ran all test suites matching /exercises\/practice\/point-mutations/i.

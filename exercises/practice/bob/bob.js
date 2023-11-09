@@ -4,5 +4,21 @@
 //
 
 export const hey = (message) => {
-  throw new Error('Remove this statement and implement this function');
+  message = message.trim();
+  
+  const isQuestion = message.endsWith("?");
+  const isYelling = message.toUpperCase() === message && message.toLowerCase() !== message;
+  const isSilent = message.length === 0;
+
+  if (isQuestion && isYelling) {
+    return 'Calm down, I know what I\'m doing!';
+  } else if (isQuestion) {
+    return 'Sure.';
+  } else if (isYelling) {
+    return 'Whoa, chill out!';
+  } else if (isSilent) {
+    return 'Fine. Be that way!';
+  } else {
+    return 'Whatever.';
+  }
 };

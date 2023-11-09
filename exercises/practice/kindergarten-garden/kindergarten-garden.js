@@ -27,10 +27,19 @@ const PLANT_CODES = {
 
 export class Garden {
   constructor(diagram, students = DEFAULT_STUDENTS) {
-    throw new Error('Remove this statement and implement this function');
+    this.diagram = diagram.split('\n');
+    this.students = students.sort();
   }
 
   plants(student) {
-    throw new Error('Remove this statement and implement this function');
+    const index = this.students.indexOf(student) * 2;
+    const plantCodes = [
+      this.diagram[0][index],
+      this.diagram[0][index + 1],
+      this.diagram[1][index],
+      this.diagram[1][index + 1],
+    ];
+
+    return plantCodes.map((code) => PLANT_CODES[code]);
   }
 }

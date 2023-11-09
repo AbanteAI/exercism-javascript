@@ -3,6 +3,17 @@
 // convenience to get you started writing code faster.
 //
 
-export const findAnagrams = () => {
-  throw new Error('Remove this statement and implement this function');
+export const findAnagrams = (target, candidates) => {
+  const normalizeWord = word => word.toLowerCase();
+  const sortString = str => str.split('').sort().join('');
+
+  const normalizedTarget = normalizeWord(target);
+  const sortedTarget = sortString(normalizedTarget);
+
+  const isAnagram = candidate => {
+    const normalizedCandidate = normalizeWord(candidate);
+    return candidate !== target && sortString(normalizedCandidate) === sortedTarget;
+  };
+
+  return candidates.filter(isAnagram);
 };

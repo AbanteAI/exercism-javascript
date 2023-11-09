@@ -1,0 +1,22 @@
+PASS exercises/practice/circular-buffer/circular-buffer.spec.js
+  CircularBuffer
+    ✓ reading empty buffer should fail (23 ms)
+    ○ skipped can read an item just written
+    ○ skipped each item may only be read once
+    ○ skipped items are read in the order they are written
+    ○ skipped full buffer can't be written to
+    ○ skipped a read frees up capacity for another write
+    ○ skipped read position is maintained even across multiple writes
+    ○ skipped items cleared out of buffer can't be read
+    ○ skipped clear frees up capacity for another write
+    ○ skipped clear does nothing on empty buffer
+    ○ skipped forceWrite acts like write on non-full buffer
+    ○ skipped forceWrite replaces the oldest item on full buffer
+    ○ skipped forceWrite replaces the oldest item remaining in buffer following a read
+    ○ skipped initial clear does not affect wrapping around
+
+Test Suites: 1 passed, 1 total
+Tests:       13 skipped, 1 passed, 14 total
+Snapshots:   0 total
+Time:        1.113 s
+Ran all test suites matching /exercises\/practice\/circular-buffer/i.

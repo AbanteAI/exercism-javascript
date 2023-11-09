@@ -1,0 +1,35 @@
+PASS exercises/practice/robot-simulator/robot-simulator.spec.js
+  Robot
+    Create robot
+      ✓ facing north by default (4 ms)
+      ○ skipped facing east
+      ○ skipped facing west, at origin
+      ○ skipped at negative position facing south
+      ○ skipped invalid robot bearing
+    Rotating clockwise
+      ○ skipped changes north to east
+      ○ skipped changes east to south
+      ○ skipped changes south to west
+      ○ skipped changes west to north
+    Rotating counter-clockwise
+      ○ skipped changes north to west
+      ○ skipped changes west to south
+      ○ skipped changes south to east
+      ○ skipped changes east to north
+    Moving forward one
+      ○ skipped advance when facing north
+      ○ skipped advance when facing south
+      ○ skipped advance when facing east
+      ○ skipped advance when facing west
+    Follow series of instructions
+      ○ skipped moving east and north from README
+      ○ skipped moving west and north
+      ○ skipped moving west and south
+      ○ skipped moving east and north
+      ○ skipped instruct many robots
+
+Test Suites: 1 passed, 1 total
+Tests:       21 skipped, 1 passed, 22 total
+Snapshots:   0 total
+Time:        0.991 s, estimated 2 s
+Ran all test suites matching /exercises\/practice\/robot-simulator/i.

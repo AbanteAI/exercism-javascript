@@ -4,23 +4,41 @@
 //
 
 export class Clock {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(hours, minutes) {
+    this.hours = hours % 24;
+    this.minutes = minutes % 60;
+    while (this.minutes < 0) {
+      this.minutes += 60;
+      this.hours--;
+    }
+    this.hours = (this.hours + 24) % 24;
   }
 
   toString() {
-    throw new Error('Remove this statement and implement this function');
+    let hoursString = String(this.hours).padStart(2, '0');
+    let minutesString = String(this.minutes).padStart(2, '0');
+    return `${hoursString}:${minutesString}`;
   }
 
-  plus() {
-    throw new Error('Remove this statement and implement this function');
+  plus(minutesToAdd) {
+    this.minutes += minutesToAdd;
+    while (this.minutes >= 60) {
+      this.minutes -= 60;
+      this.hours++;
+    }
+    this.hours %= 24;
   }
 
-  minus() {
-    throw new Error('Remove this statement and implement this function');
+  minus(minutesToSubtract) {
+    this.minutes -= minutesToSubtract;
+    while (this.minutes < 0) {
+      this.minutes += 60;
+      this.hours--;
+    }
+    this.hours = (this.hours + 24) % 24;
   }
 
-  equals() {
-    throw new Error('Remove this statement and implement this function');
+  equals(otherClock) {
+    return this.hours === otherClock.hours && this.minutes === otherClock.minutes;
   }
 }

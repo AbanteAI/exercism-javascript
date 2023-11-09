@@ -3,40 +3,49 @@
 // convenience to get you started writing code faster.
 //
 
-export const abilityModifier = () => {
-  throw new Error('Remove this statement and implement this function');
+export const abilityModifier = (score) => {
+  if (score < 3) {
+    throw new Error('Ability scores must be at least 3');
+  }
+  if (score > 18) {
+    throw new Error('Ability scores can be at most 18');
+  }
+  return Math.floor((score - 10) / 2);
 };
 
 export class Character {
-  static rollAbility() {
-    throw new Error('Remove this statement and implement this function');
-  }
+static rollAbility() {
+  const rolls = Array.from({ length: 4 }, () => Math.floor(Math.random() * 6) + 1);
+  rolls.sort((a, b) => b - a);
+  rolls.pop();
+  return rolls.reduce((a, b) => a + b, 0);
+}
 
-  get strength() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get strength() {
+  return Character.rollAbility();
+}
 
-  get dexterity() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get dexterity() {
+  return Character.rollAbility();
+}
 
-  get constitution() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get constitution() {
+  return Character.rollAbility();
+}
 
-  get intelligence() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get intelligence() {
+  return Character.rollAbility();
+}
 
-  get wisdom() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get wisdom() {
+  return Character.rollAbility();
+}
 
-  get charisma() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get charisma() {
+  return Character.rollAbility();
+}
 
-  get hitpoints() {
-    throw new Error('Remove this statement and implement this function');
-  }
+get hitpoints() {
+  return 10 + abilityModifier(this.constitution);
+}
 }

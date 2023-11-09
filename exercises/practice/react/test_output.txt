@@ -1,0 +1,21 @@
+PASS exercises/practice/react/react.spec.js
+  React module
+    ✓ accepts input (4 ms)
+    ○ skipped allows input cell value to be set
+    ○ skipped allows setting compute cells
+    ○ skipped compute cell takes inputs in correct order
+    ○ skipped compute cells update value when inputs are changed
+    ○ skipped compute cells can depend on other compute cells
+    ○ skipped compute cells fire callbacks
+    ○ skipped callbacks fire only when output values change
+    ○ skipped static callbacks fire even if their own value has not changed
+    ○ skipped callbacks can be added and removed
+    ○ skipped removing a callback multiple times doesn't interfere with other callbacks
+    ○ skipped callbacks should only be called once, even if multiple dependencies change
+    ○ skipped callbacks should not be called if dependencies change but output value doesn't change
+
+Test Suites: 1 passed, 1 total
+Tests:       12 skipped, 1 passed, 13 total
+Snapshots:   0 total
+Time:        0.974 s
+Ran all test suites matching /exercises\/practice\/react/i.

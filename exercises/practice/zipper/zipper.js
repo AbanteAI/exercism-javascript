@@ -4,43 +4,70 @@
 //
 
 export class Zipper {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(tree, path) {
+    this.tree = tree;
+    this.path = path;
+  }
   }
 
-  static fromTree() {
-    throw new Error('Remove this statement and implement this function');
+  fromTree(tree) {
+    return new Zipper(tree, []);
+  }
   }
 
   toTree() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree;
+  }
   }
 
   value() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree.value;
+  }
   }
 
   left() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree.left ? new Zipper(this.tree.left, this.path.concat(this.tree)) : null;
+  }
   }
 
   right() {
-    throw new Error('Remove this statement and implement this function');
+    return this.tree.right ? new Zipper(this.tree.right, this.path.concat(this.tree)) : null;
+  }
   }
 
   up() {
-    throw new Error('Remove this statement and implement this function');
+    if (!this.path.length) return null;
+    const newPath = this.path.slice(0, -1);
+    const parent = this.path[this.path.length - 1];
+    return new Zipper(parent, newPath);
+  }
   }
 
-  setValue() {
-    throw new Error('Remove this statement and implement this function');
+  setValue(value) {
+    this.tree.value = value;
+    return this;
+  }
   }
 
-  setLeft() {
-    throw new Error('Remove this statement and implement this function');
+  setLeft(left) {
+    this.tree.left = left;
+    return this;
+  }
   }
 
-  setRight() {
-    throw new Error('Remove this statement and implement this function');
+  setRight(right) {
+    this.tree.right = right;
+    return this;
+  }
+  }
+  delete() {
+    const newPath = this.path.slice(0, -1);
+    const parent = this.path[this.path.length - 1];
+    if (parent.left === this.tree) {
+      parent.left = this.tree.right;
+    } else {
+      parent.right = this.tree.left;
+    }
+    return new Zipper(parent, newPath);
   }
 }

@@ -1,0 +1,41 @@
+FAIL exercises/practice/tournament/tournament.spec.js
+  Tournament
+    ✕ just the header if no input (6 ms)
+    ○ skipped a win is three points, a loss is zero points
+    ○ skipped a win can also be expressed as a loss
+    ○ skipped a different team can win
+    ○ skipped a draw is one point each
+    ○ skipped there can be more than one match
+    ○ skipped there can be more than one winner
+    ○ skipped there can be more than two teams
+    ○ skipped typical input
+    ○ skipped incomplete competition (not all pairs have played)
+    ○ skipped ties broken alphabetically
+    ○ skipped ensure points sorted numerically
+
+  ● Tournament › just the header if no input
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 2
+
+      Team                           | MP |  W |  D |  L |  P
+    + undefined                      |  1 |  1 |  0 |  0 |  3
+    +                                |  1 |  0 |  0 |  1 |  0
+
+       5 |     const tally = tournamentTally('');
+       6 |     const expected = 'Team                           | MP |  W |  D |  L |  P';
+    >  7 |     expect(tally).toEqual(expected);
+         |                   ^
+       8 |   });
+       9 |   xtest('a win is three points, a loss is zero points', () => {
+      10 |     const tally = tournamentTally('Allegoric Alaskans;Blithering Badgers;win');
+
+      at Object.toEqual (exercises/practice/tournament/tournament.spec.js:7:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 11 skipped, 12 total
+Snapshots:   0 total
+Time:        0.849 s
+Ran all test suites matching /exercises\/practice\/tournament/i.

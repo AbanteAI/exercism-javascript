@@ -4,11 +4,39 @@
 //
 
 export class Crypto {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(inputText) {
+    this.inputText = inputText;
+  }
+  }
+  }
+  normalize() {
+    return this.inputText.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
   }
 
+  rectangleSize() {
+    const length = this.normalize().length;
+    const c = Math.ceil(Math.sqrt(length));
+    const r = Math.ceil(length / c);
+    return { r, c };
+  }
+  encode() {
+    const normalizedText = this.normalize();
+    const { r, c } = this.rectangleSize();
+    let encodedText = "";
+
+    for (let i = 0; i < c; i++) {
+      for (let j = 0; j < r; j++) {
+        const index = j * c + i;
+        encodedText += index < normalizedText.length ? normalizedText[index] : " ";
+      }
+      if (i < c - 1) {
+        encodedText += " ";
+      }
+    }
+
+    return encodedText;
+  }
   get ciphertext() {
-    throw new Error('Remove this statement and implement this function');
+    return this.encode();
   }
 }

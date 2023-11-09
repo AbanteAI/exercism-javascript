@@ -1,0 +1,33 @@
+FAIL exercises/practice/diamond/diamond.spec.js
+  Diamond
+    ✕ Degenerate case with a single 'A' row (2 ms)
+    ○ skipped Degenerate case with no row containing 3 distinct groups of spaces
+    ○ skipped Smallest non-degenerate case with odd diamond side length
+    ○ skipped Smallest non-degenerate case with even diamond side length
+    ○ skipped Largest possible diamond
+
+  ● Diamond › Degenerate case with a single 'A' row
+
+    RangeError: Invalid count value
+        at String.repeat (<anonymous>)
+
+      4 | //
+      5 |
+    > 6 | const generateSpaces = (n) => ' '.repeat(n);
+        |                                   ^
+      7 |
+      8 | const generateRow = (letter, index, size) => {
+      9 |   const spacesBefore = generateSpaces(size - index - 1);
+
+      at repeat (exercises/practice/diamond/diamond.js:6:35)
+      at generateSpaces (exercises/practice/diamond/diamond.js:10:25)
+      at generateRow (exercises/practice/diamond/diamond.js:19:5)
+          at Array.map (<anonymous>)
+      at map (exercises/practice/diamond/diamond.js:18:43)
+      at Object.<anonymous> (exercises/practice/diamond/diamond.spec.js:5:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 4 skipped, 5 total
+Snapshots:   0 total
+Time:        1.037 s
+Ran all test suites matching /exercises\/practice\/diamond/i.

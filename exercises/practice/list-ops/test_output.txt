@@ -1,0 +1,35 @@
+PASS exercises/practice/list-ops/list-ops.spec.js
+  append entries to a list and return the new list
+    ✓ empty lists (6 ms)
+    ○ skipped empty list to list
+    ○ skipped non-empty lists
+  concat lists and lists of lists into new list
+    ○ skipped empty list
+    ○ skipped list of lists
+  filter list returning only values that satisfy the filter function
+    ○ skipped empty list
+    ○ skipped non empty list
+  returns the length of a list
+    ○ skipped empty list
+    ○ skipped non-empty list
+  returns a list of elements whose values equal the list value transformed by the mapping function
+    ○ skipped empty list
+    ○ skipped non-empty list
+  folds (reduces) the given list from the left with a function
+    ○ skipped empty list
+    ○ skipped direction independent function applied to non-empty list
+    ○ skipped direction dependent function applied to non-empty list
+  folds (reduces) the given list from the right with a function
+    ○ skipped empty list
+    ○ skipped direction independent function applied to non-empty list
+    ○ skipped direction dependent function applied to non-empty list
+  reverse the elements of a list
+    ○ skipped empty list
+    ○ skipped non-empty list
+    ○ skipped list of lists is not flattened
+
+Test Suites: 1 passed, 1 total
+Tests:       19 skipped, 1 passed, 20 total
+Snapshots:   0 total
+Time:        1.148 s, estimated 2 s
+Ran all test suites matching /exercises\/practice\/list-ops/i.

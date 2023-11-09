@@ -5,14 +5,21 @@
 
 export class DiffieHellman {
   constructor(p, g) {
-    throw new Error('Remove this statement and implement this function');
+    this.p = p;
+    if (p <= 0 || g <= 0) {
+      throw new Error('Constructor arguments must be greater than 0');
+    }
+    this.g = g;
   }
 
   getPublicKey(privateKey) {
-    throw new Error('Remove this statement and implement this function');
+    return (this.g ** privateKey) % this.p;
+    if (privateKey <= 0 || privateKey >= this.p) {
+      throw new Error('Private key must be greater than 0 and less than p');
+    }
   }
 
   getSecret(theirPublicKey, myPrivateKey) {
-    throw new Error('Remove this statement and implement this function');
+    return (theirPublicKey ** myPrivateKey) % this.p;
   }
 }

@@ -1,0 +1,38 @@
+FAIL exercises/practice/ocr-numbers/ocr-numbers.spec.js
+  ocr
+    ✕ recognizes zero (2 ms)
+    ○ skipped recognizes one
+    ○ skipped recognizes two
+    ○ skipped recognizes three
+    ○ skipped recognizes four
+    ○ skipped recognizes five
+    ○ skipped recognizes six
+    ○ skipped recognizes seven
+    ○ skipped recognizes eight
+    ○ skipped recognizes nine
+    ○ skipped recognizes ten
+    ○ skipped identifies garble
+    ○ skipped converts 110101100
+    ○ skipped identifies garble mixed in
+    ○ skipped converts 1234567890
+    ○ skipped converts 123 456 789
+
+  ● ocr › recognizes zero
+
+    Remove this statement and implement this function
+
+      46 |   return result.join(',');
+      47 | };
+    > 48 |   throw new Error('Remove this statement and implement this function');
+         |         ^
+      49 | };
+      50 |
+
+      at Object.<anonymous>.module.exports.convert (exercises/practice/ocr-numbers/ocr-numbers.js:48:9)
+      at Object.<anonymous> (exercises/practice/ocr-numbers/ocr-numbers.spec.js:7:14)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 15 skipped, 16 total
+Snapshots:   0 total
+Time:        1.061 s
+Ran all test suites matching /exercises\/practice\/ocr-numbers/i.

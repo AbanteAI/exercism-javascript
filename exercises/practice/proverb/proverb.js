@@ -3,6 +3,14 @@
 // convenience to get you started writing code faster.
 //
 
-export const proverb = () => {
-  throw new Error('Remove this statement and implement this function');
+export const proverb = (...args) => {
+  let proverbLines = [];
+  for (let i = 0; i < args.length - 1; i++) {
+    if (typeof args[i] === 'string' && typeof args[i + 1] === 'string') {
+      proverbLines.push(`For want of a ${args[i]} the ${args[i + 1]} was lost.`);
+    } else if (typeof args[i + 1] === 'object' && args[i + 1].qualifier) {
+      proverbLines.push(`And all for the want of a ${args[i + 1].qualifier} ${args[i]}.`);
+    }
+  }
+  return proverbLines.join('\n');
 };

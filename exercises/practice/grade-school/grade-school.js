@@ -4,15 +4,26 @@
 //
 
 export class GradeSchool {
+  constructor() {
+    this._roster = {};
+  }
   roster() {
-    throw new Error('Remove this statement and implement this function');
+    const result = {};
+    for (const grade in this._roster) {
+      result[grade] = [...this._roster[grade]];
+    }
+    return result;
   }
 
-  add() {
-    throw new Error('Remove this statement and implement this function');
+  add(name, grade) {
+    if (!this._roster[grade]) {
+      this._roster[grade] = [];
+    }
+    this._roster[grade].push(name);
+    this._roster[grade].sort();
   }
 
-  grade() {
-    throw new Error('Remove this statement and implement this function');
+  grade(gradeNumber) {
+    return this._roster[gradeNumber] ? [...this._roster[gradeNumber]] : [];
   }
 }

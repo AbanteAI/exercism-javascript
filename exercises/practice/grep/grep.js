@@ -27,7 +27,7 @@ const path = require('path');
  * @returns {string[]} the lines
  */
 function readLines(file) {
-  const data = fs.readFileSync(path.resolve(file), { encoding: 'utf-8' });
+  const data = fs.readFileSync(path.join(__dirname, file), { encoding: 'utf-8' });
   return data.split(/\r?\n/);
 }
 
@@ -47,3 +47,60 @@ const ARGS = process.argv;
 //
 // This file should *not* export a function. Use ARGS to determine what to grep
 // and use console.log(output) to write to the standard output.
+
+function grep(pattern, files, options) {
+  let result = [];
+
+  for (const file of files) {
+    const lines = readLines(file);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const lineNumber = i + 1;
+      let match = options.i ? new RegExp(pattern, 'i').test(line) : new RegExp(pattern).test(line);
+
+      if (options.v) {
+        match = !match;
+      }
+
+      if (options.x) {
+        match = match && line === pattern;
+      }
+
+      if (match) {
+        if (options.l) {
+          result.push(file);
+          break;
+        } else {
+          const output = options.n ? `${lineNumber}:${line}` : line;
+          result.push(output);
+        }
+      }
+    }
+  }
+
+  return result.join('\n');
+}
+
+function parseArguments(args) {
+  const options = {};
+  const files = [];
+
+  for (let i = 2; i < args.length; i++) {
+    if (args[i].startsWith('-')) {
+      for (const option of args[i].substring(1)) {
+        if (VALID_OPTIONS.includes(option)) {
+          options[option] = true;
+        }
+      }
+    } else {
+      files.push(args[i]);
+    }
+  }
+
+  return { options, files };
+}
+
+const { options, files } = parseArguments(ARGS);
+const pattern = ARGS[2];
+const output = grep(pattern, files, options);
+console.log(output);

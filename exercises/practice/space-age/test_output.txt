@@ -1,0 +1,16 @@
+PASS exercises/practice/space-age/space-age.spec.js
+  Space Age
+    ✓ age on Earth (6 ms)
+    ○ skipped age on Mercury
+    ○ skipped age on Venus
+    ○ skipped age on Mars
+    ○ skipped age on Jupiter
+    ○ skipped age on Saturn
+    ○ skipped age on Uranus
+    ○ skipped age on Neptune
+
+Test Suites: 1 passed, 1 total
+Tests:       7 skipped, 1 passed, 8 total
+Snapshots:   0 total
+Time:        1.194 s
+Ran all test suites matching /exercises\/practice\/space-age/i.

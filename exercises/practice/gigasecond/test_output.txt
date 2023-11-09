@@ -1,0 +1,14 @@
+PASS exercises/practice/gigasecond/gigasecond.spec.js
+  Gigasecond
+    ✓ tells a gigasecond anniversary since midnight (5 ms)
+    ○ skipped tells another gigasecond anniversary since midnight
+    ○ skipped tells gigasecond anniversary since midnight, from before UNIX epoch
+    ○ skipped tells the anniversary, including a time
+    ○ skipped tells the anniversary is next day when you are born at night
+    ○ skipped does not mutate the input
+
+Test Suites: 1 passed, 1 total
+Tests:       5 skipped, 1 passed, 6 total
+Snapshots:   0 total
+Time:        0.938 s, estimated 1 s
+Ran all test suites matching /exercises\/practice\/gigasecond/i.

@@ -3,6 +3,19 @@
 // convenience to get you started writing code faster.
 //
 
-export const flatten = () => {
-  throw new Error('Remove this statement and implement this function');
+export const flatten = (inputArray) => {
+  const output = [];
+
+  const flattenHelper = (arr) => {
+    arr.forEach((element) => {
+      if (Array.isArray(element)) {
+        flattenHelper(element);
+      } else if (element !== null && element !== undefined) {
+        output.push(element);
+      }
+    });
+  };
+
+  flattenHelper(inputArray);
+  return output;
 };
